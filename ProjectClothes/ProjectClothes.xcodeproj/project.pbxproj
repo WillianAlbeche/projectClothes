@@ -13,6 +13,11 @@
 		CDF28F9626B07C8C00241F13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF28F9426B07C8C00241F13 /* Main.storyboard */; };
 		CDF28F9826B07C9000241F13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF28F9726B07C9000241F13 /* Assets.xcassets */; };
 		CDF28F9B26B07C9000241F13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF28F9926B07C9000241F13 /* LaunchScreen.storyboard */; };
+		CDF28FA826B086A600241F13 /* todayStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF28FA726B086A600241F13 /* todayStoryboard.storyboard */; };
+		CDF28FAA26B08BA800241F13 /* createStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF28FA926B08BA800241F13 /* createStoryboard.storyboard */; };
+		CDF28FAC26B08EF800241F13 /* addStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF28FAB26B08EF800241F13 /* addStoryboard.storyboard */; };
+		CDF28FAE26B08F6900241F13 /* closetStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF28FAD26B08F6900241F13 /* closetStoryboard.storyboard */; };
+		CDF28FB026B0903100241F13 /* settingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF28FAF26B0903100241F13 /* settingsStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		CDF28F9726B07C9000241F13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDF28F9A26B07C9000241F13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDF28F9C26B07C9000241F13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDF28FA726B086A600241F13 /* todayStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = todayStoryboard.storyboard; sourceTree = "<group>"; };
+		CDF28FA926B08BA800241F13 /* createStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = createStoryboard.storyboard; sourceTree = "<group>"; };
+		CDF28FAB26B08EF800241F13 /* addStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = addStoryboard.storyboard; sourceTree = "<group>"; };
+		CDF28FAD26B08F6900241F13 /* closetStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = closetStoryboard.storyboard; sourceTree = "<group>"; };
+		CDF28FAF26B0903100241F13 /* settingsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = settingsStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +85,7 @@
 		CDF28FA226B0818E00241F13 /* Closet */ = {
 			isa = PBXGroup;
 			children = (
+				CDF28FAD26B08F6900241F13 /* closetStoryboard.storyboard */,
 			);
 			path = Closet;
 			sourceTree = "<group>";
@@ -82,6 +93,7 @@
 		CDF28FA326B081A100241F13 /* Add */ = {
 			isa = PBXGroup;
 			children = (
+				CDF28FAB26B08EF800241F13 /* addStoryboard.storyboard */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -89,6 +101,7 @@
 		CDF28FA426B081C000241F13 /* Today */ = {
 			isa = PBXGroup;
 			children = (
+				CDF28FA726B086A600241F13 /* todayStoryboard.storyboard */,
 			);
 			name = Today;
 			path = /Users/willian_albeche/Documents/GitHub/projectClothes/ProjectClothes/ProjectClothes/Today;
@@ -97,6 +110,7 @@
 		CDF28FA526B081E300241F13 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				CDF28FAF26B0903100241F13 /* settingsStoryboard.storyboard */,
 			);
 			name = Settings;
 			path = /Users/willian_albeche/Documents/GitHub/projectClothes/ProjectClothes/ProjectClothes/Settings;
@@ -105,6 +119,7 @@
 		CDF28FA626B081E600241F13 /* Create */ = {
 			isa = PBXGroup;
 			children = (
+				CDF28FA926B08BA800241F13 /* createStoryboard.storyboard */,
 			);
 			name = Create;
 			path = /Users/willian_albeche/Documents/GitHub/projectClothes/ProjectClothes/ProjectClothes/Create;
@@ -167,9 +182,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF28FAA26B08BA800241F13 /* createStoryboard.storyboard in Resources */,
+				CDF28FAE26B08F6900241F13 /* closetStoryboard.storyboard in Resources */,
 				CDF28F9B26B07C9000241F13 /* LaunchScreen.storyboard in Resources */,
 				CDF28F9826B07C9000241F13 /* Assets.xcassets in Resources */,
 				CDF28F9626B07C8C00241F13 /* Main.storyboard in Resources */,
+				CDF28FA826B086A600241F13 /* todayStoryboard.storyboard in Resources */,
+				CDF28FB026B0903100241F13 /* settingsStoryboard.storyboard in Resources */,
+				CDF28FAC26B08EF800241F13 /* addStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
