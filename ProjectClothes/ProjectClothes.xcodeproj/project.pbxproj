@@ -56,6 +56,11 @@
 		CDF28F8D26B07C8C00241F13 /* ProjectClothes */ = {
 			isa = PBXGroup;
 			children = (
+				CDF28FA426B081C000241F13 /* Today */,
+				CDF28FA626B081E600241F13 /* Create */,
+				CDF28FA326B081A100241F13 /* Add */,
+				CDF28FA226B0818E00241F13 /* Closet */,
+				CDF28FA526B081E300241F13 /* Settings */,
 				CDF28F8E26B07C8C00241F13 /* AppDelegate.swift */,
 				CDF28F9026B07C8C00241F13 /* SceneDelegate.swift */,
 				CDF28F9226B07C8C00241F13 /* ViewController.swift */,
@@ -66,6 +71,44 @@
 			);
 			path = ProjectClothes;
 			sourceTree = "<group>";
+		};
+		CDF28FA226B0818E00241F13 /* Closet */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Closet;
+			sourceTree = "<group>";
+		};
+		CDF28FA326B081A100241F13 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		CDF28FA426B081C000241F13 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Today;
+			path = /Users/willian_albeche/Documents/GitHub/projectClothes/ProjectClothes/ProjectClothes/Today;
+			sourceTree = "<absolute>";
+		};
+		CDF28FA526B081E300241F13 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Settings;
+			path = /Users/willian_albeche/Documents/GitHub/projectClothes/ProjectClothes/ProjectClothes/Settings;
+			sourceTree = "<absolute>";
+		};
+		CDF28FA626B081E600241F13 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Create;
+			path = /Users/willian_albeche/Documents/GitHub/projectClothes/ProjectClothes/ProjectClothes/Create;
+			sourceTree = "<absolute>";
 		};
 /* End PBXGroup section */
 
