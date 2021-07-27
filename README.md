@@ -7,5 +7,5 @@ Nome dos integrantes do Grupo:
 - Brenda Linck
 - Heitor Kunrath
 - João Gabriel Biazus
-- Hojin
+- Hojin Ryu
 - Willian Albeche
