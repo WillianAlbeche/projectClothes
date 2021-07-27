@@ -7,66 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD8273CE26A9F6FA00C0EE7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8273CD26A9F6FA00C0EE7C /* AppDelegate.swift */; };
-		CD8273D026A9F6FA00C0EE7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8273CF26A9F6FA00C0EE7C /* SceneDelegate.swift */; };
-		CD8273D226A9F6FA00C0EE7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8273D126A9F6FA00C0EE7C /* ViewController.swift */; };
-		CD8273D526A9F6FA00C0EE7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8273D326A9F6FA00C0EE7C /* Main.storyboard */; };
-		CD8273D726A9F6FE00C0EE7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD8273D626A9F6FE00C0EE7C /* Assets.xcassets */; };
-		CD8273DA26A9F6FE00C0EE7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8273D826A9F6FE00C0EE7C /* LaunchScreen.storyboard */; };
-		CD8273E526A9F6FF00C0EE7C /* ProjectClothesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8273E426A9F6FF00C0EE7C /* ProjectClothesTests.swift */; };
-		CD8273F026A9F6FF00C0EE7C /* ProjectClothesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8273EF26A9F6FF00C0EE7C /* ProjectClothesUITests.swift */; };
+		CDF28F8F26B07C8C00241F13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF28F8E26B07C8C00241F13 /* AppDelegate.swift */; };
+		CDF28F9126B07C8C00241F13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF28F9026B07C8C00241F13 /* SceneDelegate.swift */; };
+		CDF28F9326B07C8C00241F13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF28F9226B07C8C00241F13 /* ViewController.swift */; };
+		CDF28F9626B07C8C00241F13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF28F9426B07C8C00241F13 /* Main.storyboard */; };
+		CDF28F9826B07C9000241F13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF28F9726B07C9000241F13 /* Assets.xcassets */; };
+		CDF28F9B26B07C9000241F13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF28F9926B07C9000241F13 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		CD8273E126A9F6FF00C0EE7C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD8273C226A9F6FA00C0EE7C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CD8273C926A9F6FA00C0EE7C;
-			remoteInfo = ProjectClothes;
-		};
-		CD8273EC26A9F6FF00C0EE7C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD8273C226A9F6FA00C0EE7C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CD8273C926A9F6FA00C0EE7C;
-			remoteInfo = ProjectClothes;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		CD8273CA26A9F6FA00C0EE7C /* ProjectClothes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectClothes.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD8273CD26A9F6FA00C0EE7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD8273CF26A9F6FA00C0EE7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CD8273D126A9F6FA00C0EE7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CD8273D426A9F6FA00C0EE7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CD8273D626A9F6FE00C0EE7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CD8273D926A9F6FE00C0EE7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CD8273DB26A9F6FE00C0EE7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD8273E026A9F6FF00C0EE7C /* ProjectClothesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectClothesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD8273E426A9F6FF00C0EE7C /* ProjectClothesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectClothesTests.swift; sourceTree = "<group>"; };
-		CD8273E626A9F6FF00C0EE7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD8273EB26A9F6FF00C0EE7C /* ProjectClothesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectClothesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD8273EF26A9F6FF00C0EE7C /* ProjectClothesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectClothesUITests.swift; sourceTree = "<group>"; };
-		CD8273F126A9F6FF00C0EE7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDF28F8B26B07C8C00241F13 /* ProjectClothes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectClothes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF28F8E26B07C8C00241F13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CDF28F9026B07C8C00241F13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CDF28F9226B07C8C00241F13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CDF28F9526B07C8C00241F13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CDF28F9726B07C9000241F13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDF28F9A26B07C9000241F13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CDF28F9C26B07C9000241F13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CD8273C726A9F6FA00C0EE7C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CD8273DD26A9F6FF00C0EE7C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CD8273E826A9F6FF00C0EE7C /* Frameworks */ = {
+		CDF28F8826B07C8C00241F13 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,68 +37,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CD8273C126A9F6FA00C0EE7C = {
+		CDF28F8226B07C8C00241F13 = {
 			isa = PBXGroup;
 			children = (
-				CD8273CC26A9F6FA00C0EE7C /* ProjectClothes */,
-				CD8273E326A9F6FF00C0EE7C /* ProjectClothesTests */,
-				CD8273EE26A9F6FF00C0EE7C /* ProjectClothesUITests */,
-				CD8273CB26A9F6FA00C0EE7C /* Products */,
+				CDF28F8D26B07C8C00241F13 /* ProjectClothes */,
+				CDF28F8C26B07C8C00241F13 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CD8273CB26A9F6FA00C0EE7C /* Products */ = {
+		CDF28F8C26B07C8C00241F13 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CD8273CA26A9F6FA00C0EE7C /* ProjectClothes.app */,
-				CD8273E026A9F6FF00C0EE7C /* ProjectClothesTests.xctest */,
-				CD8273EB26A9F6FF00C0EE7C /* ProjectClothesUITests.xctest */,
+				CDF28F8B26B07C8C00241F13 /* ProjectClothes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CD8273CC26A9F6FA00C0EE7C /* ProjectClothes */ = {
+		CDF28F8D26B07C8C00241F13 /* ProjectClothes */ = {
 			isa = PBXGroup;
 			children = (
-				CD8273CD26A9F6FA00C0EE7C /* AppDelegate.swift */,
-				CD8273CF26A9F6FA00C0EE7C /* SceneDelegate.swift */,
-				CD8273D126A9F6FA00C0EE7C /* ViewController.swift */,
-				CD8273D326A9F6FA00C0EE7C /* Main.storyboard */,
-				CD8273D626A9F6FE00C0EE7C /* Assets.xcassets */,
-				CD8273D826A9F6FE00C0EE7C /* LaunchScreen.storyboard */,
-				CD8273DB26A9F6FE00C0EE7C /* Info.plist */,
+				CDF28F8E26B07C8C00241F13 /* AppDelegate.swift */,
+				CDF28F9026B07C8C00241F13 /* SceneDelegate.swift */,
+				CDF28F9226B07C8C00241F13 /* ViewController.swift */,
+				CDF28F9426B07C8C00241F13 /* Main.storyboard */,
+				CDF28F9726B07C9000241F13 /* Assets.xcassets */,
+				CDF28F9926B07C9000241F13 /* LaunchScreen.storyboard */,
+				CDF28F9C26B07C9000241F13 /* Info.plist */,
 			);
 			path = ProjectClothes;
-			sourceTree = "<group>";
-		};
-		CD8273E326A9F6FF00C0EE7C /* ProjectClothesTests */ = {
-			isa = PBXGroup;
-			children = (
-				CD8273E426A9F6FF00C0EE7C /* ProjectClothesTests.swift */,
-				CD8273E626A9F6FF00C0EE7C /* Info.plist */,
-			);
-			path = ProjectClothesTests;
-			sourceTree = "<group>";
-		};
-		CD8273EE26A9F6FF00C0EE7C /* ProjectClothesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CD8273EF26A9F6FF00C0EE7C /* ProjectClothesUITests.swift */,
-				CD8273F126A9F6FF00C0EE7C /* Info.plist */,
-			);
-			path = ProjectClothesUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CD8273C926A9F6FA00C0EE7C /* ProjectClothes */ = {
+		CDF28F8A26B07C8C00241F13 /* ProjectClothes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD8273F426A9F6FF00C0EE7C /* Build configuration list for PBXNativeTarget "ProjectClothes" */;
+			buildConfigurationList = CDF28F9F26B07C9000241F13 /* Build configuration list for PBXNativeTarget "ProjectClothes" */;
 			buildPhases = (
-				CD8273C626A9F6FA00C0EE7C /* Sources */,
-				CD8273C726A9F6FA00C0EE7C /* Frameworks */,
-				CD8273C826A9F6FA00C0EE7C /* Resources */,
+				CDF28F8726B07C8C00241F13 /* Sources */,
+				CDF28F8826B07C8C00241F13 /* Frameworks */,
+				CDF28F8926B07C8C00241F13 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -145,68 +84,24 @@
 			);
 			name = ProjectClothes;
 			productName = ProjectClothes;
-			productReference = CD8273CA26A9F6FA00C0EE7C /* ProjectClothes.app */;
+			productReference = CDF28F8B26B07C8C00241F13 /* ProjectClothes.app */;
 			productType = "com.apple.product-type.application";
-		};
-		CD8273DF26A9F6FF00C0EE7C /* ProjectClothesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CD8273F726A9F6FF00C0EE7C /* Build configuration list for PBXNativeTarget "ProjectClothesTests" */;
-			buildPhases = (
-				CD8273DC26A9F6FF00C0EE7C /* Sources */,
-				CD8273DD26A9F6FF00C0EE7C /* Frameworks */,
-				CD8273DE26A9F6FF00C0EE7C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CD8273E226A9F6FF00C0EE7C /* PBXTargetDependency */,
-			);
-			name = ProjectClothesTests;
-			productName = ProjectClothesTests;
-			productReference = CD8273E026A9F6FF00C0EE7C /* ProjectClothesTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		CD8273EA26A9F6FF00C0EE7C /* ProjectClothesUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CD8273FA26A9F6FF00C0EE7C /* Build configuration list for PBXNativeTarget "ProjectClothesUITests" */;
-			buildPhases = (
-				CD8273E726A9F6FF00C0EE7C /* Sources */,
-				CD8273E826A9F6FF00C0EE7C /* Frameworks */,
-				CD8273E926A9F6FF00C0EE7C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CD8273ED26A9F6FF00C0EE7C /* PBXTargetDependency */,
-			);
-			name = ProjectClothesUITests;
-			productName = ProjectClothesUITests;
-			productReference = CD8273EB26A9F6FF00C0EE7C /* ProjectClothesUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CD8273C226A9F6FA00C0EE7C /* Project object */ = {
+		CDF28F8326B07C8C00241F13 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					CD8273C926A9F6FA00C0EE7C = {
+					CDF28F8A26B07C8C00241F13 = {
 						CreatedOnToolsVersion = 12.5.1;
-					};
-					CD8273DF26A9F6FF00C0EE7C = {
-						CreatedOnToolsVersion = 12.5.1;
-						TestTargetID = CD8273C926A9F6FA00C0EE7C;
-					};
-					CD8273EA26A9F6FF00C0EE7C = {
-						CreatedOnToolsVersion = 12.5.1;
-						TestTargetID = CD8273C926A9F6FA00C0EE7C;
 					};
 				};
 			};
-			buildConfigurationList = CD8273C526A9F6FA00C0EE7C /* Build configuration list for PBXProject "ProjectClothes" */;
+			buildConfigurationList = CDF28F8626B07C8C00241F13 /* Build configuration list for PBXProject "ProjectClothes" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -214,100 +109,55 @@
 				en,
 				Base,
 			);
-			mainGroup = CD8273C126A9F6FA00C0EE7C;
-			productRefGroup = CD8273CB26A9F6FA00C0EE7C /* Products */;
+			mainGroup = CDF28F8226B07C8C00241F13;
+			productRefGroup = CDF28F8C26B07C8C00241F13 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CD8273C926A9F6FA00C0EE7C /* ProjectClothes */,
-				CD8273DF26A9F6FF00C0EE7C /* ProjectClothesTests */,
-				CD8273EA26A9F6FF00C0EE7C /* ProjectClothesUITests */,
+				CDF28F8A26B07C8C00241F13 /* ProjectClothes */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CD8273C826A9F6FA00C0EE7C /* Resources */ = {
+		CDF28F8926B07C8C00241F13 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD8273DA26A9F6FE00C0EE7C /* LaunchScreen.storyboard in Resources */,
-				CD8273D726A9F6FE00C0EE7C /* Assets.xcassets in Resources */,
-				CD8273D526A9F6FA00C0EE7C /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CD8273DE26A9F6FF00C0EE7C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CD8273E926A9F6FF00C0EE7C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				CDF28F9B26B07C9000241F13 /* LaunchScreen.storyboard in Resources */,
+				CDF28F9826B07C9000241F13 /* Assets.xcassets in Resources */,
+				CDF28F9626B07C8C00241F13 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CD8273C626A9F6FA00C0EE7C /* Sources */ = {
+		CDF28F8726B07C8C00241F13 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD8273D226A9F6FA00C0EE7C /* ViewController.swift in Sources */,
-				CD8273CE26A9F6FA00C0EE7C /* AppDelegate.swift in Sources */,
-				CD8273D026A9F6FA00C0EE7C /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CD8273DC26A9F6FF00C0EE7C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CD8273E526A9F6FF00C0EE7C /* ProjectClothesTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CD8273E726A9F6FF00C0EE7C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CD8273F026A9F6FF00C0EE7C /* ProjectClothesUITests.swift in Sources */,
+				CDF28F9326B07C8C00241F13 /* ViewController.swift in Sources */,
+				CDF28F8F26B07C8C00241F13 /* AppDelegate.swift in Sources */,
+				CDF28F9126B07C8C00241F13 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		CD8273E226A9F6FF00C0EE7C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CD8273C926A9F6FA00C0EE7C /* ProjectClothes */;
-			targetProxy = CD8273E126A9F6FF00C0EE7C /* PBXContainerItemProxy */;
-		};
-		CD8273ED26A9F6FF00C0EE7C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CD8273C926A9F6FA00C0EE7C /* ProjectClothes */;
-			targetProxy = CD8273EC26A9F6FF00C0EE7C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		CD8273D326A9F6FA00C0EE7C /* Main.storyboard */ = {
+		CDF28F9426B07C8C00241F13 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CD8273D426A9F6FA00C0EE7C /* Base */,
+				CDF28F9526B07C8C00241F13 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		CD8273D826A9F6FE00C0EE7C /* LaunchScreen.storyboard */ = {
+		CDF28F9926B07C9000241F13 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CD8273D926A9F6FE00C0EE7C /* Base */,
+				CDF28F9A26B07C9000241F13 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -315,7 +165,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CD8273F226A9F6FF00C0EE7C /* Debug */ = {
+		CDF28F9D26B07C9000241F13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -376,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		CD8273F326A9F6FF00C0EE7C /* Release */ = {
+		CDF28F9E26B07C9000241F13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -431,7 +281,7 @@
 			};
 			name = Release;
 		};
-		CD8273F526A9F6FF00C0EE7C /* Debug */ = {
+		CDF28FA026B07C9000241F13 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -443,14 +293,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.teste.ProjectClothes;
+				PRODUCT_BUNDLE_IDENTIFIER = me.DeveloperAcademy.ProjectClothes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		CD8273F626A9F6FF00C0EE7C /* Release */ = {
+		CDF28FA126B07C9000241F13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -462,137 +312,35 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.teste.ProjectClothes;
+				PRODUCT_BUNDLE_IDENTIFIER = me.DeveloperAcademy.ProjectClothes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		CD8273F826A9F6FF00C0EE7C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76N3ST5C2U;
-				INFOPLIST_FILE = ProjectClothesTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.teste.ProjectClothesTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjectClothes.app/ProjectClothes";
-			};
-			name = Debug;
-		};
-		CD8273F926A9F6FF00C0EE7C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76N3ST5C2U;
-				INFOPLIST_FILE = ProjectClothesTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.teste.ProjectClothesTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjectClothes.app/ProjectClothes";
-			};
-			name = Release;
-		};
-		CD8273FB26A9F6FF00C0EE7C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76N3ST5C2U;
-				INFOPLIST_FILE = ProjectClothesUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.teste.ProjectClothesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ProjectClothes;
-			};
-			name = Debug;
-		};
-		CD8273FC26A9F6FF00C0EE7C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76N3ST5C2U;
-				INFOPLIST_FILE = ProjectClothesUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.teste.ProjectClothesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ProjectClothes;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CD8273C526A9F6FA00C0EE7C /* Build configuration list for PBXProject "ProjectClothes" */ = {
+		CDF28F8626B07C8C00241F13 /* Build configuration list for PBXProject "ProjectClothes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CD8273F226A9F6FF00C0EE7C /* Debug */,
-				CD8273F326A9F6FF00C0EE7C /* Release */,
+				CDF28F9D26B07C9000241F13 /* Debug */,
+				CDF28F9E26B07C9000241F13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD8273F426A9F6FF00C0EE7C /* Build configuration list for PBXNativeTarget "ProjectClothes" */ = {
+		CDF28F9F26B07C9000241F13 /* Build configuration list for PBXNativeTarget "ProjectClothes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CD8273F526A9F6FF00C0EE7C /* Debug */,
-				CD8273F626A9F6FF00C0EE7C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CD8273F726A9F6FF00C0EE7C /* Build configuration list for PBXNativeTarget "ProjectClothesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CD8273F826A9F6FF00C0EE7C /* Debug */,
-				CD8273F926A9F6FF00C0EE7C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CD8273FA26A9F6FF00C0EE7C /* Build configuration list for PBXNativeTarget "ProjectClothesUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CD8273FB26A9F6FF00C0EE7C /* Debug */,
-				CD8273FC26A9F6FF00C0EE7C /* Release */,
+				CDF28FA026B07C9000241F13 /* Debug */,
+				CDF28FA126B07C9000241F13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CD8273C226A9F6FA00C0EE7C /* Project object */;
+	rootObject = CDF28F8326B07C8C00241F13 /* Project object */;
 }
