@@ -50,6 +50,13 @@ class CustomModalViewController: UIViewController {
            return buttom
            
        }()
+    func camera(){
+        
+        
+        
+        
+    }
+    
        lazy var but2 : UIButton = {
         let buttom = UIButton()
      buttom.frame = CGRect(x: 0, y: 93, width: 100, height: 100)
@@ -83,7 +90,10 @@ class CustomModalViewController: UIViewController {
         buttom.layer.shadowOpacity = 0.3
         buttom.layer.shadowOffset = .zero
         buttom.layer.shadowRadius = 30
-     
+        
+        
+        
+        
         return buttom
            
        }()

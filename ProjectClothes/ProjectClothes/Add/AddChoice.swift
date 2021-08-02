@@ -13,8 +13,13 @@ class AddChoice: UIViewController {
     @IBOutlet weak var galleryButtum: UIButton!
     @IBOutlet weak var cameraButtom: UIButton!
     @IBOutlet weak var sparklesButtom: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem?.image = UIImage()
+        
+        
         
 //        navigationController?.navigationBar = UIButton()
 //        self.modalPresentationStyle = UIModalPresentationStyle.currentContext
