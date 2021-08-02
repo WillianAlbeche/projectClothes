@@ -15,13 +15,13 @@
 		CDF28F9B26B07C9000241F13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF28F9926B07C9000241F13 /* LaunchScreen.storyboard */; };
 		CDF28FAC26B08EF800241F13 /* addStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF28FAB26B08EF800241F13 /* addStoryboard.storyboard */; };
 		CDF28FAE26B08F6900241F13 /* closetStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF28FAD26B08F6900241F13 /* closetStoryboard.storyboard */; };
-		FD23EEC026B1D1D5009FF48C /* todayStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD23EEBF26B1D1D5009FF48C /* todayStoryboard.storyboard */; };
-		FD23EEC326B1D1FE009FF48C /* createStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD23EEC226B1D1FE009FF48C /* createStoryboard.storyboard */; };
-		FD23EEC626B1D22E009FF48C /* settingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD23EEC526B1D22E009FF48C /* settingsStoryboard.storyboard */; };
+		FD08F82B26B86AF4003E0C9C /* settingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08F82A26B86AF4003E0C9C /* settingsStoryboard.storyboard */; };
+		FD08F82D26B86B02003E0C9C /* createStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08F82C26B86B02003E0C9C /* createStoryboard.storyboard */; };
+		FD08F82F26B86B0B003E0C9C /* todayStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08F82E26B86B0B003E0C9C /* todayStoryboard.storyboard */; };
+		FD08F83126B86B6C003E0C9C /* CustomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD08F83026B86B6C003E0C9C /* CustomModalViewController.swift */; };
 		FD23EEC826B1D764009FF48C /* AddChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD23EEC726B1D764009FF48C /* AddChoice.swift */; };
 		FD430BE726B3236F00F31DD2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD430BE626B3236E00F31DD2 /* TabBarController.swift */; };
 		FD430BE926B3329700F31DD2 /* AddNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD430BE826B3329700F31DD2 /* AddNavigationController.swift */; };
-		FDED416426B4762700E8F7F7 /* CustomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDED416326B4762700E8F7F7 /* CustomModalViewController.swift */; };
 		FDF281D126B36CB100017ACB /* TesteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF281D026B36CB100017ACB /* TesteViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,13 +36,13 @@
 		CDF28F9C26B07C9000241F13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDF28FAB26B08EF800241F13 /* addStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = addStoryboard.storyboard; sourceTree = "<group>"; };
 		CDF28FAD26B08F6900241F13 /* closetStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = closetStoryboard.storyboard; sourceTree = "<group>"; };
-		FD23EEBF26B1D1D5009FF48C /* todayStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = todayStoryboard.storyboard; path = ProjectClothes/todayStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
-		FD23EEC226B1D1FE009FF48C /* createStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = createStoryboard.storyboard; path = ProjectClothes/createStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
-		FD23EEC526B1D22E009FF48C /* settingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = settingsStoryboard.storyboard; path = ProjectClothes/settingsStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		FD08F82A26B86AF4003E0C9C /* settingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = settingsStoryboard.storyboard; sourceTree = "<group>"; };
+		FD08F82C26B86B02003E0C9C /* createStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = createStoryboard.storyboard; sourceTree = "<group>"; };
+		FD08F82E26B86B0B003E0C9C /* todayStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = todayStoryboard.storyboard; sourceTree = "<group>"; };
+		FD08F83026B86B6C003E0C9C /* CustomModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModalViewController.swift; sourceTree = "<group>"; };
 		FD23EEC726B1D764009FF48C /* AddChoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChoice.swift; sourceTree = "<group>"; };
 		FD430BE626B3236E00F31DD2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FD430BE826B3329700F31DD2 /* AddNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNavigationController.swift; sourceTree = "<group>"; };
-		FDED416326B4762700E8F7F7 /* CustomModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModalViewController.swift; sourceTree = "<group>"; };
 		FDF281D026B36CB100017ACB /* TesteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +76,7 @@
 		CDF28F8D26B07C8C00241F13 /* ProjectClothes */ = {
 			isa = PBXGroup;
 			children = (
-				FD23EEC426B1D21D009FF48C /* Settings  */,
+				FD08F82926B86AF4003E0C9C /* Settings */,
 				FD23EEC126B1D1F4009FF48C /* Create */,
 				FD23EEBE26B1D1C6009FF48C /* Today */,
 				CDF28FA326B081A100241F13 /* Add */,
@@ -104,7 +104,7 @@
 		CDF28FA326B081A100241F13 /* Add */ = {
 			isa = PBXGroup;
 			children = (
-				FDED416326B4762700E8F7F7 /* CustomModalViewController.swift */,
+				FD08F83026B86B6C003E0C9C /* CustomModalViewController.swift */,
 				CDF28FAB26B08EF800241F13 /* addStoryboard.storyboard */,
 				FD23EEC726B1D764009FF48C /* AddChoice.swift */,
 				FD430BE826B3329700F31DD2 /* AddNavigationController.swift */,
@@ -113,10 +113,18 @@
 			path = Add;
 			sourceTree = "<group>";
 		};
+		FD08F82926B86AF4003E0C9C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FD08F82A26B86AF4003E0C9C /* settingsStoryboard.storyboard */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		FD23EEBE26B1D1C6009FF48C /* Today */ = {
 			isa = PBXGroup;
 			children = (
-				FD23EEBF26B1D1D5009FF48C /* todayStoryboard.storyboard */,
+				FD08F82E26B86B0B003E0C9C /* todayStoryboard.storyboard */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -124,17 +132,9 @@
 		FD23EEC126B1D1F4009FF48C /* Create */ = {
 			isa = PBXGroup;
 			children = (
-				FD23EEC226B1D1FE009FF48C /* createStoryboard.storyboard */,
+				FD08F82C26B86B02003E0C9C /* createStoryboard.storyboard */,
 			);
 			path = Create;
-			sourceTree = "<group>";
-		};
-		FD23EEC426B1D21D009FF48C /* Settings  */ = {
-			isa = PBXGroup;
-			children = (
-				FD23EEC526B1D22E009FF48C /* settingsStoryboard.storyboard */,
-			);
-			path = "Settings ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,14 +194,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD08F82B26B86AF4003E0C9C /* settingsStoryboard.storyboard in Resources */,
+				FD08F82D26B86B02003E0C9C /* createStoryboard.storyboard in Resources */,
 				CDF28FAE26B08F6900241F13 /* closetStoryboard.storyboard in Resources */,
+				FD08F82F26B86B0B003E0C9C /* todayStoryboard.storyboard in Resources */,
 				CDF28F9B26B07C9000241F13 /* LaunchScreen.storyboard in Resources */,
-				FD23EEC026B1D1D5009FF48C /* todayStoryboard.storyboard in Resources */,
 				CDF28F9826B07C9000241F13 /* Assets.xcassets in Resources */,
 				CDF28F9626B07C8C00241F13 /* Main.storyboard in Resources */,
 				CDF28FAC26B08EF800241F13 /* addStoryboard.storyboard in Resources */,
-				FD23EEC626B1D22E009FF48C /* settingsStoryboard.storyboard in Resources */,
-				FD23EEC326B1D1FE009FF48C /* createStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDF28F9326B07C8C00241F13 /* ViewController.swift in Sources */,
-				FDED416426B4762700E8F7F7 /* CustomModalViewController.swift in Sources */,
+				FD08F83126B86B6C003E0C9C /* CustomModalViewController.swift in Sources */,
 				CDF28F8F26B07C8C00241F13 /* AppDelegate.swift in Sources */,
 				FDF281D126B36CB100017ACB /* TesteViewController.swift in Sources */,
 				FD430BE926B3329700F31DD2 /* AddNavigationController.swift in Sources */,

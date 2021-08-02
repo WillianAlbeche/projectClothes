@@ -28,7 +28,7 @@
         <!--Add-->
         <scene sceneID="p97-dz-KMq">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7yY-ne-LBw" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7yY-ne-LBw" customClass="AddNavigationController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Add" image="plus" catalog="system" id="96M-GS-BCU"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
