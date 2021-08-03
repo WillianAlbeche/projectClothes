@@ -22,6 +22,25 @@
 		FD430BE726B3236F00F31DD2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD430BE626B3236E00F31DD2 /* TabBarController.swift */; };
 		FD430BE926B3329700F31DD2 /* AddNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD430BE826B3329700F31DD2 /* AddNavigationController.swift */; };
 		FD4CE71326B9AB730014B05F /* WhiteBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE71226B9AB730014B05F /* WhiteBoardViewController.swift */; };
+		FD4CE71626B9DDEC0014B05F /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE71526B9DDEC0014B05F /* DrawingView.swift */; };
+		FD4CE72A26B9DDF60014B05F /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE71826B9DDF60014B05F /* Array+Extensions.swift */; };
+		FD4CE72B26B9DDF60014B05F /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE71926B9DDF60014B05F /* Math.swift */; };
+		FD4CE72C26B9DDF60014B05F /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE71A26B9DDF60014B05F /* UIImage+CVPixelBuffer.swift */; };
+		FD4CE72D26B9DDF60014B05F /* Predictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE71B26B9DDF60014B05F /* Predictions.swift */; };
+		FD4CE72E26B9DDF60014B05F /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE71C26B9DDF60014B05F /* UIImage+Extensions.swift */; };
+		FD4CE72F26B9DDF60014B05F /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE71D26B9DDF60014B05F /* CGImagePropertyOrientation.swift */; };
+		FD4CE73026B9DDF60014B05F /* UIImage+RawBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE71E26B9DDF60014B05F /* UIImage+RawBytes.swift */; };
+		FD4CE73126B9DDF60014B05F /* MLMultiArray+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE71F26B9DDF60014B05F /* MLMultiArray+Helpers.swift */; };
+		FD4CE73226B9DDF60014B05F /* MLModel+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72026B9DDF60014B05F /* MLModel+Images.swift */; };
+		FD4CE73326B9DDF60014B05F /* CoreML+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72126B9DDF60014B05F /* CoreML+Combine.swift */; };
+		FD4CE73426B9DDF60014B05F /* CVPixelBuffer+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72226B9DDF60014B05F /* CVPixelBuffer+Create.swift */; };
+		FD4CE73526B9DDF60014B05F /* CGImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72326B9DDF60014B05F /* CGImage+CVPixelBuffer.swift */; };
+		FD4CE73626B9DDF60014B05F /* NonMaxSuppression.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72426B9DDF60014B05F /* NonMaxSuppression.swift */; };
+		FD4CE73726B9DDF60014B05F /* CGImage+RawBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72526B9DDF60014B05F /* CGImage+RawBytes.swift */; };
+		FD4CE73826B9DDF60014B05F /* MLMultiArray+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72626B9DDF60014B05F /* MLMultiArray+Image.swift */; };
+		FD4CE73926B9DDF60014B05F /* CVPixelBuffer+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72726B9DDF60014B05F /* CVPixelBuffer+Resize.swift */; };
+		FD4CE73A26B9DDF60014B05F /* CVPixelBuffer+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72826B9DDF60014B05F /* CVPixelBuffer+Rotate.swift */; };
+		FD4CE73B26B9DDF60014B05F /* DeepLabV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72926B9DDF60014B05F /* DeepLabV3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +61,25 @@
 		FD430BE626B3236E00F31DD2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FD430BE826B3329700F31DD2 /* AddNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNavigationController.swift; sourceTree = "<group>"; };
 		FD4CE71226B9AB730014B05F /* WhiteBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteBoardViewController.swift; sourceTree = "<group>"; };
+		FD4CE71526B9DDEC0014B05F /* DrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		FD4CE71826B9DDF60014B05F /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		FD4CE71926B9DDF60014B05F /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		FD4CE71A26B9DDF60014B05F /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		FD4CE71B26B9DDF60014B05F /* Predictions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predictions.swift; sourceTree = "<group>"; };
+		FD4CE71C26B9DDF60014B05F /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		FD4CE71D26B9DDF60014B05F /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
+		FD4CE71E26B9DDF60014B05F /* UIImage+RawBytes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+RawBytes.swift"; sourceTree = "<group>"; };
+		FD4CE71F26B9DDF60014B05F /* MLMultiArray+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Helpers.swift"; sourceTree = "<group>"; };
+		FD4CE72026B9DDF60014B05F /* MLModel+Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLModel+Images.swift"; sourceTree = "<group>"; };
+		FD4CE72126B9DDF60014B05F /* CoreML+Combine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreML+Combine.swift"; sourceTree = "<group>"; };
+		FD4CE72226B9DDF60014B05F /* CVPixelBuffer+Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Create.swift"; sourceTree = "<group>"; };
+		FD4CE72326B9DDF60014B05F /* CGImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		FD4CE72426B9DDF60014B05F /* NonMaxSuppression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonMaxSuppression.swift; sourceTree = "<group>"; };
+		FD4CE72526B9DDF60014B05F /* CGImage+RawBytes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+RawBytes.swift"; sourceTree = "<group>"; };
+		FD4CE72626B9DDF60014B05F /* MLMultiArray+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Image.swift"; sourceTree = "<group>"; };
+		FD4CE72726B9DDF60014B05F /* CVPixelBuffer+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Resize.swift"; sourceTree = "<group>"; };
+		FD4CE72826B9DDF60014B05F /* CVPixelBuffer+Rotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Rotate.swift"; sourceTree = "<group>"; };
+		FD4CE72926B9DDF60014B05F /* DeepLabV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DeepLabV3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +140,13 @@
 		CDF28FA326B081A100241F13 /* Add */ = {
 			isa = PBXGroup;
 			children = (
+				FD4CE71426B9DC580014B05F /* Ml */,
 				FD08F83026B86B6C003E0C9C /* CustomModalViewController.swift */,
+				FD4CE71526B9DDEC0014B05F /* DrawingView.swift */,
 				CDF28FAB26B08EF800241F13 /* addStoryboard.storyboard */,
 				FD430BE826B3329700F31DD2 /* AddNavigationController.swift */,
 				FD4CE71226B9AB730014B05F /* WhiteBoardViewController.swift */,
+				FD4CE71726B9DDF60014B05F /* CoreMLHelpers */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -132,6 +173,38 @@
 				FD08F82C26B86B02003E0C9C /* createStoryboard.storyboard */,
 			);
 			path = Create;
+			sourceTree = "<group>";
+		};
+		FD4CE71426B9DC580014B05F /* Ml */ = {
+			isa = PBXGroup;
+			children = (
+				FD4CE72926B9DDF60014B05F /* DeepLabV3.mlmodel */,
+			);
+			path = Ml;
+			sourceTree = "<group>";
+		};
+		FD4CE71726B9DDF60014B05F /* CoreMLHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				FD4CE71826B9DDF60014B05F /* Array+Extensions.swift */,
+				FD4CE71926B9DDF60014B05F /* Math.swift */,
+				FD4CE71A26B9DDF60014B05F /* UIImage+CVPixelBuffer.swift */,
+				FD4CE71B26B9DDF60014B05F /* Predictions.swift */,
+				FD4CE71C26B9DDF60014B05F /* UIImage+Extensions.swift */,
+				FD4CE71D26B9DDF60014B05F /* CGImagePropertyOrientation.swift */,
+				FD4CE71E26B9DDF60014B05F /* UIImage+RawBytes.swift */,
+				FD4CE71F26B9DDF60014B05F /* MLMultiArray+Helpers.swift */,
+				FD4CE72026B9DDF60014B05F /* MLModel+Images.swift */,
+				FD4CE72126B9DDF60014B05F /* CoreML+Combine.swift */,
+				FD4CE72226B9DDF60014B05F /* CVPixelBuffer+Create.swift */,
+				FD4CE72326B9DDF60014B05F /* CGImage+CVPixelBuffer.swift */,
+				FD4CE72426B9DDF60014B05F /* NonMaxSuppression.swift */,
+				FD4CE72526B9DDF60014B05F /* CGImage+RawBytes.swift */,
+				FD4CE72626B9DDF60014B05F /* MLMultiArray+Image.swift */,
+				FD4CE72726B9DDF60014B05F /* CVPixelBuffer+Resize.swift */,
+				FD4CE72826B9DDF60014B05F /* CVPixelBuffer+Rotate.swift */,
+			);
+			path = CoreMLHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,12 +283,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDF28F9326B07C8C00241F13 /* ViewController.swift in Sources */,
+				FD4CE73626B9DDF60014B05F /* NonMaxSuppression.swift in Sources */,
+				FD4CE73326B9DDF60014B05F /* CoreML+Combine.swift in Sources */,
+				FD4CE72A26B9DDF60014B05F /* Array+Extensions.swift in Sources */,
 				FD08F83126B86B6C003E0C9C /* CustomModalViewController.swift in Sources */,
 				CDF28F8F26B07C8C00241F13 /* AppDelegate.swift in Sources */,
+				FD4CE72D26B9DDF60014B05F /* Predictions.swift in Sources */,
+				FD4CE72C26B9DDF60014B05F /* UIImage+CVPixelBuffer.swift in Sources */,
+				FD4CE73126B9DDF60014B05F /* MLMultiArray+Helpers.swift in Sources */,
+				FD4CE73426B9DDF60014B05F /* CVPixelBuffer+Create.swift in Sources */,
+				FD4CE72F26B9DDF60014B05F /* CGImagePropertyOrientation.swift in Sources */,
+				FD4CE71626B9DDEC0014B05F /* DrawingView.swift in Sources */,
+				FD4CE73726B9DDF60014B05F /* CGImage+RawBytes.swift in Sources */,
+				FD4CE73A26B9DDF60014B05F /* CVPixelBuffer+Rotate.swift in Sources */,
 				FD4CE71326B9AB730014B05F /* WhiteBoardViewController.swift in Sources */,
+				FD4CE73826B9DDF60014B05F /* MLMultiArray+Image.swift in Sources */,
 				FD430BE926B3329700F31DD2 /* AddNavigationController.swift in Sources */,
 				FD430BE726B3236F00F31DD2 /* TabBarController.swift in Sources */,
+				FD4CE72E26B9DDF60014B05F /* UIImage+Extensions.swift in Sources */,
+				FD4CE73B26B9DDF60014B05F /* DeepLabV3.mlmodel in Sources */,
+				FD4CE73526B9DDF60014B05F /* CGImage+CVPixelBuffer.swift in Sources */,
+				FD4CE73226B9DDF60014B05F /* MLModel+Images.swift in Sources */,
+				FD4CE73026B9DDF60014B05F /* UIImage+RawBytes.swift in Sources */,
 				CDF28F9126B07C8C00241F13 /* SceneDelegate.swift in Sources */,
+				FD4CE72B26B9DDF60014B05F /* Math.swift in Sources */,
+				FD4CE73926B9DDF60014B05F /* CVPixelBuffer+Resize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
