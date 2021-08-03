@@ -7,34 +7,25 @@
 
 import UIKit
 
-class CustomModalViewController: UIViewController, UINavigationControllerDelegate, UIColorPickerViewControllerDelegate, UIImagePickerControllerDelegate {
-  
+class CustomModalViewController:  UIViewController, UINavigationControllerDelegate, UIColorPickerViewControllerDelegate, UIImagePickerControllerDelegate {
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            picker.dismiss(animated: true, completion: nil)
-        }
-    var imageViewSender: UIImage?
+        picker.dismiss(animated: true, completion: nil)
+    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-
-            
-
-            imageViewSender = image
-
-            picker.dismiss(animated: true, completion: nil)
-
-            performSegue(withIdentifier: "WhiteBoardViewController", sender: image)
+        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        picker.dismiss(animated: true, completion: nil)
+        
+        let storyboard = UIStoryboard(name: "addStoryboard", bundle: nil)
+        guard let whiteVC = storyboard.instantiateViewController(identifier: "WhiteBoardViewController") as? WhiteBoardViewController else { return }
+        whiteVC.imageReceive = image
+        
+        navigationController?.pushViewController(whiteVC, animated: true)
        
-        }
-
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            guard let destination = segue.destination as? WhiteBoardViewController else{return}
-            if segue.identifier == "WhiteBoardViewController" {
-                destination.imageReceive = imageViewSender
-                
-                self.show(destination, sender: nil)
-            }
-        }
+    }
+    
+    
     
     
     lazy var titleLabel: UILabel = {
@@ -47,15 +38,15 @@ class CustomModalViewController: UIViewController, UINavigationControllerDelegat
     }()
     
     
-
+    
     
     lazy var but1 : UIButton = {
-           
-           let buttom = UIButton()
+        
+        let buttom = UIButton()
         buttom.frame = CGRect(x: 0, y: 93, width: 100, height: 100)
         
-           buttom.backgroundColor = .white
-//           buttom .setTitle("Câmera", for: .normal)
+        buttom.backgroundColor = .white
+        //           buttom .setTitle("Câmera", for: .normal)
         buttom.setImage(UIImage(systemName: "photo.fill"), for: .normal)
         buttom.tintColor = UIColor(named: "BG-Color-2")
         buttom.layer.cornerRadius = 50
@@ -66,32 +57,32 @@ class CustomModalViewController: UIViewController, UINavigationControllerDelegat
         buttom.layer.shadowOffset = .zero
         buttom.layer.shadowRadius = 30
         buttom.addTarget(self, action: #selector(gallery(_:)), for: .touchUpInside)
-           return buttom
-           
-       }()
+        return buttom
+        
+    }()
     @IBAction func gallery(_ sender: Any?) {
         let imagePicketController = UIImagePickerController()
-                imagePicketController.delegate = self
-
-                if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-                    imagePicketController.sourceType = .photoLibrary
-                    self.present(imagePicketController, animated: true, completion: nil)
-                }else{
-                    print("Camera not available")
-                }
+        imagePicketController.delegate = self
+        
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            imagePicketController.sourceType = .photoLibrary
+            self.present(imagePicketController, animated: true, completion: nil)
+        }else{
+            print("Camera not available")
+        }
     }
-   
     
-       lazy var but2 : UIButton = {
+    
+    lazy var but2 : UIButton = {
         let buttom = UIButton()
-     buttom.frame = CGRect(x: 0, y: 93, width: 100, height: 100)
-     
+        buttom.frame = CGRect(x: 0, y: 93, width: 100, height: 100)
+        
         buttom.backgroundColor = .white
-//           buttom .setTitle("Câmera", for: .normal)
-     buttom.setImage(UIImage(systemName: "camera.fill"), for: .normal)
-     buttom.tintColor = UIColor(named: "BG-Color-2")
-     buttom.layer.cornerRadius = 50
-     buttom.imageView?.contentMode = .scaleAspectFit
+        //           buttom .setTitle("Câmera", for: .normal)
+        buttom.setImage(UIImage(systemName: "camera.fill"), for: .normal)
+        buttom.tintColor = UIColor(named: "BG-Color-2")
+        buttom.layer.cornerRadius = 50
+        buttom.imageView?.contentMode = .scaleAspectFit
         buttom.imageEdgeInsets = UIEdgeInsets(top: 75, left: 75, bottom: 75, right: 75);
         buttom.layer.shadowColor = UIColor.gray.cgColor
         buttom.layer.shadowOpacity = 0.3
@@ -99,11 +90,11 @@ class CustomModalViewController: UIViewController, UINavigationControllerDelegat
         buttom.layer.shadowRadius = 30
         buttom.addTarget(self, action: #selector(camera(_:)), for: .touchUpInside)
         return buttom
-       }()
+    }()
     @IBAction func camera(_ sender: Any?) {
         
         let imagePicketController = UIImagePickerController()
-                imagePicketController.delegate = self
+        imagePicketController.delegate = self
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             imagePicketController.sourceType = .camera
             self.present(imagePicketController, animated: true, completion: nil)
@@ -112,16 +103,16 @@ class CustomModalViewController: UIViewController, UINavigationControllerDelegat
         }
         print("camera")
     }
-       lazy var but3 : UIButton = {
+    lazy var but3 : UIButton = {
         let buttom = UIButton()
-     buttom.frame = CGRect(x: 0, y: 93, width: 100, height: 100)
-     
+        buttom.frame = CGRect(x: 0, y: 93, width: 100, height: 100)
+        
         buttom.backgroundColor = .white
-//           buttom .setTitle("Câmera", for: .normal)
-     buttom.setImage(UIImage(systemName: "sparkles"), for: .normal)
-     buttom.tintColor = UIColor(named: "BG-Color-2")
-     buttom.layer.cornerRadius = 50
-     buttom.imageView?.contentMode = .scaleAspectFit
+        //           buttom .setTitle("Câmera", for: .normal)
+        buttom.setImage(UIImage(systemName: "sparkles"), for: .normal)
+        buttom.tintColor = UIColor(named: "BG-Color-2")
+        buttom.layer.cornerRadius = 50
+        buttom.imageView?.contentMode = .scaleAspectFit
         buttom.imageEdgeInsets = UIEdgeInsets(top: 75, left: 75, bottom: 75, right: 75);
         buttom.layer.shadowColor = UIColor.gray.cgColor
         buttom.layer.shadowOpacity = 0.3
@@ -132,47 +123,47 @@ class CustomModalViewController: UIViewController, UINavigationControllerDelegat
         
         
         return buttom
-           
-       }()
+        
+    }()
     
     
-        lazy var notesLabel: UILabel = {
-            let label = UILabel()
-            label.text = "      Galeria                    Câmera                 Sugestões"
-            label.font = .systemFont(ofSize: 16)
-            label.textColor = .darkGray
-            label.numberOfLines = 0
-            return label
-        }()
-       
+    lazy var notesLabel: UILabel = {
+        let label = UILabel()
+        label.text = "      Galeria                    Câmera                 Sugestões"
+        label.font = .systemFont(ofSize: 16)
+        label.textColor = .darkGray
+        label.numberOfLines = 0
+        return label
+    }()
+    
     
     lazy var contentStackHorizontal: UIStackView = {
-//           let spacer1 = UIView()
-//           let spacer2 = UIView()
-//           let spacer3 = UIView()
-//           let spacer4 = UIView()
-           
+        //           let spacer1 = UIView()
+        //           let spacer2 = UIView()
+        //           let spacer3 = UIView()
+        //           let spacer4 = UIView()
+        
         
         
         // tirei o spacer
-           let stackView = UIStackView(arrangedSubviews: [but1 , but2, but3])
-           stackView.axis = .horizontal
+        let stackView = UIStackView(arrangedSubviews: [but1 , but2, but3])
+        stackView.axis = .horizontal
         stackView.alignment = .fill
         stackView.distribution = .fillEqually
         stackView.spacing = 37
-           return stackView
-       }()
-        
-        
-       
-       lazy var contentStackView: UIStackView = {
-           let spacer = UIView()
-           let spacer2 = UIView()
-           let stackView = UIStackView(arrangedSubviews: [titleLabel,spacer,contentStackHorizontal,notesLabel, spacer2])
-           stackView.axis = .vertical
-           stackView.spacing = 12.0
-           return stackView
-       }()
+        return stackView
+    }()
+    
+    
+    
+    lazy var contentStackView: UIStackView = {
+        let spacer = UIView()
+        let spacer2 = UIView()
+        let stackView = UIStackView(arrangedSubviews: [titleLabel,spacer,contentStackHorizontal,notesLabel, spacer2])
+        stackView.axis = .vertical
+        stackView.spacing = 12.0
+        return stackView
+    }()
     
     lazy var containerView: UIView = {
         let view = UIView()
@@ -206,7 +197,7 @@ class CustomModalViewController: UIViewController, UINavigationControllerDelegat
         super.viewDidLoad()
         setupView()
         setupConstraints()
-    
+        
         
         
         // tap gesture on dimmed view to dismiss
@@ -214,6 +205,17 @@ class CustomModalViewController: UIViewController, UINavigationControllerDelegat
         dimmedView.addGestureRecognizer(tapGesture)
         
         setupPanGesture()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        
     }
     
     @objc func handleCloseAction() {

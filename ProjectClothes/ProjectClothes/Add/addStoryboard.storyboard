@@ -28,26 +28,32 @@
         <!--White Board View Controller-->
         <scene sceneID="aEL-9q-Qpv">
             <objects>
-                <viewController id="9Ke-wb-Uun" customClass="WhiteBoardViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WhiteBoardViewController" id="9Ke-wb-Uun" customClass="WhiteBoardViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MZL-fw-DCu" customClass="Whi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="STw-O7-XVt">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="868"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="STw-O7-XVt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VC6-nX-BHb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="STw-O7-XVt" firstAttribute="trailing" secondItem="VC6-nX-BHb" secondAttribute="trailing" id="676-2Y-b3H"/>
+                            <constraint firstItem="STw-O7-XVt" firstAttribute="leading" secondItem="VC6-nX-BHb" secondAttribute="leading" id="Ebt-vC-dif"/>
+                            <constraint firstAttribute="bottom" secondItem="STw-O7-XVt" secondAttribute="bottom" id="Vxd-eq-VVG"/>
+                            <constraint firstItem="STw-O7-XVt" firstAttribute="top" secondItem="MZL-fw-DCu" secondAttribute="top" id="qEW-MO-Yum"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="f47-AS-kqC"/>
                     <connections>
                         <outlet property="imageView" destination="STw-O7-XVt" id="b16-c2-SEX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hA5-gN-oAH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4107.2463768115949" y="130.58035714285714"/>
+            <point key="canvasLocation" x="5017.3913043478269" y="130.58035714285714"/>
         </scene>
         <!--Add-->
         <scene sceneID="p97-dz-KMq">

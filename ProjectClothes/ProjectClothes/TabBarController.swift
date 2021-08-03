@@ -26,10 +26,12 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate, UIViewCo
 //            let storyboard = UIStoryboard(name: "addStoryboard", bundle: nil)
 //            let newVC = storyboard.instantiateViewController(identifier: "TesteViewController") as! TesteViewController
 //
-            let t2 = CustomModalViewController()
-            t2.modalPresentationStyle = .overCurrentContext
             
-            tabBarController.present(t2, animated: false)
+            let t2 = CustomModalViewController()
+            let nc = UINavigationController(rootViewController: t2)
+            nc.modalPresentationStyle = .overFullScreen
+            
+            tabBarController.present(nc, animated: false)
             
             
             
