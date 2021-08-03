@@ -8,10 +8,12 @@
 import UIKit
 
 class WhiteBoardViewController: UIViewController {
-
+    @IBOutlet weak var imageView: UIImageView!
+    var imageReceive : UIImage?
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem?.image = UIImage(systemName: "chevron.backward")
+        imageView.image = imageReceive
         // Do any additional setup after loading the view.
     }
     

@@ -7,8 +7,35 @@
 
 import UIKit
 
-class CustomModalViewController: UIViewController {
-    // define lazy views
+class CustomModalViewController: UIViewController, UINavigationControllerDelegate, UIColorPickerViewControllerDelegate, UIImagePickerControllerDelegate {
+  
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            picker.dismiss(animated: true, completion: nil)
+        }
+    var imageViewSender: UIImage?
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+
+            
+
+            imageViewSender = image
+
+            picker.dismiss(animated: true, completion: nil)
+
+            performSegue(withIdentifier: "WhiteBoardViewController", sender: image)
+       
+        }
+
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            guard let destination = segue.destination as? WhiteBoardViewController else{return}
+            if segue.identifier == "WhiteBoardViewController" {
+                destination.imageReceive = imageViewSender
+                
+                self.show(destination, sender: nil)
+            }
+        }
+    
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -20,15 +47,7 @@ class CustomModalViewController: UIViewController {
     }()
     
     
-//
-//    lazy var notesLabel: UILabel = {
-//        let label = UILabel()
-//        label.text = "Camera, galeria, sugestoes"
-//        label.font = .systemFont(ofSize: 16)
-//        label.textColor = .darkGray
-//        label.numberOfLines = 0
-//        return label
-//    }()
+
     
     lazy var but1 : UIButton = {
            
@@ -51,7 +70,15 @@ class CustomModalViewController: UIViewController {
            
        }()
     @IBAction func gallery(_ sender: Any?) {
-        print("gallery")
+        let imagePicketController = UIImagePickerController()
+                imagePicketController.delegate = self
+
+                if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+                    imagePicketController.sourceType = .photoLibrary
+                    self.present(imagePicketController, animated: true, completion: nil)
+                }else{
+                    print("Camera not available")
+                }
     }
    
     
@@ -74,6 +101,15 @@ class CustomModalViewController: UIViewController {
         return buttom
        }()
     @IBAction func camera(_ sender: Any?) {
+        
+        let imagePicketController = UIImagePickerController()
+                imagePicketController.delegate = self
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicketController.sourceType = .camera
+            self.present(imagePicketController, animated: true, completion: nil)
+        }else{
+            print("Camera not available")
+        }
         print("camera")
     }
        lazy var but3 : UIButton = {
