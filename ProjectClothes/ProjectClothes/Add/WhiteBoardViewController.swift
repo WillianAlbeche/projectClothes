@@ -1,23 +1,21 @@
 //
-//  AddNavigationViewController.swift
+//  WhiteBoardViewController.swift
 //  ProjectClothes
 //
-//  Created by Heitor Feijó Kunrath on 29/07/21.
+//  Created by Heitor Feijó Kunrath on 03/08/21.
 //
 
 import UIKit
 
-class AddNavigationController: UINavigationController{
+class WhiteBoardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        navigationItem.backBarButtonItem?.image = UIImage(systemName: "chevron.backward")
+        // Do any additional setup after loading the view.
     }
-  
+    
 
-    
-    
     /*
     // MARK: - Navigation
 
