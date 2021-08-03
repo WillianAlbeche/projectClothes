@@ -9,7 +9,7 @@ import UIKit
 
 
 class TabBarController: UITabBarController, UITabBarControllerDelegate, UIViewControllerTransitioningDelegate{
-    let addCho = AddChoice()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self

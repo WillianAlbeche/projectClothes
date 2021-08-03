@@ -46,16 +46,14 @@ class CustomModalViewController: UIViewController {
         buttom.layer.shadowOpacity = 0.3
         buttom.layer.shadowOffset = .zero
         buttom.layer.shadowRadius = 30
-        
+        buttom.addTarget(self, action: #selector(gallery(_:)), for: .touchUpInside)
            return buttom
            
        }()
-    func camera(){
-        
-        
-        
-        
+    @IBAction func gallery(_ sender: Any?) {
+        print("gallery")
     }
+   
     
        lazy var but2 : UIButton = {
         let buttom = UIButton()
@@ -72,9 +70,12 @@ class CustomModalViewController: UIViewController {
         buttom.layer.shadowOpacity = 0.3
         buttom.layer.shadowOffset = .zero
         buttom.layer.shadowRadius = 30
-     
+        buttom.addTarget(self, action: #selector(camera(_:)), for: .touchUpInside)
         return buttom
        }()
+    @IBAction func camera(_ sender: Any?) {
+        print("camera")
+    }
        lazy var but3 : UIButton = {
         let buttom = UIButton()
      buttom.frame = CGRect(x: 0, y: 93, width: 100, height: 100)
