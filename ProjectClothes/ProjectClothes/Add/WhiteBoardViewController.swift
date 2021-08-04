@@ -14,6 +14,20 @@ import CoreML
 class WhiteBoardViewController: UIViewController {
     
     @IBOutlet var editView: DrawingView!
+    @IBOutlet weak var nextButton: UIButton!
+    var image1: UIImage?
+    @IBAction func nextButtonAction(_ sender: Any) {
+        
+        let renderer = UIGraphicsImageRenderer(size: editView.bounds.size)
+        image1 = renderer.image { ctx in
+            editView.drawHierarchy(in: editView.bounds, afterScreenUpdates: true)
+        }
+        
+        performSegue(withIdentifier: "goToConfig", sender: image1)
+    }
+    @IBOutlet weak var iaButton: UIButton!
+    @IBAction func iaButtonAction(_ sender: Any) {
+    }
     var imagenew: UIImage?
     var imageReceive : UIImage?
 
@@ -35,6 +49,7 @@ class WhiteBoardViewController: UIViewController {
         imagenew = imageReceive
         guard let newImage = imagenew?.removeBackground(returnResult: .finalImage) else { return }
         
+        
         self.editView.image = newImage
         
         //        //Rotation
@@ -51,7 +66,17 @@ class WhiteBoardViewController: UIViewController {
         //        let pan = UIPanGestureRecognizer()
         //        pan.addTarget(self, action: #selector(handlePanGesture))
         //        self.editView.addGestureRecognizer(pan)
+
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? ClothesConfigurationViewController
+        if segue.identifier == "goToConfig" {
+            destination?.imageReceive = image1
+        }
+    }
+    
+    
     
     @objc func handlePinchGesture(_ recognizer: UIPinchGestureRecognizer) {
         if recognizer.state == .began {

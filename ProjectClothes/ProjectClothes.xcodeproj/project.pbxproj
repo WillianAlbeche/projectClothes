@@ -15,6 +15,7 @@
 		CDF28F9B26B07C9000241F13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF28F9926B07C9000241F13 /* LaunchScreen.storyboard */; };
 		CDF28FAC26B08EF800241F13 /* addStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF28FAB26B08EF800241F13 /* addStoryboard.storyboard */; };
 		CDF28FAE26B08F6900241F13 /* closetStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF28FAD26B08F6900241F13 /* closetStoryboard.storyboard */; };
+		F85A4BA026BB27540020B5F0 /* ClothesConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4B9F26BB27540020B5F0 /* ClothesConfigurationViewController.swift */; };
 		FD08F82B26B86AF4003E0C9C /* settingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08F82A26B86AF4003E0C9C /* settingsStoryboard.storyboard */; };
 		FD08F82D26B86B02003E0C9C /* createStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08F82C26B86B02003E0C9C /* createStoryboard.storyboard */; };
 		FD08F82F26B86B0B003E0C9C /* todayStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08F82E26B86B0B003E0C9C /* todayStoryboard.storyboard */; };
@@ -54,6 +55,7 @@
 		CDF28F9C26B07C9000241F13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDF28FAB26B08EF800241F13 /* addStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = addStoryboard.storyboard; sourceTree = "<group>"; };
 		CDF28FAD26B08F6900241F13 /* closetStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = closetStoryboard.storyboard; sourceTree = "<group>"; };
+		F85A4B9F26BB27540020B5F0 /* ClothesConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesConfigurationViewController.swift; sourceTree = "<group>"; };
 		FD08F82A26B86AF4003E0C9C /* settingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = settingsStoryboard.storyboard; sourceTree = "<group>"; };
 		FD08F82C26B86B02003E0C9C /* createStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = createStoryboard.storyboard; sourceTree = "<group>"; };
 		FD08F82E26B86B0B003E0C9C /* todayStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = todayStoryboard.storyboard; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				FD4CE71426B9DC580014B05F /* Ml */,
+				F85A4B9F26BB27540020B5F0 /* ClothesConfigurationViewController.swift */,
 				FD08F83026B86B6C003E0C9C /* CustomModalViewController.swift */,
 				FD4CE71526B9DDEC0014B05F /* DrawingView.swift */,
 				CDF28FAB26B08EF800241F13 /* addStoryboard.storyboard */,
@@ -301,6 +304,7 @@
 				FD430BE926B3329700F31DD2 /* AddNavigationController.swift in Sources */,
 				FD430BE726B3236F00F31DD2 /* TabBarController.swift in Sources */,
 				FD4CE72E26B9DDF60014B05F /* UIImage+Extensions.swift in Sources */,
+				F85A4BA026BB27540020B5F0 /* ClothesConfigurationViewController.swift in Sources */,
 				FD4CE73B26B9DDF60014B05F /* DeepLabV3.mlmodel in Sources */,
 				FD4CE73526B9DDF60014B05F /* CGImage+CVPixelBuffer.swift in Sources */,
 				FD4CE73226B9DDF60014B05F /* MLModel+Images.swift in Sources */,
