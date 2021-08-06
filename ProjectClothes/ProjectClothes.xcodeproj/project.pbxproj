@@ -42,6 +42,7 @@
 		FD4CE73926B9DDF60014B05F /* CVPixelBuffer+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72726B9DDF60014B05F /* CVPixelBuffer+Resize.swift */; };
 		FD4CE73A26B9DDF60014B05F /* CVPixelBuffer+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72826B9DDF60014B05F /* CVPixelBuffer+Rotate.swift */; };
 		FD4CE73B26B9DDF60014B05F /* DeepLabV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72926B9DDF60014B05F /* DeepLabV3.mlmodel */; };
+		FD949F8126BDAB0C00937C5C /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD949F8026BDAB0C00937C5C /* CreateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		FD4CE72726B9DDF60014B05F /* CVPixelBuffer+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Resize.swift"; sourceTree = "<group>"; };
 		FD4CE72826B9DDF60014B05F /* CVPixelBuffer+Rotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Rotate.swift"; sourceTree = "<group>"; };
 		FD4CE72926B9DDF60014B05F /* DeepLabV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DeepLabV3.mlmodel; sourceTree = "<group>"; };
+		FD949F8026BDAB0C00937C5C /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				FD08F82C26B86B02003E0C9C /* createStoryboard.storyboard */,
+				FD949F8026BDAB0C00937C5C /* CreateViewController.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				FD4CE73A26B9DDF60014B05F /* CVPixelBuffer+Rotate.swift in Sources */,
 				FD4CE71326B9AB730014B05F /* WhiteBoardViewController.swift in Sources */,
 				FD4CE73826B9DDF60014B05F /* MLMultiArray+Image.swift in Sources */,
+				FD949F8126BDAB0C00937C5C /* CreateViewController.swift in Sources */,
 				FD430BE926B3329700F31DD2 /* AddNavigationController.swift in Sources */,
 				FD430BE726B3236F00F31DD2 /* TabBarController.swift in Sources */,
 				FD4CE72E26B9DDF60014B05F /* UIImage+Extensions.swift in Sources */,
@@ -459,7 +463,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KY3S643HND;
+				DEVELOPMENT_TEAM = K2XYML6X84;
 				INFOPLIST_FILE = ProjectClothes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -478,7 +482,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KY3S643HND;
+				DEVELOPMENT_TEAM = K2XYML6X84;
 				INFOPLIST_FILE = ProjectClothes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

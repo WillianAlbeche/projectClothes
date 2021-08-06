@@ -3,28 +3,11 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="s0d-6b-0kx">
-            <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="VcR-4G-Wav"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="89.732142857142847"/>
-        </scene>
         <!--Create-->
         <scene sceneID="A3y-qZ-rrk">
             <objects>
@@ -38,18 +21,73 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="oy8-mt-Oim"/>
+                        <segue destination="nBY-HC-TZS" kind="relationship" relationship="rootViewController" id="TQr-ua-BaT"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zx4-sg-BcW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
         </scene>
+        <!--Create View Controller-->
+        <scene sceneID="ao8-Yc-Zsp">
+            <objects>
+                <viewController id="nBY-HC-TZS" customClass="CreateViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zpX-PI-htO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tv-tX-uT7">
+                                <rect key="frame" x="224" y="98" width="160" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7oF-1W-Sl4"/>
+                                    <constraint firstAttribute="width" constant="160" id="RWr-qE-VKx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <state key="normal" title="Adicionar peça">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addItem:" destination="nBY-HC-TZS" eventType="touchUpInside" id="sV2-5j-GwQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59W-hc-x4G">
+                                <rect key="frame" x="30" y="98" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="8ep-kR-2D9"/>
+                                    <constraint firstAttribute="height" constant="50" id="cgx-SR-Ld9"/>
+                                </constraints>
+                                <color key="tintColor" red="0.77108126880000005" green="0.12614390249999999" blue="0.17236095670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.77108126880000005" green="0.12614390249999999" blue="0.17236095670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <imageReference key="image" image="trash.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Er-4K-xpb"/>
+                        <color key="backgroundColor" red="0.96937447789999998" green="0.9729323983" blue="0.98358923200000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="1tv-tX-uT7" firstAttribute="top" secondItem="2Er-4K-xpb" secondAttribute="top" constant="10" id="Fq2-sp-tat"/>
+                            <constraint firstItem="2Er-4K-xpb" firstAttribute="trailing" secondItem="1tv-tX-uT7" secondAttribute="trailing" constant="30" id="PhI-M1-eDY"/>
+                            <constraint firstItem="59W-hc-x4G" firstAttribute="top" secondItem="2Er-4K-xpb" secondAttribute="top" constant="10" id="S43-g9-FRt"/>
+                            <constraint firstItem="59W-hc-x4G" firstAttribute="leading" secondItem="2Er-4K-xpb" secondAttribute="leading" constant="30" id="hdG-dc-47x"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1zn-Ie-pbX"/>
+                    <connections>
+                        <outlet property="addItem" destination="1tv-tX-uT7" id="sMo-GV-8CE"/>
+                        <outlet property="deleteButton" destination="59W-hc-x4G" id="kNy-HJ-fyb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T5S-ym-0Rt" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1218.840579710145" y="89.732142857142847"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="trash.fill" catalog="system" width="121" height="128"/>
         <image name="wand.and.stars" catalog="system" width="128" height="113"/>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
