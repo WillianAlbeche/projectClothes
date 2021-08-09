@@ -290,7 +290,8 @@
                                             <color key="titleColor" red="0.043137254901960784" green="0.13725490196078433" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="tsd-xi-Oye" kind="presentation" id="DV2-Cm-XHk"/>
+                                            <action selector="categoryAction:" destination="w22-R3-u5x" eventType="touchUpInside" id="2N4-9Y-pUa"/>
+                                            <segue destination="b5F-nf-TIE" kind="presentation" identifier="goToModal" id="DV2-Cm-XHk"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -362,30 +363,399 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOC-nU-JH7">
-                                <rect key="frame" x="20" y="16" width="96" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.46274509800000002" green="0.47058823529999999" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title=" Categoria" image="chevron.left" catalog="system">
-                                    <color key="titleColor" name="BG-Color-2"/>
-                                </state>
-                                <connections>
-                                    <action selector="backButtonAction:" destination="tsd-xi-Oye" eventType="touchUpInside" id="aZV-hA-gja"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="V3L-RP-GDX">
+                                <rect key="frame" x="30" y="122" width="354" height="248"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9k1-uh-vcw">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="N3z-5c-Cbg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Roupa inteira">
+                                            <color key="titleColor" red="0.043137254901960784" green="0.13725490196078433" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fullSizeAction:" destination="tsd-xi-Oye" eventType="touchUpInside" id="6wp-gp-GLp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="di8-4K-qzV">
+                                        <rect key="frame" x="0.0" y="52" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="9TS-NO-swa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Peça superior">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEs-8F-Wu3">
+                                        <rect key="frame" x="0.0" y="104" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="jVj-yG-qfh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Peça inferior">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2A-bD-ct4">
+                                        <rect key="frame" x="0.0" y="156" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Tjw-Xa-WFh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Sapato">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shoesAction:" destination="tsd-xi-Oye" eventType="touchUpInside" id="cv6-A9-dvt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8Y-rA-PZr">
+                                        <rect key="frame" x="0.0" y="208" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="TDE-ve-oud"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Acessórios">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="icd-h5-5yG"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.46274509800000002" green="0.47058823529999999" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="V3L-RP-GDX" firstAttribute="leading" secondItem="icd-h5-5yG" secondAttribute="leading" constant="30" id="0x7-ga-3Ps"/>
+                            <constraint firstItem="icd-h5-5yG" firstAttribute="trailing" secondItem="V3L-RP-GDX" secondAttribute="trailing" constant="30" id="8jy-BR-iDY"/>
+                            <constraint firstItem="V3L-RP-GDX" firstAttribute="top" secondItem="jQT-OM-J76" secondAttribute="topMargin" constant="66" id="bwd-zv-mGs"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xpa-93-Qsy"/>
                     <value key="contentSizeForViewInPopover" type="size" width="414" height="367"/>
                     <connections>
-                        <outlet property="backButton" destination="uOC-nU-JH7" id="hY5-rJ-bhR"/>
+                        <outlet property="accessoriesButton" destination="Z8Y-rA-PZr" id="BgY-oM-btq"/>
+                        <outlet property="bottomPiceButton" destination="cEs-8F-Wu3" id="Dkl-fF-Xem"/>
+                        <outlet property="fullSizeClothesButton" destination="9k1-uh-vcw" id="4NS-Mj-o1x"/>
+                        <outlet property="shoebutton" destination="Q2A-bD-ct4" id="mb0-f0-afd"/>
+                        <outlet property="topPieceButton" destination="di8-4K-qzV" id="ext-b9-ZUa"/>
+                        <segue destination="GeA-2B-aK3" kind="show" identifier="goToFullSize" id="Xa1-ce-7Sa"/>
+                        <segue destination="7gc-V1-J3Y" kind="presentation" id="cAY-3f-XxD"/>
+                        <segue destination="3YF-vI-niR" kind="presentation" id="7aE-BI-azn"/>
+                        <segue destination="PFl-ee-ubY" kind="presentation" identifier="goToShoes" id="Vi6-wL-NIv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8W-MZ-Bo7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7004" y="90"/>
+            <point key="canvasLocation" x="7913.04347826087" y="89.732142857142847"/>
+        </scene>
+        <!--Top Clothes View Controller-->
+        <scene sceneID="kDU-Yv-YKC">
+            <objects>
+                <viewController id="7gc-V1-J3Y" customClass="TopClothesViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t2F-CI-yGC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4pP-9g-pZf"/>
+                        <color key="backgroundColor" red="0.46274509803921571" green="0.47058823529411764" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mg2-on-ObH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8821.7391304347839" y="89.732142857142847"/>
+        </scene>
+        <!--Bottom Clothes View Controller-->
+        <scene sceneID="wO3-yc-auM">
+            <objects>
+                <viewController id="3YF-vI-niR" customClass="BottomClothesViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4UJ-73-2tO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nAV-ZE-mpg">
+                                <rect key="frame" x="30" y="66" width="354" height="184"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggm-hy-NLp">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="WSm-gu-MYL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Calça">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfC-0Q-d9h">
+                                        <rect key="frame" x="0.0" y="48" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="2bQ-5K-uBd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Bermuda / Short">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhT-vj-Cdu">
+                                        <rect key="frame" x="0.0" y="96" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="LQp-1y-N3E"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Saia">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyV-aY-4mN">
+                                        <rect key="frame" x="0.0" y="144" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Fcz-er-CYf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Legging">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jdm-u2-9Zn"/>
+                        <color key="backgroundColor" red="0.46274509803921571" green="0.47058823529411764" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nAV-ZE-mpg" firstAttribute="leading" secondItem="Jdm-u2-9Zn" secondAttribute="leading" constant="30" id="FL9-VG-S1O"/>
+                            <constraint firstItem="Jdm-u2-9Zn" firstAttribute="trailing" secondItem="nAV-ZE-mpg" secondAttribute="trailing" constant="30" id="btn-lp-YKF"/>
+                            <constraint firstItem="nAV-ZE-mpg" firstAttribute="top" secondItem="Jdm-u2-9Zn" secondAttribute="top" constant="66" id="hOc-k6-MDH"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0A-LD-t9m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7912" y="744"/>
+        </scene>
+        <!--Shoes View Controller-->
+        <scene sceneID="JQe-21-hSO">
+            <objects>
+                <viewController id="PFl-ee-ubY" customClass="ShoesViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="31j-mq-PqA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PDi-zb-WO1">
+                                <rect key="frame" x="30" y="66" width="354" height="520"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htR-bd-kSB">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="tTo-T7-P9Q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Tênis">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRU-z8-ONw">
+                                        <rect key="frame" x="0.0" y="48" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="OIh-EE-1Yq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Bota">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hM5-LM-S0R">
+                                        <rect key="frame" x="0.0" y="96" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="y4x-jw-2f7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Sapatênis">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6s-f1-kEI">
+                                        <rect key="frame" x="0.0" y="144" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Qpx-ii-lnT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Oxford / Monk / Derby">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e00-Dt-Oxd">
+                                        <rect key="frame" x="0.0" y="192" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Gme-mh-A4l"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Salto">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Nu-fo-an3">
+                                        <rect key="frame" x="0.0" y="240" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="0A1-Df-6p4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Sapatilha / Rasteira">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNb-Mi-C7i">
+                                        <rect key="frame" x="0.0" y="288" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Ld8-Nd-ptl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Mules">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ML4-R0-WPI">
+                                        <rect key="frame" x="0.0" y="336" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="NQz-X3-NcQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Mocassins">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFR-tt-wjV">
+                                        <rect key="frame" x="0.0" y="384" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Lah-oD-GNR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Sandálias">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elz-Zk-9f3">
+                                        <rect key="frame" x="0.0" y="432" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="oab-ug-KNP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Scarpin">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ui-bb-SgL">
+                                        <rect key="frame" x="0.0" y="480" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="MhE-mj-esi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Outros">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hGX-ap-uCx"/>
+                        <color key="backgroundColor" red="0.46274509803921571" green="0.47058823529411764" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="hGX-ap-uCx" firstAttribute="trailing" secondItem="PDi-zb-WO1" secondAttribute="trailing" constant="30" id="dzH-RP-D3K"/>
+                            <constraint firstItem="PDi-zb-WO1" firstAttribute="leading" secondItem="hGX-ap-uCx" secondAttribute="leading" constant="30" id="gPZ-se-5eE"/>
+                            <constraint firstItem="PDi-zb-WO1" firstAttribute="top" secondItem="hGX-ap-uCx" secondAttribute="top" constant="66" id="tqX-6e-mBE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="othersButton" destination="9Ui-bb-SgL" id="nEZ-QG-5OW"/>
+                        <outlet property="shoe10Button" destination="elz-Zk-9f3" id="mxi-bV-yxF"/>
+                        <outlet property="shoe1Button" destination="htR-bd-kSB" id="PyM-Co-RNg"/>
+                        <outlet property="shoe2Button" destination="vRU-z8-ONw" id="Crt-dk-5JQ"/>
+                        <outlet property="shoe3Button" destination="hM5-LM-S0R" id="oMN-AK-AW5"/>
+                        <outlet property="shoe4Button" destination="n6s-f1-kEI" id="ciB-Og-vaj"/>
+                        <outlet property="shoe5Button" destination="e00-Dt-Oxd" id="JPK-2k-hiC"/>
+                        <outlet property="shoe6Button" destination="4Nu-fo-an3" id="6Ud-hR-ZAq"/>
+                        <outlet property="shoe7Button" destination="yNb-Mi-C7i" id="Gf4-r2-lcw"/>
+                        <outlet property="shoe8Button" destination="ML4-R0-WPI" id="ehL-fc-o5g"/>
+                        <outlet property="shoe9Button" destination="aFR-tt-wjV" id="Hk4-3a-YEe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZLg-o6-MyL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7912" y="1390"/>
+        </scene>
+        <!--Full Size Clothes View Controller-->
+        <scene sceneID="wSM-FE-aqQ">
+            <objects>
+                <viewController id="GeA-2B-aK3" customClass="FullSizeClothesViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bgg-sZ-yCy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d48-p3-ske">
+                                <rect key="frame" x="30" y="122" width="354" height="88"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qL6-Ee-AFf">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="jjN-ic-sJb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Macacão">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rok-cw-jQ6">
+                                        <rect key="frame" x="0.0" y="48" width="354" height="40"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ZkV-C6-xwx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Vestido">
+                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="X6z-ZI-IHD"/>
+                        <color key="backgroundColor" red="0.46274509803921571" green="0.47058823529411764" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="d48-p3-ske" firstAttribute="top" secondItem="X6z-ZI-IHD" secondAttribute="top" constant="66" id="Mzz-8G-uzz"/>
+                            <constraint firstItem="d48-p3-ske" firstAttribute="leading" secondItem="X6z-ZI-IHD" secondAttribute="leading" constant="30" id="soy-wv-gMI"/>
+                            <constraint firstItem="X6z-ZI-IHD" firstAttribute="trailing" secondItem="d48-p3-ske" secondAttribute="trailing" constant="30" id="zzc-f8-bVb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cop-fI-pBj"/>
+                    <connections>
+                        <outlet property="fullSize1Button" destination="qL6-Ee-AFf" id="vGw-yJ-foS"/>
+                        <outlet property="fullSize2Button" destination="Rok-cw-jQ6" id="GB4-Iq-IPg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EbA-TP-WaR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8821.7391304347839" y="-548.4375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="olf-ah-1VL">
@@ -403,14 +773,32 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TBM-xS-tFs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4415.9420289855079" y="89.732142857142847"/>
+            <point key="canvasLocation" x="4536" y="90"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fQm-JA-xhp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b5F-nf-TIE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sfX-OV-mAz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.46274509800000002" green="0.47058823529999999" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tsd-xi-Oye" kind="relationship" relationship="rootViewController" id="40F-uF-gJI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fk2-MW-Ggq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7002.898550724638" y="89.732142857142847"/>
         </scene>
     </scenes>
     <color key="tintColor" name="AccentColor"/>
     <resources>
         <image name="arrow.triangle.2.circlepath" catalog="system" width="128" height="101"/>
         <image name="arrow.up.and.down.and.arrow.left.and.right" catalog="system" width="128" height="122"/>
-        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="erase" width="23" height="26"/>
         <image name="gobackward" catalog="system" width="121" height="128"/>
@@ -418,9 +806,6 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="BG-Color-2">
-            <color red="0.49799999594688416" green="0.40400001406669617" blue="0.84299999475479126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Text-Color">
             <color red="0.078000001609325409" green="0.086000002920627594" blue="0.45100000500679016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

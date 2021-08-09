@@ -13,7 +13,12 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
     @IBOutlet weak var colorButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var categoryButton: UIButton!
+    @IBAction func categoryAction(_ sender: Any) {
+        performSegue(withIdentifier: "goToModal", sender: gender)
+    }
     @IBOutlet weak var nextButton: UIButton!
+    
+    var gender: String = "M"
     
     var imageReceive: UIImage?
     
@@ -56,6 +61,13 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
         nextButton.layer.shadowOpacity = 0.3
         nextButton.layer.shadowOffset = .zero
         nextButton.layer.shadowRadius = 30
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? ModalViewController
+        if segue.identifier == "goToModal" {
+            destination?.gender = gender
+        }
     }
     
     
