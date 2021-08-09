@@ -15,6 +15,18 @@ class WhiteBoardViewController: UIViewController {
     
     @IBOutlet var editView: DrawingView!
     @IBOutlet weak var nextButton: UIButton!
+    
+    @IBOutlet weak var returnButton: UIButton!
+    @IBAction func returnColor(_ sender: Any) {
+        
+    }
+    
+    @IBOutlet weak var scaleButton: UIButton!
+    @IBOutlet weak var moveButton: UIButton!
+    @IBOutlet weak var rotateButton: UIButton!
+    @IBOutlet weak var eraseButton: UIButton!
+    
+    
     var image1: UIImage?
     @IBAction func nextButtonAction(_ sender: Any) {
         
@@ -52,6 +64,27 @@ class WhiteBoardViewController: UIViewController {
         
         self.editView.image = newImage
         
+        returnButton.layer.cornerRadius = 20
+        returnButton.layer.borderWidth = 0.5
+        returnButton.layer.borderColor = UIColor.white.cgColor
+//        returnButton.setTitleColor(UIColor.black, for: .disabled)
+        scaleButton.layer.cornerRadius = 20
+        scaleButton.layer.borderWidth = 0.5
+        scaleButton.layer.borderColor = UIColor.white.cgColor
+//        scaleButton.setcol
+        moveButton.layer.cornerRadius = 20
+        moveButton.layer.borderWidth = 0.5
+        moveButton.layer.borderColor = UIColor.white.cgColor
+//        moveButton.setTitleColor(UIColor.black, for: .disabled)
+        rotateButton.layer.cornerRadius = 20
+        rotateButton.layer.borderWidth = 0.5
+        rotateButton.layer.borderColor = UIColor.white.cgColor
+//        rotateButton.setTitleColor(UIColor.black, for: .disabled)
+        eraseButton.layer.cornerRadius = 20
+        eraseButton.layer.borderWidth = 0.5
+        eraseButton.layer.borderColor = UIColor.white.cgColor
+//        eraseButton.setTitleColor(UIColor.black, for: .disabled)
+        
         //        //Rotation
 //                let rotation = UIRotationGestureRecognizer()
         //        rotation.addTarget(self, action: #selector(handleRotateGesture))
@@ -68,6 +101,8 @@ class WhiteBoardViewController: UIViewController {
         //        self.editView.addGestureRecognizer(pan)
 
     }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as? ClothesConfigurationViewController

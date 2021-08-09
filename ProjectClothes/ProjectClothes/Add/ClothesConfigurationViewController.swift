@@ -8,7 +8,7 @@
 import UIKit
 
 class ClothesConfigurationViewController: UIViewController, UIColorPickerViewControllerDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-
+    
     @IBOutlet weak var newImage: UIImageView!
     @IBOutlet weak var colorButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
@@ -16,7 +16,6 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
     @IBOutlet weak var nextButton: UIButton!
     
     var imageReceive: UIImage?
-    var clothesColor: UIColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +58,7 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
         nextButton.layer.shadowRadius = 30
     }
     
+    
     @IBAction func colorButtonAction(_ sender: Any) {
         colorButton.addTarget(self, action: #selector(didTapSelector), for: .touchUpInside)
     }
@@ -72,7 +72,17 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
     func colorPickerViewControllerDidFinish(_ viewController: UIColorPickerViewController) {
         let color = viewController.selectedColor
         colorButton.tintColor = color
-        print(color.accessibilityName)
+        colorButton.titleLabel?.textColor = color
+        colorButton.setTitle(" \(color.accessibilityName.capitalizingFirstLetter())", for: .normal)
+    }
+}
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).uppercased() + self.lowercased().dropFirst()
+    }
+    
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
     }
 }
 extension UIColor {
