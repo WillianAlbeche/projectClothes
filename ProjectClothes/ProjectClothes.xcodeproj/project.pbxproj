@@ -64,11 +64,11 @@
 		CDF28FAD26B08F6900241F13 /* closetStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = closetStoryboard.storyboard; sourceTree = "<group>"; };
 		F85A4B9F26BB27540020B5F0 /* ClothesConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesConfigurationViewController.swift; sourceTree = "<group>"; };
 		F85A4BA126C1A48D0020B5F0 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModalViewController.swift; path = ProjectClothes/Add/ModalCategories/ModalViewController.swift; sourceTree = SOURCE_ROOT; };
-		F85A4BA426C1B2450020B5F0 /* FullSizeClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FullSizeClothesViewController.swift; path = ProjectClothes/Add/FullSizeClothesViewController.swift; sourceTree = SOURCE_ROOT; };
+		F85A4BA426C1B2450020B5F0 /* FullSizeClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FullSizeClothesViewController.swift; path = ProjectClothes/Add/ModalCategories/FullClothes/FullSizeClothesViewController.swift; sourceTree = SOURCE_ROOT; };
 		F85A4BA626C1B2660020B5F0 /* TopClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TopClothesViewController.swift; path = ProjectClothes/Add/ModalCategories/TopClothes/TopClothesViewController.swift; sourceTree = SOURCE_ROOT; };
 		F85A4BA826C1B2810020B5F0 /* BottomClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BottomClothesViewController.swift; path = ProjectClothes/Add/BottomClothesViewController.swift; sourceTree = SOURCE_ROOT; };
 		F85A4BAA26C1B2960020B5F0 /* ShoesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShoesViewController.swift; path = ProjectClothes/Add/ShoesViewController.swift; sourceTree = SOURCE_ROOT; };
-		F85A4BB026C459960020B5F0 /* CustomCellFullClothesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCellFullClothesTableViewCell.swift; path = ProjectClothes/Add/ModalCategories/CustomCellFullClothesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		F85A4BB026C459960020B5F0 /* CustomCellFullClothesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCellFullClothesTableViewCell.swift; path = ProjectClothes/Add/ModalCategories/FullClothes/CustomCellFullClothesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		F85A4BB226C45C9D0020B5F0 /* CustomCellTopClothesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCellTopClothesTableViewCell.swift; path = ProjectClothes/Add/CustomCellTopClothesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		FD08F82A26B86AF4003E0C9C /* settingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = settingsStoryboard.storyboard; sourceTree = "<group>"; };
 		FD08F82C26B86B02003E0C9C /* createStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = createStoryboard.storyboard; sourceTree = "<group>"; };
@@ -178,8 +178,6 @@
 				F85A4BB426C45D3D0020B5F0 /* FullClothes */,
 				F85A4BAF26C459740020B5F0 /* TopClothes */,
 				F85A4BA126C1A48D0020B5F0 /* ModalViewController.swift */,
-				F85A4BB026C459960020B5F0 /* CustomCellFullClothesTableViewCell.swift */,
-				F85A4BA426C1B2450020B5F0 /* FullSizeClothesViewController.swift */,
 				F85A4BA826C1B2810020B5F0 /* BottomClothesViewController.swift */,
 				F85A4BAA26C1B2960020B5F0 /* ShoesViewController.swift */,
 			);
@@ -198,6 +196,8 @@
 		F85A4BB426C45D3D0020B5F0 /* FullClothes */ = {
 			isa = PBXGroup;
 			children = (
+				F85A4BA426C1B2450020B5F0 /* FullSizeClothesViewController.swift */,
+				F85A4BB026C459960020B5F0 /* CustomCellFullClothesTableViewCell.swift */,
 			);
 			path = FullClothes;
 			sourceTree = "<group>";
