@@ -47,6 +47,7 @@
 		FD4CE73926B9DDF60014B05F /* CVPixelBuffer+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72726B9DDF60014B05F /* CVPixelBuffer+Resize.swift */; };
 		FD4CE73A26B9DDF60014B05F /* CVPixelBuffer+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72826B9DDF60014B05F /* CVPixelBuffer+Rotate.swift */; };
 		FD4CE73B26B9DDF60014B05F /* DeepLabV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72926B9DDF60014B05F /* DeepLabV3.mlmodel */; };
+		FDA72CA026C439D400F966F5 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72C9F26C439D400F966F5 /* CreateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		FD4CE72726B9DDF60014B05F /* CVPixelBuffer+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Resize.swift"; sourceTree = "<group>"; };
 		FD4CE72826B9DDF60014B05F /* CVPixelBuffer+Rotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Rotate.swift"; sourceTree = "<group>"; };
 		FD4CE72926B9DDF60014B05F /* DeepLabV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DeepLabV3.mlmodel; sourceTree = "<group>"; };
+		FDA72C9F26C439D400F966F5 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				FD08F82C26B86B02003E0C9C /* createStoryboard.storyboard */,
+				FDA72C9F26C439D400F966F5 /* CreateViewController.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				FD08F83126B86B6C003E0C9C /* CustomModalViewController.swift in Sources */,
 				CDF28F8F26B07C8C00241F13 /* AppDelegate.swift in Sources */,
 				FD4CE72D26B9DDF60014B05F /* Predictions.swift in Sources */,
+				FDA72CA026C439D400F966F5 /* CreateViewController.swift in Sources */,
 				FD4CE72C26B9DDF60014B05F /* UIImage+CVPixelBuffer.swift in Sources */,
 				FD4CE73126B9DDF60014B05F /* MLMultiArray+Helpers.swift in Sources */,
 				FD4CE73426B9DDF60014B05F /* CVPixelBuffer+Create.swift in Sources */,
