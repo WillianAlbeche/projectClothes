@@ -31,7 +31,6 @@ class FullSizeClothesViewController: UIViewController {
     
 //    override func updateViewConstraints() {
 //        self.view.frame.origin.y = 350
-//        self.view.roundCorners(corners: [.topLeft, .topRight], radius: 20.0)
 //        super.updateViewConstraints()
 //    }
     

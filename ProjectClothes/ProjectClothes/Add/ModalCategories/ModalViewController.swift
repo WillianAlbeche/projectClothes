@@ -7,6 +7,21 @@
 
 import UIKit
 
+class MyCustomNavigationController: UINavigationController {
+    override func updateViewConstraints() {
+        super.updateViewConstraints()
+        self.view.frame.origin.y = 400
+        self.view.roundCorners(corners: [.topLeft, .topRight], radius: 20.0)
+        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.shadowImage = UIImage()
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .clear
+    }
+    
+}
+
 class ModalViewController: UIViewController {
     
     @IBOutlet weak var fullSizeClothesButton: UIButton!
@@ -31,14 +46,6 @@ class ModalViewController: UIViewController {
         shoebutton.layer.cornerRadius = 20
         accessoriesButton.layer.cornerRadius = 20
     }
-    
-//    override func updateViewConstraints() {
-//
-//        self.view.frame.origin.y = 400
-//        self.view.roundCorners(corners: [.topLeft, .topRight], radius: 20.0)
-//        super.updateViewConstraints()
-//    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as? FullSizeClothesViewController
         let destination2 = segue.destination as? ShoesViewController
@@ -51,11 +58,12 @@ class ModalViewController: UIViewController {
     }
     
 }
-//extension UIView {
-//    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
-//        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-//        let mask = CAShapeLayer()
-//        mask.path = path.cgPath
-//        layer.mask = mask
-//    }
-//}
+
+extension UIView {
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
+}
