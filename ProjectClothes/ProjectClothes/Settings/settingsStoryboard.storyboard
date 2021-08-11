@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -39,39 +38,39 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRh-DP-QYf">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="40"/>
-                                        <color key="backgroundColor" red="0.46955138439999999" green="0.4547356367" blue="0.94050794839999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <rect key="contentStretch" x="0.29999999999999999" y="0.0" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Mais usadas">
-                                            <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="MaisUsadas:" destination="gTx-xK-HRz" eventType="touchUpInside" id="vDO-kz-TNH"/>
-                                            <action selector="selectedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Hfx-lp-Mh7"/>
+                                            <action selector="buttonsUsoRoupas:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Hfx-lp-Mh7"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="il8-U2-Fcc">
+                                    <button opaque="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="il8-U2-Fcc">
                                         <rect key="frame" x="124" y="0.0" width="110" height="40"/>
-                                        <color key="backgroundColor" red="0.46955138439999999" green="0.4547356367" blue="0.94050794839999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <rect key="contentStretch" x="0.29999999999999999" y="0.0" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Menos usadas">
-                                            <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="selectedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kEL-aO-xwR"/>
+                                            <action selector="buttonsUsoRoupas:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kEL-aO-xwR"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsI-yB-FNW">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsI-yB-FNW">
                                         <rect key="frame" x="248" y="0.0" width="110" height="40"/>
-                                        <color key="backgroundColor" red="0.46955138439999999" green="0.4547356367" blue="0.94050794839999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <rect key="contentStretch" x="0.29999999999999999" y="0.0" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Não considerar">
-                                            <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="selectedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XY8-Wv-7Gp"/>
+                                            <action selector="buttonsUsoRoupas:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XY8-Wv-7Gp"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -84,29 +83,29 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="00E-wp-Sj1">
                                 <rect key="frame" x="16" y="254" width="234" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXX-os-IDU">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXX-os-IDU">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="40"/>
-                                        <color key="backgroundColor" red="0.46955138439999999" green="0.4547356367" blue="0.94050794839999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <rect key="contentStretch" x="0.29999999999999999" y="0.0" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Últimas peças">
-                                            <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="selectedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VUj-uW-oDC"/>
+                                            <action selector="buttonsUsoRoupas:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VUj-uW-oDC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBW-cT-TEn">
+                                    <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBW-cT-TEn">
                                         <rect key="frame" x="124" y="0.0" width="110" height="40"/>
-                                        <color key="backgroundColor" red="0.46955138439999999" green="0.4547356367" blue="0.94050794839999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <rect key="contentStretch" x="0.29999999999999999" y="0.0" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Primeiras peças">
-                                            <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                         </state>
                                         <connections>
-                                            <action selector="selectedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xo1-au-jvW"/>
+                                            <action selector="buttonsUsoRoupas:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xo1-au-jvW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -119,38 +118,38 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMZ-md-7LC">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="40"/>
-                                        <color key="backgroundColor" red="0.46955138439999999" green="0.4547356367" blue="0.94050794839999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <rect key="contentStretch" x="0.29999999999999999" y="0.0" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Outono">
-                                            <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="selectedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7yZ-u8-Y7b"/>
+                                            <action selector="buttonsSeason:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZwA-TW-lcW"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDK-Ig-ePb">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDK-Ig-ePb">
                                         <rect key="frame" x="124" y="0.0" width="110" height="40"/>
-                                        <color key="backgroundColor" red="0.46955138439999999" green="0.4547356367" blue="0.94050794839999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <rect key="contentStretch" x="0.29999999999999999" y="0.0" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Inverno">
-                                            <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="selectedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZbW-hn-Wxi"/>
+                                            <action selector="buttonsSeason:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mBb-ni-Hxe"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYK-4F-sPU">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYK-4F-sPU">
                                         <rect key="frame" x="248" y="0.0" width="110" height="40"/>
-                                        <color key="backgroundColor" red="0.46955138439999999" green="0.4547356367" blue="0.94050794839999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <rect key="contentStretch" x="0.29999999999999999" y="0.0" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Primavera">
-                                            <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="selectedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ptr-3K-97n"/>
+                                            <action selector="buttonsSeason:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="brO-LC-iEj"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -163,28 +162,28 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="qsB-ad-ECZ">
                                 <rect key="frame" x="16" y="381" width="234" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ts4-JW-M8l">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ts4-JW-M8l">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="40"/>
-                                        <color key="backgroundColor" red="0.46955138439999999" green="0.4547356367" blue="0.94050794839999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <rect key="contentStretch" x="0.29999999999999999" y="0.0" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Verão">
-                                            <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="selectedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5AP-nn-HQN"/>
+                                            <action selector="buttonsSeason:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fvX-0b-Mt5"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gza-YI-tZ3">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gza-YI-tZ3">
                                         <rect key="frame" x="124" y="0.0" width="110" height="40"/>
-                                        <color key="backgroundColor" red="0.46955138439999999" green="0.4547356367" blue="0.94050794839999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <rect key="contentStretch" x="0.29999999999999999" y="0.0" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Não considerar">
-                                            <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="selectedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cv7-uf-FbA"/>
+                                            <action selector="buttonsSeason:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PUs-Oo-e2y"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -197,35 +196,35 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxS-Oe-c2P">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="40"/>
-                                        <color key="backgroundColor" red="0.46955138439999999" green="0.4547356367" blue="0.94050794839999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <rect key="contentStretch" x="0.29999999999999999" y="0.0" width="1" height="1"/>
                                         <state key="normal" title="Feminino">
-                                            <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="selectedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Pr0-a4-L3M"/>
+                                            <action selector="buttonGender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GuE-YY-RHo"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jri-ZR-DDA">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jri-ZR-DDA">
                                         <rect key="frame" x="124" y="0.0" width="110" height="40"/>
-                                        <color key="backgroundColor" red="0.46955138439999999" green="0.4547356367" blue="0.94050794839999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <rect key="contentStretch" x="0.29999999999999999" y="0.0" width="1" height="1"/>
                                         <state key="normal" title="Masculino">
-                                            <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="selectedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sGj-EB-bZj"/>
+                                            <action selector="buttonGender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="raY-Aj-MSH"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHh-Om-dFm">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHh-Om-dFm">
                                         <rect key="frame" x="248" y="0.0" width="110" height="40"/>
-                                        <color key="backgroundColor" red="0.46955138439999999" green="0.4547356367" blue="0.94050794839999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <rect key="contentStretch" x="0.29999999999999999" y="0.0" width="1" height="1"/>
                                         <state key="normal" title="Não binário">
-                                            <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="selectedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wT9-9o-JfC"/>
+                                            <action selector="buttonGender:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GSb-aU-kv0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -351,19 +350,19 @@
                     <navigationItem key="navigationItem" title="Settings" id="Cig-R1-gp2"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outletCollection property="UsoRoupas" destination="FRh-DP-QYf" collectionClass="NSMutableArray" id="qK7-LP-TqH"/>
-                        <outletCollection property="UsoRoupas" destination="il8-U2-Fcc" collectionClass="NSMutableArray" id="hra-JQ-zZo"/>
-                        <outletCollection property="UsoRoupas" destination="ZsI-yB-FNW" collectionClass="NSMutableArray" id="D4C-Ia-vVO"/>
-                        <outletCollection property="UsoRoupas" destination="yXX-os-IDU" collectionClass="NSMutableArray" id="cI5-r0-5GT"/>
-                        <outletCollection property="UsoRoupas" destination="iBW-cT-TEn" collectionClass="NSMutableArray" id="1jt-Hk-e0I"/>
-                        <outletCollection property="UsoRoupas" destination="KMZ-md-7LC" collectionClass="NSMutableArray" id="wTy-fW-wQe"/>
-                        <outletCollection property="UsoRoupas" destination="YDK-Ig-ePb" collectionClass="NSMutableArray" id="hnA-Fn-QZc"/>
-                        <outletCollection property="UsoRoupas" destination="MYK-4F-sPU" collectionClass="NSMutableArray" id="yLY-AP-KuF"/>
-                        <outletCollection property="UsoRoupas" destination="ts4-JW-M8l" collectionClass="NSMutableArray" id="jhQ-34-s5f"/>
-                        <outletCollection property="UsoRoupas" destination="gza-YI-tZ3" collectionClass="NSMutableArray" id="5iJ-5v-zeN"/>
-                        <outletCollection property="UsoRoupas" destination="YxS-Oe-c2P" collectionClass="NSMutableArray" id="b89-pB-OBm"/>
-                        <outletCollection property="UsoRoupas" destination="Jri-ZR-DDA" collectionClass="NSMutableArray" id="MB0-WE-AX5"/>
-                        <outletCollection property="UsoRoupas" destination="pHh-Om-dFm" collectionClass="NSMutableArray" id="coK-gp-T0x"/>
+                        <outletCollection property="usoRoupas" destination="FRh-DP-QYf" collectionClass="NSMutableArray" id="qK7-LP-TqH"/>
+                        <outletCollection property="usoRoupas" destination="il8-U2-Fcc" collectionClass="NSMutableArray" id="hra-JQ-zZo"/>
+                        <outletCollection property="usoRoupas" destination="ZsI-yB-FNW" collectionClass="NSMutableArray" id="D4C-Ia-vVO"/>
+                        <outletCollection property="usoRoupas" destination="yXX-os-IDU" collectionClass="NSMutableArray" id="cI5-r0-5GT"/>
+                        <outletCollection property="usoRoupas" destination="iBW-cT-TEn" collectionClass="NSMutableArray" id="1jt-Hk-e0I"/>
+                        <outletCollection property="season" destination="KMZ-md-7LC" collectionClass="NSMutableArray" id="WME-Nw-E0z"/>
+                        <outletCollection property="season" destination="YDK-Ig-ePb" collectionClass="NSMutableArray" id="689-n9-MNO"/>
+                        <outletCollection property="season" destination="MYK-4F-sPU" collectionClass="NSMutableArray" id="7u1-7q-Zh9"/>
+                        <outletCollection property="season" destination="ts4-JW-M8l" collectionClass="NSMutableArray" id="R0p-XU-19P"/>
+                        <outletCollection property="season" destination="gza-YI-tZ3" collectionClass="NSMutableArray" id="RPH-6Q-hyP"/>
+                        <outletCollection property="gender" destination="YxS-Oe-c2P" collectionClass="NSMutableArray" id="UCz-16-Tfk"/>
+                        <outletCollection property="gender" destination="Jri-ZR-DDA" collectionClass="NSMutableArray" id="mq0-6w-mkA"/>
+                        <outletCollection property="gender" destination="pHh-Om-dFm" collectionClass="NSMutableArray" id="g6k-ep-7cj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -394,8 +393,5 @@
     </scenes>
     <resources>
         <image name="gearshape.2.fill" catalog="system" width="128" height="100"/>
-        <systemColor name="tertiarySystemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
