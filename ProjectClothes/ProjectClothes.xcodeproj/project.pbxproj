@@ -49,6 +49,9 @@
 		FDA72CA026C439D400F966F5 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72C9F26C439D400F966F5 /* CreateViewController.swift */; };
 		FDA72CA426C43DAD00F966F5 /* settingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA72CA226C43DAD00F966F5 /* settingsStoryboard.storyboard */; };
 		FDA72CA526C43DAD00F966F5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CA326C43DAD00F966F5 /* SettingsViewController.swift */; };
+		FDA72CA926C4406100F966F5 /* wardrobeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CA626C4406100F966F5 /* wardrobeViewController.swift */; };
+		FDA72CAA26C4406100F966F5 /* SuperRoupaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CA726C4406100F966F5 /* SuperRoupaTableViewCell.swift */; };
+		FDA72CAB26C4406100F966F5 /* BackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CA826C4406100F966F5 /* BackCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +99,9 @@
 		FDA72C9F26C439D400F966F5 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		FDA72CA226C43DAD00F966F5 /* settingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = settingsStoryboard.storyboard; sourceTree = "<group>"; };
 		FDA72CA326C43DAD00F966F5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FDA72CA626C4406100F966F5 /* wardrobeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wardrobeViewController.swift; sourceTree = "<group>"; };
+		FDA72CA726C4406100F966F5 /* SuperRoupaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperRoupaTableViewCell.swift; sourceTree = "<group>"; };
+		FDA72CA826C4406100F966F5 /* BackCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,9 @@
 		CDF28FA226B0818E00241F13 /* Closet */ = {
 			isa = PBXGroup;
 			children = (
+				FDA72CA826C4406100F966F5 /* BackCollectionViewCell.swift */,
+				FDA72CA726C4406100F966F5 /* SuperRoupaTableViewCell.swift */,
+				FDA72CA626C4406100F966F5 /* wardrobeViewController.swift */,
 				CDF28FAD26B08F6900241F13 /* closetStoryboard.storyboard */,
 			);
 			path = Closet;
@@ -333,11 +342,14 @@
 				F85A4BA726C1B2660020B5F0 /* TopClothesViewController.swift in Sources */,
 				FD4CE73826B9DDF60014B05F /* MLMultiArray+Image.swift in Sources */,
 				FD430BE926B3329700F31DD2 /* AddNavigationController.swift in Sources */,
+				FDA72CA926C4406100F966F5 /* wardrobeViewController.swift in Sources */,
 				FD430BE726B3236F00F31DD2 /* TabBarController.swift in Sources */,
 				FD4CE72E26B9DDF60014B05F /* UIImage+Extensions.swift in Sources */,
 				F85A4BA026BB27540020B5F0 /* ClothesConfigurationViewController.swift in Sources */,
+				FDA72CAB26C4406100F966F5 /* BackCollectionViewCell.swift in Sources */,
 				F85A4BAB26C1B2960020B5F0 /* ShoesViewController.swift in Sources */,
 				F85A4BA926C1B2810020B5F0 /* BottomClothesViewController.swift in Sources */,
+				FDA72CAA26C4406100F966F5 /* SuperRoupaTableViewCell.swift in Sources */,
 				F85A4BA226C1A48D0020B5F0 /* ModalViewController.swift in Sources */,
 				FD4CE73B26B9DDF60014B05F /* DeepLabV3.mlmodel in Sources */,
 				FD4CE73526B9DDF60014B05F /* CGImage+CVPixelBuffer.swift in Sources */,
