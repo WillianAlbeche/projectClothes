@@ -21,7 +21,6 @@
 		F85A4BA726C1B2660020B5F0 /* TopClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4BA626C1B2660020B5F0 /* TopClothesViewController.swift */; };
 		F85A4BA926C1B2810020B5F0 /* BottomClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4BA826C1B2810020B5F0 /* BottomClothesViewController.swift */; };
 		F85A4BAB26C1B2960020B5F0 /* ShoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4BAA26C1B2960020B5F0 /* ShoesViewController.swift */; };
-		FD08F82B26B86AF4003E0C9C /* settingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08F82A26B86AF4003E0C9C /* settingsStoryboard.storyboard */; };
 		FD08F82D26B86B02003E0C9C /* createStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08F82C26B86B02003E0C9C /* createStoryboard.storyboard */; };
 		FD08F82F26B86B0B003E0C9C /* todayStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08F82E26B86B0B003E0C9C /* todayStoryboard.storyboard */; };
 		FD08F83126B86B6C003E0C9C /* CustomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD08F83026B86B6C003E0C9C /* CustomModalViewController.swift */; };
@@ -47,6 +46,12 @@
 		FD4CE73926B9DDF60014B05F /* CVPixelBuffer+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72726B9DDF60014B05F /* CVPixelBuffer+Resize.swift */; };
 		FD4CE73A26B9DDF60014B05F /* CVPixelBuffer+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72826B9DDF60014B05F /* CVPixelBuffer+Rotate.swift */; };
 		FD4CE73B26B9DDF60014B05F /* DeepLabV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72926B9DDF60014B05F /* DeepLabV3.mlmodel */; };
+		FDA72CA026C439D400F966F5 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72C9F26C439D400F966F5 /* CreateViewController.swift */; };
+		FDA72CA426C43DAD00F966F5 /* settingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA72CA226C43DAD00F966F5 /* settingsStoryboard.storyboard */; };
+		FDA72CA526C43DAD00F966F5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CA326C43DAD00F966F5 /* SettingsViewController.swift */; };
+		FDA72CA926C4406100F966F5 /* wardrobeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CA626C4406100F966F5 /* wardrobeViewController.swift */; };
+		FDA72CAA26C4406100F966F5 /* SuperRoupaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CA726C4406100F966F5 /* SuperRoupaTableViewCell.swift */; };
+		FDA72CAB26C4406100F966F5 /* BackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CA826C4406100F966F5 /* BackCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,7 +71,6 @@
 		F85A4BA626C1B2660020B5F0 /* TopClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TopClothesViewController.swift; path = ProjectClothes/Add/TopClothesViewController.swift; sourceTree = SOURCE_ROOT; };
 		F85A4BA826C1B2810020B5F0 /* BottomClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BottomClothesViewController.swift; path = ProjectClothes/Add/BottomClothesViewController.swift; sourceTree = SOURCE_ROOT; };
 		F85A4BAA26C1B2960020B5F0 /* ShoesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShoesViewController.swift; path = ProjectClothes/Add/ShoesViewController.swift; sourceTree = SOURCE_ROOT; };
-		FD08F82A26B86AF4003E0C9C /* settingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = settingsStoryboard.storyboard; sourceTree = "<group>"; };
 		FD08F82C26B86B02003E0C9C /* createStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = createStoryboard.storyboard; sourceTree = "<group>"; };
 		FD08F82E26B86B0B003E0C9C /* todayStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = todayStoryboard.storyboard; sourceTree = "<group>"; };
 		FD08F83026B86B6C003E0C9C /* CustomModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModalViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +96,12 @@
 		FD4CE72726B9DDF60014B05F /* CVPixelBuffer+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Resize.swift"; sourceTree = "<group>"; };
 		FD4CE72826B9DDF60014B05F /* CVPixelBuffer+Rotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Rotate.swift"; sourceTree = "<group>"; };
 		FD4CE72926B9DDF60014B05F /* DeepLabV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DeepLabV3.mlmodel; sourceTree = "<group>"; };
+		FDA72C9F26C439D400F966F5 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		FDA72CA226C43DAD00F966F5 /* settingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = settingsStoryboard.storyboard; sourceTree = "<group>"; };
+		FDA72CA326C43DAD00F966F5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FDA72CA626C4406100F966F5 /* wardrobeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wardrobeViewController.swift; sourceTree = "<group>"; };
+		FDA72CA726C4406100F966F5 /* SuperRoupaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperRoupaTableViewCell.swift; sourceTree = "<group>"; };
+		FDA72CA826C4406100F966F5 /* BackCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +134,7 @@
 		CDF28F8D26B07C8C00241F13 /* ProjectClothes */ = {
 			isa = PBXGroup;
 			children = (
-				FD08F82926B86AF4003E0C9C /* Settings */,
+				FDA72CA126C43DAD00F966F5 /* Settings */,
 				FD23EEC126B1D1F4009FF48C /* Create */,
 				FD23EEBE26B1D1C6009FF48C /* Today */,
 				CDF28FA326B081A100241F13 /* Add */,
@@ -144,6 +154,9 @@
 		CDF28FA226B0818E00241F13 /* Closet */ = {
 			isa = PBXGroup;
 			children = (
+				FDA72CA826C4406100F966F5 /* BackCollectionViewCell.swift */,
+				FDA72CA726C4406100F966F5 /* SuperRoupaTableViewCell.swift */,
+				FDA72CA626C4406100F966F5 /* wardrobeViewController.swift */,
 				CDF28FAD26B08F6900241F13 /* closetStoryboard.storyboard */,
 			);
 			path = Closet;
@@ -177,14 +190,6 @@
 			path = ModalCategories;
 			sourceTree = "<group>";
 		};
-		FD08F82926B86AF4003E0C9C /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				FD08F82A26B86AF4003E0C9C /* settingsStoryboard.storyboard */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
 		FD23EEBE26B1D1C6009FF48C /* Today */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				FD08F82C26B86B02003E0C9C /* createStoryboard.storyboard */,
+				FDA72C9F26C439D400F966F5 /* CreateViewController.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -231,6 +237,15 @@
 				FD4CE72826B9DDF60014B05F /* CVPixelBuffer+Rotate.swift */,
 			);
 			path = CoreMLHelpers;
+			sourceTree = "<group>";
+		};
+		FDA72CA126C43DAD00F966F5 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FDA72CA226C43DAD00F966F5 /* settingsStoryboard.storyboard */,
+				FDA72CA326C43DAD00F966F5 /* SettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,13 +305,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD08F82B26B86AF4003E0C9C /* settingsStoryboard.storyboard in Resources */,
 				FD08F82D26B86B02003E0C9C /* createStoryboard.storyboard in Resources */,
 				CDF28FAE26B08F6900241F13 /* closetStoryboard.storyboard in Resources */,
 				FD08F82F26B86B0B003E0C9C /* todayStoryboard.storyboard in Resources */,
 				CDF28F9B26B07C9000241F13 /* LaunchScreen.storyboard in Resources */,
 				CDF28F9826B07C9000241F13 /* Assets.xcassets in Resources */,
 				CDF28F9626B07C8C00241F13 /* Main.storyboard in Resources */,
+				FDA72CA426C43DAD00F966F5 /* settingsStoryboard.storyboard in Resources */,
 				CDF28FAC26B08EF800241F13 /* addStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +330,7 @@
 				FD08F83126B86B6C003E0C9C /* CustomModalViewController.swift in Sources */,
 				CDF28F8F26B07C8C00241F13 /* AppDelegate.swift in Sources */,
 				FD4CE72D26B9DDF60014B05F /* Predictions.swift in Sources */,
+				FDA72CA026C439D400F966F5 /* CreateViewController.swift in Sources */,
 				FD4CE72C26B9DDF60014B05F /* UIImage+CVPixelBuffer.swift in Sources */,
 				FD4CE73126B9DDF60014B05F /* MLMultiArray+Helpers.swift in Sources */,
 				FD4CE73426B9DDF60014B05F /* CVPixelBuffer+Create.swift in Sources */,
@@ -326,16 +342,20 @@
 				F85A4BA726C1B2660020B5F0 /* TopClothesViewController.swift in Sources */,
 				FD4CE73826B9DDF60014B05F /* MLMultiArray+Image.swift in Sources */,
 				FD430BE926B3329700F31DD2 /* AddNavigationController.swift in Sources */,
+				FDA72CA926C4406100F966F5 /* wardrobeViewController.swift in Sources */,
 				FD430BE726B3236F00F31DD2 /* TabBarController.swift in Sources */,
 				FD4CE72E26B9DDF60014B05F /* UIImage+Extensions.swift in Sources */,
 				F85A4BA026BB27540020B5F0 /* ClothesConfigurationViewController.swift in Sources */,
+				FDA72CAB26C4406100F966F5 /* BackCollectionViewCell.swift in Sources */,
 				F85A4BAB26C1B2960020B5F0 /* ShoesViewController.swift in Sources */,
 				F85A4BA926C1B2810020B5F0 /* BottomClothesViewController.swift in Sources */,
+				FDA72CAA26C4406100F966F5 /* SuperRoupaTableViewCell.swift in Sources */,
 				F85A4BA226C1A48D0020B5F0 /* ModalViewController.swift in Sources */,
 				FD4CE73B26B9DDF60014B05F /* DeepLabV3.mlmodel in Sources */,
 				FD4CE73526B9DDF60014B05F /* CGImage+CVPixelBuffer.swift in Sources */,
 				FD4CE73226B9DDF60014B05F /* MLModel+Images.swift in Sources */,
 				FD4CE73026B9DDF60014B05F /* UIImage+RawBytes.swift in Sources */,
+				FDA72CA526C43DAD00F966F5 /* SettingsViewController.swift in Sources */,
 				CDF28F9126B07C8C00241F13 /* SceneDelegate.swift in Sources */,
 				FD4CE72B26B9DDF60014B05F /* Math.swift in Sources */,
 				F85A4BA526C1B2450020B5F0 /* FullSizeClothesViewController.swift in Sources */,
