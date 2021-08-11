@@ -9,9 +9,10 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ev4-ut-1Fo">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="v60-uc-leN" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="v60-uc-leN" customClass="TabBarController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="gmk-MV-Qar">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="0.61486428979999996" green="0.61156100030000005" blue="0.9294463396" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -26,7 +27,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6X-Pi-m8v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="84" y="46"/>
+            <point key="canvasLocation" x="25" y="-59"/>
         </scene>
         <!--todayStoryboard-->
         <scene sceneID="xmI-LK-9qK">
@@ -37,7 +38,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="32M-5H-be1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="757" y="-42"/>
+            <point key="canvasLocation" x="764" y="-165"/>
         </scene>
         <!--createStoryboard-->
         <scene sceneID="Ldz-kW-Rm7">
@@ -47,7 +48,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VSK-g8-B04" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="760" y="-2"/>
+            <point key="canvasLocation" x="767" y="-125"/>
         </scene>
         <!--addStoryboard-->
         <scene sceneID="Ufi-ef-uF0">
@@ -57,7 +58,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5w-9q-4KB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749" y="46"/>
+            <point key="canvasLocation" x="778" y="-33"/>
         </scene>
         <!--closetStoryboard-->
         <scene sceneID="Otu-tB-H7R">
