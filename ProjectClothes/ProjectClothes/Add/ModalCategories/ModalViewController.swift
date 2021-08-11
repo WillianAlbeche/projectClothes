@@ -29,12 +29,21 @@ class ModalViewController: UIViewController {
         performSegue(withIdentifier: "goToFullSize", sender: gender)
     }
     @IBOutlet weak var topPieceButton: UIButton!
+    @IBAction func topPieceAction(_ sender: Any) {
+        performSegue(withIdentifier: "goToTop", sender: gender)
+    }
     @IBOutlet weak var bottomPiceButton: UIButton!
+    @IBAction func bottomPieceAction(_ sender: Any) {
+        performSegue(withIdentifier: "goToBottom", sender: gender)
+    }
     @IBOutlet weak var shoebutton: UIButton!
     @IBAction func shoesAction(_ sender: Any) {
         performSegue(withIdentifier: "goToShoes", sender: gender)
     }
     @IBOutlet weak var accessoriesButton: UIButton!
+    @IBAction func accessoriesAction(_ sender: Any) {
+        performSegue(withIdentifier: "goToTop", sender: gender)
+    }
     
     var gender: String?
     

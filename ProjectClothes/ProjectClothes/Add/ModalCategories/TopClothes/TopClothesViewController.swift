@@ -1,5 +1,5 @@
 //
-//  FullSizeClothesViewController.swift
+//  TopClothesViewController.swift
 //  ProjectClothes
 //
 //  Created by João Gabriel Biazus de Quevedo on 09/08/21.
@@ -7,15 +7,14 @@
 
 import UIKit
 
-class FullSizeClothesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TopClothesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    
     var gender: String?
     
-    var maleClothes = ["Macacão"]
-    var femaleClothes = ["Macacão", "Vestido"]
-    var none = ["Macacão", "Vestido"]
+    var maleClothes = ["Blazer / Paletó", "Colete", "Casaco", "Moletom", "Camiseta", "Camisa", "Polo", "Regata", "Blusão / Suéter"]
+    var femaleClothes = ["Blazer", "Casaco / Jaqueta", "Cardigan", "Colete / Kimono"]
+    var none = ["Blazer / Paletó", "Colete / Kimono", "Casaco / Jaqueta", "Cardigan", "Moletom", "Camiseta", "Camisa", "Polo", "Regata", "Blusão / Suéter"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +40,7 @@ class FullSizeClothesViewController: UIViewController, UITableViewDelegate, UITa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! CustomCellFullClothesTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! CustomCellTopClothesTableViewCell
         
         if gender == "M"{
             
@@ -67,4 +66,3 @@ class FullSizeClothesViewController: UIViewController, UITableViewDelegate, UITa
     }
     
 }
-

@@ -390,6 +390,9 @@
                                         <state key="normal" title="Peça superior">
                                             <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="topPieceAction:" destination="tsd-xi-Oye" eventType="touchUpInside" id="2hy-cS-6SY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEs-8F-Wu3">
                                         <rect key="frame" x="0.0" y="104" width="354" height="40"/>
@@ -401,6 +404,9 @@
                                         <state key="normal" title="Peça inferior">
                                             <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="bottomPieceAction:" destination="tsd-xi-Oye" eventType="touchUpInside" id="8Aj-Se-UD4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2A-bD-ct4">
                                         <rect key="frame" x="0.0" y="156" width="354" height="40"/>
@@ -426,6 +432,9 @@
                                         <state key="normal" title="Acessórios">
                                             <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="accessoriesAction:" destination="tsd-xi-Oye" eventType="touchUpInside" id="JLN-Xp-7Ud"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -447,14 +456,14 @@
                         <outlet property="shoebutton" destination="Q2A-bD-ct4" id="mb0-f0-afd"/>
                         <outlet property="topPieceButton" destination="di8-4K-qzV" id="ext-b9-ZUa"/>
                         <segue destination="GeA-2B-aK3" kind="show" identifier="goToFullSize" id="Xa1-ce-7Sa"/>
-                        <segue destination="7gc-V1-J3Y" kind="presentation" id="cAY-3f-XxD"/>
-                        <segue destination="3YF-vI-niR" kind="presentation" id="7aE-BI-azn"/>
-                        <segue destination="PFl-ee-ubY" kind="presentation" identifier="goToShoes" id="Vi6-wL-NIv"/>
+                        <segue destination="7gc-V1-J3Y" kind="show" identifier="goToTop" id="cAY-3f-XxD"/>
+                        <segue destination="3YF-vI-niR" kind="presentation" identifier="goToBottom" id="7aE-BI-azn"/>
+                        <segue destination="PFl-ee-ubY" kind="show" identifier="goToShoes" id="Z3y-i6-Pbf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8W-MZ-Bo7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9733.3333333333339" y="89.732142857142847"/>
+            <point key="canvasLocation" x="7749" y="90"/>
         </scene>
         <!--Top Clothes View Controller-->
         <scene sceneID="kDU-Yv-YKC">
@@ -463,13 +472,65 @@
                     <view key="view" contentMode="scaleToFill" id="t2F-CI-yGC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G68-nN-2b7" customClass="c">
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <color key="backgroundColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="separatorColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell1" rowHeight="72" id="Roc-Pf-dAp" customClass="CustomCellTopClothesTableViewCell" customModule="ProjectClothes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Roc-Pf-dAp" id="qyM-m5-wNv">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyf-yd-iUz">
+                                                    <rect key="frame" x="15" y="10" width="384" height="52"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="FwX-gw-l2a"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstItem="Qyf-yd-iUz" firstAttribute="centerX" secondItem="qyM-m5-wNv" secondAttribute="centerX" id="GYH-de-g7o"/>
+                                                <constraint firstAttribute="trailing" secondItem="Qyf-yd-iUz" secondAttribute="trailing" constant="15" id="Qxn-rY-421"/>
+                                                <constraint firstItem="Qyf-yd-iUz" firstAttribute="top" secondItem="qyM-m5-wNv" secondAttribute="top" constant="10" id="Vv0-SQ-rzc"/>
+                                                <constraint firstItem="Qyf-yd-iUz" firstAttribute="leading" secondItem="qyM-m5-wNv" secondAttribute="leading" constant="15" id="hIH-Z7-iOC"/>
+                                                <constraint firstAttribute="bottom" secondItem="Qyf-yd-iUz" secondAttribute="bottom" constant="10" id="jfh-BE-cJD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="clothesLabel" destination="Qyf-yd-iUz" id="RSq-Qa-BBO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4pP-9g-pZf"/>
-                        <color key="backgroundColor" red="0.46274509803921571" green="0.47058823529411764" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="G68-nN-2b7" firstAttribute="top" secondItem="4pP-9g-pZf" secondAttribute="top" id="BZ7-fk-uFj"/>
+                            <constraint firstItem="G68-nN-2b7" firstAttribute="leading" secondItem="4pP-9g-pZf" secondAttribute="leading" id="VkJ-cR-Rpl"/>
+                            <constraint firstAttribute="bottom" secondItem="G68-nN-2b7" secondAttribute="bottom" id="WJO-Vi-aI2"/>
+                            <constraint firstItem="G68-nN-2b7" firstAttribute="trailing" secondItem="4pP-9g-pZf" secondAttribute="trailing" id="yx7-V2-mLh"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="MRQ-EY-vWk"/>
+                    <connections>
+                        <outlet property="tableView" destination="G68-nN-2b7" id="S5r-lT-gOA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mg2-on-ObH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10642.028985507248" y="89.732142857142847"/>
+            <point key="canvasLocation" x="8739" y="90"/>
         </scene>
         <!--Bottom Clothes View Controller-->
         <scene sceneID="wO3-yc-auM">
@@ -530,7 +591,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jdm-u2-9Zn"/>
-                        <color key="backgroundColor" red="0.46274509803921571" green="0.47058823529411764" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="nAV-ZE-mpg" firstAttribute="leading" secondItem="Jdm-u2-9Zn" secondAttribute="leading" constant="30" id="FL9-VG-S1O"/>
                             <constraint firstItem="Jdm-u2-9Zn" firstAttribute="trailing" secondItem="nAV-ZE-mpg" secondAttribute="trailing" constant="30" id="btn-lp-YKF"/>
@@ -540,7 +601,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k0A-LD-t9m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9732" y="824"/>
+            <point key="canvasLocation" x="8535" y="820"/>
         </scene>
         <!--Shoes View Controller-->
         <scene sceneID="JQe-21-hSO">
@@ -551,7 +612,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PDi-zb-WO1">
-                                <rect key="frame" x="30" y="66" width="354" height="520"/>
+                                <rect key="frame" x="30" y="122" width="354" height="520"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htR-bd-kSB">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
@@ -678,13 +739,14 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hGX-ap-uCx"/>
-                        <color key="backgroundColor" red="0.46274509803921571" green="0.47058823529411764" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="hGX-ap-uCx" firstAttribute="trailing" secondItem="PDi-zb-WO1" secondAttribute="trailing" constant="30" id="dzH-RP-D3K"/>
                             <constraint firstItem="PDi-zb-WO1" firstAttribute="leading" secondItem="hGX-ap-uCx" secondAttribute="leading" constant="30" id="gPZ-se-5eE"/>
                             <constraint firstItem="PDi-zb-WO1" firstAttribute="top" secondItem="hGX-ap-uCx" secondAttribute="top" constant="66" id="tqX-6e-mBE"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="PZt-55-Iza"/>
                     <connections>
                         <outlet property="othersButton" destination="9Ui-bb-SgL" id="nEZ-QG-5OW"/>
                         <outlet property="shoe10Button" destination="elz-Zk-9f3" id="mxi-bV-yxF"/>
@@ -701,7 +763,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZLg-o6-MyL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9732" y="1489"/>
+            <point key="canvasLocation" x="8533.3333333333339" y="1526.7857142857142"/>
         </scene>
         <!--Full Size Clothes View Controller-->
         <scene sceneID="wSM-FE-aqQ">
@@ -711,53 +773,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d48-p3-ske">
-                                <rect key="frame" x="30" y="66" width="354" height="88"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qL6-Ee-AFf">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="jjN-ic-sJb"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="Macacão">
-                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rok-cw-jQ6">
-                                        <rect key="frame" x="0.0" y="48" width="354" height="40"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="ZkV-C6-xwx"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="Vestido">
-                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8CF-BV-S1F">
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell1" rowHeight="88" id="MUF-8J-YU6" customClass="CustomCellFullClothesTableViewCell" customModule="ProjectClothes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="88"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MUF-8J-YU6" id="Hrn-58-ia8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxj-mg-h7g">
+                                                    <rect key="frame" x="15" y="10" width="384" height="68"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="Po5-xa-7FW"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Mxj-mg-h7g" secondAttribute="trailing" constant="15" id="OC3-V7-1bF"/>
+                                                <constraint firstItem="Mxj-mg-h7g" firstAttribute="leading" secondItem="Hrn-58-ia8" secondAttribute="leading" constant="15" id="VnY-B2-XmR"/>
+                                                <constraint firstAttribute="bottom" secondItem="Mxj-mg-h7g" secondAttribute="bottom" constant="10" id="iht-f3-a6V"/>
+                                                <constraint firstItem="Mxj-mg-h7g" firstAttribute="top" secondItem="Hrn-58-ia8" secondAttribute="top" constant="10" id="tsc-lb-M27"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="ligthPurple"/>
+                                        <connections>
+                                            <outlet property="clothesLabel" destination="Mxj-mg-h7g" id="Dwu-Rt-X9y"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="X6z-ZI-IHD"/>
-                        <color key="backgroundColor" red="0.46274509803921571" green="0.47058823529411764" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="d48-p3-ske" firstAttribute="top" secondItem="X6z-ZI-IHD" secondAttribute="top" constant="10" id="Mzz-8G-uzz"/>
-                            <constraint firstItem="d48-p3-ske" firstAttribute="leading" secondItem="X6z-ZI-IHD" secondAttribute="leading" constant="30" id="soy-wv-gMI"/>
-                            <constraint firstItem="X6z-ZI-IHD" firstAttribute="trailing" secondItem="d48-p3-ske" secondAttribute="trailing" constant="30" id="zzc-f8-bVb"/>
+                            <constraint firstItem="8CF-BV-S1F" firstAttribute="top" secondItem="X6z-ZI-IHD" secondAttribute="top" id="28z-3V-D31"/>
+                            <constraint firstItem="8CF-BV-S1F" firstAttribute="leading" secondItem="X6z-ZI-IHD" secondAttribute="leading" id="6Xi-4Q-MjG"/>
+                            <constraint firstItem="8CF-BV-S1F" firstAttribute="trailing" secondItem="X6z-ZI-IHD" secondAttribute="trailing" id="lDp-Bw-QIV"/>
+                            <constraint firstAttribute="bottom" secondItem="8CF-BV-S1F" secondAttribute="bottom" id="zsF-cd-DnC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cop-fI-pBj">
                         <barButtonItem key="backBarButtonItem" title="Categorias" id="fKN-hy-leU"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="fullSize1Button" destination="qL6-Ee-AFf" id="vGw-yJ-foS"/>
-                        <outlet property="fullSize2Button" destination="Rok-cw-jQ6" id="GB4-Iq-IPg"/>
+                        <outlet property="tableView" destination="8CF-BV-S1F" id="f75-vM-LG1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EbA-TP-WaR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10642.028985507248" y="-548.4375"/>
+            <point key="canvasLocation" x="8738" y="-589"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="olf-ah-1VL">
@@ -794,7 +865,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUk-Sm-Ic4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8823.188405797102" y="89.732142857142847"/>
+            <point key="canvasLocation" x="6964" y="90"/>
         </scene>
     </scenes>
     <color key="tintColor" name="AccentColor"/>
@@ -811,6 +882,9 @@
         </namedColor>
         <namedColor name="Text-Color">
             <color red="0.078000001609325409" green="0.086000002920627594" blue="0.45100000500679016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ligthPurple">
+            <color red="0.79327136279999999" green="0.8288878798" blue="0.96825665240000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

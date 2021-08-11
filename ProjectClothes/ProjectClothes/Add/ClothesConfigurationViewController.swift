@@ -18,7 +18,7 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
     }
     @IBOutlet weak var nextButton: UIButton!
     
-    var gender: String = "M"
+    var gender: String = "NONE"
     
     var imageReceive: UIImage?
     
