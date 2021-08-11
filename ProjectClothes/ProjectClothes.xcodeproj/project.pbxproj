@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD852CFF26C44E3800926B13 /* Clothes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD852CF926C44E3800926B13 /* Clothes.swift */; };
+		CD852D0026C44E3800926B13 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD852CFC26C44E3800926B13 /* DatabaseManager.swift */; };
+		CD852D0126C44E3800926B13 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD852CFE26C44E3800926B13 /* Extensions.swift */; };
 		CDF28F8F26B07C8C00241F13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF28F8E26B07C8C00241F13 /* AppDelegate.swift */; };
 		CDF28F9126B07C8C00241F13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF28F9026B07C8C00241F13 /* SceneDelegate.swift */; };
 		CDF28F9326B07C8C00241F13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF28F9226B07C8C00241F13 /* ViewController.swift */; };
@@ -55,6 +58,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD852CF926C44E3800926B13 /* Clothes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clothes.swift; sourceTree = "<group>"; };
+		CD852CFA26C44E3800926B13 /* ProjectClothes.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = ProjectClothes.entitlements; sourceTree = "<group>"; };
+		CD852CFC26C44E3800926B13 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		CD852CFE26C44E3800926B13 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CDF28F8B26B07C8C00241F13 /* ProjectClothes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectClothes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF28F8E26B07C8C00241F13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDF28F9026B07C8C00241F13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +122,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD852CF826C44E3800926B13 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD852CF926C44E3800926B13 /* Clothes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD852CFB26C44E3800926B13 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CD852CFC26C44E3800926B13 /* DatabaseManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		CD852CFD26C44E3800926B13 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CD852CFE26C44E3800926B13 /* Extensions.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		CDF28F8226B07C8C00241F13 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +165,10 @@
 		CDF28F8D26B07C8C00241F13 /* ProjectClothes */ = {
 			isa = PBXGroup;
 			children = (
+				CD852CFB26C44E3800926B13 /* Managers */,
+				CD852CF826C44E3800926B13 /* Model */,
+				CD852CFA26C44E3800926B13 /* ProjectClothes.entitlements */,
+				CD852CFD26C44E3800926B13 /* Resources */,
 				FDA72CA126C43DAD00F966F5 /* Settings */,
 				FD23EEC126B1D1F4009FF48C /* Create */,
 				FD23EEBE26B1D1C6009FF48C /* Today */,
@@ -325,6 +360,7 @@
 			files = (
 				CDF28F9326B07C8C00241F13 /* ViewController.swift in Sources */,
 				FD4CE73626B9DDF60014B05F /* NonMaxSuppression.swift in Sources */,
+				CD852D0026C44E3800926B13 /* DatabaseManager.swift in Sources */,
 				FD4CE73326B9DDF60014B05F /* CoreML+Combine.swift in Sources */,
 				FD4CE72A26B9DDF60014B05F /* Array+Extensions.swift in Sources */,
 				FD08F83126B86B6C003E0C9C /* CustomModalViewController.swift in Sources */,
@@ -337,6 +373,7 @@
 				FD4CE72F26B9DDF60014B05F /* CGImagePropertyOrientation.swift in Sources */,
 				FD4CE71626B9DDEC0014B05F /* DrawingView.swift in Sources */,
 				FD4CE73726B9DDF60014B05F /* CGImage+RawBytes.swift in Sources */,
+				CD852CFF26C44E3800926B13 /* Clothes.swift in Sources */,
 				FD4CE73A26B9DDF60014B05F /* CVPixelBuffer+Rotate.swift in Sources */,
 				FD4CE71326B9AB730014B05F /* WhiteBoardViewController.swift in Sources */,
 				F85A4BA726C1B2660020B5F0 /* TopClothesViewController.swift in Sources */,
@@ -356,6 +393,7 @@
 				FD4CE73226B9DDF60014B05F /* MLModel+Images.swift in Sources */,
 				FD4CE73026B9DDF60014B05F /* UIImage+RawBytes.swift in Sources */,
 				FDA72CA526C43DAD00F966F5 /* SettingsViewController.swift in Sources */,
+				CD852D0126C44E3800926B13 /* Extensions.swift in Sources */,
 				CDF28F9126B07C8C00241F13 /* SceneDelegate.swift in Sources */,
 				FD4CE72B26B9DDF60014B05F /* Math.swift in Sources */,
 				F85A4BA526C1B2450020B5F0 /* FullSizeClothesViewController.swift in Sources */,
