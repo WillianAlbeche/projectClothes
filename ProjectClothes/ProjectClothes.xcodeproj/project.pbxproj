@@ -52,6 +52,8 @@
 		FDA72CA926C4406100F966F5 /* wardrobeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CA626C4406100F966F5 /* wardrobeViewController.swift */; };
 		FDA72CAA26C4406100F966F5 /* SuperRoupaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CA726C4406100F966F5 /* SuperRoupaTableViewCell.swift */; };
 		FDA72CAB26C4406100F966F5 /* BackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CA826C4406100F966F5 /* BackCollectionViewCell.swift */; };
+		FDA72CAF26C464C900F966F5 /* Look.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CAD26C464C900F966F5 /* Look.swift */; };
+		FDA72CB026C464C900F966F5 /* Clothes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CAE26C464C900F966F5 /* Clothes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,8 @@
 		FDA72CA626C4406100F966F5 /* wardrobeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wardrobeViewController.swift; sourceTree = "<group>"; };
 		FDA72CA726C4406100F966F5 /* SuperRoupaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperRoupaTableViewCell.swift; sourceTree = "<group>"; };
 		FDA72CA826C4406100F966F5 /* BackCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackCollectionViewCell.swift; sourceTree = "<group>"; };
+		FDA72CAD26C464C900F966F5 /* Look.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Look.swift; sourceTree = "<group>"; };
+		FDA72CAE26C464C900F966F5 /* Clothes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clothes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,7 @@
 		CDF28F8D26B07C8C00241F13 /* ProjectClothes */ = {
 			isa = PBXGroup;
 			children = (
+				FDA72CAC26C464C900F966F5 /* Model */,
 				FDA72CA126C43DAD00F966F5 /* Settings */,
 				FD23EEC126B1D1F4009FF48C /* Create */,
 				FD23EEBE26B1D1C6009FF48C /* Today */,
@@ -248,6 +253,15 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		FDA72CAC26C464C900F966F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FDA72CAD26C464C900F966F5 /* Look.swift */,
+				FDA72CAE26C464C900F966F5 /* Clothes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -327,10 +341,12 @@
 				FD4CE73626B9DDF60014B05F /* NonMaxSuppression.swift in Sources */,
 				FD4CE73326B9DDF60014B05F /* CoreML+Combine.swift in Sources */,
 				FD4CE72A26B9DDF60014B05F /* Array+Extensions.swift in Sources */,
+				FDA72CAF26C464C900F966F5 /* Look.swift in Sources */,
 				FD08F83126B86B6C003E0C9C /* CustomModalViewController.swift in Sources */,
 				CDF28F8F26B07C8C00241F13 /* AppDelegate.swift in Sources */,
 				FD4CE72D26B9DDF60014B05F /* Predictions.swift in Sources */,
 				FDA72CA026C439D400F966F5 /* CreateViewController.swift in Sources */,
+				FDA72CB026C464C900F966F5 /* Clothes.swift in Sources */,
 				FD4CE72C26B9DDF60014B05F /* UIImage+CVPixelBuffer.swift in Sources */,
 				FD4CE73126B9DDF60014B05F /* MLMultiArray+Helpers.swift in Sources */,
 				FD4CE73426B9DDF60014B05F /* CVPixelBuffer+Create.swift in Sources */,

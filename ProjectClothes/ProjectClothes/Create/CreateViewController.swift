@@ -8,7 +8,7 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
     
     @IBOutlet weak var deleteButton: UIButton!
     
-//    @IBOutlet weak var outButton: UIButton!
+    //    @IBOutlet weak var outButton: UIButton!
     
     @IBOutlet weak var saveButton: UIButton!
     
@@ -51,11 +51,11 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
         deleteButton.layer.shadowRadius = 20
         deleteButton.layer.cornerRadius = 25
         
-//        outButton.layer.shadowColor = UIColor.gray.cgColor
-//        outButton.layer.shadowOpacity = 0.3
-//        outButton.layer.shadowOffset = .zero
-//        outButton.layer.shadowRadius = 20
-//        outButton.layer.cornerRadius = 25
+        //        outButton.layer.shadowColor = UIColor.gray.cgColor
+        //        outButton.layer.shadowOpacity = 0.3
+        //        outButton.layer.shadowOffset = .zero
+        //        outButton.layer.shadowRadius = 20
+        //        outButton.layer.cornerRadius = 25
         
         
         saveButton.layer.shadowColor = UIColor.gray.cgColor
@@ -81,22 +81,35 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
             self.view.bringSubviewToFront(addItem ?? UIView())
             //            self.view.bringSubviewToFront(deleteButton ?? UIView())
             self.view.bringSubviewToFront(saveButton ?? UIView())
-//            self.view.bringSubviewToFront(outButton ?? UIView())
+            //            self.view.bringSubviewToFront(outButton ?? UIView())
             
             if pointIsWithinView(point:gestureRecognizer.location(in: self.view) , view1: deleteButton){
-                            gestureRecognizer.view?.removeFromSuperview()
-                            
+                self.animateView(deleteButton)
+                gestureRecognizer.view?.removeFromSuperview()
             }
-            
         }
-        
+    }
+    
+    fileprivate func animateView( _ viewToAnimate: UIView){
+        UIView.animateKeyframes(withDuration: 0.3, delay: 0, options: UIView.KeyframeAnimationOptions.allowUserInteraction , animations: {
+            viewToAnimate.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        }){ (_) in
+            
+            print("funcionando")
+            UIView.animateKeyframes(withDuration: 1, delay: 0, options: UIView.KeyframeAnimationOptions.allowUserInteraction , animations: {
+                viewToAnimate.transform = CGAffineTransform(scaleX: -1, y: -1)
+                UIView.animateKeyframes(withDuration: 1, delay: 0, options: UIView.KeyframeAnimationOptions.allowUserInteraction , animations: {
+                    viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)
+                }, completion: nil)
+            },completion: nil)
+        }
     }
     
     func pointIsWithinView(point:CGPoint, view1:UIView ) -> Bool{
-
-            
-            return view1.frame.contains(point)
-            }
+        
+        
+        return view1.frame.contains(point)
+    }
     
     @objc func handlePinchGesture(_ gestureRecognizer:UIPinchGestureRecognizer){
         if gestureRecognizer.state == .began || gestureRecognizer.state == .changed

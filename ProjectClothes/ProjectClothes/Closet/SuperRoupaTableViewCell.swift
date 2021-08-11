@@ -43,7 +43,9 @@ extension SuperRoupaTableViewCell : UICollectionViewDelegate, UICollectionViewDa
         let lado = UIScreen.screenHeight*0.1859
         return CGSize(width: lado , height: lado)
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("selectioando ")
+    }
     
     
     

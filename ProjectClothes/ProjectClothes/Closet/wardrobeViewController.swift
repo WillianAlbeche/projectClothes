@@ -38,6 +38,10 @@ class wardrobeViewController: UIViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         
         navigationItem.searchController = searchController
+        let looksCollectionViewLayout = looksCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
+        looksCollectionViewLayout?.sectionInset = UIEdgeInsets(top: 0.0 , left: UIScreen.screenWidth*0.072, bottom: 5, right: UIScreen.screenWidth*0.072)
+                
+        
         
     }
 }
@@ -81,7 +85,7 @@ extension wardrobeViewController : UICollectionViewDelegate, UICollectionViewDat
         }
         
         cell.backgroundColor = .blue
-        cell.clotheImage.image = UIImage(named: "image2")
+        cell.clotheImage.image = UIImage(named: "Image2")
         cell.label.text = "roupa blue"
 
         return cell

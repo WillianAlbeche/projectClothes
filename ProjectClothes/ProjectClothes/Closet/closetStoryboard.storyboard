@@ -22,7 +22,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="bSJ-3q-N5Z" kind="relationship" relationship="rootViewController" id="apC-YT-zhj"/>
+                        <segue destination="vXi-a3-RrA" kind="relationship" relationship="rootViewController" id="4Ak-8X-l1h"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xfr-gc-kp4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -40,7 +40,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u7V-uf-SCZ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Eu5-Mx-M5D">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Eu5-Mx-M5D">
                                     <size key="itemSize" width="237" height="233"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -97,7 +97,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uuV-Vf-PBa">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uuV-Vf-PBa">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -189,24 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCK-Kq-UfS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2564" y="115"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="zYr-QZ-KCk">
-            <objects>
-                <navigationController id="bSJ-3q-N5Z" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="cVd-AP-La5"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="0Gj-Z6-ZA9">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="vXi-a3-RrA" kind="relationship" relationship="rootViewController" id="eYT-n2-sib"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bCu-rK-SQE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1133" y="115"/>
+            <point key="canvasLocation" x="1538" y="115"/>
         </scene>
     </scenes>
     <resources>
