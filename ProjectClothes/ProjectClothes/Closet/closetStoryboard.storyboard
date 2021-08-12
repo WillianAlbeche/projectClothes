@@ -32,7 +32,7 @@
         <!--Wardrobe View Controller-->
         <scene sceneID="3fZ-Ft-Ot6">
             <objects>
-                <viewController id="vXi-a3-RrA" customClass="wardrobeViewController" customModule="Wardrobe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXi-a3-RrA" customClass="wardrobeViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rzB-Jn-lBg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,7 +47,7 @@
                                     <inset key="sectionInset" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hiddenCollectionCell" id="0aB-Hj-gf5" customClass="BackCollectionViewCell" customModule="Wardrobe" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="hiddenCollectionCell" id="0aB-Hj-gf5" customClass="BackCollectionViewCell" customModule="ProjectClothes" customModuleProvider="target">
                                         <rect key="frame" x="30" y="0.0" width="151" height="151"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bZV-lw-1Yu">
@@ -101,7 +101,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="220" id="6VY-Q9-Jdo" customClass="SuperRoupaTableViewCell" customModule="Wardrobe" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="220" id="6VY-Q9-Jdo" customClass="SuperRoupaTableViewCell" customModule="ProjectClothes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6VY-Q9-Jdo" id="rme-gv-Y7L">
@@ -124,13 +124,27 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="337-nf-csf">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="337-nf-csf" customClass="FrontCollectionViewCell" customModule="ProjectClothes" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="21.5" width="128" height="128"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="g0U-pm-tmH">
                                                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vRf-f7-OfB">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="vRf-f7-OfB" secondAttribute="bottom" id="5tn-OQ-keH"/>
+                                                                    <constraint firstItem="vRf-f7-OfB" firstAttribute="top" secondItem="g0U-pm-tmH" secondAttribute="top" id="I6l-kD-dgu"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="vRf-f7-OfB" secondAttribute="trailing" id="RZa-Vt-nGo"/>
+                                                                    <constraint firstItem="vRf-f7-OfB" firstAttribute="leading" secondItem="g0U-pm-tmH" secondAttribute="leading" id="ioh-g5-IhH"/>
+                                                                </constraints>
                                                             </collectionViewCellContentView>
+                                                            <connections>
+                                                                <outlet property="pictureOfSubType" destination="vRf-f7-OfB" id="rhU-iB-4th"/>
+                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>

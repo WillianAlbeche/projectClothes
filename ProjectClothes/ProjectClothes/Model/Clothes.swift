@@ -7,7 +7,7 @@
 
 import Foundation
 import CloudKit
-
+import UIKit
 //class Clothes {
 //
 //    let id: CKRecord.ID?
@@ -271,4 +271,23 @@ enum Confort: Int {
     }
 }
 
-
+extension CKAsset {
+    func toUIImage() -> UIImage? {
+        if let data = NSData(contentsOf: self.fileURL!) {
+            return UIImage(data: data as Data)
+        }
+        return nil
+    }
+}
+extension UIImage {
+    func toURL() -> URL? {
+        let data = self.pngData()
+        let url = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(NSUUID().uuidString+".dat")
+        do {
+            try data!.write(to: url!)
+        } catch let e as NSError {
+            print("Error! \(e)");
+        }
+        return url
+    }
+}

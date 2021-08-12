@@ -54,6 +54,8 @@
 		FDA72CAB26C4406100F966F5 /* BackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CA826C4406100F966F5 /* BackCollectionViewCell.swift */; };
 		FDA72CAF26C464C900F966F5 /* Look.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CAD26C464C900F966F5 /* Look.swift */; };
 		FDA72CB026C464C900F966F5 /* Clothes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CAE26C464C900F966F5 /* Clothes.swift */; };
+		FDA72CB226C4677C00F966F5 /* MockClothesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CB126C4677C00F966F5 /* MockClothesData.swift */; };
+		FDA72CD726C5A80C00F966F5 /* FrontCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CD626C5A80C00F966F5 /* FrontCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +108,8 @@
 		FDA72CA826C4406100F966F5 /* BackCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackCollectionViewCell.swift; sourceTree = "<group>"; };
 		FDA72CAD26C464C900F966F5 /* Look.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Look.swift; sourceTree = "<group>"; };
 		FDA72CAE26C464C900F966F5 /* Clothes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clothes.swift; sourceTree = "<group>"; };
+		FDA72CB126C4677C00F966F5 /* MockClothesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockClothesData.swift; sourceTree = "<group>"; };
+		FDA72CD626C5A80C00F966F5 /* FrontCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 				FDA72CA726C4406100F966F5 /* SuperRoupaTableViewCell.swift */,
 				FDA72CA626C4406100F966F5 /* wardrobeViewController.swift */,
 				CDF28FAD26B08F6900241F13 /* closetStoryboard.storyboard */,
+				FDA72CD626C5A80C00F966F5 /* FrontCollectionViewCell.swift */,
 			);
 			path = Closet;
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 			children = (
 				FDA72CAD26C464C900F966F5 /* Look.swift */,
 				FDA72CAE26C464C900F966F5 /* Clothes.swift */,
+				FDA72CB126C4677C00F966F5 /* MockClothesData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -343,6 +349,7 @@
 				FD4CE72A26B9DDF60014B05F /* Array+Extensions.swift in Sources */,
 				FDA72CAF26C464C900F966F5 /* Look.swift in Sources */,
 				FD08F83126B86B6C003E0C9C /* CustomModalViewController.swift in Sources */,
+				FDA72CB226C4677C00F966F5 /* MockClothesData.swift in Sources */,
 				CDF28F8F26B07C8C00241F13 /* AppDelegate.swift in Sources */,
 				FD4CE72D26B9DDF60014B05F /* Predictions.swift in Sources */,
 				FDA72CA026C439D400F966F5 /* CreateViewController.swift in Sources */,
@@ -356,6 +363,7 @@
 				FD4CE73A26B9DDF60014B05F /* CVPixelBuffer+Rotate.swift in Sources */,
 				FD4CE71326B9AB730014B05F /* WhiteBoardViewController.swift in Sources */,
 				F85A4BA726C1B2660020B5F0 /* TopClothesViewController.swift in Sources */,
+				FDA72CD726C5A80C00F966F5 /* FrontCollectionViewCell.swift in Sources */,
 				FD4CE73826B9DDF60014B05F /* MLMultiArray+Image.swift in Sources */,
 				FD430BE926B3329700F31DD2 /* AddNavigationController.swift in Sources */,
 				FDA72CA926C4406100F966F5 /* wardrobeViewController.swift in Sources */,

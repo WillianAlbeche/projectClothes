@@ -16,6 +16,15 @@ class wardrobeViewController: UIViewController {
     @IBOutlet weak var clotheOrLookPicker: UISegmentedControl!
     @IBOutlet weak var categoriesTableView: UITableView!
     
+    var classeMock = MockClothesData()
+    
+    var allClothes: [Clothes]?
+    var clotheTipesDict: [String: [Clothes]] = [:]
+    var presentClothesSuperTypes : [String] = []
+    
+    var calculatedNumberOfCategories :Int?
+    
+    
     @IBAction func didSelectPicker(_ sender: UISegmentedControl) {
         
         categoriesTableView.isHidden = sender.selectedSegmentIndex != 0
@@ -24,6 +33,7 @@ class wardrobeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        allClothes = classeMock.roupasMock
        
         categoriesTableView.delegate = self
         categoriesTableView.dataSource = self
@@ -40,22 +50,58 @@ class wardrobeViewController: UIViewController {
         navigationItem.searchController = searchController
         let looksCollectionViewLayout = looksCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
         looksCollectionViewLayout?.sectionInset = UIEdgeInsets(top: 0.0 , left: UIScreen.screenWidth*0.072, bottom: 5, right: UIScreen.screenWidth*0.072)
-                
+           
+        
+        calculatedNumberOfCategories = getNumberSuperClothesCategories()
         
         
     }
+    func getNumberSuperClothesCategories() -> Int{
+       
+        guard let unwrapedClothesArray = allClothes else{
+            fatalError("no clothes to be received")
+        }
+         
+        for clothe in unwrapedClothesArray{
+            guard let currentClotheType = clothe.type else{
+                print("somethingWrong with unwrapedClothesArray in wardrobeVC")
+                continue
+            }
+            if  presentClothesSuperTypes.contains(currentClotheType) == false{
+                presentClothesSuperTypes.append(currentClotheType)
+                clotheTipesDict[currentClotheType] = [clothe]
+                
+            }else{
+                // so da append no dict
+                clotheTipesDict[currentClotheType]?.append(clothe)
+            }
+        }
+        print(presentClothesSuperTypes.count)
+    
+        return presentClothesSuperTypes.count
+     
+    }
+        
+        
+    
+    
+   
+    
 }
+
+
 extension wardrobeViewController :  UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 3
+        return calculatedNumberOfCategories ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = categoriesTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? SuperRoupaTableViewCell else{
-            return categoriesTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        }
-            cell.superClassNameLabel.text = "parte superior"
+        let cell = categoriesTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SuperRoupaTableViewCell
+        
+        let name = presentClothesSuperTypes[indexPath.row]
+        cell.superClassNameLabel.text = name
+        cell.thisSuperClothesArray = clotheTipesDict[name]
+        
         
         return  cell
     }
