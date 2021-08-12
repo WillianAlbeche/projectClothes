@@ -41,30 +41,44 @@ class FullSizeClothesViewController: UIViewController, UITableViewDelegate, UITa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! CustomCellFullClothesTableViewCell
-        
         if gender == "M"{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! CustomCellFullClothesTableViewCell
             
             let cellroupas = maleClothes[indexPath.row]
             
             cell.clothesLabel.text = cellroupas
             cell.clothesLabel.layer.cornerRadius = 20
             
+            return cell
+            
         }else if gender == "F" {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! CustomCellFullClothesTableViewCell
             
             let cellroupas = femaleClothes[indexPath.row]
             
             cell.clothesLabel.text = cellroupas
             cell.clothesLabel.layer.cornerRadius = 20
+            
+            return cell
         }else if gender == "NONE"{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! CustomCellFullClothesTableViewCell
             
             let cellroupas = none[indexPath.row]
             
             cell.clothesLabel.text = cellroupas
             cell.clothesLabel.layer.cornerRadius = 20
+            
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! CustomCellFullClothesTableViewCell
+            
+            let cellroupas = none[indexPath.row]
+            
+            cell.clothesLabel.text = cellroupas
+            cell.clothesLabel.layer.cornerRadius = 20
+            
+            return cell
         }
-        return cell
     }
-    
 }
 

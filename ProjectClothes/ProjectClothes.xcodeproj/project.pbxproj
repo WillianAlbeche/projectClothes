@@ -23,6 +23,10 @@
 		F85A4BAB26C1B2960020B5F0 /* ShoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4BAA26C1B2960020B5F0 /* ShoesViewController.swift */; };
 		F85A4BB126C459960020B5F0 /* CustomCellFullClothesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4BB026C459960020B5F0 /* CustomCellFullClothesTableViewCell.swift */; };
 		F85A4BB326C45C9D0020B5F0 /* CustomCellTopClothesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4BB226C45C9D0020B5F0 /* CustomCellTopClothesTableViewCell.swift */; };
+		F85A4BB926C469970020B5F0 /* CustomCellBottomClothesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4BB826C469970020B5F0 /* CustomCellBottomClothesTableViewCell.swift */; };
+		F85A4BBB26C585270020B5F0 /* CustomCellShoesClothesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4BBA26C585270020B5F0 /* CustomCellShoesClothesTableViewCell.swift */; };
+		F85A4BBF26C586430020B5F0 /* AccessoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4BBE26C586430020B5F0 /* AccessoriesViewController.swift */; };
+		F85A4BC126C587230020B5F0 /* CustomCellAccessoriesClothesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4BC026C587230020B5F0 /* CustomCellAccessoriesClothesTableViewCell.swift */; };
 		FD08F82B26B86AF4003E0C9C /* settingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08F82A26B86AF4003E0C9C /* settingsStoryboard.storyboard */; };
 		FD08F82D26B86B02003E0C9C /* createStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08F82C26B86B02003E0C9C /* createStoryboard.storyboard */; };
 		FD08F82F26B86B0B003E0C9C /* todayStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08F82E26B86B0B003E0C9C /* todayStoryboard.storyboard */; };
@@ -66,10 +70,14 @@
 		F85A4BA126C1A48D0020B5F0 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModalViewController.swift; path = ProjectClothes/Add/ModalCategories/ModalViewController.swift; sourceTree = SOURCE_ROOT; };
 		F85A4BA426C1B2450020B5F0 /* FullSizeClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FullSizeClothesViewController.swift; path = ProjectClothes/Add/ModalCategories/FullClothes/FullSizeClothesViewController.swift; sourceTree = SOURCE_ROOT; };
 		F85A4BA626C1B2660020B5F0 /* TopClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TopClothesViewController.swift; path = ProjectClothes/Add/ModalCategories/TopClothes/TopClothesViewController.swift; sourceTree = SOURCE_ROOT; };
-		F85A4BA826C1B2810020B5F0 /* BottomClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BottomClothesViewController.swift; path = ProjectClothes/Add/BottomClothesViewController.swift; sourceTree = SOURCE_ROOT; };
-		F85A4BAA26C1B2960020B5F0 /* ShoesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShoesViewController.swift; path = ProjectClothes/Add/ShoesViewController.swift; sourceTree = SOURCE_ROOT; };
+		F85A4BA826C1B2810020B5F0 /* BottomClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BottomClothesViewController.swift; path = ProjectClothes/Add/ModalCategories/BottomClothes/BottomClothesViewController.swift; sourceTree = SOURCE_ROOT; };
+		F85A4BAA26C1B2960020B5F0 /* ShoesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShoesViewController.swift; path = ProjectClothes/Add/ModalCategories/Shoes/ShoesViewController.swift; sourceTree = SOURCE_ROOT; };
 		F85A4BB026C459960020B5F0 /* CustomCellFullClothesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCellFullClothesTableViewCell.swift; path = ProjectClothes/Add/ModalCategories/FullClothes/CustomCellFullClothesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		F85A4BB226C45C9D0020B5F0 /* CustomCellTopClothesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCellTopClothesTableViewCell.swift; path = ProjectClothes/Add/CustomCellTopClothesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		F85A4BB826C469970020B5F0 /* CustomCellBottomClothesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCellBottomClothesTableViewCell.swift; path = ProjectClothes/Add/CustomCellBottomClothesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		F85A4BBA26C585270020B5F0 /* CustomCellShoesClothesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCellShoesClothesTableViewCell.swift; path = ProjectClothes/Add/CustomCellShoesClothesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		F85A4BBE26C586430020B5F0 /* AccessoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccessoriesViewController.swift; path = ProjectClothes/Add/AccessoriesViewController.swift; sourceTree = SOURCE_ROOT; };
+		F85A4BC026C587230020B5F0 /* CustomCellAccessoriesClothesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCellAccessoriesClothesTableViewCell.swift; path = ProjectClothes/Add/CustomCellAccessoriesClothesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		FD08F82A26B86AF4003E0C9C /* settingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = settingsStoryboard.storyboard; sourceTree = "<group>"; };
 		FD08F82C26B86B02003E0C9C /* createStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = createStoryboard.storyboard; sourceTree = "<group>"; };
 		FD08F82E26B86B0B003E0C9C /* todayStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = todayStoryboard.storyboard; sourceTree = "<group>"; };
@@ -178,8 +186,6 @@
 				F85A4BB426C45D3D0020B5F0 /* FullClothes */,
 				F85A4BAF26C459740020B5F0 /* TopClothes */,
 				F85A4BA126C1A48D0020B5F0 /* ModalViewController.swift */,
-				F85A4BA826C1B2810020B5F0 /* BottomClothesViewController.swift */,
-				F85A4BAA26C1B2960020B5F0 /* ShoesViewController.swift */,
 			);
 			path = ModalCategories;
 			sourceTree = "<group>";
@@ -205,6 +211,8 @@
 		F85A4BB526C45D450020B5F0 /* BottomClothes */ = {
 			isa = PBXGroup;
 			children = (
+				F85A4BA826C1B2810020B5F0 /* BottomClothesViewController.swift */,
+				F85A4BB826C469970020B5F0 /* CustomCellBottomClothesTableViewCell.swift */,
 			);
 			path = BottomClothes;
 			sourceTree = "<group>";
@@ -212,6 +220,8 @@
 		F85A4BB626C45D530020B5F0 /* Shoes */ = {
 			isa = PBXGroup;
 			children = (
+				F85A4BAA26C1B2960020B5F0 /* ShoesViewController.swift */,
+				F85A4BBA26C585270020B5F0 /* CustomCellShoesClothesTableViewCell.swift */,
 			);
 			path = Shoes;
 			sourceTree = "<group>";
@@ -219,6 +229,8 @@
 		F85A4BB726C45D5D0020B5F0 /* Accessories */ = {
 			isa = PBXGroup;
 			children = (
+				F85A4BBE26C586430020B5F0 /* AccessoriesViewController.swift */,
+				F85A4BC026C587230020B5F0 /* CustomCellAccessoriesClothesTableViewCell.swift */,
 			);
 			path = Accessories;
 			sourceTree = "<group>";
@@ -354,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F85A4BC126C587230020B5F0 /* CustomCellAccessoriesClothesTableViewCell.swift in Sources */,
 				CDF28F9326B07C8C00241F13 /* ViewController.swift in Sources */,
 				FD4CE73626B9DDF60014B05F /* NonMaxSuppression.swift in Sources */,
 				FD4CE73326B9DDF60014B05F /* CoreML+Combine.swift in Sources */,
@@ -380,6 +393,9 @@
 				F85A4BA926C1B2810020B5F0 /* BottomClothesViewController.swift in Sources */,
 				F85A4BA226C1A48D0020B5F0 /* ModalViewController.swift in Sources */,
 				FD4CE73B26B9DDF60014B05F /* DeepLabV3.mlmodel in Sources */,
+				F85A4BBB26C585270020B5F0 /* CustomCellShoesClothesTableViewCell.swift in Sources */,
+				F85A4BB926C469970020B5F0 /* CustomCellBottomClothesTableViewCell.swift in Sources */,
+				F85A4BBF26C586430020B5F0 /* AccessoriesViewController.swift in Sources */,
 				FD4CE73526B9DDF60014B05F /* CGImage+CVPixelBuffer.swift in Sources */,
 				FD4CE73226B9DDF60014B05F /* MLModel+Images.swift in Sources */,
 				FD4CE73026B9DDF60014B05F /* UIImage+RawBytes.swift in Sources */,

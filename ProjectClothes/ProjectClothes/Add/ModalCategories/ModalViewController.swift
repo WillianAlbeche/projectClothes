@@ -42,7 +42,7 @@ class ModalViewController: UIViewController {
     }
     @IBOutlet weak var accessoriesButton: UIButton!
     @IBAction func accessoriesAction(_ sender: Any) {
-        performSegue(withIdentifier: "goToTop", sender: gender)
+        performSegue(withIdentifier: "goToAccessories", sender: gender)
     }
     
     var gender: String?
@@ -61,7 +61,13 @@ class ModalViewController: UIViewController {
         
         if segue.identifier == "goToFullSize" {
             destination?.gender = gender
+        }else if segue.identifier == "goToTop"{
+            destination2?.gender = gender
+        }else if segue.identifier == "goToBottom"{
+            destination2?.gender = gender
         }else if segue.identifier == "goToShoes"{
+            destination2?.gender = gender
+        }else if segue.identifier == "goToAccessories"{
             destination2?.gender = gender
         }
     }
