@@ -102,77 +102,76 @@ import CloudKit
 //    }
 //}
 
-enum Filter: Int {
-    
-    var id: Int { self.rawValue }
-    
-    case Casual
-    case Formal
-    case Camping
-    case Work
-    case Beach
-    case Holiday
-    case Sports
-    case Party
-    case Date
-    
-    func getName() -> String{
-        switch self {
-        case .Casual : return "Casual"
-        case .Formal : return "Formal"
-        case .Camping : return "Camping"
-        case .Work : return "Work"
-        case .Beach : return "Beach"
-        case .Holiday : return "Holiday"
-        case .Sports : return "Sports"
-        case .Party : return "Party"
-        case .Date : return "Date"
-        }
-    }
-}
-
-enum Season: Int {
-    
-    var id: Int { self.rawValue }
-    
-    case Fall
-    case Winter
-    case Summer
-    case Spring
-    
-    func getName() -> String{
-        switch self {
-        case .Fall : return "Fall"
-        case .Winter : return "Winter"
-        case .Summer : return "Summer"
-        case .Spring : return "Spring"
-        }
-    }
-}
-
-enum Special: Int {
-    
-    var id: Int { self.rawValue }
-    
-    case Wind
-    case Rainning
-    case Snow
-    case SensitiveToRain
-    
-    func getName() -> String{
-        switch self {
-        case .Wind : return "Wind"
-        case .Rainning : return "Rainning"
-        case .Snow : return "Snow"
-        case .SensitiveToRain : return "SensitiveToRain"
-        }
-    }
-}
+//enum Filter: Int {
+//
+//    var id: Int { self.rawValue }
+//
+//    case Casual
+//    case Formal
+//    case Camping
+//    case Work
+//    case Beach
+//    case Holiday
+//    case Sports
+//    case Party
+//    case Date
+//
+//    func getName() -> String{
+//        switch self {
+//        case .Casual : return "Casual"
+//        case .Formal : return "Formal"
+//        case .Camping : return "Camping"
+//        case .Work : return "Work"
+//        case .Beach : return "Beach"
+//        case .Holiday : return "Holiday"
+//        case .Sports : return "Sports"
+//        case .Party : return "Party"
+//        case .Date : return "Date"
+//        }
+//    }
+//}
+//
+//enum Season: Int {
+//
+//    var id: Int { self.rawValue }
+//
+//    case Fall
+//    case Winter
+//    case Summer
+//    case Spring
+//
+//    func getName() -> String{
+//        switch self {
+//        case .Fall : return "Fall"
+//        case .Winter : return "Winter"
+//        case .Summer : return "Summer"
+//        case .Spring : return "Spring"
+//        }
+//    }
+//}
+//
+//enum Special: Int {
+//
+//    var id: Int { self.rawValue }
+//
+//    case Wind
+//    case Rainning
+//    case Snow
+//    case SensitiveToRain
+//
+//    func getName() -> String{
+//        switch self {
+//        case .Wind : return "Wind"
+//        case .Rainning : return "Rainning"
+//        case .Snow : return "Snow"
+//        case .SensitiveToRain : return "SensitiveToRain"
+//        }
+//    }
+//}
 
 class Clothes {
     
     let id: CKRecord.ID?
-    
     var image: CKAsset?
     var color: String?
     
@@ -195,38 +194,26 @@ class Clothes {
     
     init(record: CKRecord) {
         id = record.recordID
-        
-        /// change
+       
         self.image = record["image"] as? CKAsset
         self.color = record["color"] as? String
+        self.filters = record["filters"] as? [String]
+        self.seasons = record["seasons"] as? [String]
+        self.specials = record["specials"] as? [String]
+        self.type = record["type"] as? String
+        self.subType = record["subType"] as? String
+        self.fabric = record["fabric"] as? String
+        self.brand = record["brand"] as? String
+        self.gender = record["gender"] as? String
         
-        if
-            let filters = record["filters"] as? [String],
-            let seasons = record["seasons"] as? [String],
-            let specials = record["specials"] as? [String],
-            let warm = record["warm"] as? Int,
-            let confort = record["confort"] as? Int,
-            let type = record["type"] as? String,
-            let subType = record["subType"] as? String,
-            let fabric = record["fabric"] as? String,
-            let brand = record["brand"] as? String,
-            let gender = record["gender"] as? String
+        if let warm = record["warm"] as? Int,
+            let confort = record["confort"] as? Int
         {
-            
-            
             let warm1 = Warm(rawValue: warm)
             let confort1 = Confort(rawValue: confort)
-            
-            self.filters = filters
-            self.seasons = seasons
-            self.specials = specials
+           
             self.warm = warm1
             self.confort = confort1
-            self.type = type
-            self.subType = subType
-            self.fabric = fabric
-            self.brand = brand
-            self.gender = gender
             
         }
         
@@ -281,5 +268,3 @@ enum Confort: Int {
         }
     }
 }
-
-
