@@ -34,7 +34,6 @@ class DatabaseManager {
             fetchAllClothes(completionQueue: completionQueue, completion: completion)
             return
         }
-        
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "Clothes", predicate: predicate)
         
