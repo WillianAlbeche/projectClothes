@@ -19,9 +19,6 @@ class SuperRoupaTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
-        
-    
         subClassesCollecionView.delegate = self
         subClassesCollecionView.dataSource = self
        
@@ -34,12 +31,9 @@ class SuperRoupaTableViewCell: UITableViewCell {
     }
 
 }
+
 extension SuperRoupaTableViewCell : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-            print(thisSuperClothesArray!.count)
-       
-        
         return thisSuperClothesArray!.count
     }
   
@@ -47,14 +41,21 @@ extension SuperRoupaTableViewCell : UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
          let collectionCell = subClassesCollecionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! FrontCollectionViewCell
         
-        collectionCell.layer.cornerRadius = 10
-        print("aqui---------")
-        print(thisSuperClothesArray?[indexPath.row].type)
-        print(thisSuperClothesArray?[indexPath.row].image?.toUIImage())
-        print("------------")
-        collectionCell.pictureOfSubType.image = thisSuperClothesArray?[indexPath.row].image?.toUIImage()
-        collectionCell.backgroundColor = .blue
+       
+        //collectionCell.pictureOfSubType.image = thisSuperClothesArray?[indexPath.row].image?.toUIImage()
+        collectionCell.pictureOfSubType.image = UIImage(named: "ver")
+        collectionCell.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0).cgColor
+        collectionCell.layer.cornerRadius = 50
         
+//        collectionCell.layer.shadowColor = UIColor.black.cgColor
+//        collectionCell.layer.shadowOpacity = 1
+//        collectionCell.layer.shadowOffset = .zero
+//        collectionCell.layer.shadowRadius = 10
+//        collectionCell.layer.cornerRadius = 21
+        
+        
+        collectionCell.layer.borderWidth = 20
+        collectionCell.layer.borderColor = UIColor.green.cgColor
             return collectionCell
     }
     
@@ -63,7 +64,7 @@ extension SuperRoupaTableViewCell : UICollectionViewDelegate, UICollectionViewDa
         return CGSize(width: lado , height: lado)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("selectioando ")
+        
     }
     
     

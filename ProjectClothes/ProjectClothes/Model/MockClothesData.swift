@@ -73,11 +73,12 @@ class MockClothesData {
     lazy var roupa5: Clothes = {
         var roupa : Clothes = Clothes.createEmptyClothes()
         
+        let image = UIImage(named: "Image-1")
         
         guard let imageURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("Image2.png") else {
             fatalError("problema nem fetch imagem nas roupas mock")
         }
-        roupa.image = CKAsset.init(fileURL: imageURL)
+        roupa.image = CKAsset.init(fileURL: image?.toURL() ?? imageURL)
         
         roupa.type = "infra"
         roupa.subType = "infra1"
@@ -90,11 +91,12 @@ class MockClothesData {
     lazy var roupa6: Clothes = {
         var roupa : Clothes = Clothes.createEmptyClothes()
         
+        let image = UIImage(named: "Image-1")
         
         guard let imageURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("Image2.png") else {
             fatalError("problema nem fetch imagem nas roupas mock")
         }
-        roupa.image = CKAsset.init(fileURL: imageURL)
+        roupa.image = CKAsset.init(fileURL: image?.toURL() ?? imageURL)
         
         roupa.type = "infra"
         roupa.subType = "infra2"
@@ -108,7 +110,7 @@ class MockClothesData {
         var roupa : Clothes = Clothes.createEmptyClothes()
         
         
-        let image = UIImage(named: "Image2")
+        let image = UIImage(named: "Image-1")
         
         guard let imageURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("Image2.png") else {
             fatalError("problema nem fetch imagem nas roupas mock")

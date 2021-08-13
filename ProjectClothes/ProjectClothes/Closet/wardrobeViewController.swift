@@ -11,18 +11,21 @@ class wardrobeViewController: UIViewController {
     
     
     
-   
-    @IBOutlet weak var looksCollectionView: UICollectionView!
+    
+    @IBOutlet weak var looksCollectionView: UICollectionView! // na verdade isso nao vai ser só de looks
     @IBOutlet weak var clotheOrLookPicker: UISegmentedControl!
     @IBOutlet weak var categoriesTableView: UITableView!
     
     var classeMock = MockClothesData()
-    
-    var allClothes: [Clothes]?
-    var clotheTipesDict: [String: [Clothes]] = [:]
-    var presentClothesSuperTypes : [String] = []
+    var viewsSearchController : UISearchController?
+    var allClothes: [Clothes]? // array the clothes recebido ou do servidor, ou do core data, ou do mock de dados
+    var clotheTipesDict: [String: [Clothes]] = [:]// array filtrado pelo tipo : parte de cima, parte de baixo, calçado
+    var presentClothesSuperTypes : [String] = [] //tipos(supertipos) presentes no array allclothes
+    var filteredClothes : [Clothes]?
     
     var calculatedNumberOfCategories :Int?
+    
+    
     
     
     @IBAction func didSelectPicker(_ sender: UISegmentedControl) {
@@ -30,38 +33,53 @@ class wardrobeViewController: UIViewController {
         categoriesTableView.isHidden = sender.selectedSegmentIndex != 0
         looksCollectionView.isHidden = sender.selectedSegmentIndex == 0
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        allClothes = classeMock.roupasMock
-       
+        
+        allClothes = classeMock.roupasMock//carregando os dados mock
+        
         categoriesTableView.delegate = self
         categoriesTableView.dataSource = self
         looksCollectionView.delegate = self
         looksCollectionView.dataSource = self
+        categoriesTableView.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
         
         self.view.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
-        
+        self.view.backgroundColor = .red
         navigationItem.title = "first"
-        let searchController = UISearchController(searchResultsController: nil)
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
         
-        navigationItem.searchController = searchController
+        
+        setUpSearchController()
+        
+        
+        
         let looksCollectionViewLayout = looksCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
         looksCollectionViewLayout?.sectionInset = UIEdgeInsets(top: 0.0 , left: UIScreen.screenWidth*0.072, bottom: 5, right: UIScreen.screenWidth*0.072)
-           
+        
         
         calculatedNumberOfCategories = getNumberSuperClothesCategories()
         
         
     }
+    func setUpSearchController(){
+        
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        navigationItem.searchController = searchController
+        viewsSearchController = searchController
+        
+        
+    }
+    
+    
     func getNumberSuperClothesCategories() -> Int{
-       
+        
         guard let unwrapedClothesArray = allClothes else{
             fatalError("no clothes to be received")
         }
-         
+        
         for clothe in unwrapedClothesArray{
             guard let currentClotheType = clothe.type else{
                 print("somethingWrong with unwrapedClothesArray in wardrobeVC")
@@ -77,15 +95,15 @@ class wardrobeViewController: UIViewController {
             }
         }
         print(presentClothesSuperTypes.count)
-    
+        
         return presentClothesSuperTypes.count
-     
+        
     }
-        
-        
     
     
-   
+    
+    
+    
     
 }
 
@@ -121,6 +139,12 @@ extension wardrobeViewController : UICollectionViewDelegate, UICollectionViewDat
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if let _ = viewsSearchController?.searchBar.text, let unwrappedFilteredClothes = filteredClothes,  viewsSearchController?.searchBar.text != "" {
+            return unwrappedFilteredClothes.count
+            
+            
+        }
+        
         return 10
     }
     
@@ -129,12 +153,31 @@ extension wardrobeViewController : UICollectionViewDelegate, UICollectionViewDat
             return collectionView.dequeueReusableCell(withReuseIdentifier: "hiddenCollectionCell", for: indexPath)
             
         }
+        if let _ = viewsSearchController?.searchBar.text, let unwrappedFilteredClothes = filteredClothes,  viewsSearchController?.searchBar.text != "" {
+            // if a query is being made, basically
+            
+            let currentFilteredClothe = unwrappedFilteredClothes[indexPath.row]
+            
+            cell.backgroundColor = .blue
+            cell.clotheImage.image = UIImage(named: "Image2")
+            cell.label.text = currentFilteredClothe.type //TEMPORARIO !!!!!!!!
+            
+            return cell
+        }else{
+            // here I should just load the looks normally, since a query isnt being made
+            
+            
+            cell.backgroundColor = .blue
+            cell.clotheImage.image = UIImage(named: "Image2")
+            cell.label.text = "roupa blue"
+            
+            
+            return cell
+        }
         
-        cell.backgroundColor = .blue
-        cell.clotheImage.image = UIImage(named: "Image2")
-        cell.label.text = "roupa blue"
-
-        return cell
+        
+        
+        
     }
     
     
@@ -144,43 +187,80 @@ extension wardrobeViewController : UICollectionViewDelegate, UICollectionViewDat
 }
 extension wardrobeViewController : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-                return CGSize(width:  UIScreen.screenWidth*0.4, height: UIScreen.screenWidth*0.4)
+        return CGSize(width:  UIScreen.screenWidth*0.4, height: UIScreen.screenWidth*0.4)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return CGFloat(30)
-//    }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return CGFloat(0)
-//    }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return CGFloat(0)
-//    }
-  
 }
 extension wardrobeViewController : UISearchResultsUpdating{
     func updateSearchResults(for searchController: UISearchController) {
-       let query = searchController.searchBar.text ?? ""
+        let query = searchController.searchBar.text ?? ""
         
         if query.isEmpty {
             
-                categoriesTableView.isHidden = clotheOrLookPicker.selectedSegmentIndex != 0
-                looksCollectionView.isHidden = clotheOrLookPicker.selectedSegmentIndex == 0
-
+            categoriesTableView.isHidden = clotheOrLookPicker.selectedSegmentIndex != 0
+            looksCollectionView.isHidden = clotheOrLookPicker.selectedSegmentIndex == 0
+            
             
         }else{
             categoriesTableView.isHidden = true
             looksCollectionView.isHidden = false
             
+            filteredClothes = allClothes?.filter{ clothe in
+                
+                
+                
+                return isInQuery(clothe: clothe, query: query)
+            }
             
         }
         
+        
+        
+        looksCollectionView.reloadData()
+        
+        
     }
+    func isInQuery(clothe: Clothes, query: String)->Bool{
+        let arrayOfQueriesAux = query.words
+        var arrayOfQueries : [String] = []
+        arrayOfQueriesAux.forEach{ palavra in
+            arrayOfQueries.append(String(palavra))
+        }
+        
+        for tag in arrayOfQueries{
+            
+            if clotheHasTag(clothe: clothe, tag: tag) == true {
+                
+                return true
+                
+            }
+            
+        }
+        
+        return false
+    }
+    func clotheHasTag(clothe: Clothes, tag: String) ->Bool{
+        
+        guard let provisorio = (clothe.type?.lowercased().contains(tag.lowercased()))
+        else{// provisorio !!!!
+            return false
+        }
+        return provisorio   // ta dando merda aqui
+    }
+    
+    
     
 }
 extension UIScreen{
-   static let screenWidth = UIScreen.main.bounds.width
-   static let screenHeight = UIScreen.main.bounds.height
-   static let screenSize = UIScreen.main.bounds.size
+    static let screenWidth = UIScreen.main.bounds.width
+    static let screenHeight = UIScreen.main.bounds.height
+    static let screenSize = UIScreen.main.bounds.size
+}
+
+
+extension StringProtocol {
+    var words: [SubSequence] {
+        return split { !$0.isLetter }
+    }
 }
