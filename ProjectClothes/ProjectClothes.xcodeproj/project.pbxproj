@@ -27,6 +27,8 @@
 		F85A4BBB26C585270020B5F0 /* CustomCellShoesClothesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4BBA26C585270020B5F0 /* CustomCellShoesClothesTableViewCell.swift */; };
 		F85A4BBF26C586430020B5F0 /* AccessoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4BBE26C586430020B5F0 /* AccessoriesViewController.swift */; };
 		F85A4BC126C587230020B5F0 /* CustomCellAccessoriesClothesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4BC026C587230020B5F0 /* CustomCellAccessoriesClothesTableViewCell.swift */; };
+		F85A4BC626C59F4B0020B5F0 /* clothesConfig.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F85A4BC526C59F4B0020B5F0 /* clothesConfig.storyboard */; };
+		F85A4BC826C59FB10020B5F0 /* ClothesConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4BC726C59FB10020B5F0 /* ClothesConfigViewController.swift */; };
 		FD08F82B26B86AF4003E0C9C /* settingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08F82A26B86AF4003E0C9C /* settingsStoryboard.storyboard */; };
 		FD08F82D26B86B02003E0C9C /* createStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08F82C26B86B02003E0C9C /* createStoryboard.storyboard */; };
 		FD08F82F26B86B0B003E0C9C /* todayStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08F82E26B86B0B003E0C9C /* todayStoryboard.storyboard */; };
@@ -78,6 +80,8 @@
 		F85A4BBA26C585270020B5F0 /* CustomCellShoesClothesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCellShoesClothesTableViewCell.swift; path = ProjectClothes/Add/CustomCellShoesClothesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		F85A4BBE26C586430020B5F0 /* AccessoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccessoriesViewController.swift; path = ProjectClothes/Add/AccessoriesViewController.swift; sourceTree = SOURCE_ROOT; };
 		F85A4BC026C587230020B5F0 /* CustomCellAccessoriesClothesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomCellAccessoriesClothesTableViewCell.swift; path = ProjectClothes/Add/CustomCellAccessoriesClothesTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		F85A4BC526C59F4B0020B5F0 /* clothesConfig.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = clothesConfig.storyboard; path = ProjectClothes/Add/clothesConfig.storyboard; sourceTree = SOURCE_ROOT; };
+		F85A4BC726C59FB10020B5F0 /* ClothesConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClothesConfigViewController.swift; path = ProjectClothes/Add/ClothesConfigViewController.swift; sourceTree = SOURCE_ROOT; };
 		FD08F82A26B86AF4003E0C9C /* settingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = settingsStoryboard.storyboard; sourceTree = "<group>"; };
 		FD08F82C26B86B02003E0C9C /* createStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = createStoryboard.storyboard; sourceTree = "<group>"; };
 		FD08F82E26B86B0B003E0C9C /* todayStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = todayStoryboard.storyboard; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 		CDF28FA326B081A100241F13 /* Add */ = {
 			isa = PBXGroup;
 			children = (
+				F85A4BC226C59F090020B5F0 /* ClothesConfiguration */,
 				FD4CE71426B9DC580014B05F /* Ml */,
 				F85A4BA326C1B1D90020B5F0 /* ModalCategories */,
 				F85A4B9F26BB27540020B5F0 /* ClothesConfigurationViewController.swift */,
@@ -180,12 +185,12 @@
 		F85A4BA326C1B1D90020B5F0 /* ModalCategories */ = {
 			isa = PBXGroup;
 			children = (
+				F85A4BA126C1A48D0020B5F0 /* ModalViewController.swift */,
 				F85A4BB726C45D5D0020B5F0 /* Accessories */,
 				F85A4BB626C45D530020B5F0 /* Shoes */,
 				F85A4BB526C45D450020B5F0 /* BottomClothes */,
 				F85A4BB426C45D3D0020B5F0 /* FullClothes */,
 				F85A4BAF26C459740020B5F0 /* TopClothes */,
-				F85A4BA126C1A48D0020B5F0 /* ModalViewController.swift */,
 			);
 			path = ModalCategories;
 			sourceTree = "<group>";
@@ -233,6 +238,15 @@
 				F85A4BC026C587230020B5F0 /* CustomCellAccessoriesClothesTableViewCell.swift */,
 			);
 			path = Accessories;
+			sourceTree = "<group>";
+		};
+		F85A4BC226C59F090020B5F0 /* ClothesConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				F85A4BC526C59F4B0020B5F0 /* clothesConfig.storyboard */,
+				F85A4BC726C59FB10020B5F0 /* ClothesConfigViewController.swift */,
+			);
+			path = ClothesConfiguration;
 			sourceTree = "<group>";
 		};
 		FD08F82926B86AF4003E0C9C /* Settings */ = {
@@ -350,6 +364,7 @@
 			files = (
 				FD08F82B26B86AF4003E0C9C /* settingsStoryboard.storyboard in Resources */,
 				FD08F82D26B86B02003E0C9C /* createStoryboard.storyboard in Resources */,
+				F85A4BC626C59F4B0020B5F0 /* clothesConfig.storyboard in Resources */,
 				CDF28FAE26B08F6900241F13 /* closetStoryboard.storyboard in Resources */,
 				FD08F82F26B86B0B003E0C9C /* todayStoryboard.storyboard in Resources */,
 				CDF28F9B26B07C9000241F13 /* LaunchScreen.storyboard in Resources */,
@@ -401,6 +416,7 @@
 				FD4CE73026B9DDF60014B05F /* UIImage+RawBytes.swift in Sources */,
 				CDF28F9126B07C8C00241F13 /* SceneDelegate.swift in Sources */,
 				FD4CE72B26B9DDF60014B05F /* Math.swift in Sources */,
+				F85A4BC826C59FB10020B5F0 /* ClothesConfigViewController.swift in Sources */,
 				F85A4BB326C45C9D0020B5F0 /* CustomCellTopClothesTableViewCell.swift in Sources */,
 				F85A4BA526C1B2450020B5F0 /* FullSizeClothesViewController.swift in Sources */,
 				FD4CE73926B9DDF60014B05F /* CVPixelBuffer+Resize.swift in Sources */,
