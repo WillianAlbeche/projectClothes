@@ -42,8 +42,13 @@ extension SuperRoupaTableViewCell : UICollectionViewDelegate, UICollectionViewDa
          let collectionCell = subClassesCollecionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! FrontCollectionViewCell
         
        
-        //collectionCell.pictureOfSubType.image = thisSuperClothesArray?[indexPath.row].image?.toUIImage()
+        collectionCell.pictureOfSubType.image = thisSuperClothesArray?[indexPath.row].image?.toUIImage()
+        
+        if collectionCell.pictureOfSubType.image == nil{
         collectionCell.pictureOfSubType.image = UIImage(named: "ver")
+        }
+        
+        
         collectionCell.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0).cgColor
         collectionCell.layer.cornerRadius = 50
         
