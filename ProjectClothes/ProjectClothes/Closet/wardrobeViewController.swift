@@ -138,7 +138,7 @@ extension wardrobeViewController :  UITableViewDelegate, UITableViewDataSource{
 }
 extension wardrobeViewController : UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        <#code#>
+        print("")
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
