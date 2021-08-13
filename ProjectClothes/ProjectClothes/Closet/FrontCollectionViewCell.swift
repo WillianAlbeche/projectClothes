@@ -11,7 +11,6 @@ class FrontCollectionViewCell: UICollectionViewCell {
     
     
     @IBOutlet weak var pictureOfSubType: UIImageView!
-    
-    
+    var typeOfCell = EnumForSegues.subtype
     
 }

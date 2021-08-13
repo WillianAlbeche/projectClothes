@@ -46,7 +46,11 @@ class wardrobeViewController: UIViewController {
         categoriesTableView.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
         
         self.view.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
-        self.view.backgroundColor = .red
+        
+        looksCollectionView.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+        
+        
+        
         navigationItem.title = "first"
         
         
@@ -59,9 +63,8 @@ class wardrobeViewController: UIViewController {
         
         
         calculatedNumberOfCategories = getNumberSuperClothesCategories()
-        
-        
     }
+    
     func setUpSearchController(){
         
         let searchController = UISearchController(searchResultsController: nil)
@@ -119,8 +122,8 @@ extension wardrobeViewController :  UITableViewDelegate, UITableViewDataSource{
         let name = presentClothesSuperTypes[indexPath.row]
         cell.superClassNameLabel.text = name
         cell.thisSuperClothesArray = clotheTipesDict[name]
-        
-        
+        cell.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+        cell.superClassNameLabel.text = name
         return  cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -134,7 +137,9 @@ extension wardrobeViewController :  UITableViewDelegate, UITableViewDataSource{
     
 }
 extension wardrobeViewController : UICollectionViewDelegate, UICollectionViewDataSource{
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        <#code#>
+    }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -158,25 +163,25 @@ extension wardrobeViewController : UICollectionViewDelegate, UICollectionViewDat
             
             let currentFilteredClothe = unwrappedFilteredClothes[indexPath.row]
             
-            cell.backgroundColor = .blue
+            
             cell.clotheImage.image = UIImage(named: "Image2")
             cell.label.text = currentFilteredClothe.type //TEMPORARIO !!!!!!!!
             
-            return cell
+            
         }else{
             // here I should just load the looks normally, since a query isnt being made
             
             
-            cell.backgroundColor = .blue
             cell.clotheImage.image = UIImage(named: "Image2")
             cell.label.text = "roupa blue"
             
             
-            return cell
+            
         }
+        cell.layer.cornerRadius = 25
+        cell.backgroundColor = .white
         
-        
-        
+        return cell
         
     }
     
@@ -214,12 +219,7 @@ extension wardrobeViewController : UISearchResultsUpdating{
             }
             
         }
-        
-        
-        
         looksCollectionView.reloadData()
-        
-        
     }
     func isInQuery(clothe: Clothes, query: String)->Bool{
         let arrayOfQueriesAux = query.words
@@ -227,17 +227,11 @@ extension wardrobeViewController : UISearchResultsUpdating{
         arrayOfQueriesAux.forEach{ palavra in
             arrayOfQueries.append(String(palavra))
         }
-        
         for tag in arrayOfQueries{
-            
             if clotheHasTag(clothe: clothe, tag: tag) == true {
-                
                 return true
-                
             }
-            
         }
-        
         return false
     }
     func clotheHasTag(clothe: Clothes, tag: String) ->Bool{

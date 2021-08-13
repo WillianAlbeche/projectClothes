@@ -56,6 +56,9 @@
 		FDA72CB226C4677C00F966F5 /* MockClothesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CB126C4677C00F966F5 /* MockClothesData.swift */; };
 		FDA72CD726C5A80C00F966F5 /* FrontCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CD626C5A80C00F966F5 /* FrontCollectionViewCell.swift */; };
 		FDA72CD926C5D4A500F966F5 /* closetStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA72CD826C5D4A500F966F5 /* closetStoryboard.storyboard */; };
+		FDA72CE826C6DDE700F966F5 /* SelectedCategorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CE726C6DDE700F966F5 /* SelectedCategorieViewController.swift */; };
+		FDA72CEA26C6E31D00F966F5 /* SegmentedCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CE926C6E31D00F966F5 /* SegmentedCellCollectionViewCell.swift */; };
+		FDA72CEC26C6F1AD00F966F5 /* EnumForSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CEB26C6F1AD00F966F5 /* EnumForSegues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +113,9 @@
 		FDA72CB126C4677C00F966F5 /* MockClothesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockClothesData.swift; sourceTree = "<group>"; };
 		FDA72CD626C5A80C00F966F5 /* FrontCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCollectionViewCell.swift; sourceTree = "<group>"; };
 		FDA72CD826C5D4A500F966F5 /* closetStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = closetStoryboard.storyboard; sourceTree = "<group>"; };
+		FDA72CE726C6DDE700F966F5 /* SelectedCategorieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategorieViewController.swift; sourceTree = "<group>"; };
+		FDA72CE926C6E31D00F966F5 /* SegmentedCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		FDA72CEB26C6F1AD00F966F5 /* EnumForSegues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumForSegues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +174,9 @@
 				FDA72CA726C4406100F966F5 /* SuperRoupaTableViewCell.swift */,
 				FDA72CA626C4406100F966F5 /* wardrobeViewController.swift */,
 				FDA72CD626C5A80C00F966F5 /* FrontCollectionViewCell.swift */,
+				FDA72CE726C6DDE700F966F5 /* SelectedCategorieViewController.swift */,
+				FDA72CE926C6E31D00F966F5 /* SegmentedCellCollectionViewCell.swift */,
+				FDA72CEB26C6F1AD00F966F5 /* EnumForSegues.swift */,
 			);
 			path = Closet;
 			sourceTree = "<group>";
@@ -347,6 +356,7 @@
 				FD4CE73626B9DDF60014B05F /* NonMaxSuppression.swift in Sources */,
 				FD4CE73326B9DDF60014B05F /* CoreML+Combine.swift in Sources */,
 				FD4CE72A26B9DDF60014B05F /* Array+Extensions.swift in Sources */,
+				FDA72CEA26C6E31D00F966F5 /* SegmentedCellCollectionViewCell.swift in Sources */,
 				FDA72CAF26C464C900F966F5 /* Look.swift in Sources */,
 				FD08F83126B86B6C003E0C9C /* CustomModalViewController.swift in Sources */,
 				FDA72CB226C4677C00F966F5 /* MockClothesData.swift in Sources */,
@@ -360,6 +370,7 @@
 				FD4CE72F26B9DDF60014B05F /* CGImagePropertyOrientation.swift in Sources */,
 				FD4CE71626B9DDEC0014B05F /* DrawingView.swift in Sources */,
 				FD4CE73726B9DDF60014B05F /* CGImage+RawBytes.swift in Sources */,
+				FDA72CE826C6DDE700F966F5 /* SelectedCategorieViewController.swift in Sources */,
 				FD4CE73A26B9DDF60014B05F /* CVPixelBuffer+Rotate.swift in Sources */,
 				FD4CE71326B9AB730014B05F /* WhiteBoardViewController.swift in Sources */,
 				F85A4BA726C1B2660020B5F0 /* TopClothesViewController.swift in Sources */,
@@ -367,6 +378,7 @@
 				FD4CE73826B9DDF60014B05F /* MLMultiArray+Image.swift in Sources */,
 				FD430BE926B3329700F31DD2 /* AddNavigationController.swift in Sources */,
 				FDA72CA926C4406100F966F5 /* wardrobeViewController.swift in Sources */,
+				FDA72CEC26C6F1AD00F966F5 /* EnumForSegues.swift in Sources */,
 				FD430BE726B3236F00F31DD2 /* TabBarController.swift in Sources */,
 				FD4CE72E26B9DDF60014B05F /* UIImage+Extensions.swift in Sources */,
 				F85A4BA026BB27540020B5F0 /* ClothesConfigurationViewController.swift in Sources */,

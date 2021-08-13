@@ -144,9 +144,29 @@ class MockClothesData {
         return roupa
         
     }()
+    lazy var roupa9: Clothes = {
+        var roupa : Clothes = Clothes.createEmptyClothes()
+        
+        
+        let image = UIImage(named: "Image-1")
+        
+        guard let imageURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("Image2.png") else {
+            fatalError("problema nem fetch imagem nas roupas mock")
+        }
+        roupa.image = CKAsset.init(fileURL: image?.toURL() ?? imageURL)
+        
+        
+        roupa.type = "meio"
+        roupa.subType = "infra2"
+        
+        
+        
+        return roupa
+        
+    }()
     
     var roupasMock : [Clothes] {
-        return [ roupa1,roupa2,roupa3,roupa4,roupa5,roupa6,roupa7,roupa8] }
+        return [ roupa1,roupa2,roupa3,roupa4,roupa5,roupa6,roupa7,roupa8, roupa9] }
     
     
     

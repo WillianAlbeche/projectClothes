@@ -12,16 +12,18 @@ class SuperRoupaTableViewCell: UITableViewCell {
     @IBOutlet weak var subClassesCollecionView: UICollectionView!
     @IBOutlet weak var superClassNameLabel: UILabel!
     
+    @IBOutlet weak var constraintCollectionViewHeight: NSLayoutConstraint!
     var thisSuperClothesArray : [Clothes]?
     
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         subClassesCollecionView.delegate = self
         subClassesCollecionView.dataSource = self
-       
+        subClassesCollecionView.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+        constraintCollectionViewHeight.constant = UIScreen.screenWidth*0.41
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -45,7 +47,8 @@ extension SuperRoupaTableViewCell : UICollectionViewDelegate, UICollectionViewDa
         collectionCell.pictureOfSubType.image = thisSuperClothesArray?[indexPath.row].image?.toUIImage()
         
         if collectionCell.pictureOfSubType.image == nil{
-        collectionCell.pictureOfSubType.image = UIImage(named: "ver")
+            collectionCell.pictureOfSubType.backgroundColor = .green
+       // collectionCell.pictureOfSubType.image = UIImage(named: "ver")
         }
         
         
@@ -59,13 +62,14 @@ extension SuperRoupaTableViewCell : UICollectionViewDelegate, UICollectionViewDa
 //        collectionCell.layer.cornerRadius = 21
         
         
-        collectionCell.layer.borderWidth = 20
-        collectionCell.layer.borderColor = UIColor.green.cgColor
+//        collectionCell.layer.borderWidth = 20
+//        collectionCell.layer.borderColor = UIColor.green.cgColor
             return collectionCell
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let lado = UIScreen.screenHeight*0.1859
+        let lado = UIScreen.screenWidth*0.4
         return CGSize(width: lado , height: lado)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
