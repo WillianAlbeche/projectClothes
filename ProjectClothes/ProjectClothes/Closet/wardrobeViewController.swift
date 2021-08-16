@@ -69,9 +69,13 @@ class wardrobeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "selectionOfSubtipe"{
             let destination = segue.destination as? SelectedCategorieViewController
-            destination?.segmentedClothes = allClothes
+            if let senderTuple = sender as? (String, String) {
+                destination?.segmentedClothes = clotheSuperTypesAndSubTypesDict[senderTuple.0]?[senderTuple.1]
+                
+                
+                
         }
-        
+        }
     }
     
     
@@ -168,11 +172,9 @@ extension wardrobeViewController :  UITableViewDelegate, UITableViewDataSource{
         cell.thisSuperClothesArray = getFirstItems(superType: name)
         
         cell.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
-//        cell.superClassNameLabel.text = name
-        cell.segueSubtypes = {
-            self.performSegue(withIdentifier: "selectionOfSubtipe", sender: self)
-        }
-//        cell.setUpSubTypesDic()
+
+        cell.fatherView = self
+        
         return  cell
     }
 
@@ -210,7 +212,7 @@ extension wardrobeViewController : UICollectionViewDelegate, UICollectionViewDat
             
             
             cell.clotheImage.image = UIImage(named: "Image2")
-            cell.label.text = currentFilteredClothe.type //TEMPORARIO !!!!!!!!
+            cell.label.text = currentFilteredClothe.type //TEMPORARIO
             
             
         }else{
