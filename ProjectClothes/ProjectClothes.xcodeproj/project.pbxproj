@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CDA4C6FA26CAEC8E0061C082 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4C6F926CAEC8E0061C082 /* ContactViewController.swift */; };
 		CDF28F8F26B07C8C00241F13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF28F8E26B07C8C00241F13 /* AppDelegate.swift */; };
 		CDF28F9126B07C8C00241F13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF28F9026B07C8C00241F13 /* SceneDelegate.swift */; };
 		CDF28F9326B07C8C00241F13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF28F9226B07C8C00241F13 /* ViewController.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CDA4C6F926CAEC8E0061C082 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		CDF28F8B26B07C8C00241F13 /* ProjectClothes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectClothes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF28F8E26B07C8C00241F13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDF28F9026B07C8C00241F13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			children = (
 				FDA72CA226C43DAD00F966F5 /* settingsStoryboard.storyboard */,
 				FDA72CA326C43DAD00F966F5 /* SettingsViewController.swift */,
+				CDA4C6F926CAEC8E0061C082 /* ContactViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				FDA72CB026C464C900F966F5 /* Clothes.swift in Sources */,
 				FD4CE72C26B9DDF60014B05F /* UIImage+CVPixelBuffer.swift in Sources */,
 				FD4CE73126B9DDF60014B05F /* MLMultiArray+Helpers.swift in Sources */,
+				CDA4C6FA26CAEC8E0061C082 /* ContactViewController.swift in Sources */,
 				FD4CE73426B9DDF60014B05F /* CVPixelBuffer+Create.swift in Sources */,
 				FD4CE72F26B9DDF60014B05F /* CGImagePropertyOrientation.swift in Sources */,
 				FD4CE71626B9DDEC0014B05F /* DrawingView.swift in Sources */,
@@ -543,7 +547,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KY3S643HND;
+				DEVELOPMENT_TEAM = 76N3ST5C2U;
 				INFOPLIST_FILE = ProjectClothes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -562,7 +566,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KY3S643HND;
+				DEVELOPMENT_TEAM = 76N3ST5C2U;
 				INFOPLIST_FILE = ProjectClothes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

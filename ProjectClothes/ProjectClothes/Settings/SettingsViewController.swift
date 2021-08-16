@@ -31,6 +31,15 @@ class SettingsViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "contato" {
+            let destination = segue.destination as? UINavigationController
+            let topDestination = destination?.topViewController as? ContactViewController
+        }
+    }
     
-    
+    @IBAction func contato(_ sender: Any) {
+        performSegue(withIdentifier: "contato", sender: nil)
+        
+    }
 }
