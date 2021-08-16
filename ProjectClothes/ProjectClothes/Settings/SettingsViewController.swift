@@ -9,24 +9,25 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    @IBOutlet var UsoRoupas: [UIButton]!
+    @IBOutlet var gender: [UIButton]!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UsoRoupas.forEach { $0.layer.cornerRadius = 5 }
+        gender.forEach { $0.layer.cornerRadius = 5 }
     }
     
     @IBAction func selectedButton(_ sender: Any) {
-//        for button in UsoRoupas {
-//            button.isTouchInside
-//            if button. <= sender.tag {
-//                button.setImage(UIImage.init(named: “star_selected”), for: .normal)
-//            } else {
-//                button.setImage(UIImage.init(named: “star_normal”), for: .normal)
-//            }
-//        }
+        for button in gender {
+            if button.tag == (sender as AnyObject).tag {
+                button.backgroundColor = UIColor(red: 118/255, green: 120/255, blue: 232/255, alpha: 1)
+                button.setTitleColor(UIColor.white, for:.normal)
+            } else {
+                button.backgroundColor = UIColor.white
+                button.setTitleColor(UIColor.black, for:.normal)
+            }
+        }
         
     }
     
