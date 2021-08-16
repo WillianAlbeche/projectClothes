@@ -20,6 +20,7 @@ class wardrobeViewController: UIViewController {
     var viewsSearchController : UISearchController?
     var allClothes: [Clothes]? // array the clothes recebido ou do servidor, ou do core data, ou do mock de dados
     var clotheTipesDict: [String: [Clothes]] = [:]// array filtrado pelo tipo : parte de cima, parte de baixo, calçado
+    var clotheSuperTypesAndSubTypesDict : [String:[String:[Clothes]]] = [:] // isso aqui tem somente uma roupa de cada subtipo
     var presentClothesSuperTypes : [String] = [] //tipos(supertipos) presentes no array allclothes
     var filteredClothes : [Clothes]?
     
@@ -52,7 +53,7 @@ class wardrobeViewController: UIViewController {
         
         
         
-//        navigationItem.title = "first"
+
         
         
         setUpSearchController()
@@ -71,6 +72,21 @@ class wardrobeViewController: UIViewController {
             destination?.segmentedClothes = allClothes
         }
         
+    }
+    
+    
+    func getFirstItems(superType : String) -> [Clothes]{
+        guard let subTypesDic = clotheSuperTypesAndSubTypesDict[superType] else{
+            return []
+            
+        }
+        var firstElements : [Clothes] = []
+        for i in subTypesDic{
+            
+            firstElements.append(i.1.first! )// forced
+        }
+    
+        return firstElements
     }
     func setUpSearchController(){
         
@@ -91,20 +107,40 @@ class wardrobeViewController: UIViewController {
         }
         
         for clothe in unwrapedClothesArray{
-            guard let currentClotheType = clothe.type else{
+            guard let currentClotheType = clothe.type, let  currentClotheSubType = clothe.subType else{
                 print("somethingWrong with unwrapedClothesArray in wardrobeVC")
                 continue
             }
+            print("-------------")
+            print(currentClotheType)
+            
+            
             if  presentClothesSuperTypes.contains(currentClotheType) == false{
                 presentClothesSuperTypes.append(currentClotheType)
                 clotheTipesDict[currentClotheType] = [clothe]
                 
+                if let currentSubType = clothe.subType{
+                clotheSuperTypesAndSubTypesDict[currentClotheType] = [currentSubType: [clothe]]
+                }
+
             }else{
                 // so da append no dict
                 clotheTipesDict[currentClotheType]?.append(clothe)
+                if let subDic = clotheSuperTypesAndSubTypesDict[currentClotheType]{
+                    if subDic[currentClotheSubType] != nil {// se tem o subtype
+                        clotheSuperTypesAndSubTypesDict[currentClotheType]?[currentClotheSubType]?.append(clothe)
+                    
+                }else{
+                    clotheSuperTypesAndSubTypesDict[currentClotheType]?[currentClotheSubType] = [clothe]
+                    
+                }
+                
+                }
+                
             }
+            
+            
         }
-        print(presentClothesSuperTypes.count)
         
         return presentClothesSuperTypes.count
         
@@ -125,21 +161,22 @@ extension wardrobeViewController :  UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = categoriesTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SuperRoupaTableViewCell
+        let name = presentClothesSuperTypes[indexPath.row] // com esse nome pegar uma clothe de cada subtipo
+        cell.superClassNameLabel.text = name
         
-        let name = presentClothesSuperTypes[indexPath.row]
-        cell.superClassNameLabel.text = name
-        cell.thisSuperClothesArray = clotheTipesDict[name]
+        
+        cell.thisSuperClothesArray = getFirstItems(superType: name)
+        
         cell.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
-        cell.superClassNameLabel.text = name
+//        cell.superClassNameLabel.text = name
         cell.segueSubtypes = {
             self.performSegue(withIdentifier: "selectionOfSubtipe", sender: self)
         }
-        
+//        cell.setUpSubTypesDic()
         return  cell
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("working")
-    }
+
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let tamanho = UIScreen.screenHeight*0.2216
         return tamanho
@@ -148,10 +185,7 @@ extension wardrobeViewController :  UITableViewDelegate, UITableViewDataSource{
     
 }
 extension wardrobeViewController : UICollectionViewDelegate, UICollectionViewDataSource{
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-                
-        
-        
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {// fazer segue aqui também
         print("")
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
