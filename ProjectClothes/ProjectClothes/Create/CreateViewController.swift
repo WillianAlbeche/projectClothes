@@ -15,10 +15,10 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
     
     @IBOutlet weak var addItem: UIButton!
     
-//    let mock = MockData()
-//    var mockClo: [Clothes] = []
-//    var roupa : Clothes = Clothes.createEmptyClothes()
-//    var isflag: Bool = false
+    let mock = MockData()
+    var mockClo: [Clothes] = []
+    var roupa : Clothes = Clothes.createEmptyClothes()
+    var isflag: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +48,7 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
         saveButton.layer.shadowRadius = 20
         saveButton.layer.cornerRadius = 25
         
+//        // MARK: - Check iCloud account status
 //        CKContainer.default().accountStatus { (accountStatus, error) in
 //            switch accountStatus {
 //            case .available:
@@ -65,38 +66,32 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
 //                fatalError()
 //            }
 //        }
+        DatabaseManager.shared.checkiCloudAccount()
+        
         
         
     }
     // BUTTON
     
     @IBAction func addItem(_ sender: UIButton) {
-        let imageName = "Image2"
-        let image = UIImage(named: imageName)
-        let imageView = UIImageView(image: image!)
-        imageView.frame = CGRect(x: UIScreen.main.bounds.width/2, y: UIScreen.main.bounds.height/2, width: 100, height: 200)
-        self.view.addSubview(imageView)
-        let panGesture = UIPanGestureRecognizer(target: self,
-                                                action: #selector(handlePanGesture(_:)))
-        imageView.addGestureRecognizer(panGesture)
-        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinchGesture(_:)))
-        imageView.addGestureRecognizer(pinchGesture)
-        let rotateGesture = UIRotationGestureRecognizer(target: self, action: #selector(handleRotateGesture(_:)))
-        imageView.addGestureRecognizer(rotateGesture)
-
-        imageView.isUserInteractionEnabled = true
+//        let imageName = "Image2"
+//        let image = UIImage(named: imageName)
+//        let imageView = UIImageView(image: image!)
+//        imageView.frame = CGRect(x: UIScreen.main.bounds.width/2, y: UIScreen.main.bounds.height/2, width: 100, height: 200)
+//        self.view.addSubview(imageView)
+//        let panGesture = UIPanGestureRecognizer(target: self,
+//                                                action: #selector(handlePanGesture(_:)))
+//        imageView.addGestureRecognizer(panGesture)
+//        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinchGesture(_:)))
+//        imageView.addGestureRecognizer(pinchGesture)
+//        let rotateGesture = UIRotationGestureRecognizer(target: self, action: #selector(handleRotateGesture(_:)))
+//        imageView.addGestureRecognizer(rotateGesture)
+//
+//        imageView.isUserInteractionEnabled = true
         
-//        if isflag {
-//            let ac = UIAlertController(title: "No iCloud account", message: "You need to be logged in iCloud account.", preferredStyle: .alert)
-//            ac.addAction((UIAlertAction(title: "Go to settings", style: .default, handler: { (action) -> Void in
-//                    //This will call when you press ok in your alertview
-//                guard let settingsUrl = NSURL(string: UIApplication.openSettingsURLString) as URL? else {return}
-//                UIApplication.shared.open(settingsUrl )
-//                })))
-//            ac.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
-//            self.present(ac, animated: true)
-//        }
-//        DatabaseManager.shared.fetchAllClothes { result in
+        
+        // MARK: - Filter clothes with filtros
+//        DatabaseManager.shared.filterClothesList(searchingList: ["red", "Snow", "rainning"]) { result in
 //
 //          switch result {
 //          case .failure(let error):
@@ -104,16 +99,32 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
 //          case .success(let clothes):
 //            self.mockClo = clothes
 //          }
-//            print(self.mockClo.last?.filters)
+//            print(self.mockClo)
 //        }
-//
-//        for item in mock.roupasMock {
-//            DatabaseManager.shared.createNewClothes(clothes: item) { error in
-//                if error == nil {
-//                    print("hihi")
-//                }
+
+        // MARK: - Create new clothes
+//        DatabaseManager.shared.createNewClothes(clothes: mock.roupa1) { error in
+//            if error == nil {
+//                print("hihi")
 //            }
 //        }
+        
+        // MARK: - store // load gender
+//        print(DatabaseManager.shared.storeGender(userGender: "male"))
+//        print(DatabaseManager.shared.loadGender())
+        
+        // MARK: - Make user to be logged in iCloud account
+//        if isflag {
+//            let ac = UIAlertController(title: "No iCloud account", message: "You need to be logged in iCloud account.", preferredStyle: .alert)
+//            ac.addAction((UIAlertAction(title: "Go to settings", style: .default, handler: { (action) -> Void in
+//                    //This will call when you press ok in your alertview
+//                guard let settingsUrl = NSURL(string: UIApplication.openSettingsURLString) as URL? else {return}
+//                UIApplication.shared.open(settingsUrl)
+//                })))
+//            ac.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+//            self.present(ac, animated: true)
+//        }
+        DatabaseManager.shared.neediCloudLoggedIn(vc: self)
     }
 
     

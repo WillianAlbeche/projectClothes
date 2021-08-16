@@ -174,7 +174,6 @@ class Clothes {
     let id: CKRecord.ID?
     var image: CKAsset?
     var color: String?
-    
     var filters: [String]?
     var seasons: [String]?
     var specials: [String]?

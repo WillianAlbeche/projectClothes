@@ -18,9 +18,7 @@ class MockData {
         var roupa : Clothes = Clothes.createEmptyClothes()
         
         
-        guard let imageURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("Image-1.png") else {
-            fatalError("problema nem fetch imagem nas roupas mock")
-        }
+        guard let imageurl = UIImage(named: "Image-1")?.toURL() else { return roupa }
         
         var auxFilters = ["Camping, Holiday"]
         var auxSeasons = ["Winter"]
@@ -29,7 +27,7 @@ class MockData {
         guard let mockConfort = Confort(rawValue: 1),
               let mockWarm = Warm(rawValue: 1)
         else { return roupa }
-        roupa.image = CKAsset.init(fileURL: imageURL)
+        roupa.image = CKAsset.init(fileURL: imageurl)
         roupa.color = "red"
         roupa.filters = auxFilters
         roupa.seasons = auxSeasons
@@ -50,13 +48,12 @@ class MockData {
     lazy var roupa2: Clothes = {
         var roupa : Clothes = Clothes.createEmptyClothes()
         
-        guard let imageURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("Image-1.png") else {
-            fatalError("problema nem fetch imagem nas roupas mock")
-        }
+        guard let imageurl = UIImage(named: "Image2")?.toURL() else { return roupa }
+        
         var auxFilters = ["Camping, Formal"]
         var auxSeasons = ["Spring"]
         var auxSpecials = ["Rainning"]
-        roupa.image = CKAsset.init(fileURL: imageURL)
+        roupa.image = CKAsset.init(fileURL: imageurl)
         roupa.color = "Black"
         roupa.filters = auxFilters
         roupa.seasons = auxSeasons
@@ -68,13 +65,12 @@ class MockData {
     lazy var roupa3: Clothes = {
         var roupa : Clothes = Clothes.createEmptyClothes()
         
-        guard let imageURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("Image-1.png") else {
-            fatalError("problema nem fetch imagem nas roupas mock")
-        }
+        guard let imageurl = UIImage(named: "Image-1")?.toURL() else { return roupa }
+        
         var auxFilters = ["Work, Formal"]
         var auxSeasons = ["Spring"]
         var auxSpecials = ["Rainning"]
-        roupa.image = CKAsset.init(fileURL: imageURL)
+        roupa.image = CKAsset.init(fileURL: imageurl)
         roupa.color = "Blue"
         roupa.filters = auxFilters
         roupa.seasons = auxSeasons

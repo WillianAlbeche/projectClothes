@@ -19,6 +19,8 @@ class DatabaseManager {
     /// For use of Singleton.
     static let shared: DatabaseManager = DatabaseManager()
     
+    /// For iCloud account status
+    var isLoggedIn: Bool = false
     
     //------------------------------------------------
     // MARK: - API (Clothes)
@@ -29,7 +31,7 @@ class DatabaseManager {
     func filterClothesList( searchingList: [String]?, completionQueue: DispatchQueue = .main, _ completion: @escaping (Result<[Clothes], Error>) -> Void) {
         
         //        let searchUp = searchingList.map { filteringSearchResults(forName: $0) }
-        // if it's only fetching all list of clothes saved without any filter, call fetchAllClothesList function.
+        // if it's only fetching all list of clothes saved without any filter, call fetchAllClothes function.
         guard let searchingList = searchingList else {
             fetchAllClothes(completionQueue: completionQueue, completion: completion)
             return
@@ -254,9 +256,9 @@ class DatabaseManager {
         //        let searchUp = searchingList.map { filteringSearchResults(forName: $0) }
         
         
-        // if it's only fetching all list of clothes saved without any filter, call fetchAllClothesList function.
+        // if it's only fetching all list of looks saved without any filter, call fetchAllLooks function.
         guard let searchingList = searchingList else {
-            fetchAllLook(completionQueue: completionQueue, completion: completion)
+            fetchAllLooks(completionQueue: completionQueue, completion: completion)
             return
         }
         
@@ -304,7 +306,7 @@ class DatabaseManager {
     /// - Parameters:
     ///   - completionQueue: The [DispatchQueue](https://developer.apple.com/documentation/dispatch/dispatchqueue) on which the completion handler will be called. Defaults to `main`.
     ///   - completion: Handler called on operation completion with success (array of names) or failure.
-    func fetchAllLook(completionQueue: DispatchQueue = .main, completion: @escaping (Result<[Look], Error>) -> Void) {
+    func fetchAllLooks(completionQueue: DispatchQueue = .main, completion: @escaping (Result<[Look], Error>) -> Void) {
         
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "Look", predicate: predicate)
@@ -389,7 +391,67 @@ class DatabaseManager {
         
     }
     
-    // MARK: - Helpers
+    //------------------------------------------------
+    // MARK: - API (Gender)
+    /// To store user's gender.
+    /// - Parameters:
+    ///   - userGender: user's gender to be able to show all types of clothes which conform to that gender.
+    func storeGender(userGender: String) -> Bool {
+        
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(userGender) {
+            let defaults = UserDefaults.standard
+            defaults.set(encoded, forKey: "gender")
+            return true
+        }
+        return false
+    }
     
+    /// To load user's gender.
+    func loadGender() -> String {
+        if let savedDay = UserDefaults.standard.data(forKey: "gender") {
+            let decoder = JSONDecoder()
+            if let loadedDay = try? decoder.decode(String.self, from: savedDay) {
+                return loadedDay
+            }
+        }
+        return ""
+    }
     
+    //------------------------------------------------
+    // MARK: - Helper
+    /// To check iCloud account status
+    func checkiCloudAccount(){
+        CKContainer.default().accountStatus { (accountStatus, error) in
+            switch accountStatus {
+            case .available:
+                print("iCloud Available")
+                self.isLoggedIn = true
+            case .noAccount:
+                print("No iCloud account")
+                self.isLoggedIn = false
+            case .restricted:
+                print("iCloud restricted")
+            case .couldNotDetermine:
+                print("Unable to determine iCloud status")
+            @unknown default:
+                fatalError()
+            }
+        }
+    }
+    
+    /// To make user to log in iCloud account
+    func neediCloudLoggedIn(vc: UIViewController){
+        if !self.isLoggedIn {
+            let ac = UIAlertController(title: "No iCloud account", message: "You need to be logged in iCloud account.", preferredStyle: .alert)
+            ac.addAction((UIAlertAction(title: "Go to settings", style: .default, handler: { (action) -> Void in
+                    //This will call when you press ok in your alertview
+                guard let settingsUrl = NSURL(string: UIApplication.openSettingsURLString) as URL? else {return}
+                UIApplication.shared.open(settingsUrl)
+                })))
+            ac.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+            vc.present(ac, animated: true)
+        }
+
+    }
 }
