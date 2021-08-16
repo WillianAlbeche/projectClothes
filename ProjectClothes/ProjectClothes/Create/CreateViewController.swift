@@ -1,6 +1,7 @@
 
 
 import UIKit
+import CloudKit
 
 class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
     
@@ -14,27 +15,10 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
     
     @IBOutlet weak var addItem: UIButton!
     
-    
-    
-    // BUTTON
-    
-    @IBAction func addItem(_ sender: UIButton) {
-        let imageName = "Image2"
-        let image = UIImage(named: imageName)
-        let imageView = UIImageView(image: image!)
-        imageView.frame = CGRect(x: UIScreen.main.bounds.width/2, y: UIScreen.main.bounds.height/2, width: 100, height: 200)
-        self.view.addSubview(imageView)
-        let panGesture = UIPanGestureRecognizer(target: self,
-                                                action: #selector(handlePanGesture(_:)))
-        imageView.addGestureRecognizer(panGesture)
-        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinchGesture(_:)))
-        imageView.addGestureRecognizer(pinchGesture)
-        let rotateGesture = UIRotationGestureRecognizer(target: self, action: #selector(handleRotateGesture(_:)))
-        imageView.addGestureRecognizer(rotateGesture)
-        
-        imageView.isUserInteractionEnabled = true
-    }
-    
+//    let mock = MockData()
+//    var mockClo: [Clothes] = []
+//    var roupa : Clothes = Clothes.createEmptyClothes()
+//    var isflag: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,9 +48,74 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
         saveButton.layer.shadowRadius = 20
         saveButton.layer.cornerRadius = 25
         
+//        CKContainer.default().accountStatus { (accountStatus, error) in
+//            switch accountStatus {
+//            case .available:
+//                print("iCloud Available")
+//            case .noAccount:
+//                print("No iCloud account")
+//
+//                self.isflag = true
+//
+//            case .restricted:
+//                print("iCloud restricted")
+//            case .couldNotDetermine:
+//                print("Unable to determine iCloud status")
+//            @unknown default:
+//                fatalError()
+//            }
+//        }
         
         
     }
+    // BUTTON
+    
+    @IBAction func addItem(_ sender: UIButton) {
+        let imageName = "Image2"
+        let image = UIImage(named: imageName)
+        let imageView = UIImageView(image: image!)
+        imageView.frame = CGRect(x: UIScreen.main.bounds.width/2, y: UIScreen.main.bounds.height/2, width: 100, height: 200)
+        self.view.addSubview(imageView)
+        let panGesture = UIPanGestureRecognizer(target: self,
+                                                action: #selector(handlePanGesture(_:)))
+        imageView.addGestureRecognizer(panGesture)
+        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinchGesture(_:)))
+        imageView.addGestureRecognizer(pinchGesture)
+        let rotateGesture = UIRotationGestureRecognizer(target: self, action: #selector(handleRotateGesture(_:)))
+        imageView.addGestureRecognizer(rotateGesture)
+
+        imageView.isUserInteractionEnabled = true
+        
+//        if isflag {
+//            let ac = UIAlertController(title: "No iCloud account", message: "You need to be logged in iCloud account.", preferredStyle: .alert)
+//            ac.addAction((UIAlertAction(title: "Go to settings", style: .default, handler: { (action) -> Void in
+//                    //This will call when you press ok in your alertview
+//                guard let settingsUrl = NSURL(string: UIApplication.openSettingsURLString) as URL? else {return}
+//                UIApplication.shared.open(settingsUrl )
+//                })))
+//            ac.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+//            self.present(ac, animated: true)
+//        }
+//        DatabaseManager.shared.fetchAllClothes { result in
+//
+//          switch result {
+//          case .failure(let error):
+//            print("wrong clothes")
+//          case .success(let clothes):
+//            self.mockClo = clothes
+//          }
+//            print(self.mockClo.last?.filters)
+//        }
+//
+//        for item in mock.roupasMock {
+//            DatabaseManager.shared.createNewClothes(clothes: item) { error in
+//                if error == nil {
+//                    print("hihi")
+//                }
+//            }
+//        }
+    }
+
     
     
     @objc func handlePanGesture(_ gestureRecognizer:UIPanGestureRecognizer){

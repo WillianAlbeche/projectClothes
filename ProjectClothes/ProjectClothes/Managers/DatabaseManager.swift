@@ -61,7 +61,10 @@ class DatabaseManager {
             var auxClothesList: [Clothes] = []
             auxClothesList = clothesList.filter{ clothes in
                 
-                clothes.fabric == "fabric" || searchingList.contains(where: { (clothes.specials ?? []).contains( $0 ) })
+                searchingList.contains(where: { (clothes.filters ?? []).contains( $0 ) }) ||
+                searchingList.contains(where: { (clothes.seasons ?? []).contains( $0 ) }) ||
+                searchingList.contains(where: { (clothes.specials ?? []).contains( $0 ) }) ||
+                searchingList.contains(where: { (clothes.color ?? "").contains( $0 ) })
                 //                    (clothes.specials ?? [] ).map{ $0.id }.contains(array: tec)
                 
             }
@@ -158,7 +161,10 @@ class DatabaseManager {
     ///   - completion: An optional handler to return a flag (bool) to inidcate operation `finished` and process completion `success` or `failure`.
     func createNewClothes(clothes: Clothes, completion: ((Bool) -> Void)? = nil) {
         
-        let newClothesRecord = CKRecord(recordType: "Clothes")
+        guard let auxid = clothes.id else {
+            print("recordid")
+            return}
+        let newClothesRecord = CKRecord(recordType: "Clothes", recordID: auxid)
         
         newClothesRecord["image"] = clothes.image
         newClothesRecord["color"] = clothes.color
@@ -172,11 +178,13 @@ class DatabaseManager {
         newClothesRecord["fabric"] = clothes.fabric
         newClothesRecord["brand"] = clothes.brand
         newClothesRecord["gender"] = clothes.gender
+        print(clothes.color)
         
         self.privateDB.save(newClothesRecord) { (savedRecord, error) in
             
             guard let _ = savedRecord else {
                 completion?(error == nil)
+                print( "not saved")
                 return
             }
             
@@ -380,4 +388,8 @@ class DatabaseManager {
         }
         
     }
+    
+    // MARK: - Helpers
+    
+    
 }

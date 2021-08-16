@@ -10,33 +10,21 @@ import CoreLocation
 
 class TodayViewController: UIViewController, CLLocationManagerDelegate {
     
-    @IBOutlet var locationLabel: UILabel!
-    var manager: CLLocationManager = CLLocationManager()
-    let weatherKey = "2546907a7b457df6e27139df975c5b50"
-    var temp = 0.0
+    @IBOutlet var tempLabel: UILabel!
+    @IBOutlet var iconeLabel: UILabel!
+    @IBOutlet var preferenceLabel: UILabel!
+    
+    
+    private let constants: Constants = Constants()
+    private var manager: CLLocationManager = CLLocationManager()
+    private let weatherKey: String = "2546907a7b457df6e27139df975c5b50"
+    var auxTemp: Double = 0.0
+    var auxIcone: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    func getTemperature(lat: CLLocationDegrees, long: CLLocationDegrees, completionHandler: @escaping (Double) -> Void) {
-        let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?appid=2546907a7b457df6e27139df975c5b50&lat=\(lat)&lon=\(long)&units=metric")!
         
-        typealias webWeather = [String: Any]
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            
-            
-            guard let data = data,
-                  let json = try? JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed),
-                  let dictionary = json as? [String: Any],
-                  let tempList = dictionary["main"] as? webWeather
-            else { return }
-            
-            guard let celsius = tempList["temp"] as? Double
-            else { return }
-            
-            completionHandler(celsius)
-        }
-        .resume()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,14 +41,41 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
         }
         print("long: \(first.coordinate.longitude) | lat: \(first.coordinate.latitude)")
         
-        getTemperature(lat: first.coordinate.latitude, long: first.coordinate.longitude) { result in
-            self.temp = result
-            
+        getTemperature(lat: first.coordinate.latitude, long: first.coordinate.longitude) { temp, icone in
+            self.auxTemp = temp
+            self.auxIcone = icone
+            print("temp : \(self.auxTemp)")
+            print("icone : \(self.auxIcone)")
             DispatchQueue.main.async {
-                self.locationLabel.text = "\(self.temp)"
+                self.tempLabel.text = "\(Int(self.auxTemp))° "
+                self.iconeLabel.text = self.auxIcone
+                self.preferenceLabel.text = ("Dê preferência: \(self.constants.recommendationPhrase(temperatures: Int(self.auxTemp)))")
             }
         }
         
         manager.stopUpdatingLocation()
+    }
+    
+    private func getTemperature(lat: CLLocationDegrees, long: CLLocationDegrees, completionHandler: @escaping (Double, String) -> Void) {
+        let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?appid=2546907a7b457df6e27139df975c5b50&lat=\(lat)&lon=\(long)&units=metric")!
+        
+        typealias webWeather = [String: Any]
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            
+            guard let data = data,
+                  let json = try? JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed),
+                  let dictionary = json as? [String: Any],
+                  let mainList = dictionary["main"] as? webWeather,
+                  let celsius = mainList["temp"] as? Double,
+                  let weatherList = dictionary["weather"] as? [webWeather]
+            else { return }
+            
+            let weatherList2 = weatherList[0]
+            guard let weatherIcone = weatherList2["main"] as? String else { return }
+            
+            completionHandler(celsius, weatherIcone)
+        }
+        .resume()
     }
 }

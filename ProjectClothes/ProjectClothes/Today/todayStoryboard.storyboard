@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Today View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="TodayViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,8 +36,17 @@
                                     <constraint firstAttribute="width" constant="150" id="67U-hE-lXm"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evite peças de camurça Dê preferência para casacos e botas mais resistêntes à àgua." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2h-ce-TQg">
-                                <rect key="frame" x="30" y="672" width="323" height="61"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evite peças de camurça " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMT-QY-MLJ">
+                                <rect key="frame" x="30" y="593" width="323" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="m75-aG-H4o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dê preferência para casacos e botas mais resistêntes à àgua." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2h-ce-TQg">
+                                <rect key="frame" x="30" y="662" width="323" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -46,14 +55,22 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.50168710949999995" green="0.38891232009999999" blue="0.84317857029999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="W2h-ce-TQg" secondAttribute="trailing" constant="61" id="0pz-ww-gAC"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="W2h-ce-TQg" secondAttribute="bottom" constant="80" id="JrC-Mp-qdz"/>
-                            <constraint firstItem="W2h-ce-TQg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="cL8-At-QDN"/>
+                            <constraint firstItem="WMT-QY-MLJ" firstAttribute="trailing" secondItem="W2h-ce-TQg" secondAttribute="trailing" id="0oe-gY-v1A"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WMT-QY-MLJ" secondAttribute="trailing" constant="61" id="9dt-Wm-3aC"/>
+                            <constraint firstItem="WMT-QY-MLJ" firstAttribute="leading" secondItem="W2h-ce-TQg" secondAttribute="leading" id="Bbp-sD-XqA"/>
+                            <constraint firstItem="WMT-QY-MLJ" firstAttribute="leading" secondItem="1KV-wo-Ih9" secondAttribute="leading" id="J4Y-tO-Fg5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="W2h-ce-TQg" secondAttribute="bottom" constant="110" id="ra3-eQ-UJa"/>
+                            <constraint firstItem="W2h-ce-TQg" firstAttribute="top" secondItem="WMT-QY-MLJ" secondAttribute="bottom" constant="8" id="sQc-gF-jN6"/>
                             <constraint firstItem="1KV-wo-Ih9" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="xr0-Eu-cgP"/>
                             <constraint firstItem="1KV-wo-Ih9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="zkG-tQ-jwl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nhq-fG-Mu1"/>
+                    <connections>
+                        <outlet property="iconeLabel" destination="GgI-1A-ice" id="DYS-ux-uOd"/>
+                        <outlet property="preferenceLabel" destination="W2h-ce-TQg" id="XCN-8n-QbN"/>
+                        <outlet property="tempLabel" destination="VmP-dv-rRt" id="O6E-Q4-OWY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
