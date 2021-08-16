@@ -14,7 +14,7 @@ class SuperRoupaTableViewCell: UITableViewCell {
     
     @IBOutlet weak var constraintCollectionViewHeight: NSLayoutConstraint!
     var thisSuperClothesArray : [Clothes]?
-    
+    var segueSubtypes : (()->())?
     
     
     override func awakeFromNib() {
@@ -32,6 +32,8 @@ class SuperRoupaTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    
+        
 }
 
 extension SuperRoupaTableViewCell : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -73,6 +75,11 @@ extension SuperRoupaTableViewCell : UICollectionViewDelegate, UICollectionViewDa
         return CGSize(width: lado , height: lado)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let segue = segueSubtypes!
+        
+        segue()
+        
         
     }
     

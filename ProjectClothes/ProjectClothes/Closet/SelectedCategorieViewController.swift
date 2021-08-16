@@ -18,15 +18,16 @@ class SelectedCategorieViewController: UIViewController {
         filteredClothesCollectionView.delegate = self
         filteredClothesCollectionView.dataSource = self
         // Do any additional setup after loading the view.
+        
+        let layout = filteredClothesCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
+        layout?.sectionInset =  UIEdgeInsets(top: 0.0 , left: UIScreen.screenWidth*0.072, bottom: 5, right: UIScreen.screenWidth*0.072)
+        
     }
-    
 
 }
 extension SelectedCategorieViewController : UICollectionViewDelegate, UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
         return 1
-
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -45,4 +46,11 @@ extension SelectedCategorieViewController : UICollectionViewDelegate, UICollecti
     }
     
 
+}
+extension SelectedCategorieViewController : UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width:  UIScreen.screenWidth*0.4, height: UIScreen.screenWidth*0.4)
+    }
+    
+    
 }

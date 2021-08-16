@@ -43,6 +43,7 @@ class wardrobeViewController: UIViewController {
         categoriesTableView.dataSource = self
         looksCollectionView.delegate = self
         looksCollectionView.dataSource = self
+        
         categoriesTableView.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
         
         self.view.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
@@ -51,7 +52,7 @@ class wardrobeViewController: UIViewController {
         
         
         
-        navigationItem.title = "first"
+//        navigationItem.title = "first"
         
         
         setUpSearchController()
@@ -64,7 +65,13 @@ class wardrobeViewController: UIViewController {
         
         calculatedNumberOfCategories = getNumberSuperClothesCategories()
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "selectionOfSubtipe"{
+            let destination = segue.destination as? SelectedCategorieViewController
+            destination?.segmentedClothes = allClothes
+        }
+        
+    }
     func setUpSearchController(){
         
         let searchController = UISearchController(searchResultsController: nil)
@@ -124,6 +131,10 @@ extension wardrobeViewController :  UITableViewDelegate, UITableViewDataSource{
         cell.thisSuperClothesArray = clotheTipesDict[name]
         cell.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
         cell.superClassNameLabel.text = name
+        cell.segueSubtypes = {
+            self.performSegue(withIdentifier: "selectionOfSubtipe", sender: self)
+        }
+        
         return  cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -138,6 +149,9 @@ extension wardrobeViewController :  UITableViewDelegate, UITableViewDataSource{
 }
 extension wardrobeViewController : UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+                
+        
+        
         print("")
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -146,10 +160,7 @@ extension wardrobeViewController : UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let _ = viewsSearchController?.searchBar.text, let unwrappedFilteredClothes = filteredClothes,  viewsSearchController?.searchBar.text != "" {
             return unwrappedFilteredClothes.count
-            
-            
         }
-        
         return 10
     }
     
@@ -170,12 +181,8 @@ extension wardrobeViewController : UICollectionViewDelegate, UICollectionViewDat
             
         }else{
             // here I should just load the looks normally, since a query isnt being made
-            
-            
             cell.clotheImage.image = UIImage(named: "Image2")
             cell.label.text = "roupa blue"
-            
-            
             
         }
         cell.layer.cornerRadius = 25
@@ -242,9 +249,6 @@ extension wardrobeViewController : UISearchResultsUpdating{
         }
         return provisorio   // ta dando merda aqui
     }
-    
-    
-    
 }
 extension UIScreen{
     static let screenWidth = UIScreen.main.bounds.width
