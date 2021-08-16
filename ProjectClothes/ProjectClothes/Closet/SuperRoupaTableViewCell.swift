@@ -23,7 +23,7 @@ class SuperRoupaTableViewCell: UITableViewCell {
         subClassesCollecionView.delegate = self
         subClassesCollecionView.dataSource = self
         subClassesCollecionView.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
-        constraintCollectionViewHeight.constant = UIScreen.screenWidth*0.41
+        constraintCollectionViewHeight.constant = UIScreen.screenWidth*0.4//41
         
         
         
@@ -45,24 +45,13 @@ extension SuperRoupaTableViewCell : UICollectionViewDelegate, UICollectionViewDa
         
         
         collectionCell.pictureOfSubType.image = thisSuperClothesArray?[indexPath.item].image?.toUIImage() ?? nil
-        if collectionCell.pictureOfSubType.image == nil{
-            collectionCell.backgroundColor = .white
-            collectionCell.pictureOfSubType.backgroundColor = .white
-            
-        }
         
         collectionCell.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0).cgColor
-        collectionCell.layer.cornerRadius = 50
-        
-        //        collectionCell.layer.shadowColor = UIColor.black.cgColor
-        //        collectionCell.layer.shadowOpacity = 1
-        //        collectionCell.layer.shadowOffset = .zero
-        //        collectionCell.layer.shadowRadius = 10
-        //        collectionCell.layer.cornerRadius = 21
-        //        collectionCell.layer.borderWidth = 20
-        //        collectionCell.layer.borderColor = UIColor.green.cgColor
+        collectionCell.layer.cornerRadius = 21
         
         
+        collectionCell.backgroundColor = .white
+        collectionCell.pictureOfSubType.backgroundColor = .white
         return collectionCell
     }
     

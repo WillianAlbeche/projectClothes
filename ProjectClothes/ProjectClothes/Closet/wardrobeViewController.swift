@@ -179,10 +179,10 @@ extension wardrobeViewController :  UITableViewDelegate, UITableViewDataSource{
     }
 
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let tamanho = UIScreen.screenHeight*0.2216
-        return tamanho
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        let tamanho = UIScreen.screenHeight*0.2216
+//        return tamanho
+//    }
     
     
 }
@@ -212,8 +212,9 @@ extension wardrobeViewController : UICollectionViewDelegate, UICollectionViewDat
             
             
             cell.clotheImage.image = UIImage(named: "Image2")
+            if clotheOrLookPicker.selectedSegmentIndex == 1 {
             cell.label.text = currentFilteredClothe.type //TEMPORARIO
-            
+            }
             
         }else{
             // here I should just load the looks normally, since a query isnt being made
@@ -298,3 +299,4 @@ extension StringProtocol {
         return split { !$0.isLetter }
     }
 }
+//extension wardrobeViewController :
