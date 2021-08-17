@@ -13,7 +13,9 @@
         <scene sceneID="nHn-U5-DJc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f0l-Ze-ZeP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Closet" image="person.fill" catalog="system" id="yaw-Tz-1ee"/>
+                    <tabBarItem key="tabBarItem" title="Closet" image="cabide" id="yaw-Tz-1ee">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="w2X-oL-lNt">
@@ -224,7 +226,6 @@
         <!--Selected Categorie View Controller-->
         <scene sceneID="BaE-PC-Wcw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SvC-hY-NJI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="iYl-XX-ttu" customClass="SelectedCategorieViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="mDI-wa-D1w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -269,12 +270,13 @@
                         <outlet property="filteredClothesCollectionView" destination="mDI-wa-D1w" id="HCM-Z4-22N"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SvC-hY-NJI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2884" y="115"/>
         </scene>
     </scenes>
     <resources>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="cabide" width="23" height="17.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
