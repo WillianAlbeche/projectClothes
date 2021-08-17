@@ -13,38 +13,9 @@
 		CDF28F9626B07C8C00241F13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF28F9426B07C8C00241F13 /* Main.storyboard */; };
 		CDF28F9826B07C9000241F13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF28F9726B07C9000241F13 /* Assets.xcassets */; };
 		CDF28F9B26B07C9000241F13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF28F9926B07C9000241F13 /* LaunchScreen.storyboard */; };
-		CDF28FAC26B08EF800241F13 /* addStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF28FAB26B08EF800241F13 /* addStoryboard.storyboard */; };
-		F85A4BA026BB27540020B5F0 /* ClothesConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4B9F26BB27540020B5F0 /* ClothesConfigurationViewController.swift */; };
-		F85A4BA226C1A48D0020B5F0 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4BA126C1A48D0020B5F0 /* ModalViewController.swift */; };
-		F85A4BA526C1B2450020B5F0 /* FullSizeClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4BA426C1B2450020B5F0 /* FullSizeClothesViewController.swift */; };
-		F85A4BA726C1B2660020B5F0 /* TopClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4BA626C1B2660020B5F0 /* TopClothesViewController.swift */; };
-		F85A4BA926C1B2810020B5F0 /* BottomClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4BA826C1B2810020B5F0 /* BottomClothesViewController.swift */; };
-		F85A4BAB26C1B2960020B5F0 /* ShoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85A4BAA26C1B2960020B5F0 /* ShoesViewController.swift */; };
 		FD08F82D26B86B02003E0C9C /* createStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08F82C26B86B02003E0C9C /* createStoryboard.storyboard */; };
 		FD08F82F26B86B0B003E0C9C /* todayStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08F82E26B86B0B003E0C9C /* todayStoryboard.storyboard */; };
-		FD08F83126B86B6C003E0C9C /* CustomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD08F83026B86B6C003E0C9C /* CustomModalViewController.swift */; };
 		FD430BE726B3236F00F31DD2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD430BE626B3236E00F31DD2 /* TabBarController.swift */; };
-		FD430BE926B3329700F31DD2 /* AddNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD430BE826B3329700F31DD2 /* AddNavigationController.swift */; };
-		FD4CE71326B9AB730014B05F /* WhiteBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE71226B9AB730014B05F /* WhiteBoardViewController.swift */; };
-		FD4CE71626B9DDEC0014B05F /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE71526B9DDEC0014B05F /* DrawingView.swift */; };
-		FD4CE72A26B9DDF60014B05F /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE71826B9DDF60014B05F /* Array+Extensions.swift */; };
-		FD4CE72B26B9DDF60014B05F /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE71926B9DDF60014B05F /* Math.swift */; };
-		FD4CE72C26B9DDF60014B05F /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE71A26B9DDF60014B05F /* UIImage+CVPixelBuffer.swift */; };
-		FD4CE72D26B9DDF60014B05F /* Predictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE71B26B9DDF60014B05F /* Predictions.swift */; };
-		FD4CE72E26B9DDF60014B05F /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE71C26B9DDF60014B05F /* UIImage+Extensions.swift */; };
-		FD4CE72F26B9DDF60014B05F /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE71D26B9DDF60014B05F /* CGImagePropertyOrientation.swift */; };
-		FD4CE73026B9DDF60014B05F /* UIImage+RawBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE71E26B9DDF60014B05F /* UIImage+RawBytes.swift */; };
-		FD4CE73126B9DDF60014B05F /* MLMultiArray+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE71F26B9DDF60014B05F /* MLMultiArray+Helpers.swift */; };
-		FD4CE73226B9DDF60014B05F /* MLModel+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72026B9DDF60014B05F /* MLModel+Images.swift */; };
-		FD4CE73326B9DDF60014B05F /* CoreML+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72126B9DDF60014B05F /* CoreML+Combine.swift */; };
-		FD4CE73426B9DDF60014B05F /* CVPixelBuffer+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72226B9DDF60014B05F /* CVPixelBuffer+Create.swift */; };
-		FD4CE73526B9DDF60014B05F /* CGImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72326B9DDF60014B05F /* CGImage+CVPixelBuffer.swift */; };
-		FD4CE73626B9DDF60014B05F /* NonMaxSuppression.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72426B9DDF60014B05F /* NonMaxSuppression.swift */; };
-		FD4CE73726B9DDF60014B05F /* CGImage+RawBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72526B9DDF60014B05F /* CGImage+RawBytes.swift */; };
-		FD4CE73826B9DDF60014B05F /* MLMultiArray+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72626B9DDF60014B05F /* MLMultiArray+Image.swift */; };
-		FD4CE73926B9DDF60014B05F /* CVPixelBuffer+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72726B9DDF60014B05F /* CVPixelBuffer+Resize.swift */; };
-		FD4CE73A26B9DDF60014B05F /* CVPixelBuffer+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72826B9DDF60014B05F /* CVPixelBuffer+Rotate.swift */; };
-		FD4CE73B26B9DDF60014B05F /* DeepLabV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FD4CE72926B9DDF60014B05F /* DeepLabV3.mlmodel */; };
 		FDA72CA026C439D400F966F5 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72C9F26C439D400F966F5 /* CreateViewController.swift */; };
 		FDA72CA426C43DAD00F966F5 /* settingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA72CA226C43DAD00F966F5 /* settingsStoryboard.storyboard */; };
 		FDA72CA526C43DAD00F966F5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CA326C43DAD00F966F5 /* SettingsViewController.swift */; };
@@ -59,6 +30,43 @@
 		FDA72CE826C6DDE700F966F5 /* SelectedCategorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CE726C6DDE700F966F5 /* SelectedCategorieViewController.swift */; };
 		FDA72CEA26C6E31D00F966F5 /* SegmentedCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CE926C6E31D00F966F5 /* SegmentedCellCollectionViewCell.swift */; };
 		FDA72CEC26C6F1AD00F966F5 /* EnumForSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CEB26C6F1AD00F966F5 /* EnumForSegues.swift */; };
+		FDA72D1D26CB503C00F966F5 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CEF26CB503B00F966F5 /* Array+Extensions.swift */; };
+		FDA72D1E26CB503C00F966F5 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CF026CB503B00F966F5 /* Math.swift */; };
+		FDA72D1F26CB503C00F966F5 /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CF126CB503B00F966F5 /* UIImage+CVPixelBuffer.swift */; };
+		FDA72D2026CB503C00F966F5 /* Predictions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CF226CB503B00F966F5 /* Predictions.swift */; };
+		FDA72D2126CB503C00F966F5 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CF326CB503B00F966F5 /* UIImage+Extensions.swift */; };
+		FDA72D2226CB503C00F966F5 /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CF426CB503B00F966F5 /* CGImagePropertyOrientation.swift */; };
+		FDA72D2326CB503C00F966F5 /* UIImage+RawBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CF526CB503B00F966F5 /* UIImage+RawBytes.swift */; };
+		FDA72D2426CB503C00F966F5 /* MLMultiArray+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CF626CB503B00F966F5 /* MLMultiArray+Helpers.swift */; };
+		FDA72D2526CB503C00F966F5 /* MLModel+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CF726CB503B00F966F5 /* MLModel+Images.swift */; };
+		FDA72D2626CB503C00F966F5 /* CoreML+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CF826CB503B00F966F5 /* CoreML+Combine.swift */; };
+		FDA72D2726CB503C00F966F5 /* CVPixelBuffer+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CF926CB503B00F966F5 /* CVPixelBuffer+Create.swift */; };
+		FDA72D2826CB503C00F966F5 /* CGImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CFA26CB503B00F966F5 /* CGImage+CVPixelBuffer.swift */; };
+		FDA72D2926CB503C00F966F5 /* NonMaxSuppression.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CFB26CB503B00F966F5 /* NonMaxSuppression.swift */; };
+		FDA72D2A26CB503C00F966F5 /* CGImage+RawBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CFC26CB503B00F966F5 /* CGImage+RawBytes.swift */; };
+		FDA72D2B26CB503C00F966F5 /* MLMultiArray+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CFD26CB503B00F966F5 /* MLMultiArray+Image.swift */; };
+		FDA72D2C26CB503C00F966F5 /* CVPixelBuffer+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CFE26CB503B00F966F5 /* CVPixelBuffer+Resize.swift */; };
+		FDA72D2D26CB503C00F966F5 /* CVPixelBuffer+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CFF26CB503B00F966F5 /* CVPixelBuffer+Rotate.swift */; };
+		FDA72D2E26CB503C00F966F5 /* addStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA72D0026CB503B00F966F5 /* addStoryboard.storyboard */; };
+		FDA72D2F26CB503C00F966F5 /* AddNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D0126CB503B00F966F5 /* AddNavigationController.swift */; };
+		FDA72D3026CB503C00F966F5 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D0226CB503B00F966F5 /* DrawingView.swift */; };
+		FDA72D3126CB503C00F966F5 /* CustomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D0326CB503B00F966F5 /* CustomModalViewController.swift */; };
+		FDA72D3226CB503C00F966F5 /* ClothesConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D0426CB503B00F966F5 /* ClothesConfigViewController.swift */; };
+		FDA72D3426CB503C00F966F5 /* ClothesConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D0626CB503B00F966F5 /* ClothesConfigurationViewController.swift */; };
+		FDA72D3526CB503C00F966F5 /* AccessoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D0926CB503B00F966F5 /* AccessoriesViewController.swift */; };
+		FDA72D3626CB503C00F966F5 /* CustomCellFullClothesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D0B26CB503B00F966F5 /* CustomCellFullClothesTableViewCell.swift */; };
+		FDA72D3726CB503C00F966F5 /* FullSizeClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D0C26CB503B00F966F5 /* FullSizeClothesViewController.swift */; };
+		FDA72D3826CB503C00F966F5 /* BottomClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D0E26CB503B00F966F5 /* BottomClothesViewController.swift */; };
+		FDA72D3926CB503C00F966F5 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D0F26CB503B00F966F5 /* ModalViewController.swift */; };
+		FDA72D3A26CB503C00F966F5 /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D1126CB503B00F966F5 /* CustomCellTableViewCell.swift */; };
+		FDA72D3B26CB503C00F966F5 /* TopClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D1226CB503B00F966F5 /* TopClothesViewController.swift */; };
+		FDA72D3C26CB503C00F966F5 /* ShoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D1426CB503B00F966F5 /* ShoesViewController.swift */; };
+		FDA72D3D26CB503C00F966F5 /* DeepLabV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D1626CB503B00F966F5 /* DeepLabV3.mlmodel */; };
+		FDA72D3E26CB503C00F966F5 /* WhiteBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D1726CB503B00F966F5 /* WhiteBoardViewController.swift */; };
+		FDA72D3F26CB503C00F966F5 /* CustomCellShoesClothesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D1826CB503B00F966F5 /* CustomCellShoesClothesTableViewCell.swift */; };
+		FDA72D4026CB503C00F966F5 /* CustomCellAccessoriesClothesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D1926CB503B00F966F5 /* CustomCellAccessoriesClothesTableViewCell.swift */; };
+		FDA72D4126CB503C00F966F5 /* clothesConfig.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA72D1B26CB503B00F966F5 /* clothesConfig.storyboard */; };
+		FDA72D4226CB503C00F966F5 /* CustomCellBottomClothesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D1C26CB503B00F966F5 /* CustomCellBottomClothesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,38 +78,9 @@
 		CDF28F9726B07C9000241F13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDF28F9A26B07C9000241F13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDF28F9C26B07C9000241F13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDF28FAB26B08EF800241F13 /* addStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = addStoryboard.storyboard; sourceTree = "<group>"; };
-		F85A4B9F26BB27540020B5F0 /* ClothesConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesConfigurationViewController.swift; sourceTree = "<group>"; };
-		F85A4BA126C1A48D0020B5F0 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModalViewController.swift; path = ProjectClothes/Add/ModalCategories/ModalViewController.swift; sourceTree = SOURCE_ROOT; };
-		F85A4BA426C1B2450020B5F0 /* FullSizeClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FullSizeClothesViewController.swift; path = ProjectClothes/Add/FullSizeClothesViewController.swift; sourceTree = SOURCE_ROOT; };
-		F85A4BA626C1B2660020B5F0 /* TopClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TopClothesViewController.swift; path = ProjectClothes/Add/TopClothesViewController.swift; sourceTree = SOURCE_ROOT; };
-		F85A4BA826C1B2810020B5F0 /* BottomClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BottomClothesViewController.swift; path = ProjectClothes/Add/BottomClothesViewController.swift; sourceTree = SOURCE_ROOT; };
-		F85A4BAA26C1B2960020B5F0 /* ShoesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShoesViewController.swift; path = ProjectClothes/Add/ShoesViewController.swift; sourceTree = SOURCE_ROOT; };
 		FD08F82C26B86B02003E0C9C /* createStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = createStoryboard.storyboard; sourceTree = "<group>"; };
 		FD08F82E26B86B0B003E0C9C /* todayStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = todayStoryboard.storyboard; sourceTree = "<group>"; };
-		FD08F83026B86B6C003E0C9C /* CustomModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModalViewController.swift; sourceTree = "<group>"; };
 		FD430BE626B3236E00F31DD2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		FD430BE826B3329700F31DD2 /* AddNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNavigationController.swift; sourceTree = "<group>"; };
-		FD4CE71226B9AB730014B05F /* WhiteBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteBoardViewController.swift; sourceTree = "<group>"; };
-		FD4CE71526B9DDEC0014B05F /* DrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
-		FD4CE71826B9DDF60014B05F /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
-		FD4CE71926B9DDF60014B05F /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
-		FD4CE71A26B9DDF60014B05F /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
-		FD4CE71B26B9DDF60014B05F /* Predictions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predictions.swift; sourceTree = "<group>"; };
-		FD4CE71C26B9DDF60014B05F /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
-		FD4CE71D26B9DDF60014B05F /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
-		FD4CE71E26B9DDF60014B05F /* UIImage+RawBytes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+RawBytes.swift"; sourceTree = "<group>"; };
-		FD4CE71F26B9DDF60014B05F /* MLMultiArray+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Helpers.swift"; sourceTree = "<group>"; };
-		FD4CE72026B9DDF60014B05F /* MLModel+Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLModel+Images.swift"; sourceTree = "<group>"; };
-		FD4CE72126B9DDF60014B05F /* CoreML+Combine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreML+Combine.swift"; sourceTree = "<group>"; };
-		FD4CE72226B9DDF60014B05F /* CVPixelBuffer+Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Create.swift"; sourceTree = "<group>"; };
-		FD4CE72326B9DDF60014B05F /* CGImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
-		FD4CE72426B9DDF60014B05F /* NonMaxSuppression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonMaxSuppression.swift; sourceTree = "<group>"; };
-		FD4CE72526B9DDF60014B05F /* CGImage+RawBytes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+RawBytes.swift"; sourceTree = "<group>"; };
-		FD4CE72626B9DDF60014B05F /* MLMultiArray+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Image.swift"; sourceTree = "<group>"; };
-		FD4CE72726B9DDF60014B05F /* CVPixelBuffer+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Resize.swift"; sourceTree = "<group>"; };
-		FD4CE72826B9DDF60014B05F /* CVPixelBuffer+Rotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Rotate.swift"; sourceTree = "<group>"; };
-		FD4CE72926B9DDF60014B05F /* DeepLabV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DeepLabV3.mlmodel; sourceTree = "<group>"; };
 		FDA72C9F26C439D400F966F5 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		FDA72CA226C43DAD00F966F5 /* settingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = settingsStoryboard.storyboard; sourceTree = "<group>"; };
 		FDA72CA326C43DAD00F966F5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +95,43 @@
 		FDA72CE726C6DDE700F966F5 /* SelectedCategorieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategorieViewController.swift; sourceTree = "<group>"; };
 		FDA72CE926C6E31D00F966F5 /* SegmentedCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		FDA72CEB26C6F1AD00F966F5 /* EnumForSegues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumForSegues.swift; sourceTree = "<group>"; };
+		FDA72CEF26CB503B00F966F5 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		FDA72CF026CB503B00F966F5 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		FDA72CF126CB503B00F966F5 /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		FDA72CF226CB503B00F966F5 /* Predictions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Predictions.swift; sourceTree = "<group>"; };
+		FDA72CF326CB503B00F966F5 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		FDA72CF426CB503B00F966F5 /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
+		FDA72CF526CB503B00F966F5 /* UIImage+RawBytes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+RawBytes.swift"; sourceTree = "<group>"; };
+		FDA72CF626CB503B00F966F5 /* MLMultiArray+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Helpers.swift"; sourceTree = "<group>"; };
+		FDA72CF726CB503B00F966F5 /* MLModel+Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLModel+Images.swift"; sourceTree = "<group>"; };
+		FDA72CF826CB503B00F966F5 /* CoreML+Combine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreML+Combine.swift"; sourceTree = "<group>"; };
+		FDA72CF926CB503B00F966F5 /* CVPixelBuffer+Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Create.swift"; sourceTree = "<group>"; };
+		FDA72CFA26CB503B00F966F5 /* CGImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		FDA72CFB26CB503B00F966F5 /* NonMaxSuppression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonMaxSuppression.swift; sourceTree = "<group>"; };
+		FDA72CFC26CB503B00F966F5 /* CGImage+RawBytes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+RawBytes.swift"; sourceTree = "<group>"; };
+		FDA72CFD26CB503B00F966F5 /* MLMultiArray+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MLMultiArray+Image.swift"; sourceTree = "<group>"; };
+		FDA72CFE26CB503B00F966F5 /* CVPixelBuffer+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Resize.swift"; sourceTree = "<group>"; };
+		FDA72CFF26CB503B00F966F5 /* CVPixelBuffer+Rotate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Rotate.swift"; sourceTree = "<group>"; };
+		FDA72D0026CB503B00F966F5 /* addStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = addStoryboard.storyboard; sourceTree = "<group>"; };
+		FDA72D0126CB503B00F966F5 /* AddNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNavigationController.swift; sourceTree = "<group>"; };
+		FDA72D0226CB503B00F966F5 /* DrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		FDA72D0326CB503B00F966F5 /* CustomModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModalViewController.swift; sourceTree = "<group>"; };
+		FDA72D0426CB503B00F966F5 /* ClothesConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothesConfigViewController.swift; sourceTree = "<group>"; };
+		FDA72D0626CB503B00F966F5 /* ClothesConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothesConfigurationViewController.swift; sourceTree = "<group>"; };
+		FDA72D0926CB503B00F966F5 /* AccessoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessoriesViewController.swift; sourceTree = "<group>"; };
+		FDA72D0B26CB503B00F966F5 /* CustomCellFullClothesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellFullClothesTableViewCell.swift; sourceTree = "<group>"; };
+		FDA72D0C26CB503B00F966F5 /* FullSizeClothesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullSizeClothesViewController.swift; sourceTree = "<group>"; };
+		FDA72D0E26CB503B00F966F5 /* BottomClothesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomClothesViewController.swift; sourceTree = "<group>"; };
+		FDA72D0F26CB503B00F966F5 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		FDA72D1126CB503B00F966F5 /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
+		FDA72D1226CB503B00F966F5 /* TopClothesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopClothesViewController.swift; sourceTree = "<group>"; };
+		FDA72D1426CB503B00F966F5 /* ShoesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoesViewController.swift; sourceTree = "<group>"; };
+		FDA72D1626CB503B00F966F5 /* DeepLabV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DeepLabV3.mlmodel; sourceTree = "<group>"; };
+		FDA72D1726CB503B00F966F5 /* WhiteBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteBoardViewController.swift; sourceTree = "<group>"; };
+		FDA72D1826CB503B00F966F5 /* CustomCellShoesClothesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellShoesClothesTableViewCell.swift; sourceTree = "<group>"; };
+		FDA72D1926CB503B00F966F5 /* CustomCellAccessoriesClothesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellAccessoriesClothesTableViewCell.swift; sourceTree = "<group>"; };
+		FDA72D1B26CB503B00F966F5 /* clothesConfig.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = clothesConfig.storyboard; sourceTree = "<group>"; };
+		FDA72D1C26CB503B00F966F5 /* CustomCellBottomClothesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellBottomClothesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,11 +164,11 @@
 		CDF28F8D26B07C8C00241F13 /* ProjectClothes */ = {
 			isa = PBXGroup;
 			children = (
+				FDA72CED26CB503B00F966F5 /* Add */,
 				FDA72CAC26C464C900F966F5 /* Model */,
 				FDA72CA126C43DAD00F966F5 /* Settings */,
 				FD23EEC126B1D1F4009FF48C /* Create */,
 				FD23EEBE26B1D1C6009FF48C /* Today */,
-				CDF28FA326B081A100241F13 /* Add */,
 				CDF28FA226B0818E00241F13 /* Closet */,
 				CDF28F8E26B07C8C00241F13 /* AppDelegate.swift */,
 				CDF28F9026B07C8C00241F13 /* SceneDelegate.swift */,
@@ -181,34 +197,6 @@
 			path = Closet;
 			sourceTree = "<group>";
 		};
-		CDF28FA326B081A100241F13 /* Add */ = {
-			isa = PBXGroup;
-			children = (
-				FD4CE71426B9DC580014B05F /* Ml */,
-				F85A4BA326C1B1D90020B5F0 /* ModalCategories */,
-				F85A4B9F26BB27540020B5F0 /* ClothesConfigurationViewController.swift */,
-				FD08F83026B86B6C003E0C9C /* CustomModalViewController.swift */,
-				FD4CE71526B9DDEC0014B05F /* DrawingView.swift */,
-				CDF28FAB26B08EF800241F13 /* addStoryboard.storyboard */,
-				FD430BE826B3329700F31DD2 /* AddNavigationController.swift */,
-				FD4CE71226B9AB730014B05F /* WhiteBoardViewController.swift */,
-				FD4CE71726B9DDF60014B05F /* CoreMLHelpers */,
-			);
-			path = Add;
-			sourceTree = "<group>";
-		};
-		F85A4BA326C1B1D90020B5F0 /* ModalCategories */ = {
-			isa = PBXGroup;
-			children = (
-				F85A4BA126C1A48D0020B5F0 /* ModalViewController.swift */,
-				F85A4BA426C1B2450020B5F0 /* FullSizeClothesViewController.swift */,
-				F85A4BA626C1B2660020B5F0 /* TopClothesViewController.swift */,
-				F85A4BA826C1B2810020B5F0 /* BottomClothesViewController.swift */,
-				F85A4BAA26C1B2960020B5F0 /* ShoesViewController.swift */,
-			);
-			path = ModalCategories;
-			sourceTree = "<group>";
-		};
 		FD23EEBE26B1D1C6009FF48C /* Today */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,38 +212,6 @@
 				FDA72C9F26C439D400F966F5 /* CreateViewController.swift */,
 			);
 			path = Create;
-			sourceTree = "<group>";
-		};
-		FD4CE71426B9DC580014B05F /* Ml */ = {
-			isa = PBXGroup;
-			children = (
-				FD4CE72926B9DDF60014B05F /* DeepLabV3.mlmodel */,
-			);
-			path = Ml;
-			sourceTree = "<group>";
-		};
-		FD4CE71726B9DDF60014B05F /* CoreMLHelpers */ = {
-			isa = PBXGroup;
-			children = (
-				FD4CE71826B9DDF60014B05F /* Array+Extensions.swift */,
-				FD4CE71926B9DDF60014B05F /* Math.swift */,
-				FD4CE71A26B9DDF60014B05F /* UIImage+CVPixelBuffer.swift */,
-				FD4CE71B26B9DDF60014B05F /* Predictions.swift */,
-				FD4CE71C26B9DDF60014B05F /* UIImage+Extensions.swift */,
-				FD4CE71D26B9DDF60014B05F /* CGImagePropertyOrientation.swift */,
-				FD4CE71E26B9DDF60014B05F /* UIImage+RawBytes.swift */,
-				FD4CE71F26B9DDF60014B05F /* MLMultiArray+Helpers.swift */,
-				FD4CE72026B9DDF60014B05F /* MLModel+Images.swift */,
-				FD4CE72126B9DDF60014B05F /* CoreML+Combine.swift */,
-				FD4CE72226B9DDF60014B05F /* CVPixelBuffer+Create.swift */,
-				FD4CE72326B9DDF60014B05F /* CGImage+CVPixelBuffer.swift */,
-				FD4CE72426B9DDF60014B05F /* NonMaxSuppression.swift */,
-				FD4CE72526B9DDF60014B05F /* CGImage+RawBytes.swift */,
-				FD4CE72626B9DDF60014B05F /* MLMultiArray+Image.swift */,
-				FD4CE72726B9DDF60014B05F /* CVPixelBuffer+Resize.swift */,
-				FD4CE72826B9DDF60014B05F /* CVPixelBuffer+Rotate.swift */,
-			);
-			path = CoreMLHelpers;
 			sourceTree = "<group>";
 		};
 		FDA72CA126C43DAD00F966F5 /* Settings */ = {
@@ -275,6 +231,122 @@
 				FDA72CB126C4677C00F966F5 /* MockClothesData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FDA72CED26CB503B00F966F5 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				FDA72CEE26CB503B00F966F5 /* CoreMLHelpers */,
+				FDA72D0026CB503B00F966F5 /* addStoryboard.storyboard */,
+				FDA72D0126CB503B00F966F5 /* AddNavigationController.swift */,
+				FDA72D0226CB503B00F966F5 /* DrawingView.swift */,
+				FDA72D0326CB503B00F966F5 /* CustomModalViewController.swift */,
+				FDA72D0426CB503B00F966F5 /* ClothesConfigViewController.swift */,
+				FDA72D0626CB503B00F966F5 /* ClothesConfigurationViewController.swift */,
+				FDA72D0726CB503B00F966F5 /* ModalCategories */,
+				FDA72D1526CB503B00F966F5 /* Ml */,
+				FDA72D1726CB503B00F966F5 /* WhiteBoardViewController.swift */,
+				FDA72D1826CB503B00F966F5 /* CustomCellShoesClothesTableViewCell.swift */,
+				FDA72D1926CB503B00F966F5 /* CustomCellAccessoriesClothesTableViewCell.swift */,
+				FDA72D1A26CB503B00F966F5 /* ClothesConfiguration */,
+				FDA72D1C26CB503B00F966F5 /* CustomCellBottomClothesTableViewCell.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		FDA72CEE26CB503B00F966F5 /* CoreMLHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				FDA72CEF26CB503B00F966F5 /* Array+Extensions.swift */,
+				FDA72CF026CB503B00F966F5 /* Math.swift */,
+				FDA72CF126CB503B00F966F5 /* UIImage+CVPixelBuffer.swift */,
+				FDA72CF226CB503B00F966F5 /* Predictions.swift */,
+				FDA72CF326CB503B00F966F5 /* UIImage+Extensions.swift */,
+				FDA72CF426CB503B00F966F5 /* CGImagePropertyOrientation.swift */,
+				FDA72CF526CB503B00F966F5 /* UIImage+RawBytes.swift */,
+				FDA72CF626CB503B00F966F5 /* MLMultiArray+Helpers.swift */,
+				FDA72CF726CB503B00F966F5 /* MLModel+Images.swift */,
+				FDA72CF826CB503B00F966F5 /* CoreML+Combine.swift */,
+				FDA72CF926CB503B00F966F5 /* CVPixelBuffer+Create.swift */,
+				FDA72CFA26CB503B00F966F5 /* CGImage+CVPixelBuffer.swift */,
+				FDA72CFB26CB503B00F966F5 /* NonMaxSuppression.swift */,
+				FDA72CFC26CB503B00F966F5 /* CGImage+RawBytes.swift */,
+				FDA72CFD26CB503B00F966F5 /* MLMultiArray+Image.swift */,
+				FDA72CFE26CB503B00F966F5 /* CVPixelBuffer+Resize.swift */,
+				FDA72CFF26CB503B00F966F5 /* CVPixelBuffer+Rotate.swift */,
+			);
+			path = CoreMLHelpers;
+			sourceTree = "<group>";
+		};
+		FDA72D0726CB503B00F966F5 /* ModalCategories */ = {
+			isa = PBXGroup;
+			children = (
+				FDA72D0826CB503B00F966F5 /* Accessories */,
+				FDA72D0A26CB503B00F966F5 /* FullClothes */,
+				FDA72D0D26CB503B00F966F5 /* BottomClothes */,
+				FDA72D0F26CB503B00F966F5 /* ModalViewController.swift */,
+				FDA72D1026CB503B00F966F5 /* TopClothes */,
+				FDA72D1326CB503B00F966F5 /* Shoes */,
+			);
+			path = ModalCategories;
+			sourceTree = "<group>";
+		};
+		FDA72D0826CB503B00F966F5 /* Accessories */ = {
+			isa = PBXGroup;
+			children = (
+				FDA72D0926CB503B00F966F5 /* AccessoriesViewController.swift */,
+			);
+			path = Accessories;
+			sourceTree = "<group>";
+		};
+		FDA72D0A26CB503B00F966F5 /* FullClothes */ = {
+			isa = PBXGroup;
+			children = (
+				FDA72D0B26CB503B00F966F5 /* CustomCellFullClothesTableViewCell.swift */,
+				FDA72D0C26CB503B00F966F5 /* FullSizeClothesViewController.swift */,
+			);
+			path = FullClothes;
+			sourceTree = "<group>";
+		};
+		FDA72D0D26CB503B00F966F5 /* BottomClothes */ = {
+			isa = PBXGroup;
+			children = (
+				FDA72D0E26CB503B00F966F5 /* BottomClothesViewController.swift */,
+			);
+			path = BottomClothes;
+			sourceTree = "<group>";
+		};
+		FDA72D1026CB503B00F966F5 /* TopClothes */ = {
+			isa = PBXGroup;
+			children = (
+				FDA72D1126CB503B00F966F5 /* CustomCellTableViewCell.swift */,
+				FDA72D1226CB503B00F966F5 /* TopClothesViewController.swift */,
+			);
+			path = TopClothes;
+			sourceTree = "<group>";
+		};
+		FDA72D1326CB503B00F966F5 /* Shoes */ = {
+			isa = PBXGroup;
+			children = (
+				FDA72D1426CB503B00F966F5 /* ShoesViewController.swift */,
+			);
+			path = Shoes;
+			sourceTree = "<group>";
+		};
+		FDA72D1526CB503B00F966F5 /* Ml */ = {
+			isa = PBXGroup;
+			children = (
+				FDA72D1626CB503B00F966F5 /* DeepLabV3.mlmodel */,
+			);
+			path = Ml;
+			sourceTree = "<group>";
+		};
+		FDA72D1A26CB503B00F966F5 /* ClothesConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				FDA72D1B26CB503B00F966F5 /* clothesConfig.storyboard */,
+			);
+			path = ClothesConfiguration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,13 +407,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD08F82D26B86B02003E0C9C /* createStoryboard.storyboard in Resources */,
+				FDA72D2E26CB503C00F966F5 /* addStoryboard.storyboard in Resources */,
+				FDA72D4126CB503C00F966F5 /* clothesConfig.storyboard in Resources */,
 				FD08F82F26B86B0B003E0C9C /* todayStoryboard.storyboard in Resources */,
 				CDF28F9B26B07C9000241F13 /* LaunchScreen.storyboard in Resources */,
 				CDF28F9826B07C9000241F13 /* Assets.xcassets in Resources */,
 				CDF28F9626B07C8C00241F13 /* Main.storyboard in Resources */,
 				FDA72CD926C5D4A500F966F5 /* closetStoryboard.storyboard in Resources */,
 				FDA72CA426C43DAD00F966F5 /* settingsStoryboard.storyboard in Resources */,
-				CDF28FAC26B08EF800241F13 /* addStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,50 +425,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDA72D3626CB503C00F966F5 /* CustomCellFullClothesTableViewCell.swift in Sources */,
+				FDA72D2526CB503C00F966F5 /* MLModel+Images.swift in Sources */,
+				FDA72D2026CB503C00F966F5 /* Predictions.swift in Sources */,
+				FDA72D2D26CB503C00F966F5 /* CVPixelBuffer+Rotate.swift in Sources */,
 				CDF28F9326B07C8C00241F13 /* ViewController.swift in Sources */,
-				FD4CE73626B9DDF60014B05F /* NonMaxSuppression.swift in Sources */,
-				FD4CE73326B9DDF60014B05F /* CoreML+Combine.swift in Sources */,
-				FD4CE72A26B9DDF60014B05F /* Array+Extensions.swift in Sources */,
+				FDA72D3826CB503C00F966F5 /* BottomClothesViewController.swift in Sources */,
 				FDA72CEA26C6E31D00F966F5 /* SegmentedCellCollectionViewCell.swift in Sources */,
+				FDA72D3526CB503C00F966F5 /* AccessoriesViewController.swift in Sources */,
+				FDA72D3126CB503C00F966F5 /* CustomModalViewController.swift in Sources */,
+				FDA72D2126CB503C00F966F5 /* UIImage+Extensions.swift in Sources */,
 				FDA72CAF26C464C900F966F5 /* Look.swift in Sources */,
-				FD08F83126B86B6C003E0C9C /* CustomModalViewController.swift in Sources */,
+				FDA72D3026CB503C00F966F5 /* DrawingView.swift in Sources */,
 				FDA72CB226C4677C00F966F5 /* MockClothesData.swift in Sources */,
+				FDA72D2C26CB503C00F966F5 /* CVPixelBuffer+Resize.swift in Sources */,
+				FDA72D4226CB503C00F966F5 /* CustomCellBottomClothesTableViewCell.swift in Sources */,
+				FDA72D3D26CB503C00F966F5 /* DeepLabV3.mlmodel in Sources */,
+				FDA72D2826CB503C00F966F5 /* CGImage+CVPixelBuffer.swift in Sources */,
 				CDF28F8F26B07C8C00241F13 /* AppDelegate.swift in Sources */,
-				FD4CE72D26B9DDF60014B05F /* Predictions.swift in Sources */,
 				FDA72CA026C439D400F966F5 /* CreateViewController.swift in Sources */,
+				FDA72D2626CB503C00F966F5 /* CoreML+Combine.swift in Sources */,
+				FDA72D2B26CB503C00F966F5 /* MLMultiArray+Image.swift in Sources */,
+				FDA72D3226CB503C00F966F5 /* ClothesConfigViewController.swift in Sources */,
+				FDA72D3C26CB503C00F966F5 /* ShoesViewController.swift in Sources */,
+				FDA72D1F26CB503C00F966F5 /* UIImage+CVPixelBuffer.swift in Sources */,
+				FDA72D2926CB503C00F966F5 /* NonMaxSuppression.swift in Sources */,
+				FDA72D3A26CB503C00F966F5 /* CustomCellTableViewCell.swift in Sources */,
 				FDA72CB026C464C900F966F5 /* Clothes.swift in Sources */,
-				FD4CE72C26B9DDF60014B05F /* UIImage+CVPixelBuffer.swift in Sources */,
-				FD4CE73126B9DDF60014B05F /* MLMultiArray+Helpers.swift in Sources */,
-				FD4CE73426B9DDF60014B05F /* CVPixelBuffer+Create.swift in Sources */,
-				FD4CE72F26B9DDF60014B05F /* CGImagePropertyOrientation.swift in Sources */,
-				FD4CE71626B9DDEC0014B05F /* DrawingView.swift in Sources */,
-				FD4CE73726B9DDF60014B05F /* CGImage+RawBytes.swift in Sources */,
 				FDA72CE826C6DDE700F966F5 /* SelectedCategorieViewController.swift in Sources */,
-				FD4CE73A26B9DDF60014B05F /* CVPixelBuffer+Rotate.swift in Sources */,
-				FD4CE71326B9AB730014B05F /* WhiteBoardViewController.swift in Sources */,
-				F85A4BA726C1B2660020B5F0 /* TopClothesViewController.swift in Sources */,
+				FDA72D1D26CB503C00F966F5 /* Array+Extensions.swift in Sources */,
 				FDA72CD726C5A80C00F966F5 /* FrontCollectionViewCell.swift in Sources */,
-				FD4CE73826B9DDF60014B05F /* MLMultiArray+Image.swift in Sources */,
-				FD430BE926B3329700F31DD2 /* AddNavigationController.swift in Sources */,
 				FDA72CA926C4406100F966F5 /* wardrobeViewController.swift in Sources */,
+				FDA72D2226CB503C00F966F5 /* CGImagePropertyOrientation.swift in Sources */,
+				FDA72D1E26CB503C00F966F5 /* Math.swift in Sources */,
+				FDA72D2A26CB503C00F966F5 /* CGImage+RawBytes.swift in Sources */,
 				FDA72CEC26C6F1AD00F966F5 /* EnumForSegues.swift in Sources */,
+				FDA72D4026CB503C00F966F5 /* CustomCellAccessoriesClothesTableViewCell.swift in Sources */,
 				FD430BE726B3236F00F31DD2 /* TabBarController.swift in Sources */,
-				FD4CE72E26B9DDF60014B05F /* UIImage+Extensions.swift in Sources */,
-				F85A4BA026BB27540020B5F0 /* ClothesConfigurationViewController.swift in Sources */,
+				FDA72D2326CB503C00F966F5 /* UIImage+RawBytes.swift in Sources */,
+				FDA72D2726CB503C00F966F5 /* CVPixelBuffer+Create.swift in Sources */,
 				FDA72CAB26C4406100F966F5 /* BackCollectionViewCell.swift in Sources */,
-				F85A4BAB26C1B2960020B5F0 /* ShoesViewController.swift in Sources */,
-				F85A4BA926C1B2810020B5F0 /* BottomClothesViewController.swift in Sources */,
+				FDA72D3B26CB503C00F966F5 /* TopClothesViewController.swift in Sources */,
+				FDA72D3926CB503C00F966F5 /* ModalViewController.swift in Sources */,
+				FDA72D2F26CB503C00F966F5 /* AddNavigationController.swift in Sources */,
+				FDA72D3426CB503C00F966F5 /* ClothesConfigurationViewController.swift in Sources */,
 				FDA72CAA26C4406100F966F5 /* SuperRoupaTableViewCell.swift in Sources */,
-				F85A4BA226C1A48D0020B5F0 /* ModalViewController.swift in Sources */,
-				FD4CE73B26B9DDF60014B05F /* DeepLabV3.mlmodel in Sources */,
-				FD4CE73526B9DDF60014B05F /* CGImage+CVPixelBuffer.swift in Sources */,
-				FD4CE73226B9DDF60014B05F /* MLModel+Images.swift in Sources */,
-				FD4CE73026B9DDF60014B05F /* UIImage+RawBytes.swift in Sources */,
 				FDA72CA526C43DAD00F966F5 /* SettingsViewController.swift in Sources */,
+				FDA72D2426CB503C00F966F5 /* MLMultiArray+Helpers.swift in Sources */,
+				FDA72D3F26CB503C00F966F5 /* CustomCellShoesClothesTableViewCell.swift in Sources */,
 				CDF28F9126B07C8C00241F13 /* SceneDelegate.swift in Sources */,
-				FD4CE72B26B9DDF60014B05F /* Math.swift in Sources */,
-				F85A4BA526C1B2450020B5F0 /* FullSizeClothesViewController.swift in Sources */,
-				FD4CE73926B9DDF60014B05F /* CVPixelBuffer+Resize.swift in Sources */,
+				FDA72D3E26CB503C00F966F5 /* WhiteBoardViewController.swift in Sources */,
+				FDA72D3726CB503C00F966F5 /* FullSizeClothesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
