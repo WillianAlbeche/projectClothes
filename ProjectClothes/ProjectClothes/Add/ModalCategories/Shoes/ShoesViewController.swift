@@ -11,15 +11,18 @@ class ShoesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var tableViewheigth: NSLayoutConstraint!
+    
     var gender: String?
     
-    var maleClothes = ["Tênis", "Bota", "Sapatênis", "Oxford / Monk / Derby", "Outro"]
+    var maleClothes = ["Tênis", "Bota", "Sapatênis", "Oxford / Monk / Derby", "Outro", "Tênis", "Bota", "Sapatênis"]
     var femaleClothes = ["Tênis", "Bota", "Saltos", "Sapatilhas / Rasteiras", "Oxford", "Mules", "Mocassins", "Sandálias", "Scarpin", "Outro"]
     var none = ["Tênis", "Bota", "Sapatênis", "Oxford / Monk / Derby", "Saltos", "Sapatilhas / Rasteiras", "Mules", "Mocassins", "Sandálias", "Scarpin", "Outro"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableViewheigth.constant = UIScreen.main.bounds.height*0.35
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor(named: "ligthPurple")

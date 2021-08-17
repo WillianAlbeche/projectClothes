@@ -316,6 +316,9 @@
                                         <state key="normal" title="Continuar">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="continuarButton:" destination="w22-R3-u5x" eventType="touchUpInside" id="9T5-wA-RV9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -349,11 +352,22 @@
                         <outlet property="nextButton" destination="BBR-hn-4RT" id="Bkh-Hq-FC2"/>
                         <outlet property="saveButton" destination="2hF-12-VTn" id="tcL-ki-yzF"/>
                         <segue destination="E17-eI-zX3" kind="presentation" identifier="goToModal" id="8Zs-kL-gQf"/>
+                        <segue destination="f7W-0M-4Oh" kind="show" identifier="goToConfig" id="WeQ-O6-D3u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UxH-B0-HkZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6147.826086956522" y="89.732142857142847"/>
+        </scene>
+        <!--clothesConfig-->
+        <scene sceneID="swI-TW-I2S">
+            <objects>
+                <viewControllerPlaceholder storyboardName="clothesConfig" id="f7W-0M-4Oh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0Pl-oW-xy7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DIg-4n-8m5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6148" y="579"/>
         </scene>
         <!--Modal View Controller-->
         <scene sceneID="bF3-kg-VJi">
@@ -670,8 +684,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jqn-M2-ISJ">
-                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="426"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="426" id="xYD-yM-z6x"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell1" rowHeight="134" id="umU-MN-BhL" customClass="CustomCellShoesClothesTableViewCell" customModule="ProjectClothes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="134"/>
@@ -710,7 +727,6 @@
                         <color key="backgroundColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="jqn-M2-ISJ" firstAttribute="trailing" secondItem="hGX-ap-uCx" secondAttribute="trailing" id="CHC-21-s90"/>
-                            <constraint firstAttribute="bottom" secondItem="jqn-M2-ISJ" secondAttribute="bottom" id="UAE-zP-lud"/>
                             <constraint firstItem="jqn-M2-ISJ" firstAttribute="leading" secondItem="hGX-ap-uCx" secondAttribute="leading" id="gF5-Nb-jTb"/>
                             <constraint firstItem="jqn-M2-ISJ" firstAttribute="top" secondItem="hGX-ap-uCx" secondAttribute="top" id="yLv-dO-KlI"/>
                         </constraints>
@@ -718,6 +734,7 @@
                     <navigationItem key="navigationItem" id="PZt-55-Iza"/>
                     <connections>
                         <outlet property="tableView" destination="jqn-M2-ISJ" id="qdS-E5-oHx"/>
+                        <outlet property="tableViewheigth" destination="xYD-yM-z6x" id="HTc-cr-pzZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZLg-o6-MyL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -815,6 +832,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2iK-l1-Waf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

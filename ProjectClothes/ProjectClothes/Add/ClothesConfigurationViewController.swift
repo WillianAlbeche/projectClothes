@@ -13,12 +13,17 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
     @IBOutlet weak var colorButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var categoryButton: UIButton!
-    @IBAction func categoryAction(_ sender: Any) {
+    @IBAction func continuarButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToConfig", sender: gender)
+    }
+    
+    
+    @IBAction func categoryAction(_ sender: UIButton) {
         performSegue(withIdentifier: "goToModal", sender: gender)
     }
     @IBOutlet weak var nextButton: UIButton!
     
-    var gender: String = "NONE"
+    var gender = "M"
     
     var imageReceive: UIImage?
     
@@ -64,9 +69,14 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as? ModalViewController
+        if segue.identifier == "goToConfig"{
+            let destination = segue.destination as? ClothesConfigViewController
+        }
+    
         if segue.identifier == "goToModal" {
-            destination?.gender = gender
+            let destination = segue.destination as? MyCustomNavigationController
+            let dest = destination?.topViewController as? ModalViewController
+            dest?.gender1 = gender
         }
     }
     

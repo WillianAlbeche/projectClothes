@@ -23,6 +23,7 @@ class FullSizeClothesViewController: UIViewController, UITableViewDelegate, UITa
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor(named: "ligthPurple")
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,6 +48,7 @@ class FullSizeClothesViewController: UIViewController, UITableViewDelegate, UITa
             let cellroupas = maleClothes[indexPath.row]
             
             cell.clothesLabel.text = cellroupas
+            cell.clothesLabel.layer.masksToBounds = true
             cell.clothesLabel.layer.cornerRadius = 20
             
             return cell
