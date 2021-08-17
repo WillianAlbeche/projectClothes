@@ -27,8 +27,7 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+       
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -36,39 +35,14 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
         loadingWeather.startAnimating()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
-        if(manager.authorizationStatus == CLAuthorizationStatus.authorizedAlways || manager.authorizationStatus == CLAuthorizationStatus.authorizedWhenInUse){
-            print("authorized")
-            isAuthorized = true
-        } else if(manager.authorizationStatus == CLAuthorizationStatus.denied){
-            print("locked")
-            isAuthorized = false
-            if !isAuthorized {
-                let ac = UIAlertController(title: "location authorization denied", message: "You need to authorize location services in settings.", preferredStyle: .alert)
-                ac.addAction((UIAlertAction(title: "Go to settings", style: .default, handler: { (action) -> Void in
-                    //This will call when you press ok in your alertview
-                    guard let settingsUrl = NSURL(string: UIApplication.openSettingsURLString) as URL? else {return}
-                    UIApplication.shared.open(settingsUrl )
-                })))
-                ac.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
-                self.present(ac, animated: true)
-            }
-        }
+        
+        DatabaseManager.shared.checkLocationAuth(locationManager: manager, vc: self)
 
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         
         
     }
-    
-    //    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-    //
-    //        if(status == .authorizedAlways || status == .authorizedWhenInUse){
-    //            print("authorized")
-    //        } else if(status == .denied){
-    //            print("locked")
-    //        }
-    //
-    //    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let first = locations.first else {

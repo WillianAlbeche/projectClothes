@@ -20,7 +20,10 @@ class DatabaseManager {
     static let shared: DatabaseManager = DatabaseManager()
     
     /// For iCloud account status
-    var isLoggedIn: Bool = false
+    var isiCloudAuth: Bool = false
+    var isLocationAuth: Bool = false
+    
+    private let preferencePath = "App-prefs:"
     
     //------------------------------------------------
     // MARK: - API (Clothes)
@@ -64,9 +67,9 @@ class DatabaseManager {
             auxClothesList = clothesList.filter{ clothes in
                 
                 searchingList.contains(where: { (clothes.filters ?? []).contains( $0 ) }) ||
-                searchingList.contains(where: { (clothes.seasons ?? []).contains( $0 ) }) ||
-                searchingList.contains(where: { (clothes.specials ?? []).contains( $0 ) }) ||
-                searchingList.contains(where: { (clothes.color ?? "").contains( $0 ) })
+                    searchingList.contains(where: { (clothes.seasons ?? []).contains( $0 ) }) ||
+                    searchingList.contains(where: { (clothes.specials ?? []).contains( $0 ) }) ||
+                    searchingList.contains(where: { (clothes.color ?? "").contains( $0 ) })
                 //                    (clothes.specials ?? [] ).map{ $0.id }.contains(array: tec)
                 
             }
@@ -92,6 +95,7 @@ class DatabaseManager {
         query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
         
         self.privateDB.perform(query, inZoneWith: nil) { results, error in
+            
             if let error = error {
                 DispatchQueue.main.async {
                     completion(.failure(error))
@@ -421,15 +425,16 @@ class DatabaseManager {
     //------------------------------------------------
     // MARK: - Helper
     /// To check iCloud account status
-    func checkiCloudAccount(){
+    
+    func checkiCloudAccount(vc: UIViewController){
         CKContainer.default().accountStatus { (accountStatus, error) in
             switch accountStatus {
             case .available:
                 print("iCloud Available")
-                self.isLoggedIn = true
+                self.isiCloudAuth = true
             case .noAccount:
                 print("No iCloud account")
-                self.isLoggedIn = false
+                self.isiCloudAuth = false
             case .restricted:
                 print("iCloud restricted")
             case .couldNotDetermine:
@@ -440,18 +445,39 @@ class DatabaseManager {
         }
     }
     
-    /// To make user to log in iCloud account
-    func neediCloudLoggedIn(vc: UIViewController){
-        if !self.isLoggedIn {
+    /// For user to log in iCloud account
+    func loggingiCloud(vc: UIViewController){
+        let appPath = "\(self.preferencePath)=ACCOUNT_SETTINGS"
+        if !self.isiCloudAuth {
             let ac = UIAlertController(title: "No iCloud account", message: "You need to be logged in iCloud account.", preferredStyle: .alert)
             ac.addAction((UIAlertAction(title: "Go to settings", style: .default, handler: { (action) -> Void in
-                    //This will call when you press ok in your alertview
-                guard let settingsUrl = NSURL(string: UIApplication.openSettingsURLString) as URL? else {return}
+                guard let settingsUrl = NSURL(string: appPath) as URL? else {return}
                 UIApplication.shared.open(settingsUrl)
-                })))
+            })))
             ac.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
             vc.present(ac, animated: true)
         }
+    }
+    /// To check location auth
+    /// For user to authorize location
+    func checkLocationAuth(locationManager: CLLocationManager, vc: UIViewController){
+        if(locationManager.authorizationStatus == CLAuthorizationStatus.authorizedAlways || locationManager.authorizationStatus == CLAuthorizationStatus.authorizedWhenInUse){
+            print("authorized")
+            isLocationAuth = true
+        } else if(locationManager.authorizationStatus == CLAuthorizationStatus.denied){
+            print("locked")
+            isLocationAuth = false
+            if !isLocationAuth {
+                let ac = UIAlertController(title: "location authorization denied", message: "You need to authorize location services in settings.", preferredStyle: .alert)
+                ac.addAction((UIAlertAction(title: "Go to settings", style: .default, handler: { (action) -> Void in
+                    //This will call when you press ok in your alertview
 
+                    guard let settingsUrl = NSURL(string: UIApplication.openSettingsURLString) as URL? else {return}
+                    UIApplication.shared.open(settingsUrl)
+                })))
+                ac.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+                vc.present(ac, animated: true)
+            }
+        }
     }
 }

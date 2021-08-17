@@ -18,7 +18,7 @@ class wardrobeViewController: UIViewController {
     
     var classeMock = MockClothesData()
     var viewsSearchController : UISearchController?
-    var allClothes: [Clothes]? // array the clothes recebido ou do servidor, ou do core data, ou do mock de dados
+    var allClothes: [Clothes]? = [] // array the clothes recebido ou do servidor, ou do core data, ou do mock de dados
     var clotheTipesDict: [String: [Clothes]] = [:]// array filtrado pelo tipo : parte de cima, parte de baixo, calçado
     var clotheSuperTypesAndSubTypesDict : [String:[String:[Clothes]]] = [:] // isso aqui tem somente uma roupa de cada subtipo
     var presentClothesSuperTypes : [String] = [] //tipos(supertipos) presentes no array allclothes
@@ -38,7 +38,7 @@ class wardrobeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        allClothes = classeMock.roupasMock//carregando os dados mock
+        
         
         categoriesTableView.delegate = self
         categoriesTableView.dataSource = self
@@ -53,7 +53,7 @@ class wardrobeViewController: UIViewController {
         
         
         
-
+        
         
         
         setUpSearchController()
@@ -66,15 +66,32 @@ class wardrobeViewController: UIViewController {
         
         calculatedNumberOfCategories = getNumberSuperClothesCategories()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        DatabaseManager.shared.fetchAllClothes { result in
+            switch result {
+            case .failure(let error):
+                print("wrong clothes")
+            case .success(let clothes):
+                self.allClothes = clothes
+                DispatchQueue.main.async {
+                    self.calculatedNumberOfCategories = self.getNumberSuperClothesCategories()
+                    self.categoriesTableView.reloadData()
+                }
+            }
+            print(self.allClothes)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "selectionOfSubtipe"{
             let destination = segue.destination as? SelectedCategorieViewController
             if let senderTuple = sender as? (String, String) {
                 destination?.segmentedClothes = clotheSuperTypesAndSubTypesDict[senderTuple.0]?[senderTuple.1]
                 
-                
-                
-        }
+            }
         }
     }
     
@@ -89,7 +106,7 @@ class wardrobeViewController: UIViewController {
             
             firstElements.append(i.1.first! )// forced
         }
-    
+        
         return firstElements
     }
     func setUpSearchController(){
@@ -124,21 +141,21 @@ class wardrobeViewController: UIViewController {
                 clotheTipesDict[currentClotheType] = [clothe]
                 
                 if let currentSubType = clothe.subType{
-                clotheSuperTypesAndSubTypesDict[currentClotheType] = [currentSubType: [clothe]]
+                    clotheSuperTypesAndSubTypesDict[currentClotheType] = [currentSubType: [clothe]]
                 }
-
+                
             }else{
                 // so da append no dict
                 clotheTipesDict[currentClotheType]?.append(clothe)
                 if let subDic = clotheSuperTypesAndSubTypesDict[currentClotheType]{
                     if subDic[currentClotheSubType] != nil {// se tem o subtype
                         clotheSuperTypesAndSubTypesDict[currentClotheType]?[currentClotheSubType]?.append(clothe)
+                        
+                    }else{
+                        clotheSuperTypesAndSubTypesDict[currentClotheType]?[currentClotheSubType] = [clothe]
+                        
+                    }
                     
-                }else{
-                    clotheSuperTypesAndSubTypesDict[currentClotheType]?[currentClotheSubType] = [clothe]
-                    
-                }
-                
                 }
                 
             }
@@ -172,17 +189,17 @@ extension wardrobeViewController :  UITableViewDelegate, UITableViewDataSource{
         cell.thisSuperClothesArray = getFirstItems(superType: name)
         
         cell.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
-
+        
         cell.fatherView = self
         
         return  cell
     }
-
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let tamanho = UIScreen.screenHeight*0.2216
-        return tamanho
-    }
+    
+    //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //        let tamanho = UIScreen.screenHeight*0.2216
+    //        return tamanho
+    //    }
     
     
 }
@@ -212,8 +229,9 @@ extension wardrobeViewController : UICollectionViewDelegate, UICollectionViewDat
             
             
             cell.clotheImage.image = UIImage(named: "Image2")
-            cell.label.text = currentFilteredClothe.type //TEMPORARIO
-            
+            if clotheOrLookPicker.selectedSegmentIndex == 1 {
+                cell.label.text = currentFilteredClothe.type //TEMPORARIO
+            }
             
         }else{
             // here I should just load the looks normally, since a query isnt being made
@@ -298,3 +316,4 @@ extension StringProtocol {
         return split { !$0.isLetter }
     }
 }
+//extension wardrobeViewController :

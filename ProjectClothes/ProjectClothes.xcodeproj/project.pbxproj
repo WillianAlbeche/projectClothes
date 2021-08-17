@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B215AD0026CC25CE0033CDAA /* MockClothesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B215ACFF26CC25CE0033CDAA /* MockClothesData.swift */; };
 		B237047426C58202000097FA /* Look.swift in Sources */ = {isa = PBXBuildFile; fileRef = B237047326C58202000097FA /* Look.swift */; };
 		B278CE1426C97ED200A7FEA4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278CE1326C97ED200A7FEA4 /* Constants.swift */; };
 		B278CE1626C9A9C600A7FEA4 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278CE1526C9A9C600A7FEA4 /* MockData.swift */; };
@@ -59,9 +60,6 @@
 		FDA72CA926C4406100F966F5 /* wardrobeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CA626C4406100F966F5 /* wardrobeViewController.swift */; };
 		FDA72CAA26C4406100F966F5 /* SuperRoupaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CA726C4406100F966F5 /* SuperRoupaTableViewCell.swift */; };
 		FDA72CAB26C4406100F966F5 /* BackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CA826C4406100F966F5 /* BackCollectionViewCell.swift */; };
-		FDA72CAF26C464C900F966F5 /* Look.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CAD26C464C900F966F5 /* Look.swift */; };
-		FDA72CB026C464C900F966F5 /* Clothes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CAE26C464C900F966F5 /* Clothes.swift */; };
-		FDA72CB226C4677C00F966F5 /* MockClothesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CB126C4677C00F966F5 /* MockClothesData.swift */; };
 		FDA72CD726C5A80C00F966F5 /* FrontCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CD626C5A80C00F966F5 /* FrontCollectionViewCell.swift */; };
 		FDA72CD926C5D4A500F966F5 /* closetStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA72CD826C5D4A500F966F5 /* closetStoryboard.storyboard */; };
 		FDA72CE826C6DDE700F966F5 /* SelectedCategorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CE726C6DDE700F966F5 /* SelectedCategorieViewController.swift */; };
@@ -70,6 +68,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B215ACFF26CC25CE0033CDAA /* MockClothesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockClothesData.swift; sourceTree = "<group>"; };
 		B237047326C58202000097FA /* Look.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Look.swift; sourceTree = "<group>"; };
 		B278CE1326C97ED200A7FEA4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B278CE1526C9A9C600A7FEA4 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
@@ -125,9 +124,6 @@
 		FDA72CA626C4406100F966F5 /* wardrobeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wardrobeViewController.swift; sourceTree = "<group>"; };
 		FDA72CA726C4406100F966F5 /* SuperRoupaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperRoupaTableViewCell.swift; sourceTree = "<group>"; };
 		FDA72CA826C4406100F966F5 /* BackCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackCollectionViewCell.swift; sourceTree = "<group>"; };
-		FDA72CAD26C464C900F966F5 /* Look.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Look.swift; sourceTree = "<group>"; };
-		FDA72CAE26C464C900F966F5 /* Clothes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clothes.swift; sourceTree = "<group>"; };
-		FDA72CB126C4677C00F966F5 /* MockClothesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockClothesData.swift; sourceTree = "<group>"; };
 		FDA72CD626C5A80C00F966F5 /* FrontCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCollectionViewCell.swift; sourceTree = "<group>"; };
 		FDA72CD826C5D4A500F966F5 /* closetStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = closetStoryboard.storyboard; sourceTree = "<group>"; };
 		FDA72CE726C6DDE700F966F5 /* SelectedCategorieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategorieViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +157,7 @@
 				CD852CF926C44E3800926B13 /* Clothes.swift */,
 				B237047326C58202000097FA /* Look.swift */,
 				B278CE1526C9A9C600A7FEA4 /* MockData.swift */,
+				B215ACFF26CC25CE0033CDAA /* MockClothesData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -325,16 +322,6 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		FDA72CAC26C464C900F966F5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				FDA72CAD26C464C900F966F5 /* Look.swift */,
-				FDA72CAE26C464C900F966F5 /* Clothes.swift */,
-				FDA72CB126C4677C00F966F5 /* MockClothesData.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -416,16 +403,14 @@
 				FD4CE73326B9DDF60014B05F /* CoreML+Combine.swift in Sources */,
 				FD4CE72A26B9DDF60014B05F /* Array+Extensions.swift in Sources */,
 				FDA72CEA26C6E31D00F966F5 /* SegmentedCellCollectionViewCell.swift in Sources */,
-				FDA72CAF26C464C900F966F5 /* Look.swift in Sources */,
 				FD08F83126B86B6C003E0C9C /* CustomModalViewController.swift in Sources */,
-				FDA72CB226C4677C00F966F5 /* MockClothesData.swift in Sources */,
 				CDF28F8F26B07C8C00241F13 /* AppDelegate.swift in Sources */,
 				FD4CE72D26B9DDF60014B05F /* Predictions.swift in Sources */,
 				B278CE1426C97ED200A7FEA4 /* Constants.swift in Sources */,
 				B278CE1626C9A9C600A7FEA4 /* MockData.swift in Sources */,
 				CD852D0326C706B700926B13 /* TodayViewController.swift in Sources */,
+				B215AD0026CC25CE0033CDAA /* MockClothesData.swift in Sources */,
 				FDA72CA026C439D400F966F5 /* CreateViewController.swift in Sources */,
-				FDA72CB026C464C900F966F5 /* Clothes.swift in Sources */,
 				FD4CE72C26B9DDF60014B05F /* UIImage+CVPixelBuffer.swift in Sources */,
 				FD4CE73126B9DDF60014B05F /* MLMultiArray+Helpers.swift in Sources */,
 				FD4CE73426B9DDF60014B05F /* CVPixelBuffer+Create.swift in Sources */,

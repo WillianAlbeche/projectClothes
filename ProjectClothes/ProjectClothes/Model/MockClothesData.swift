@@ -231,11 +231,7 @@ class MockClothesData {
     var roupasMock : [Clothes] {
         return [ roupa00 ,roupa03,roupa02,roupa01,roupa1,roupa2,roupa3,roupa4,roupa5,roupa6,roupa7,roupa8, roupa9] }
     
-    
-    
-    
-    
-    
+
     
 }
 
