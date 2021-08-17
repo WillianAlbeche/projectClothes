@@ -75,7 +75,9 @@
         <scene sceneID="ZEZ-Fg-era">
             <objects>
                 <navigationController id="UAC-J6-uZc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Today" image="cloud.sun.fill" catalog="system" id="ZKB-R5-cS5"/>
+                    <tabBarItem key="tabBarItem" title="Today" image="cloud.sun.fill" catalog="system" id="ZKB-R5-cS5">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="anV-4m-FjN">

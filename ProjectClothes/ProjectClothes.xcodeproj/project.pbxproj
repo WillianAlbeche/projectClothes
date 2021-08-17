@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CDA4C6FA26CAEC8E0061C082 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4C6F926CAEC8E0061C082 /* ContactViewController.swift */; };
+		CDA4C6FC26CC2B710061C082 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4C6FB26CC2B710061C082 /* ContactViewController.swift */; };
 		CDF28F8F26B07C8C00241F13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF28F8E26B07C8C00241F13 /* AppDelegate.swift */; };
 		CDF28F9126B07C8C00241F13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF28F9026B07C8C00241F13 /* SceneDelegate.swift */; };
 		CDF28F9326B07C8C00241F13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF28F9226B07C8C00241F13 /* ViewController.swift */; };
@@ -71,7 +71,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CDA4C6F926CAEC8E0061C082 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		CDA4C6FB26CC2B710061C082 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		CDF28F8B26B07C8C00241F13 /* ProjectClothes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectClothes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF28F8E26B07C8C00241F13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDF28F9026B07C8C00241F13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -219,6 +219,7 @@
 		FDA72CA126C43DAD00F966F5 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				CDA4C6FB26CC2B710061C082 /* ContactViewController.swift */,
 				FDA72CA226C43DAD00F966F5 /* settingsStoryboard.storyboard */,
 				FDA72CA326C43DAD00F966F5 /* SettingsViewController.swift */,
 			);
@@ -330,9 +331,6 @@
 		FDA72D1326CB503B00F966F5 /* Shoes */ = {
 			isa = PBXGroup;
 			children = (
-				FDA72CA226C43DAD00F966F5 /* settingsStoryboard.storyboard */,
-				FDA72CA326C43DAD00F966F5 /* SettingsViewController.swift */,
-				CDA4C6F926CAEC8E0061C082 /* ContactViewController.swift */,
 				FDA72D1426CB503B00F966F5 /* ShoesViewController.swift */,
 			);
 			path = Shoes;
@@ -457,13 +455,6 @@
 				FDA72D2926CB503C00F966F5 /* NonMaxSuppression.swift in Sources */,
 				FDA72D3A26CB503C00F966F5 /* CustomCellTableViewCell.swift in Sources */,
 				FDA72CB026C464C900F966F5 /* Clothes.swift in Sources */,
-				FD4CE72C26B9DDF60014B05F /* UIImage+CVPixelBuffer.swift in Sources */,
-				FD4CE73126B9DDF60014B05F /* MLMultiArray+Helpers.swift in Sources */,
-				CDA4C6FA26CAEC8E0061C082 /* ContactViewController.swift in Sources */,
-				FD4CE73426B9DDF60014B05F /* CVPixelBuffer+Create.swift in Sources */,
-				FD4CE72F26B9DDF60014B05F /* CGImagePropertyOrientation.swift in Sources */,
-				FD4CE71626B9DDEC0014B05F /* DrawingView.swift in Sources */,
-				FD4CE73726B9DDF60014B05F /* CGImage+RawBytes.swift in Sources */,
 				FDA72CE826C6DDE700F966F5 /* SelectedCategorieViewController.swift in Sources */,
 				FDA72D1D26CB503C00F966F5 /* Array+Extensions.swift in Sources */,
 				FDA72CD726C5A80C00F966F5 /* FrontCollectionViewCell.swift in Sources */,
@@ -481,6 +472,7 @@
 				FDA72D3926CB503C00F966F5 /* ModalViewController.swift in Sources */,
 				FDA72D2F26CB503C00F966F5 /* AddNavigationController.swift in Sources */,
 				FDA72D3426CB503C00F966F5 /* ClothesConfigurationViewController.swift in Sources */,
+				CDA4C6FC26CC2B710061C082 /* ContactViewController.swift in Sources */,
 				FDA72CAA26C4406100F966F5 /* SuperRoupaTableViewCell.swift in Sources */,
 				FDA72CA526C43DAD00F966F5 /* SettingsViewController.swift in Sources */,
 				FDA72D2426CB503C00F966F5 /* MLMultiArray+Helpers.swift in Sources */,
