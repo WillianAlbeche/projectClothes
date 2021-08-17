@@ -58,13 +58,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Yt9-xi-dQh">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="0.056052442020000003" green="0.0042765853" blue="0.21933195759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.50168710949999995" green="0.38891232009999999" blue="0.84317857029999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="WMT-QY-MLJ" firstAttribute="trailing" secondItem="W2h-ce-TQg" secondAttribute="trailing" id="0oe-gY-v1A"/>
+                            <constraint firstItem="Yt9-xi-dQh" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="8UD-75-7eZ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WMT-QY-MLJ" secondAttribute="trailing" constant="61" id="9dt-Wm-3aC"/>
                             <constraint firstItem="WMT-QY-MLJ" firstAttribute="leading" secondItem="W2h-ce-TQg" secondAttribute="leading" id="Bbp-sD-XqA"/>
+                            <constraint firstItem="Yt9-xi-dQh" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="EMQ-tr-uXb"/>
                             <constraint firstItem="WMT-QY-MLJ" firstAttribute="leading" secondItem="1KV-wo-Ih9" secondAttribute="leading" id="J4Y-tO-Fg5"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="W2h-ce-TQg" secondAttribute="bottom" constant="60" id="ra3-eQ-UJa"/>
                             <constraint firstItem="W2h-ce-TQg" firstAttribute="top" secondItem="WMT-QY-MLJ" secondAttribute="bottom" constant="8" id="sQc-gF-jN6"/>
@@ -76,6 +82,7 @@
                     <connections>
                         <outlet property="iconeImage" destination="Hha-C9-OtI" id="lmE-gx-y7v"/>
                         <outlet property="iconeLabel" destination="GgI-1A-ice" id="DYS-ux-uOd"/>
+                        <outlet property="loadingWeather" destination="Yt9-xi-dQh" id="aMF-EH-oZI"/>
                         <outlet property="preferenceLabel" destination="W2h-ce-TQg" id="XCN-8n-QbN"/>
                         <outlet property="tempLabel" destination="VmP-dv-rRt" id="O6E-Q4-OWY"/>
                     </connections>

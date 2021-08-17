@@ -14,6 +14,7 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var iconeLabel: UILabel!
     @IBOutlet weak var iconeImage: UIImageView!
     @IBOutlet var preferenceLabel: UILabel!
+    @IBOutlet weak var loadingWeather: UIActivityIndicatorView!
     
     
     private let constants: Constants = Constants()
@@ -32,7 +33,7 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        loadingWeather.startAnimating()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
         if(manager.authorizationStatus == CLAuthorizationStatus.authorizedAlways || manager.authorizationStatus == CLAuthorizationStatus.authorizedWhenInUse){
@@ -88,6 +89,7 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
                 self.iconeLabel.text = self.auxIconeLabel
                 self.iconeImage.image = icone
                 self.preferenceLabel.text = ("Dê preferência: \(self.constants.recommendationPhrase(temperatures: Int(self.auxTemp)))")
+                self.loadingWeather.stopAnimating()
             }
         }
         

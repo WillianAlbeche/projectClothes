@@ -180,7 +180,7 @@ class DatabaseManager {
         newClothesRecord["fabric"] = clothes.fabric
         newClothesRecord["brand"] = clothes.brand
         newClothesRecord["gender"] = clothes.gender
-        print(clothes.color)
+        
         
         self.privateDB.save(newClothesRecord) { (savedRecord, error) in
             
