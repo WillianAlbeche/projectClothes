@@ -26,17 +26,26 @@ class ModalViewController: UIViewController {
     
     @IBOutlet weak var fullSizeClothesButton: UIButton!
     @IBAction func fullSizeAction(_ sender: Any) {
-        performSegue(withIdentifier: "goToFullSize", sender: gender)
+        performSegue(withIdentifier: "goToFullSize", sender: gender1)
     }
     @IBOutlet weak var topPieceButton: UIButton!
+    @IBAction func topPieceAction(_ sender: Any) {
+        performSegue(withIdentifier: "goToTop", sender: gender1)
+    }
     @IBOutlet weak var bottomPiceButton: UIButton!
+    @IBAction func bottomPieceAction(_ sender: Any) {
+        performSegue(withIdentifier: "goToBottom", sender: gender1)
+    }
     @IBOutlet weak var shoebutton: UIButton!
     @IBAction func shoesAction(_ sender: Any) {
-        performSegue(withIdentifier: "goToShoes", sender: gender)
+        performSegue(withIdentifier: "goToShoes", sender: gender1)
     }
     @IBOutlet weak var accessoriesButton: UIButton!
+    @IBAction func accessoriesAction(_ sender: Any) {
+        performSegue(withIdentifier: "goToAccessories", sender: gender1)
+    }
     
-    var gender: String?
+    var gender1: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +60,15 @@ class ModalViewController: UIViewController {
         let destination2 = segue.destination as? ShoesViewController
         
         if segue.identifier == "goToFullSize" {
-            destination?.gender = gender
+            destination?.gender = gender1
+        }else if segue.identifier == "goToTop"{
+            destination2?.gender = gender1
+        }else if segue.identifier == "goToBottom"{
+            destination2?.gender = gender1
         }else if segue.identifier == "goToShoes"{
-            destination2?.gender = gender
+            destination2?.gender = gender1
+        }else if segue.identifier == "goToAccessories"{
+            destination2?.gender = gender1
         }
     }
     
