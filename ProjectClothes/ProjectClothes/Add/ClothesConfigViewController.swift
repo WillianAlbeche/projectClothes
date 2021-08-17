@@ -42,10 +42,6 @@ class ClothesConfigViewController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     
-    @IBOutlet weak var autumnStack: UIStackView!
-    
-    
-    
     @IBAction func sliderValueChanged(_ sender: Any) {
         
         if self.appSlider.value < 0.25{
@@ -172,11 +168,6 @@ class ClothesConfigViewController: UIViewController {
         nextButton.layer.shadowOpacity = 0.4
         nextButton.layer.shadowOffset = .zero
         nextButton.layer.shadowRadius = 18
-        
-        autumnStack.layer.shadowColor = UIColor.gray.cgColor
-        autumnStack.layer.shadowOpacity = 0.4
-        autumnStack.layer.shadowOffset = .zero
-        autumnStack.layer.shadowRadius = 18
         
     }
     

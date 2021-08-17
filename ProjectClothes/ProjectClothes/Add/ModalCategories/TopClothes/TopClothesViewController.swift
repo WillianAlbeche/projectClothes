@@ -48,6 +48,7 @@ class TopClothesViewController: UIViewController, UITableViewDelegate, UITableVi
             let cellroupas = maleClothes[indexPath.row]
             
             cell.clothesLabel.text = cellroupas
+            cell.clothesLabel.layer.masksToBounds = true
             cell.clothesLabel.layer.cornerRadius = 20
         
             
@@ -60,6 +61,7 @@ class TopClothesViewController: UIViewController, UITableViewDelegate, UITableVi
             let cellroupas = femaleClothes[indexPath.row]
             
             cell.clothesLabel.text = cellroupas
+            cell.clothesLabel.layer.masksToBounds = true
             cell.clothesLabel.layer.cornerRadius = 20
             
             return cell
@@ -71,6 +73,7 @@ class TopClothesViewController: UIViewController, UITableViewDelegate, UITableVi
             let cellroupas = none[indexPath.row]
             
             cell.clothesLabel.text = cellroupas
+            cell.clothesLabel.layer.masksToBounds = true
             cell.clothesLabel.layer.cornerRadius = 20
             
             return cell
@@ -80,6 +83,7 @@ class TopClothesViewController: UIViewController, UITableViewDelegate, UITableVi
             let cellroupas = none[indexPath.row]
             
             cell.clothesLabel.text = cellroupas
+            cell.clothesLabel.layer.masksToBounds = true
             cell.clothesLabel.layer.cornerRadius = 20
             
             return cell

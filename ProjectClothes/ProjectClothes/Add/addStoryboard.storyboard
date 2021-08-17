@@ -378,7 +378,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="V3L-RP-GDX">
-                                <rect key="frame" x="30" y="66" width="354" height="248"/>
+                                <rect key="frame" x="30" y="56" width="354" height="248"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9k1-uh-vcw">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
@@ -458,7 +458,7 @@
                         <constraints>
                             <constraint firstItem="V3L-RP-GDX" firstAttribute="leading" secondItem="icd-h5-5yG" secondAttribute="leading" constant="30" id="0x7-ga-3Ps"/>
                             <constraint firstItem="icd-h5-5yG" firstAttribute="trailing" secondItem="V3L-RP-GDX" secondAttribute="trailing" constant="30" id="8jy-BR-iDY"/>
-                            <constraint firstItem="V3L-RP-GDX" firstAttribute="top" secondItem="jQT-OM-J76" secondAttribute="topMargin" constant="10" id="bwd-zv-mGs"/>
+                            <constraint firstItem="V3L-RP-GDX" firstAttribute="top" secondItem="jQT-OM-J76" secondAttribute="topMargin" id="bwd-zv-mGs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xpa-93-Qsy"/>

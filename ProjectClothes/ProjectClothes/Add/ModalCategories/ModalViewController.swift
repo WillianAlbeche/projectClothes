@@ -10,7 +10,7 @@ import UIKit
 class MyCustomNavigationController: UINavigationController {
     override func updateViewConstraints() {
         super.updateViewConstraints()
-        self.view.frame.origin.y = 400
+        self.view.frame.origin.y = self.view.bounds.height/2.2
         self.view.roundCorners(corners: [.topLeft, .topRight], radius: 20.0)
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()

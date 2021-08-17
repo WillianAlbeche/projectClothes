@@ -512,7 +512,6 @@
                         <outlet property="addCloth" destination="qjo-8M-pmM" id="2qk-qr-rfw"/>
                         <outlet property="appSlider" destination="xfs-zB-fOJ" id="L7q-fZ-E8X"/>
                         <outlet property="autumnOption" destination="Dbw-Yt-Eg9" id="oce-8L-l6b"/>
-                        <outlet property="autumnStack" destination="s5E-br-19u" id="niq-gx-sgu"/>
                         <outlet property="beachOption" destination="VsX-UL-0RX" id="Eer-aT-to7"/>
                         <outlet property="campingOption" destination="l2x-Gr-HjD" id="DBu-lS-tz6"/>
                         <outlet property="casualOption" destination="BV7-wX-mmY" id="IMO-ZU-ZQZ"/>
