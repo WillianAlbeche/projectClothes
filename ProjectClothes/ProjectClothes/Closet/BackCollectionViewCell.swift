@@ -11,6 +11,7 @@ class BackCollectionViewCell: UICollectionViewCell {
  
     
     
+    var typeOfCell : EnumForSegues?
     
     @IBOutlet weak var clotheImage: UIImageView!
     

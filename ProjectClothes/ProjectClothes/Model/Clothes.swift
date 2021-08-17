@@ -7,7 +7,6 @@
 
 import Foundation
 import CloudKit
-
 //class Clothes {
 //
 //    let id: CKRecord.ID?
