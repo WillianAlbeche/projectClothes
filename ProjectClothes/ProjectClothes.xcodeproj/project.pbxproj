@@ -241,7 +241,6 @@
 				FDA72D0126CB503B00F966F5 /* AddNavigationController.swift */,
 				FDA72D0226CB503B00F966F5 /* DrawingView.swift */,
 				FDA72D0326CB503B00F966F5 /* CustomModalViewController.swift */,
-				FDA72D0426CB503B00F966F5 /* ClothesConfigViewController.swift */,
 				FDA72D0626CB503B00F966F5 /* ClothesConfigurationViewController.swift */,
 				FDA72D0726CB503B00F966F5 /* ModalCategories */,
 				FDA72D1526CB503B00F966F5 /* Ml */,
@@ -344,6 +343,7 @@
 		FDA72D1A26CB503B00F966F5 /* ClothesConfiguration */ = {
 			isa = PBXGroup;
 			children = (
+				FDA72D0426CB503B00F966F5 /* ClothesConfigViewController.swift */,
 				FDA72D1B26CB503B00F966F5 /* clothesConfig.storyboard */,
 			);
 			path = ClothesConfiguration;
