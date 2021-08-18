@@ -54,6 +54,7 @@ class ModalViewController: UIViewController {
         bottomPiceButton.layer.cornerRadius = 20
         shoebutton.layer.cornerRadius = 20
         accessoriesButton.layer.cornerRadius = 20
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as? FullSizeClothesViewController
