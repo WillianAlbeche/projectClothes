@@ -73,7 +73,19 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        DatabaseManager.shared.checkiCloudAccount(vc: self)
+        
+        DatabaseManager.shared.checkiCloudAccount() { error, logged in
+            if error == true {
+                if logged {
+                    print("yes log")
+                } else {
+                    print("nolog")
+                    DispatchQueue.main.async {
+                        DatabaseManager.shared.loggingiCloud(vc: self)
+                    }
+                }
+            }
+        }
     }
     // BUTTON
     
@@ -128,7 +140,7 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
 //            ac.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
 //            self.present(ac, animated: true)
 //        }
-        DatabaseManager.shared.loggingiCloud(vc: self)
+        print("button")
         
     }
 

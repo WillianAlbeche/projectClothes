@@ -12,6 +12,7 @@ class wardrobeViewController: UIViewController {
     
     
     
+
     @IBOutlet weak var looksCollectionView: UICollectionView! // na verdade isso nao vai ser só de looks
     @IBOutlet weak var clotheOrLookPicker: UISegmentedControl!
     @IBOutlet weak var categoriesTableView: UITableView!
@@ -25,6 +26,7 @@ class wardrobeViewController: UIViewController {
     var filteredClothes : [Clothes]?
     
     var calculatedNumberOfCategories :Int?
+    var isloggedin: Bool = false
     
     
     
@@ -63,25 +65,43 @@ class wardrobeViewController: UIViewController {
         let looksCollectionViewLayout = looksCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
         looksCollectionViewLayout?.sectionInset = UIEdgeInsets(top: 0.0 , left: UIScreen.screenWidth*0.072, bottom: 5, right: UIScreen.screenWidth*0.072)
         
-        
-        calculatedNumberOfCategories = getNumberSuperClothesCategories()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        DatabaseManager.shared.fetchAllClothes { result in
-            switch result {
-            case .failure(let error):
-                print("wrong clothes")
-            case .success(let clothes):
-                self.allClothes = clothes
-                DispatchQueue.main.async {
-                    self.calculatedNumberOfCategories = self.getNumberSuperClothesCategories()
-                    self.categoriesTableView.reloadData()
+//        loadingPage.startAnimating()
+        DatabaseManager.shared.checkiCloudAccount() { error, logged in
+            if error == true {
+                if logged {
+                    print("yes log")
+                    DatabaseManager.shared.fetchAllClothes { result in
+                        switch result {
+                        case .failure(let error):
+                            print("wrong clothes")
+                        case .success(let clothes):
+                            self.allClothes = clothes
+                            DispatchQueue.main.async {
+                                self.clotheTipesDict = [:]
+                                self.clotheSuperTypesAndSubTypesDict = [:]
+                                self.presentClothesSuperTypes = []
+                                self.filteredClothes = []
+                                
+                                self.clotheSuperTypesAndSubTypesDict = [:]
+                                
+                                self.calculatedNumberOfCategories = self.getNumberSuperClothesCategories()
+                                
+                                self.categoriesTableView.reloadData()
+                            }
+                        }
+                        print(self.allClothes)
+                    }
+                } else {
+                    print("nolog")
+                    DispatchQueue.main.async {
+                        DatabaseManager.shared.loggingiCloud(vc: self)
+                    }
                 }
             }
-            print(self.allClothes)
         }
     }
     
@@ -194,19 +214,7 @@ extension wardrobeViewController :  UITableViewDelegate, UITableViewDataSource{
         
         return  cell
     }
-    
-<<<<<<< HEAD
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        let tamanho = UIScreen.screenHeight*0.2216
-//        return tamanho
-//    }
-=======
-    
-    //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    //        let tamanho = UIScreen.screenHeight*0.2216
-    //        return tamanho
-    //    }
->>>>>>> US06_TK14_informarsobreoclima
+
     
     
 }
@@ -237,11 +245,7 @@ extension wardrobeViewController : UICollectionViewDelegate, UICollectionViewDat
             
             cell.clotheImage.image = UIImage(named: "Image2")
             if clotheOrLookPicker.selectedSegmentIndex == 1 {
-<<<<<<< HEAD
-            cell.label.text = currentFilteredClothe.type //TEMPORARIO
-=======
                 cell.label.text = currentFilteredClothe.type //TEMPORARIO
->>>>>>> US06_TK14_informarsobreoclima
             }
             
         }else{

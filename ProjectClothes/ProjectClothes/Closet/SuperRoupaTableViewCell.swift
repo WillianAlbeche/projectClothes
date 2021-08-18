@@ -63,7 +63,7 @@ extension SuperRoupaTableViewCell : UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         //        let segue = segueSubtypes!
-        fatherView!.performSegue(withIdentifier: "selectionOfSubtipe", sender: (superClassNameLabel.text, thisSuperClothesArray?[indexPath.item].subType))
+        fatherView!.performSegue(withIdentifier: "selectionOfSubtipe", sender: (superClassNameLabel.text, self.thisSuperClothesArray?[indexPath.item].subType))
         //        segue()
         
         

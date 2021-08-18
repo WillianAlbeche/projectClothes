@@ -16,13 +16,14 @@ class DatabaseManager {
     /// A user's private Database
     let privateDB = CKContainer.default().privateCloudDatabase
     
-    /// For use of Singleton.
+    /// For use of Singleton
     static let shared: DatabaseManager = DatabaseManager()
     
     /// For iCloud account status
     var isiCloudAuth: Bool = false
     var isLocationAuth: Bool = false
     
+    /// For settings screen url path
     private let preferencePath = "App-prefs:"
     
     //------------------------------------------------
@@ -426,7 +427,7 @@ class DatabaseManager {
     // MARK: - Helper
     /// To check iCloud account status
     
-    func checkiCloudAccount(vc: UIViewController){
+    func checkiCloudAccount(completion: ((Bool, Bool) -> Void)? = nil){
         CKContainer.default().accountStatus { (accountStatus, error) in
             switch accountStatus {
             case .available:
@@ -442,6 +443,7 @@ class DatabaseManager {
             @unknown default:
                 fatalError()
             }
+            completion?(error == nil, self.isiCloudAuth)
         }
     }
     
@@ -458,6 +460,7 @@ class DatabaseManager {
             vc.present(ac, animated: true)
         }
     }
+    
     /// To check location auth
     /// For user to authorize location
     func checkLocationAuth(locationManager: CLLocationManager, vc: UIViewController){
