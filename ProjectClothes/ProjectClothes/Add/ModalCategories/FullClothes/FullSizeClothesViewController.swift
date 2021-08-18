@@ -11,6 +11,8 @@ class FullSizeClothesViewController: UIViewController, UITableViewDelegate, UITa
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var tableViewheigth: NSLayoutConstraint!
+    
     var gender: String?
     
     var maleClothes = ["Macacão"]
@@ -20,6 +22,7 @@ class FullSizeClothesViewController: UIViewController, UITableViewDelegate, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableViewheigth.constant = UIScreen.main.bounds.height*0.35
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor(named: "ligthPurple")
@@ -59,6 +62,7 @@ class FullSizeClothesViewController: UIViewController, UITableViewDelegate, UITa
             let cellroupas = femaleClothes[indexPath.row]
             
             cell.clothesLabel.text = cellroupas
+            cell.clothesLabel.layer.masksToBounds = true
             cell.clothesLabel.layer.cornerRadius = 20
             
             return cell
@@ -68,6 +72,7 @@ class FullSizeClothesViewController: UIViewController, UITableViewDelegate, UITa
             let cellroupas = none[indexPath.row]
             
             cell.clothesLabel.text = cellroupas
+            cell.clothesLabel.layer.masksToBounds = true
             cell.clothesLabel.layer.cornerRadius = 20
             
             return cell
@@ -77,6 +82,7 @@ class FullSizeClothesViewController: UIViewController, UITableViewDelegate, UITa
             let cellroupas = none[indexPath.row]
             
             cell.clothesLabel.text = cellroupas
+            cell.clothesLabel.layer.masksToBounds = true
             cell.clothesLabel.layer.cornerRadius = 20
             
             return cell

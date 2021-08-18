@@ -11,6 +11,8 @@ class TopClothesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var tableViewheigth: NSLayoutConstraint!
+    
     var gender: String?
     
     var maleClothes = ["Blazer / Paletó", "Colete", "Casaco", "Moletom", "Camiseta", "Camisa", "Polo", "Regata", "Blusão / Suéter"]
@@ -20,6 +22,7 @@ class TopClothesViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableViewheigth.constant = UIScreen.main.bounds.height*0.35
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor(named: "ligthPurple")
@@ -48,6 +51,7 @@ class TopClothesViewController: UIViewController, UITableViewDelegate, UITableVi
             let cellroupas = maleClothes[indexPath.row]
             
             cell.clothesLabel.text = cellroupas
+            cell.clothesLabel.layer.masksToBounds = true
             cell.clothesLabel.layer.cornerRadius = 20
         
             
@@ -60,6 +64,7 @@ class TopClothesViewController: UIViewController, UITableViewDelegate, UITableVi
             let cellroupas = femaleClothes[indexPath.row]
             
             cell.clothesLabel.text = cellroupas
+            cell.clothesLabel.layer.masksToBounds = true
             cell.clothesLabel.layer.cornerRadius = 20
             
             return cell
@@ -71,6 +76,7 @@ class TopClothesViewController: UIViewController, UITableViewDelegate, UITableVi
             let cellroupas = none[indexPath.row]
             
             cell.clothesLabel.text = cellroupas
+            cell.clothesLabel.layer.masksToBounds = true
             cell.clothesLabel.layer.cornerRadius = 20
             
             return cell
@@ -80,6 +86,7 @@ class TopClothesViewController: UIViewController, UITableViewDelegate, UITableVi
             let cellroupas = none[indexPath.row]
             
             cell.clothesLabel.text = cellroupas
+            cell.clothesLabel.layer.masksToBounds = true
             cell.clothesLabel.layer.cornerRadius = 20
             
             return cell

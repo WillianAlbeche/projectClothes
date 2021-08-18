@@ -10,7 +10,7 @@ import UIKit
 class MyCustomNavigationController: UINavigationController {
     override func updateViewConstraints() {
         super.updateViewConstraints()
-        self.view.frame.origin.y = 400
+        self.view.frame.origin.y = self.view.bounds.height/2.2
         self.view.roundCorners(corners: [.topLeft, .topRight], radius: 20.0)
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
@@ -54,21 +54,26 @@ class ModalViewController: UIViewController {
         bottomPiceButton.layer.cornerRadius = 20
         shoebutton.layer.cornerRadius = 20
         accessoriesButton.layer.cornerRadius = 20
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as? FullSizeClothesViewController
-        let destination2 = segue.destination as? ShoesViewController
+        let destination2 = segue.destination as? TopClothesViewController
+//        let destination3 = segue.destination as?
+        let destination4 = segue.destination as? ShoesViewController
+//        let destination5 = segue.destination as?
+        
         
         if segue.identifier == "goToFullSize" {
             destination?.gender = gender1
         }else if segue.identifier == "goToTop"{
             destination2?.gender = gender1
-        }else if segue.identifier == "goToBottom"{
-            destination2?.gender = gender1
+//        }else if segue.identifier == "goToBottom"{
+//            destination3?.gender = gender1
         }else if segue.identifier == "goToShoes"{
-            destination2?.gender = gender1
-        }else if segue.identifier == "goToAccessories"{
-            destination2?.gender = gender1
+            destination4?.gender = gender1
+//        }else if segue.identifier == "goToAccessories"{
+//            destination5?.gender = gender1
         }
     }
     

@@ -42,10 +42,6 @@ class ClothesConfigViewController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     
-    @IBOutlet weak var autumnStack: UIStackView!
-    
-    
-    
     @IBAction func sliderValueChanged(_ sender: Any) {
         
         if self.appSlider.value < 0.25{
@@ -153,6 +149,63 @@ class ClothesConfigViewController: UIViewController {
         newOption.layer.shadowOffset = .zero
         newOption.layer.shadowRadius = 18
         
+        autumnOption.layer.cornerRadius = 10
+        autumnOption.backgroundColor = .white
+        autumnOption.layer.shadowColor = UIColor.gray.cgColor
+        autumnOption.layer.shadowOpacity = 0.3
+        autumnOption.layer.shadowOffset = .zero
+        autumnOption.layer.shadowRadius = 10
+        
+        winterOption.layer.cornerRadius = 10
+        winterOption.backgroundColor = .white
+        winterOption.layer.shadowColor = UIColor.gray.cgColor
+        winterOption.layer.shadowOpacity = 0.3
+        winterOption.layer.shadowOffset = .zero
+        winterOption.layer.shadowRadius = 10
+        
+        springOption.layer.cornerRadius = 10
+        springOption.backgroundColor = .white
+        springOption.layer.shadowColor = UIColor.gray.cgColor
+        springOption.layer.shadowOpacity = 0.3
+        springOption.layer.shadowOffset = .zero
+        springOption.layer.shadowRadius = 10
+        
+        summerOption.layer.cornerRadius = 10
+        summerOption.backgroundColor = .white
+        summerOption.layer.shadowColor = UIColor.gray.cgColor
+        summerOption.layer.shadowOpacity = 0.3
+        summerOption.layer.shadowOffset = .zero
+        summerOption.layer.shadowRadius = 10
+        
+        
+        windOption.layer.cornerRadius = 10
+        windOption.backgroundColor = .white
+        windOption.layer.shadowColor = UIColor.gray.cgColor
+        windOption.layer.shadowOpacity = 0.3
+        windOption.layer.shadowOffset = .zero
+        windOption.layer.shadowRadius = 10
+        
+        rainOption.layer.cornerRadius = 10
+        rainOption.backgroundColor = .white
+        rainOption.layer.shadowColor = UIColor.gray.cgColor
+        rainOption.layer.shadowOpacity = 0.3
+        rainOption.layer.shadowOffset = .zero
+        rainOption.layer.shadowRadius = 10
+        
+        snowOption.layer.cornerRadius = 10
+        snowOption.backgroundColor = .white
+        snowOption.layer.shadowColor = UIColor.gray.cgColor
+        snowOption.layer.shadowOpacity = 0.3
+        snowOption.layer.shadowOffset = .zero
+        snowOption.layer.shadowRadius = 10
+        
+        sensitiveRainOption.layer.cornerRadius = 10
+        sensitiveRainOption.backgroundColor = .white
+        sensitiveRainOption.layer.shadowColor = UIColor.gray.cgColor
+        sensitiveRainOption.layer.shadowOpacity = 0.3
+        sensitiveRainOption.layer.shadowOffset = .zero
+        sensitiveRainOption.layer.shadowRadius = 10
+        
         addBrand.layer.cornerRadius = 20
         addBrand.backgroundColor = .white
         addBrand.layer.shadowColor = UIColor.gray.cgColor
@@ -172,11 +225,6 @@ class ClothesConfigViewController: UIViewController {
         nextButton.layer.shadowOpacity = 0.4
         nextButton.layer.shadowOffset = .zero
         nextButton.layer.shadowRadius = 18
-        
-        autumnStack.layer.shadowColor = UIColor.gray.cgColor
-        autumnStack.layer.shadowOpacity = 0.4
-        autumnStack.layer.shadowOffset = .zero
-        autumnStack.layer.shadowRadius = 18
         
     }
     

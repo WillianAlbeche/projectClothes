@@ -283,15 +283,11 @@
 				FDA72D0126CB503B00F966F5 /* AddNavigationController.swift */,
 				FDA72D0226CB503B00F966F5 /* DrawingView.swift */,
 				FDA72D0326CB503B00F966F5 /* CustomModalViewController.swift */,
-				FDA72D0426CB503B00F966F5 /* ClothesConfigViewController.swift */,
 				FDA72D0626CB503B00F966F5 /* ClothesConfigurationViewController.swift */,
 				FDA72D0726CB503B00F966F5 /* ModalCategories */,
 				FDA72D1526CB503B00F966F5 /* Ml */,
 				FDA72D1726CB503B00F966F5 /* WhiteBoardViewController.swift */,
-				FDA72D1826CB503B00F966F5 /* CustomCellShoesClothesTableViewCell.swift */,
-				FDA72D1926CB503B00F966F5 /* CustomCellAccessoriesClothesTableViewCell.swift */,
 				FDA72D1A26CB503B00F966F5 /* ClothesConfiguration */,
-				FDA72D1C26CB503B00F966F5 /* CustomCellBottomClothesTableViewCell.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -337,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				FDA72D0926CB503B00F966F5 /* AccessoriesViewController.swift */,
+				FDA72D1926CB503B00F966F5 /* CustomCellAccessoriesClothesTableViewCell.swift */,
 			);
 			path = Accessories;
 			sourceTree = "<group>";
@@ -353,6 +350,7 @@
 		FDA72D0D26CB503B00F966F5 /* BottomClothes */ = {
 			isa = PBXGroup;
 			children = (
+				FDA72D1C26CB503B00F966F5 /* CustomCellBottomClothesTableViewCell.swift */,
 				FDA72D0E26CB503B00F966F5 /* BottomClothesViewController.swift */,
 			);
 			path = BottomClothes;
@@ -370,6 +368,7 @@
 		FDA72D1326CB503B00F966F5 /* Shoes */ = {
 			isa = PBXGroup;
 			children = (
+				FDA72D1826CB503B00F966F5 /* CustomCellShoesClothesTableViewCell.swift */,
 				FDA72D1426CB503B00F966F5 /* ShoesViewController.swift */,
 			);
 			path = Shoes;
@@ -386,6 +385,7 @@
 		FDA72D1A26CB503B00F966F5 /* ClothesConfiguration */ = {
 			isa = PBXGroup;
 			children = (
+				FDA72D0426CB503B00F966F5 /* ClothesConfigViewController.swift */,
 				FDA72D1B26CB503B00F966F5 /* clothesConfig.storyboard */,
 			);
 			path = ClothesConfiguration;
@@ -666,7 +666,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ProjectClothes/ProjectClothes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 26UK52Y76J;
+				DEVELOPMENT_TEAM = KY3S643HND;
 				INFOPLIST_FILE = ProjectClothes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -686,7 +686,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ProjectClothes/ProjectClothes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 26UK52Y76J;
+				DEVELOPMENT_TEAM = KY3S643HND;
 				INFOPLIST_FILE = ProjectClothes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
