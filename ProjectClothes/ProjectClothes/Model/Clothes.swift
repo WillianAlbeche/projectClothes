@@ -7,7 +7,6 @@
 
 import Foundation
 import CloudKit
-import UIKit
 //class Clothes {
 //
 //    let id: CKRecord.ID?
@@ -172,10 +171,8 @@ import UIKit
 class Clothes {
     
     let id: CKRecord.ID?
-    
     var image: CKAsset?
     var color: String?
-    
     var filters: [String]?
     var seasons: [String]?
     var specials: [String]?
@@ -195,8 +192,7 @@ class Clothes {
     
     init(record: CKRecord) {
         id = record.recordID
-        
-        /// change
+       
         self.image = record["image"] as? CKAsset
         self.color = record["color"] as? String
         self.filters = record["filters"] as? [String]
@@ -209,11 +205,11 @@ class Clothes {
         self.gender = record["gender"] as? String
         
         if let warm = record["warm"] as? Int,
-           let confort = record["confort"] as? Int
+            let confort = record["confort"] as? Int
         {
             let warm1 = Warm(rawValue: warm)
             let confort1 = Confort(rawValue: confort)
-            
+           
             self.warm = warm1
             self.confort = confort1
             
@@ -268,26 +264,5 @@ enum Confort: Int {
         case .Medium : return "Medium"
         case .High : return "High"
         }
-    }
-}
-
-extension CKAsset {
-    func toUIImage() -> UIImage? {
-        if let data = NSData(contentsOf: self.fileURL!) {
-            return UIImage(data: data as Data)
-        }
-        return nil
-    }
-}
-extension UIImage {
-    func toURL() -> URL? {
-        let data = self.pngData()
-        let url = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(NSUUID().uuidString+".dat")
-        do {
-            try data!.write(to: url!)
-        } catch let e as NSError {
-            print("Error! \(e)");
-        }
-        return url
     }
 }

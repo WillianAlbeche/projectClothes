@@ -8,17 +8,84 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Today View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="TodayViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="1KV-wo-Ih9">
+                                <rect key="frame" x="30" y="128" width="150" height="236"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmP-dv-rRt">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="76.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hha-C9-OtI">
+                                        <rect key="frame" x="0.0" y="76.5" width="150" height="128"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="thunderstorm with heavy drizzle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgI-1A-ice">
+                                        <rect key="frame" x="0.0" y="204.5" width="150" height="31.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="67U-hE-lXm"/>
+                                    <constraint firstItem="Hha-C9-OtI" firstAttribute="centerX" secondItem="GgI-1A-ice" secondAttribute="centerX" id="BQH-Wq-36J"/>
+                                    <constraint firstItem="Hha-C9-OtI" firstAttribute="leading" secondItem="GgI-1A-ice" secondAttribute="leading" id="OGT-OW-PWy"/>
+                                    <constraint firstItem="VmP-dv-rRt" firstAttribute="centerX" secondItem="Hha-C9-OtI" secondAttribute="centerX" id="jU8-gx-et7"/>
+                                    <constraint firstItem="VmP-dv-rRt" firstAttribute="leading" secondItem="Hha-C9-OtI" secondAttribute="leading" id="qSM-2a-jOk"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evite peças de camurça " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMT-QY-MLJ">
+                                <rect key="frame" x="30" y="643" width="323" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="m75-aG-H4o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dê preferência para casacos e botas mais resistêntes à àgua." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2h-ce-TQg">
+                                <rect key="frame" x="30" y="712" width="323" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Yt9-xi-dQh">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" red="0.056052442020000003" green="0.0042765853" blue="0.21933195759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" red="0.50168710949999995" green="0.38891232009999999" blue="0.84317857029999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="WMT-QY-MLJ" firstAttribute="trailing" secondItem="W2h-ce-TQg" secondAttribute="trailing" id="0oe-gY-v1A"/>
+                            <constraint firstItem="Yt9-xi-dQh" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="8UD-75-7eZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WMT-QY-MLJ" secondAttribute="trailing" constant="61" id="9dt-Wm-3aC"/>
+                            <constraint firstItem="WMT-QY-MLJ" firstAttribute="leading" secondItem="W2h-ce-TQg" secondAttribute="leading" id="Bbp-sD-XqA"/>
+                            <constraint firstItem="Yt9-xi-dQh" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="EMQ-tr-uXb"/>
+                            <constraint firstItem="WMT-QY-MLJ" firstAttribute="leading" secondItem="1KV-wo-Ih9" secondAttribute="leading" id="J4Y-tO-Fg5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="W2h-ce-TQg" secondAttribute="bottom" constant="60" id="ra3-eQ-UJa"/>
+                            <constraint firstItem="W2h-ce-TQg" firstAttribute="top" secondItem="WMT-QY-MLJ" secondAttribute="bottom" constant="8" id="sQc-gF-jN6"/>
+                            <constraint firstItem="1KV-wo-Ih9" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="xr0-Eu-cgP"/>
+                            <constraint firstItem="1KV-wo-Ih9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="zkG-tQ-jwl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nhq-fG-Mu1"/>
+                    <connections>
+                        <outlet property="iconeImage" destination="Hha-C9-OtI" id="lmE-gx-y7v"/>
+                        <outlet property="iconeLabel" destination="GgI-1A-ice" id="DYS-ux-uOd"/>
+                        <outlet property="loadingWeather" destination="Yt9-xi-dQh" id="aMF-EH-oZI"/>
+                        <outlet property="preferenceLabel" destination="W2h-ce-TQg" id="XCN-8n-QbN"/>
+                        <outlet property="tempLabel" destination="VmP-dv-rRt" id="O6E-Q4-OWY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,7 +142,9 @@
         <scene sceneID="ZEZ-Fg-era">
             <objects>
                 <navigationController id="UAC-J6-uZc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Today" image="cloud.sun.fill" catalog="system" id="ZKB-R5-cS5"/>
+                    <tabBarItem key="tabBarItem" title="Today" image="cloud.sun.fill" catalog="system" id="ZKB-R5-cS5">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="anV-4m-FjN">
@@ -96,9 +165,6 @@
         <image name="cloud.sun.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

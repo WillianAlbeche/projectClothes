@@ -1,14 +1,14 @@
-//
-//  Look.swift
-//  ProjectClothes
-//
-//  Created by Hojin Ryu on 11/08/21.
-//
-
-import Foundation
-import CloudKit
-
-class Look {
+ //
+ //  Look.swift
+ //  ProjectClothes
+ //
+ //  Created by Hojin Ryu on 11/08/21.
+ //
+ 
+ import Foundation
+ import CloudKit
+ 
+ class Look {
     
     let id: CKRecord.ID?
     
@@ -33,4 +33,4 @@ class Look {
     static func createEmptyClothes() -> Look{
         return Look.init()
     }
-}
+ }
