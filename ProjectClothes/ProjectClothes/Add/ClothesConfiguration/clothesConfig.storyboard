@@ -205,7 +205,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6mq-sE-gti">
                                                         <rect key="frame" x="0.0" y="0.0" width="145" height="70"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6l-7Y-ZDX">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6l-7Y-ZDX">
                                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="70" id="4Rm-uR-Ihu"/>
@@ -214,13 +214,13 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <color key="tintColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <inset key="contentEdgeInsets" minX="-41" minY="0.0" maxX="0.0" maxY="-41"/>
-                                                                <inset key="imageEdgeInsets" minX="0.0" minY="-60" maxX="-80" maxY="0.0"/>
-                                                                <state key="normal" title="Outono" image="leaf" catalog="system">
-                                                                    <color key="titleColor" red="0.53725490200000003" green="0.5568627451" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="-7" maxY="0.0"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="-60" maxX="-82" maxY="0.0"/>
+                                                                <state key="normal" title="Outono" image="autumn">
                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="thin"/>
                                                                 </state>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Htt-Yj-zOL">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Htt-Yj-zOL">
                                                                 <rect key="frame" x="75" y="0.0" width="70" height="70"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="70" id="0kI-Oe-eyS"/>
@@ -230,10 +230,9 @@
                                                                 <color key="tintColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <inset key="contentEdgeInsets" minX="-41" minY="0.0" maxX="0.0" maxY="-41"/>
                                                                 <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="-7" maxY="0.0"/>
-                                                                <inset key="imageEdgeInsets" minX="0.0" minY="-60" maxX="-80" maxY="0.0"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="-60" maxX="-84" maxY="0.0"/>
                                                                 <state key="normal" title="Inverno" image="snow" catalog="system">
-                                                                    <color key="titleColor" red="0.53725490200000003" green="0.5568627451" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="thin"/>
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="light"/>
                                                                 </state>
                                                             </button>
                                                         </subviews>
@@ -241,7 +240,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CrY-V3-0z9">
                                                         <rect key="frame" x="0.0" y="75" width="145" height="70"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IU3-Mi-swH">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IU3-Mi-swH">
                                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="70" id="W30-Zb-4PI"/>
@@ -253,11 +252,10 @@
                                                                 <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="-1" maxY="0.0"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="-60" maxX="-98" maxY="0.0"/>
                                                                 <state key="normal" title="Primavera" image="leaf" catalog="system">
-                                                                    <color key="titleColor" red="0.53725490200000003" green="0.5568627451" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="thin"/>
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="light"/>
                                                                 </state>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhG-ZI-GBC">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhG-ZI-GBC">
                                                                 <rect key="frame" x="75" y="0.0" width="70" height="70"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="70" id="AZM-e9-uTK"/>
@@ -269,8 +267,7 @@
                                                                 <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="1" maxY="0.0"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="-60" maxX="-73" maxY="0.0"/>
                                                                 <state key="normal" title="Verão" image="sun.max" catalog="system">
-                                                                    <color key="titleColor" red="0.53725490200000003" green="0.5568627451" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="thin"/>
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="light"/>
                                                                 </state>
                                                             </button>
                                                         </subviews>
@@ -283,7 +280,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dEV-r0-5Wx">
                                                         <rect key="frame" x="0.0" y="0.0" width="145" height="70"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tj2-Rf-2eN">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tj2-Rf-2eN">
                                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="70" id="FcK-90-IUe"/>
@@ -292,13 +289,13 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <color key="tintColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <inset key="contentEdgeInsets" minX="-41" minY="0.0" maxX="0.0" maxY="-41"/>
-                                                                <inset key="imageEdgeInsets" minX="0.0" minY="-60" maxX="-80" maxY="0.0"/>
+                                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="3" maxY="0.0"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="-60" maxX="-75" maxY="0.0"/>
                                                                 <state key="normal" title="Vento" image="wind" catalog="system">
-                                                                    <color key="titleColor" red="0.53725490200000003" green="0.5568627451" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="thin"/>
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="light"/>
                                                                 </state>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Asr-Rb-emE">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Asr-Rb-emE">
                                                                 <rect key="frame" x="75" y="0.0" width="70" height="70"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="70" id="W9t-g4-7KX"/>
@@ -310,8 +307,7 @@
                                                                 <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="2" maxY="0.0"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="-60" maxX="-78" maxY="0.0"/>
                                                                 <state key="normal" title="Chuva" image="cloud.rain" catalog="system">
-                                                                    <color key="titleColor" red="0.53725490200000003" green="0.5568627451" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="thin"/>
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="light"/>
                                                                 </state>
                                                             </button>
                                                         </subviews>
@@ -319,7 +315,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Rur-ge-VKM">
                                                         <rect key="frame" x="0.0" y="75" width="145" height="70"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAV-mG-R33">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAV-mG-R33">
                                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="70" id="Eug-pc-9ql"/>
@@ -330,12 +326,11 @@
                                                                 <inset key="contentEdgeInsets" minX="-41" minY="0.0" maxX="0.0" maxY="-41"/>
                                                                 <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="-6" maxY="0.0"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="-60" maxX="-70" maxY="0.0"/>
-                                                                <state key="normal" title="Neve" image="snow" catalog="system">
-                                                                    <color key="titleColor" red="0.53725490200000003" green="0.5568627451" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <state key="normal" title="Neve" image="neve">
                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="thin"/>
                                                                 </state>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sn-BQ-a02">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3Sn-BQ-a02">
                                                                 <rect key="frame" x="75" y="0.0" width="70" height="70"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="70" id="3x3-z1-xws"/>
@@ -344,11 +339,10 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <color key="tintColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <inset key="contentEdgeInsets" minX="-41" minY="0.0" maxX="0.0" maxY="-41"/>
-                                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="-5" maxY="0.0"/>
-                                                                <inset key="imageEdgeInsets" minX="0.0" minY="-60" maxX="-115" maxY="0.0"/>
+                                                                <inset key="titleEdgeInsets" minX="0.0" minY="-4" maxX="-13" maxY="0.0"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="-70" maxX="-91" maxY="0.0"/>
                                                                 <state key="normal" title="Sensível a chuva" image="umbrella" catalog="system">
-                                                                    <color key="titleColor" red="0.53725490200000003" green="0.5568627451" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="thin"/>
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="light"/>
                                                                 </state>
                                                             </button>
                                                         </subviews>
@@ -450,27 +444,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYe-b5-5IF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3737.68115942029" y="114.50892857142857"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="OBC-jr-iEV">
-            <objects>
-                <viewController id="RId-t9-qoG" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9Mr-In-4sF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="BVS-3o-J4F"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GJS-uu-F7P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4542" y="118"/>
+            <point key="canvasLocation" x="3617" y="115"/>
         </scene>
     </scenes>
     <resources>
+        <image name="autumn" width="34" height="34"/>
         <image name="cloud.rain" catalog="system" width="128" height="125"/>
         <image name="leaf" catalog="system" width="128" height="109"/>
+        <image name="neve" width="33" height="32"/>
         <image name="snow" catalog="system" width="121" height="128"/>
         <image name="sun.max" catalog="system" width="128" height="124"/>
         <image name="umbrella" catalog="system" width="124" height="128"/>
