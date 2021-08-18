@@ -27,6 +27,8 @@
 		CD852D0026C44E3800926B13 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD852CFC26C44E3800926B13 /* DatabaseManager.swift */; };
 		CD852D0126C44E3800926B13 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD852CFE26C44E3800926B13 /* Extensions.swift */; };
 		CDA4C6FC26CC2B710061C082 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4C6FB26CC2B710061C082 /* ContactViewController.swift */; };
+		CDA4C70326CDB0110061C082 /* CustomCellBottomClothesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D1C26CB503B00F966F5 /* CustomCellBottomClothesTableViewCell.swift */; };
+		CDA4C70426CDB0140061C082 /* BottomClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D0E26CB503B00F966F5 /* BottomClothesViewController.swift */; };
 		CDF28F8F26B07C8C00241F13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF28F8E26B07C8C00241F13 /* AppDelegate.swift */; };
 		CDF28F9126B07C8C00241F13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF28F9026B07C8C00241F13 /* SceneDelegate.swift */; };
 		CDF28F9326B07C8C00241F13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF28F9226B07C8C00241F13 /* ViewController.swift */; };
@@ -468,6 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B215AD0F26CC55570033CDAA /* MLMultiArray+Image.swift in Sources */,
+				CDA4C70426CDB0140061C082 /* BottomClothesViewController.swift in Sources */,
 				B215AD0E26CC55330033CDAA /* CGImage+CVPixelBuffer.swift in Sources */,
 				B215AD0D26CC551D0033CDAA /* UIImage+CVPixelBuffer.swift in Sources */,
 				B215AD0C26CC550E0033CDAA /* UIImage+Extensions.swift in Sources */,
@@ -481,6 +484,7 @@
 				FDA72D2526CB503C00F966F5 /* MLModel+Images.swift in Sources */,
 				B215AD0526CC52F20033CDAA /* TodayViewController.swift in Sources */,
 				FDA72D2026CB503C00F966F5 /* Predictions.swift in Sources */,
+				CDA4C70326CDB0110061C082 /* CustomCellBottomClothesTableViewCell.swift in Sources */,
 				FDA72D2D26CB503C00F966F5 /* CVPixelBuffer+Rotate.swift in Sources */,
 				CDF28F9326B07C8C00241F13 /* ViewController.swift in Sources */,
 				CD852D0026C44E3800926B13 /* DatabaseManager.swift in Sources */,
