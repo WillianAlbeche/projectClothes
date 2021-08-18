@@ -11,6 +11,8 @@ class BottomClothesViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var tableViewheigth: NSLayoutConstraint!
+    
     var gender: String?
     
     var maleClothes = ["Calça", "Short / Bermuda"]
@@ -21,6 +23,7 @@ class BottomClothesViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableViewheigth.constant = UIScreen.main.bounds.height*0.35
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor(named: "ligthPurple")

@@ -489,8 +489,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G68-nN-2b7" customClass="c">
-                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="426"/>
                                 <color key="backgroundColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="426" id="wAD-wg-fqe"/>
+                                </constraints>
                                 <color key="separatorColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexBackgroundColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
@@ -534,13 +537,13 @@
                         <constraints>
                             <constraint firstItem="G68-nN-2b7" firstAttribute="top" secondItem="4pP-9g-pZf" secondAttribute="top" id="BZ7-fk-uFj"/>
                             <constraint firstItem="G68-nN-2b7" firstAttribute="leading" secondItem="4pP-9g-pZf" secondAttribute="leading" id="VkJ-cR-Rpl"/>
-                            <constraint firstAttribute="bottom" secondItem="G68-nN-2b7" secondAttribute="bottom" id="WJO-Vi-aI2"/>
                             <constraint firstItem="G68-nN-2b7" firstAttribute="trailing" secondItem="4pP-9g-pZf" secondAttribute="trailing" id="yx7-V2-mLh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MRQ-EY-vWk"/>
                     <connections>
                         <outlet property="tableView" destination="G68-nN-2b7" id="S5r-lT-gOA"/>
+                        <outlet property="tableViewheigth" destination="wAD-wg-fqe" id="tzB-0f-4os"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mg2-on-ObH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -556,8 +559,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VPP-YL-bXA">
-                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="426"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="426" id="eRA-7S-v6f"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell1" rowHeight="86" id="9cR-h1-6gi" customClass="CustomCellBottomClothesTableViewCell" customModule="ProjectClothes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="86"/>
@@ -598,13 +604,13 @@
                         <constraints>
                             <constraint firstItem="VPP-YL-bXA" firstAttribute="trailing" secondItem="Jdm-u2-9Zn" secondAttribute="trailing" id="BP4-Dy-jac"/>
                             <constraint firstItem="VPP-YL-bXA" firstAttribute="top" secondItem="Jdm-u2-9Zn" secondAttribute="top" id="IJ2-G9-WeP"/>
-                            <constraint firstAttribute="bottom" secondItem="VPP-YL-bXA" secondAttribute="bottom" id="Rrq-gl-8zu"/>
                             <constraint firstItem="VPP-YL-bXA" firstAttribute="leading" secondItem="Jdm-u2-9Zn" secondAttribute="leading" id="TEV-5x-Wxc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1y0-pL-dkp"/>
                     <connections>
                         <outlet property="tableView" destination="VPP-YL-bXA" id="Ij5-m8-wDo"/>
+                        <outlet property="tableViewheigth" destination="eRA-7S-v6f" id="o6h-U5-QUp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k0A-LD-t9m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -620,8 +626,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kk9-WN-0F0">
-                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="426"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="426" id="lyh-tg-6PB"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell1" rowHeight="105" id="MIQ-rN-9ef" customClass="CustomCellAccessoriesClothesTableViewCell" customModule="ProjectClothes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="105"/>
@@ -658,17 +667,17 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mZb-c9-vhv"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="kk9-WN-0F0" firstAttribute="trailing" secondItem="mZb-c9-vhv" secondAttribute="trailing" id="4eV-EP-T7l"/>
                             <constraint firstItem="kk9-WN-0F0" firstAttribute="leading" secondItem="mZb-c9-vhv" secondAttribute="leading" id="HYB-gZ-l97"/>
                             <constraint firstItem="kk9-WN-0F0" firstAttribute="top" secondItem="mZb-c9-vhv" secondAttribute="top" id="XHm-mz-aSg"/>
-                            <constraint firstAttribute="bottom" secondItem="kk9-WN-0F0" secondAttribute="bottom" id="rdU-2J-m3D"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dri-yh-lY3"/>
                     <connections>
                         <outlet property="tableView" destination="kk9-WN-0F0" id="igM-35-9JG"/>
+                        <outlet property="tableViewheigth" destination="lyh-tg-6PB" id="gC0-P1-lO9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Cc-CV-hzL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -750,8 +759,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8CF-BV-S1F">
-                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="426"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="426" id="tmZ-Df-oL6"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell1" rowHeight="88" id="MUF-8J-YU6" customClass="CustomCellFullClothesTableViewCell" customModule="ProjectClothes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="88"/>
@@ -792,7 +804,6 @@
                             <constraint firstItem="8CF-BV-S1F" firstAttribute="top" secondItem="X6z-ZI-IHD" secondAttribute="top" id="28z-3V-D31"/>
                             <constraint firstItem="8CF-BV-S1F" firstAttribute="leading" secondItem="X6z-ZI-IHD" secondAttribute="leading" id="6Xi-4Q-MjG"/>
                             <constraint firstItem="8CF-BV-S1F" firstAttribute="trailing" secondItem="X6z-ZI-IHD" secondAttribute="trailing" id="lDp-Bw-QIV"/>
-                            <constraint firstAttribute="bottom" secondItem="8CF-BV-S1F" secondAttribute="bottom" id="zsF-cd-DnC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cop-fI-pBj">
@@ -800,6 +811,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="8CF-BV-S1F" id="f75-vM-LG1"/>
+                        <outlet property="tableViewheigth" destination="tmZ-Df-oL6" id="zw8-gz-cla"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EbA-TP-WaR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
