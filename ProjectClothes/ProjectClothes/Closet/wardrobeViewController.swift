@@ -65,45 +65,49 @@ class wardrobeViewController: UIViewController {
         let looksCollectionViewLayout = looksCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
         looksCollectionViewLayout?.sectionInset = UIEdgeInsets(top: 0.0 , left: UIScreen.screenWidth*0.072, bottom: 5, right: UIScreen.screenWidth*0.072)
         
+        allClothes = classeMock.roupasMock
+        self.calculatedNumberOfCategories = self.getNumberSuperClothesCategories()
+        
+        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-//        loadingPage.startAnimating()
-        DatabaseManager.shared.checkiCloudAccount() { error, logged in
-            if error == true {
-                if logged {
-                    print("yes log")
-                    DatabaseManager.shared.fetchAllClothes { result in
-                        switch result {
-                        case .failure(let error):
-                            print("wrong clothes")
-                        case .success(let clothes):
-                            self.allClothes = clothes
-                            DispatchQueue.main.async {
-                                self.clotheTipesDict = [:]
-                                self.clotheSuperTypesAndSubTypesDict = [:]
-                                self.presentClothesSuperTypes = []
-                                self.filteredClothes = []
-                                
-                                self.clotheSuperTypesAndSubTypesDict = [:]
-                                
-                                self.calculatedNumberOfCategories = self.getNumberSuperClothesCategories()
-                                
-                                self.categoriesTableView.reloadData()
-                            }
-                        }
-                        print(self.allClothes)
-                    }
-                } else {
-                    print("nolog")
-                    DispatchQueue.main.async {
-                        DatabaseManager.shared.loggingiCloud(vc: self)
-                    }
-                }
-            }
-        }
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+////        loadingPage.startAnimating()
+//        DatabaseManager.shared.checkiCloudAccount() { error, logged in
+//            if error == true {
+//                if logged {
+//                    print("yes log")
+//                    DatabaseManager.shared.fetchAllClothes { result in
+//                        switch result {
+//                        case .failure(let error):
+//                            print("wrong clothes")
+//                        case .success(let clothes):
+//                            self.allClothes = clothes
+//                            DispatchQueue.main.async {
+//                                self.clotheTipesDict = [:]
+//                                self.clotheSuperTypesAndSubTypesDict = [:]
+//                                self.presentClothesSuperTypes = []
+//                                self.filteredClothes = []
+//
+//                                self.clotheSuperTypesAndSubTypesDict = [:]
+//
+//                                self.calculatedNumberOfCategories = self.getNumberSuperClothesCategories()
+//
+//                                self.categoriesTableView.reloadData()
+//                            }
+//                        }
+//                        print(self.allClothes)
+//                    }
+//                } else {
+//                    print("nolog")
+//                    DispatchQueue.main.async {
+//                        DatabaseManager.shared.loggingiCloud(vc: self)
+//                    }
+//                }
+//            }
+//        }
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "selectionOfSubtipe"{
