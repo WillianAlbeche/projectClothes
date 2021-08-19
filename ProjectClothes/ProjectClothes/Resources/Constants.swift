@@ -70,8 +70,4 @@ struct Constants {
             return iconeRecommendation[5]
         }
     }
-    
-    
-    
-    
 }
