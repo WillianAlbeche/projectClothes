@@ -7,8 +7,11 @@
 
 import UIKit
 
+//enum CategoryOption {
+//    case casual, formal, camping, trabalho, praia, ferias, esportes, festa, encontro
+//}
+
 class ClothesConfigViewController: UIViewController {
-    
     
     @IBOutlet weak var viewHeigth: NSLayoutConstraint!
     
@@ -20,18 +23,89 @@ class ClothesConfigViewController: UIViewController {
     
     //Options
     @IBOutlet weak var casualOption: UIButton!
+    @IBAction func casualAction(_ sender: Any) {
+        if casualOption.backgroundColor == .white{
+            casualOption.backgroundColor = UIColor(named: "purple1")
+        }else{
+            casualOption.backgroundColor = .white
+        }
+    }
     @IBOutlet weak var formalOption: UIButton!
+    @IBAction func formalAction(_ sender: Any) {
+        if formalOption.backgroundColor == .white{
+            formalOption.backgroundColor = UIColor(named: "purple1")
+        }else{
+            formalOption.backgroundColor = .white
+        }
+    }
     @IBOutlet weak var campingOption: UIButton!
+    @IBAction func campingAction(_ sender: Any) {
+        if campingOption.backgroundColor == .white{
+            campingOption.backgroundColor = UIColor(named: "purple1")
+        }else{
+            campingOption.backgroundColor = .white
+        }
+    }
     @IBOutlet weak var workOption: UIButton!
+    @IBAction func workAction(_ sender: Any) {
+        if workOption.backgroundColor == .white{
+            workOption.backgroundColor = UIColor(named: "purple1")
+        }else{
+            workOption.backgroundColor = .white
+        }
+    }
     @IBOutlet weak var beachOption: UIButton!
+    @IBAction func beachAction(_ sender: Any) {
+        if beachOption.backgroundColor == .white{
+            beachOption.backgroundColor = UIColor(named: "purple1")
+        }else{
+            beachOption.backgroundColor = .white
+        }
+    }
     @IBOutlet weak var vacationsOption: UIButton!
+    @IBAction func vacationAction(_ sender: Any) {
+        if vacationsOption.backgroundColor == .white{
+            vacationsOption.backgroundColor = UIColor(named: "purple1")
+        }else{
+            vacationsOption.backgroundColor = .white
+        }
+    }
     @IBOutlet weak var sportsOption: UIButton!
+    @IBAction func sportsAction(_ sender: Any) {
+        if sportsOption.backgroundColor == .white{
+            sportsOption.backgroundColor = UIColor(named: "purple1")
+        }else{
+            sportsOption.backgroundColor = .white
+        }
+    }
     @IBOutlet weak var partyOption: UIButton!
+    @IBAction func partyAction(_ sender: Any) {
+        if partyOption.backgroundColor == .white{
+            partyOption.backgroundColor = UIColor(named: "purple1")
+        }else{
+            partyOption.backgroundColor = .white
+        }
+    }
     @IBOutlet weak var dateOption: UIButton!
+    @IBAction func dateOption(_ sender: Any) {
+        if dateOption.backgroundColor == .white{
+            dateOption.backgroundColor = UIColor(named: "purple1")
+        }else{
+            dateOption.backgroundColor = .white
+        }
+    }
+    
     @IBOutlet weak var newOption: UIButton!
     
     //Stack Estação
     @IBOutlet weak var autumnOption: UIButton!
+    @IBAction func autumnAction(_ sender: Any) {
+        if autumnOption.backgroundColor == .white{
+            autumnOption.backgroundColor = UIColor(named: "purple1")
+        }else{
+            autumnOption.backgroundColor = .white
+        }
+    }
     @IBOutlet weak var winterOption: UIButton!
     @IBOutlet weak var springOption: UIButton!
     @IBOutlet weak var summerOption: UIButton!
@@ -46,6 +120,9 @@ class ClothesConfigViewController: UIViewController {
     @IBOutlet weak var addCloth: UIButton!
     
     @IBOutlet weak var nextButton: UIButton!
+    @IBAction func nextButtonAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func sliderValueChanged(_ sender: Any) {
         

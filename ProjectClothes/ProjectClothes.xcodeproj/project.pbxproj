@@ -284,7 +284,6 @@
 				FDA72CEE26CB503B00F966F5 /* CoreMLHelpers */,
 				FDA72D0026CB503B00F966F5 /* addStoryboard.storyboard */,
 				FDA72D0126CB503B00F966F5 /* AddNavigationController.swift */,
-				FDA72D0226CB503B00F966F5 /* DrawingView.swift */,
 				FDA72D0326CB503B00F966F5 /* CustomModalViewController.swift */,
 				FDA72D0626CB503B00F966F5 /* ClothesConfigurationViewController.swift */,
 				FDA72D0726CB503B00F966F5 /* ModalCategories */,
@@ -298,6 +297,7 @@
 		FDA72CEE26CB503B00F966F5 /* CoreMLHelpers */ = {
 			isa = PBXGroup;
 			children = (
+				FDA72D0226CB503B00F966F5 /* DrawingView.swift */,
 				FDA72CEF26CB503B00F966F5 /* Array+Extensions.swift */,
 				FDA72CF026CB503B00F966F5 /* Math.swift */,
 				FDA72CF126CB503B00F966F5 /* UIImage+CVPixelBuffer.swift */,

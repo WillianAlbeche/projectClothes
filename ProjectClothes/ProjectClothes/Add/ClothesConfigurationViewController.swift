@@ -27,7 +27,12 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
     @IBOutlet weak var nextButton: UIButton!
     
     var gender = "M"
-    var choice: String?
+    var choice: String?{
+        didSet{
+            guard let choice = choice else {return}
+            categoryButton.setTitle(choice, for: .normal)
+        }
+    }
     
     var imageReceive: UIImage?
     

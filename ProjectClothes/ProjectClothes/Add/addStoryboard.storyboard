@@ -103,6 +103,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="button2:" destination="UWU-pd-xIf" eventType="touchUpInside" id="A2b-ty-4nf"/>
+                                                            <action selector="scaleAction:" destination="UWU-pd-xIf" eventType="touchUpInside" id="u7m-a8-zMP"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -128,6 +129,7 @@
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="moveAction:" destination="UWU-pd-xIf" eventType="touchUpInside" id="iRB-Ri-1eU"/>
                                                             <action selector="nextButton:" destination="UWU-pd-xIf" eventType="touchUpInside" id="yPR-5p-sWC"/>
                                                         </connections>
                                                     </button>
@@ -155,6 +157,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="button1:" destination="UWU-pd-xIf" eventType="touchUpInside" id="FRZ-ex-DxZ"/>
+                                                            <action selector="rotateAction:" destination="UWU-pd-xIf" eventType="touchUpInside" id="nuQ-BI-1gg"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -179,6 +182,7 @@
                                                             <color key="titleColor" name="AccentColor"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="eraseAction:" destination="UWU-pd-xIf" eventType="touchUpInside" id="Vrh-Ms-SMd"/>
                                                             <action selector="eraseButton:" destination="UWU-pd-xIf" eventType="touchUpInside" id="o4E-SE-lcp"/>
                                                         </connections>
                                                     </button>
@@ -317,7 +321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UxH-B0-HkZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6147.826086956522" y="89.732142857142847"/>
+            <point key="canvasLocation" x="6146" y="90"/>
         </scene>
         <!--clothesConfig-->
         <scene sceneID="swI-TW-I2S">

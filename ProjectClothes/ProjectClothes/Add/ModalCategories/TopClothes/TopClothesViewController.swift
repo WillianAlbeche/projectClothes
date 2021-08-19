@@ -16,9 +16,9 @@ class TopClothesViewController: UIViewController, UITableViewDelegate, UITableVi
     var gender: String?
     var choice: String?
     
-    var maleClothes = ["Blazer / Paletó", "Colete", "Casaco", "Moletom", "Camiseta", "Camisa", "Polo", "Regata", "Blusão / Suéter"]
-    var femaleClothes = ["Blazer", "Casaco / Jaqueta", "Cardigan", "Colete / Kimono"]
-    var none = ["Blazer / Paletó", "Colete / Kimono", "Casaco / Jaqueta", "Cardigan", "Moletom", "Camiseta", "Camisa", "Polo", "Regata", "Blusão / Suéter"]
+    var maleClothes = ["Blazer / Paletó", "Colete", "Casaco", "Moletom", "Camiseta", "Camisa", "Polo", "Regata", "Blusão / Suéter", "Outro"]
+    var femaleClothes = ["Blazer", "Casaco / Jaqueta", "Cardigan", "Colete / Kimono", "Outro"]
+    var none = ["Blazer / Paletó", "Colete / Kimono", "Casaco / Jaqueta", "Cardigan", "Moletom", "Camiseta", "Camisa", "Polo", "Regata", "Blusão / Suéter", "Outro"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

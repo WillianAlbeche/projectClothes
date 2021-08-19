@@ -16,9 +16,9 @@ class ShoesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var gender: String?
     var choice: String?
     
-    var maleClothes = ["Tênis", "Bota", "Sapatênis", "Oxford / Monk / Derby", "Outro", "Tênis", "Bota", "Sapatênis"]
+    var maleClothes = ["Tênis", "Bota", "Sapatênis", "Oxford", "Monk", "Derby", "Outro"]
     var femaleClothes = ["Tênis", "Bota", "Saltos", "Sapatilhas / Rasteiras", "Oxford", "Mules", "Mocassins", "Sandálias", "Scarpin", "Outro"]
-    var none = ["Tênis", "Bota", "Sapatênis", "Oxford / Monk / Derby", "Saltos", "Sapatilhas / Rasteiras", "Mules", "Mocassins", "Sandálias", "Scarpin", "Outro"]
+    var none = ["Tênis", "Bota", "Sapatênis", "Oxford", "Monk", "Derby", "Saltos", "Sapatilhas / Rasteiras", "Mules", "Mocassins", "Sandálias", "Scarpin", "Outro"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

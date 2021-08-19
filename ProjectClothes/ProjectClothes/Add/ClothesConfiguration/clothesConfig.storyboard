@@ -32,7 +32,13 @@
                                                             <constraint firstAttribute="height" constant="40" id="flK-NL-QUP"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <state key="normal" title="Casual"/>
+                                                        <color key="tintColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Casual">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="casualAction:" destination="54f-cc-Slp" eventType="touchUpInside" id="w4M-dc-eeN"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1s-dj-SqH">
                                                         <rect key="frame" x="128" y="0.0" width="118" height="40"/>
@@ -41,7 +47,13 @@
                                                             <constraint firstAttribute="height" constant="40" id="IY5-Mh-VEB"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <state key="normal" title="Formal"/>
+                                                        <color key="tintColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Formal">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="formalAction:" destination="54f-cc-Slp" eventType="touchUpInside" id="yiz-Za-GWu"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2x-Gr-HjD">
                                                         <rect key="frame" x="256" y="0.0" width="118" height="40"/>
@@ -50,7 +62,13 @@
                                                             <constraint firstAttribute="height" constant="40" id="NEy-D1-pPP"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <state key="normal" title="Camping"/>
+                                                        <color key="tintColor" red="0.80000000000000004" green="0.82745098039999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Camping">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="campingAction:" destination="54f-cc-Slp" eventType="touchUpInside" id="ILx-7d-TU9"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -64,7 +82,13 @@
                                                             <constraint firstAttribute="height" constant="40" id="6oC-I6-URi"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <state key="normal" title="Trabalho"/>
+                                                        <color key="tintColor" red="0.80000000000000004" green="0.82745098039999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Trabalho">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="workAction:" destination="54f-cc-Slp" eventType="touchUpInside" id="Tut-L3-M9S"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VsX-UL-0RX">
                                                         <rect key="frame" x="128" y="0.0" width="118" height="40"/>
@@ -73,7 +97,13 @@
                                                             <constraint firstAttribute="height" constant="40" id="zvr-hr-g2B"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <state key="normal" title="Praia"/>
+                                                        <color key="tintColor" red="0.80000000000000004" green="0.82745098039999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Praia">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="beachAction:" destination="54f-cc-Slp" eventType="touchUpInside" id="PCG-0e-csN"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ga-w5-k7f">
                                                         <rect key="frame" x="256" y="0.0" width="118" height="40"/>
@@ -82,7 +112,13 @@
                                                             <constraint firstAttribute="height" constant="40" id="aDP-ng-XNJ"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <state key="normal" title="Férias"/>
+                                                        <color key="tintColor" red="0.80000000000000004" green="0.82745098039999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Férias">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="vacationAction:" destination="54f-cc-Slp" eventType="touchUpInside" id="NBM-ml-xRg"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -96,7 +132,13 @@
                                                             <constraint firstAttribute="height" constant="40" id="TSs-m3-rUH"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <state key="normal" title="Esportes"/>
+                                                        <color key="tintColor" red="0.80000000000000004" green="0.82745098039999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Esportes">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="sportsAction:" destination="54f-cc-Slp" eventType="touchUpInside" id="85j-SB-2f4"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NN6-bt-QkY">
                                                         <rect key="frame" x="128" y="0.0" width="118" height="40"/>
@@ -105,7 +147,13 @@
                                                             <constraint firstAttribute="height" constant="40" id="aPt-x9-ksT"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <state key="normal" title="Festa"/>
+                                                        <color key="tintColor" red="0.80000000000000004" green="0.82745098039999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Festa">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="partyAction:" destination="54f-cc-Slp" eventType="touchUpInside" id="hdS-yl-0Ul"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lZ-H7-Lk1">
                                                         <rect key="frame" x="256" y="0.0" width="118" height="40"/>
@@ -114,11 +162,17 @@
                                                             <constraint firstAttribute="height" constant="40" id="Jt3-SD-zLD"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <state key="normal" title="Encontro"/>
+                                                        <color key="tintColor" red="0.80000000000000004" green="0.82745098039999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Encontro">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="dateOption:" destination="54f-cc-Slp" eventType="touchUpInside" id="FlB-WN-Zcc"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfv-gv-JpH">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfv-gv-JpH">
                                                 <rect key="frame" x="20" y="200" width="136" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -126,7 +180,9 @@
                                                     <constraint firstAttribute="width" constant="136" id="Yi4-37-KWf"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <state key="normal" title="Adicionar +"/>
+                                                <state key="normal" title="Adicionar +">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quão quente é essa peça?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4L-Jo-h6W">
                                                 <rect key="frame" x="20" y="260" width="374" height="14.5"/>
@@ -172,6 +228,9 @@
                                                                                 <state key="normal" title="Outono" image="autumn">
                                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="thin"/>
                                                                                 </state>
+                                                                                <connections>
+                                                                                    <action selector="autumnAction:" destination="54f-cc-Slp" eventType="touchUpInside" id="Hxg-hP-zq8"/>
+                                                                                </connections>
                                                                             </button>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Htt-Yj-zOL">
                                                                                 <rect key="frame" x="75" y="0.0" width="70" height="70"/>
@@ -360,9 +419,12 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="esD-CQ-wpu"/>
                                                 </constraints>
-                                                <state key="normal" title="Button">
+                                                <state key="normal" title="Concluir">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="nextButtonAction:" destination="54f-cc-Slp" eventType="touchUpInside" id="hUU-E8-GtN"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

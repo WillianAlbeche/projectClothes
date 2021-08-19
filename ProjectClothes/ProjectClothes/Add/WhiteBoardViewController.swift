@@ -11,15 +11,62 @@ import UIKit
 import UIKit
 import CoreML
 
+enum WhiteBoardOption {
+    case scale, move, rotate, erase
+}
+
 class WhiteBoardViewController: UIViewController {
     
     @IBOutlet var editView: DrawingView!
     @IBOutlet weak var nextButton: UIButton!
     
     @IBOutlet weak var scaleButton: UIButton!
+    @IBAction func scaleAction(_ sender: Any) {
+        selectedWhiteBoardOption = .scale
+    }
     @IBOutlet weak var moveButton: UIButton!
+    @IBAction func moveAction(_ sender: Any) {
+        selectedWhiteBoardOption = .move
+    }
     @IBOutlet weak var rotateButton: UIButton!
+    @IBAction func rotateAction(_ sender: Any) {
+        selectedWhiteBoardOption = .rotate
+    }
     @IBOutlet weak var eraseButton: UIButton!
+    @IBAction func eraseAction(_ sender: Any) {
+        selectedWhiteBoardOption = .erase
+    }
+    
+    var selectedWhiteBoardOption: WhiteBoardOption = .scale {
+        didSet {
+            resetAllWhiteBoardButtons()
+            switch selectedWhiteBoardOption {
+            case .erase:
+                eraseButton.backgroundColor = .white
+                eraseButton.setImage(UIImage(named: "erase"), for: .normal)
+            case .move:
+                moveButton.backgroundColor = .white
+                moveButton.tintColor = .black
+            case .rotate:
+                rotateButton.backgroundColor = .white
+                rotateButton.tintColor = .black
+            case .scale:
+                scaleButton.backgroundColor = .white
+                scaleButton.tintColor = .black
+            }
+        }
+    }
+    
+    private func resetAllWhiteBoardButtons() {
+        scaleButton.backgroundColor = .black
+        scaleButton.tintColor = .white
+        moveButton.backgroundColor = .black
+        moveButton.tintColor = .white
+        rotateButton.backgroundColor = .black
+        rotateButton.tintColor = .white
+        eraseButton.backgroundColor = .black
+        eraseButton.setImage(UIImage(named: "erase"), for: .normal)
+    }
     
     
     var image1: UIImage?
