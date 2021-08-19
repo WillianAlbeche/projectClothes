@@ -14,6 +14,7 @@ class ShoesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableViewheigth: NSLayoutConstraint!
     
     var gender: String?
+    var choice: String?
     
     var maleClothes = ["Tênis", "Bota", "Sapatênis", "Oxford / Monk / Derby", "Outro", "Tênis", "Bota", "Sapatênis"]
     var femaleClothes = ["Tênis", "Bota", "Saltos", "Sapatilhas / Rasteiras", "Oxford", "Mules", "Mocassins", "Sandálias", "Scarpin", "Outro"]
@@ -22,7 +23,7 @@ class ShoesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableViewheigth.constant = UIScreen.main.bounds.height*0.35
+        tableViewheigth.constant = UIScreen.main.bounds.height*0.38
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor(named: "ligthPurple")
@@ -88,5 +89,38 @@ class ShoesViewController: UIViewController, UITableViewDelegate, UITableViewDat
             return cell
         }
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)  {
+        
+        if gender == "M" {
+            
+            let array = maleClothes
+            choice = array[indexPath.row]
+            performSegue(withIdentifier: "goBack", sender: self)
+            
+        }else if gender == "F" {
+            
+            let array = femaleClothes
+            choice = array[indexPath.row]
+            performSegue(withIdentifier: "goBack", sender: self)
+            
+        }else if gender == "NONE"{
+            
+            let array = none
+            choice = array[indexPath.row]
+            performSegue(withIdentifier: "goBack", sender: self)
+            
+        }else{
+            let array = none
+            choice = array[indexPath.row]
+            performSegue(withIdentifier: "goBack", sender: self)
+            
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? ClothesConfigurationViewController
+        
+        if segue.identifier == "goBack" {
+            destination?.choice = choice
+        }
+    }
 }

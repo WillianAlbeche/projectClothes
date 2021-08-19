@@ -9,6 +9,9 @@ import UIKit
 
 class ClothesConfigurationViewController: UIViewController, UIColorPickerViewControllerDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    @IBAction func unwind( _ seg: UIStoryboardSegue) {
+    }
+    
     @IBOutlet weak var newImage: UIImageView!
     @IBOutlet weak var colorButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
@@ -24,6 +27,7 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
     @IBOutlet weak var nextButton: UIButton!
     
     var gender = "M"
+    var choice: String?
     
     var imageReceive: UIImage?
     
@@ -67,10 +71,10 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
         nextButton.layer.shadowOffset = .zero
         nextButton.layer.shadowRadius = 30
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToConfig"{
             let destination = segue.destination as? ClothesConfigViewController
+            destination?.clothCategory = choice
         }
     
         if segue.identifier == "goToModal" {
@@ -79,7 +83,6 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
             dest?.gender1 = gender
         }
     }
-    
     
     @IBAction func colorButtonAction(_ sender: Any) {
         colorButton.addTarget(self, action: #selector(didTapSelector), for: .touchUpInside)

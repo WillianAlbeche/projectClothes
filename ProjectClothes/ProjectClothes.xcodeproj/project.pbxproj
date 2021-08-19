@@ -35,6 +35,9 @@
 		CDF28F9626B07C8C00241F13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF28F9426B07C8C00241F13 /* Main.storyboard */; };
 		CDF28F9826B07C9000241F13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF28F9726B07C9000241F13 /* Assets.xcassets */; };
 		CDF28F9B26B07C9000241F13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF28F9926B07C9000241F13 /* LaunchScreen.storyboard */; };
+		F8103C4926CDAE900082F5D5 /* BottomClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D0E26CB503B00F966F5 /* BottomClothesViewController.swift */; };
+		F8103C4A26CDAEA20082F5D5 /* AccessoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D0926CB503B00F966F5 /* AccessoriesViewController.swift */; };
+		F8103C4B26CDAF000082F5D5 /* CustomCellBottomClothesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D1C26CB503B00F966F5 /* CustomCellBottomClothesTableViewCell.swift */; };
 		FD08F82D26B86B02003E0C9C /* createStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08F82C26B86B02003E0C9C /* createStoryboard.storyboard */; };
 		FD08F82F26B86B0B003E0C9C /* todayStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD08F82E26B86B0B003E0C9C /* todayStoryboard.storyboard */; };
 		FD430BE726B3236F00F31DD2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD430BE626B3236E00F31DD2 /* TabBarController.swift */; };
@@ -497,6 +500,8 @@
 				B237047426C58202000097FA /* Look.swift in Sources */,
 				CD852CFF26C44E3800926B13 /* Clothes.swift in Sources */,
 				FDA72CE826C6DDE700F966F5 /* SelectedCategorieViewController.swift in Sources */,
+				F8103C4A26CDAEA20082F5D5 /* AccessoriesViewController.swift in Sources */,
+				F8103C4926CDAE900082F5D5 /* BottomClothesViewController.swift in Sources */,
 				FDA72D1D26CB503C00F966F5 /* Array+Extensions.swift in Sources */,
 				FDA72CD726C5A80C00F966F5 /* FrontCollectionViewCell.swift in Sources */,
 				FDA72CA926C4406100F966F5 /* wardrobeViewController.swift in Sources */,
@@ -509,6 +514,7 @@
 				FDA72D2326CB503C00F966F5 /* UIImage+RawBytes.swift in Sources */,
 				FDA72D2726CB503C00F966F5 /* CVPixelBuffer+Create.swift in Sources */,
 				FDA72CAB26C4406100F966F5 /* BackCollectionViewCell.swift in Sources */,
+				F8103C4B26CDAF000082F5D5 /* CustomCellBottomClothesTableViewCell.swift in Sources */,
 				FDA72D3B26CB503C00F966F5 /* TopClothesViewController.swift in Sources */,
 				FDA72D3926CB503C00F966F5 /* ModalViewController.swift in Sources */,
 				FDA72D2F26CB503C00F966F5 /* AddNavigationController.swift in Sources */,
