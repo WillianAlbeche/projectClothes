@@ -23,6 +23,8 @@
 		B278CE1426C97ED200A7FEA4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278CE1326C97ED200A7FEA4 /* Constants.swift */; };
 		B278CE1626C9A9C600A7FEA4 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278CE1526C9A9C600A7FEA4 /* MockData.swift */; };
 		B278CE1926C9ADFB00A7FEA4 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B278CE1826C9ADFB00A7FEA4 /* CloudKit.framework */; };
+		B28E0D5C26CEC183008476D4 /* Gender.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28E0D5B26CEC183008476D4 /* Gender.storyboard */; };
+		B28E0D5E26CEC197008476D4 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E0D5D26CEC197008476D4 /* GenderViewController.swift */; };
 		CD852CFF26C44E3800926B13 /* Clothes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD852CF926C44E3800926B13 /* Clothes.swift */; };
 		CD852D0026C44E3800926B13 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD852CFC26C44E3800926B13 /* DatabaseManager.swift */; };
 		CD852D0126C44E3800926B13 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD852CFE26C44E3800926B13 /* Extensions.swift */; };
@@ -82,6 +84,8 @@
 		B278CE1326C97ED200A7FEA4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B278CE1526C9A9C600A7FEA4 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		B278CE1826C9ADFB00A7FEA4 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		B28E0D5B26CEC183008476D4 /* Gender.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Gender.storyboard; sourceTree = "<group>"; };
+		B28E0D5D26CEC197008476D4 /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
 		CD852CF926C44E3800926B13 /* Clothes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clothes.swift; sourceTree = "<group>"; };
 		CD852CFA26C44E3800926B13 /* ProjectClothes.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = ProjectClothes.entitlements; sourceTree = "<group>"; };
 		CD852CFC26C44E3800926B13 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
@@ -168,6 +172,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B28E0D5A26CEC150008476D4 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B28E0D5B26CEC183008476D4 /* Gender.storyboard */,
+				B28E0D5D26CEC197008476D4 /* GenderViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		CD852CF826C44E3800926B13 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +229,7 @@
 		CDF28F8D26B07C8C00241F13 /* ProjectClothes */ = {
 			isa = PBXGroup;
 			children = (
+				B28E0D5A26CEC150008476D4 /* Onboarding */,
 				FDA72CED26CB503B00F966F5 /* Add */,
 				CD852CFB26C44E3800926B13 /* Managers */,
 				CD852CF826C44E3800926B13 /* Model */,
@@ -454,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD08F82D26B86B02003E0C9C /* createStoryboard.storyboard in Resources */,
+				B28E0D5C26CEC183008476D4 /* Gender.storyboard in Resources */,
 				FDA72D2E26CB503C00F966F5 /* addStoryboard.storyboard in Resources */,
 				FDA72D4126CB503C00F966F5 /* clothesConfig.storyboard in Resources */,
 				FD08F82F26B86B0B003E0C9C /* todayStoryboard.storyboard in Resources */,
@@ -505,6 +520,7 @@
 				FDA72D1D26CB503C00F966F5 /* Array+Extensions.swift in Sources */,
 				FDA72CD726C5A80C00F966F5 /* FrontCollectionViewCell.swift in Sources */,
 				FDA72CA926C4406100F966F5 /* wardrobeViewController.swift in Sources */,
+				B28E0D5E26CEC197008476D4 /* GenderViewController.swift in Sources */,
 				FDA72D2226CB503C00F966F5 /* CGImagePropertyOrientation.swift in Sources */,
 				FDA72D1E26CB503C00F966F5 /* Math.swift in Sources */,
 				FDA72D2A26CB503C00F966F5 /* CGImage+RawBytes.swift in Sources */,

@@ -15,6 +15,8 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var iconeImage: UIImageView!
     @IBOutlet var preferenceLabel: UILabel!
     @IBOutlet weak var loadingWeather: UIActivityIndicatorView!
+    @IBOutlet weak var onBoardingView: UIView!
+    @IBOutlet weak var tempIconView: UIImageView!
     
     
     private let constants: Constants = Constants()
@@ -24,24 +26,27 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
     var auxIcone: String = ""
     var auxIconeLabel: String = ""
     var isAuthorized: Bool = false
+    var isSelectedGender: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        onBoardingView.isHidden = DatabaseManager.shared.loadOnboardingDone()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        loadingWeather.startAnimating()
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
-        
-        DatabaseManager.shared.checkLocationAuth(locationManager: manager, vc: self)
+        if DatabaseManager.shared.loadOnboardingDone() {
+            loadingWeather.startAnimating()
+            manager.delegate = self
+            manager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
+            
+            DatabaseManager.shared.checkLocationAuth(locationManager: manager, vc: self)
 
-        manager.requestWhenInUseAuthorization()
-        manager.startUpdatingLocation()
-        
-        
+            manager.requestWhenInUseAuthorization()
+            manager.startUpdatingLocation()
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -53,7 +58,7 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
         getTemperature(lat: first.coordinate.latitude, long: first.coordinate.longitude) { temp, iconeLabel, icone in
             self.auxTemp = temp
             self.auxIconeLabel = iconeLabel
-            
+            guard let auxIcone = UIImage(named: self.constants.recommendationIcone(temperatures: Int(temp))) else { return }
             
             
             print("temp : \(self.auxTemp)")
@@ -63,6 +68,7 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
                 self.iconeLabel.text = self.auxIconeLabel
                 self.iconeImage.image = icone
                 self.preferenceLabel.text = ("Dê preferência: \(self.constants.recommendationPhrase(temperatures: Int(self.auxTemp)))")
+                self.tempIconView.image = auxIcone
                 self.loadingWeather.stopAnimating()
             }
         }
@@ -112,5 +118,25 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
             completionHandler(passing)
         }
         .resume()
+    }
+    
+    @IBAction func generoButton(_ sender: UIButton) {
+        switch sender.tag {
+        case 0: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Feminino")
+            print(sender.tag)
+        case 1: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Masculino")
+            print(sender.tag)
+        case 2: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Não binário")
+            print(sender.tag)
+        default: isSelectedGender = false
+        }
+        
+        DatabaseManager.shared.onboardingDone(genderSave: isSelectedGender)
+        
+        onBoardingView.isHidden = isSelectedGender
+        
+        
+        
+        
     }
 }
