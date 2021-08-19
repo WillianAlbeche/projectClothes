@@ -46,6 +46,7 @@ class ModalViewController: UIViewController {
     }
     
     var gender1: String?
+    var category: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,21 +60,21 @@ class ModalViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as? FullSizeClothesViewController
         let destination2 = segue.destination as? TopClothesViewController
-//        let destination3 = segue.destination as?
+        let destination3 = segue.destination as? BottomClothesViewController
         let destination4 = segue.destination as? ShoesViewController
-//        let destination5 = segue.destination as?
+        let destination5 = segue.destination as? AccessoriesViewController
         
         
         if segue.identifier == "goToFullSize" {
             destination?.gender = gender1
         }else if segue.identifier == "goToTop"{
             destination2?.gender = gender1
-//        }else if segue.identifier == "goToBottom"{
-//            destination3?.gender = gender1
+        }else if segue.identifier == "goToBottom"{
+            destination3?.gender = gender1
         }else if segue.identifier == "goToShoes"{
             destination4?.gender = gender1
-//        }else if segue.identifier == "goToAccessories"{
-//            destination5?.gender = gender1
+        }else if segue.identifier == "goToAccessories"{
+            destination5?.gender = gender1
         }
     }
     

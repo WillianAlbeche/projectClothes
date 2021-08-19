@@ -9,6 +9,11 @@ import UIKit
 
 class ClothesConfigViewController: UIViewController {
     
+    
+    @IBOutlet weak var viewHeigth: NSLayoutConstraint!
+    
+    var clothCategory: String?
+    
     //Slider 1
     @IBOutlet weak var appSlider: UISlider!
     @IBOutlet weak var showSliderValue: UILabel!
@@ -44,33 +49,41 @@ class ClothesConfigViewController: UIViewController {
     
     @IBAction func sliderValueChanged(_ sender: Any) {
         
+        let option1 = "Roupa leve, ideal para dias bem quentes"
+        let option2 = "Boa peça para climas amenos"
+        let option3 = "Peça quente! Uso nos dias agradavelmente frios"
+        let option4 = "Peça bem quente! Ideal para um rigoroso inverno"
+        
         if self.appSlider.value < 0.25{
             appSlider.minimumTrackTintColor = UIColor(named: "color1")
             appSlider.setThumbImage(UIImage(named: "circle1"), for: .normal)
-            showSliderValue.text = "Roupa leve, ideal para dias bem quentes"
+            showSliderValue.text = option1
             
         }else if self.appSlider.value >= 0.25 && self.appSlider.value < 0.5 {
             appSlider.minimumTrackTintColor = UIColor(named: "color2")
             appSlider.setThumbImage(UIImage(named: "circle2"), for: .normal)
-            showSliderValue.text = "Boa peça para climas amenos"
+            showSliderValue.text = option2
             
         }else if self.appSlider.value >= 0.5 && self.appSlider.value < 0.75{
             appSlider.minimumTrackTintColor = UIColor(named: "color3")
             appSlider.setThumbImage(UIImage(named: "circle3"), for: .normal)
-            showSliderValue.text = "Peça quente! Uso nos dias agradavelmente frios"
+            showSliderValue.text = option3
             
         }else if self.appSlider.value > 0.75{
             appSlider.minimumTrackTintColor = UIColor(named: "color4")
             appSlider.setThumbImage(UIImage(named: "circle4"), for: .normal)
-            showSliderValue.text = "Peça bem quente! Ideal para um rigoroso inverno"
-            
+            showSliderValue.text = option4
         }
-        
     }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        viewHeigth.constant = UIScreen.main.bounds.height*0.2
+        
+        self.title = clothCategory
+        
         appSlider.minimumTrackTintColor = UIColor(named: "color1")
         appSlider.maximumTrackTintColor = .white
         appSlider.setThumbImage(UIImage(named: "circle1"), for: .normal)
