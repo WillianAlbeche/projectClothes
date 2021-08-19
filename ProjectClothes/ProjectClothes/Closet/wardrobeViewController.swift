@@ -47,11 +47,11 @@ class wardrobeViewController: UIViewController {
         looksCollectionView.delegate = self
         looksCollectionView.dataSource = self
         
-        categoriesTableView.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+        categoriesTableView.backgroundColor = UIColor(red: 247/255, green: 248/255 , blue: 251/255, alpha: 1)
         
-        self.view.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+        self.view.backgroundColor = UIColor(red: 247/255, green: 248/255 , blue: 251/255, alpha: 1)
         
-        looksCollectionView.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+        looksCollectionView.backgroundColor = UIColor(red: 247/255, green: 248/255 , blue: 251/255, alpha: 1)
         
         
         
@@ -65,45 +65,49 @@ class wardrobeViewController: UIViewController {
         let looksCollectionViewLayout = looksCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
         looksCollectionViewLayout?.sectionInset = UIEdgeInsets(top: 0.0 , left: UIScreen.screenWidth*0.072, bottom: 5, right: UIScreen.screenWidth*0.072)
         
+        allClothes = classeMock.roupasMock
+        self.calculatedNumberOfCategories = self.getNumberSuperClothesCategories()
+        
+        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-//        loadingPage.startAnimating()
-        DatabaseManager.shared.checkiCloudAccount() { error, logged in
-            if error == true {
-                if logged {
-                    print("yes log")
-                    DatabaseManager.shared.fetchAllClothes { result in
-                        switch result {
-                        case .failure(let error):
-                            print("wrong clothes")
-                        case .success(let clothes):
-                            self.allClothes = clothes
-                            DispatchQueue.main.async {
-                                self.clotheTipesDict = [:]
-                                self.clotheSuperTypesAndSubTypesDict = [:]
-                                self.presentClothesSuperTypes = []
-                                self.filteredClothes = []
-                                
-                                self.clotheSuperTypesAndSubTypesDict = [:]
-                                
-                                self.calculatedNumberOfCategories = self.getNumberSuperClothesCategories()
-                                
-                                self.categoriesTableView.reloadData()
-                            }
-                        }
-                        print(self.allClothes)
-                    }
-                } else {
-                    print("nolog")
-                    DispatchQueue.main.async {
-                        DatabaseManager.shared.loggingiCloud(vc: self)
-                    }
-                }
-            }
-        }
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+////        loadingPage.startAnimating()
+//        DatabaseManager.shared.checkiCloudAccount() { error, logged in
+//            if error == true {
+//                if logged {
+//                    print("yes log")
+//                    DatabaseManager.shared.fetchAllClothes { result in
+//                        switch result {
+//                        case .failure(let error):
+//                            print("wrong clothes")
+//                        case .success(let clothes):
+//                            self.allClothes = clothes
+//                            DispatchQueue.main.async {
+//                                self.clotheTipesDict = [:]
+//                                self.clotheSuperTypesAndSubTypesDict = [:]
+//                                self.presentClothesSuperTypes = []
+//                                self.filteredClothes = []
+//
+//                                self.clotheSuperTypesAndSubTypesDict = [:]
+//
+//                                self.calculatedNumberOfCategories = self.getNumberSuperClothesCategories()
+//
+//                                self.categoriesTableView.reloadData()
+//                            }
+//                        }
+//                        print(self.allClothes)
+//                    }
+//                } else {
+//                    print("nolog")
+//                    DispatchQueue.main.async {
+//                        DatabaseManager.shared.loggingiCloud(vc: self)
+//                    }
+//                }
+//            }
+//        }
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "selectionOfSubtipe"{
@@ -208,7 +212,7 @@ extension wardrobeViewController :  UITableViewDelegate, UITableViewDataSource{
         
         cell.thisSuperClothesArray = getFirstItems(superType: name)
         
-        cell.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+        cell.backgroundColor = UIColor(red: 247/255, green: 248/255 , blue: 251/255, alpha: 1)
         
         cell.fatherView = self
         
@@ -243,15 +247,26 @@ extension wardrobeViewController : UICollectionViewDelegate, UICollectionViewDat
             let currentFilteredClothe = unwrappedFilteredClothes[indexPath.row]
             
             
-            cell.clotheImage.image = UIImage(named: "Image2")
-            if clotheOrLookPicker.selectedSegmentIndex == 1 {
-                cell.label.text = currentFilteredClothe.type //TEMPORARIO
+           
+            if clotheOrLookPicker.selectedSegmentIndex == 1 {//se está no looks
+            cell.label.text = currentFilteredClothe.type //TEMPORARIO
+                cell.clotheImage.image = UIImage(named: "Image2")
             }
             
         }else{
             // here I should just load the looks normally, since a query isnt being made
-            cell.clotheImage.image = UIImage(named: "Image2")
-            cell.label.text = "roupa blue"
+            
+            if indexPath.item < filteredClothes?.count ?? 0
+            {
+            cell.clotheImage.image = filteredClothes?[indexPath.item].image?.toUIImage() ?? nil
+            cell.label.text = ""
+                
+                
+            }else{
+                cell.clotheImage.image = UIImage(named: "")
+                
+                
+            }
             
         }
         cell.layer.cornerRadius = 25
@@ -260,7 +275,6 @@ extension wardrobeViewController : UICollectionViewDelegate, UICollectionViewDat
         return cell
         
     }
-    
     
     
     
