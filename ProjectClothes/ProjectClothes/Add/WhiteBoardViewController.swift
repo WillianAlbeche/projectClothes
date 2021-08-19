@@ -16,6 +16,7 @@ enum WhiteBoardOption {
 }
 
 class WhiteBoardViewController: UIViewController {
+
     
     @IBOutlet var editView: DrawingView!
     @IBOutlet weak var nextButton: UIButton!
@@ -68,8 +69,8 @@ class WhiteBoardViewController: UIViewController {
         eraseButton.setImage(UIImage(named: "erase"), for: .normal)
     }
     
-    
     var image1: UIImage?
+    
     @IBAction func nextButtonAction(_ sender: Any) {
         
         let renderer = UIGraphicsImageRenderer(size: editView.bounds.size)
