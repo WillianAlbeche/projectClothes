@@ -140,7 +140,7 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
 //            ac.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
 //            self.present(ac, animated: true)
 //        }
-        print("button")
+        DatabaseManager.shared.loggingiCloud(vc: self)
         
     }
 
