@@ -16,11 +16,6 @@ class WhiteBoardViewController: UIViewController {
     @IBOutlet var editView: DrawingView!
     @IBOutlet weak var nextButton: UIButton!
     
-    @IBOutlet weak var returnButton: UIButton!
-    @IBAction func returnColor(_ sender: Any) {
-        
-    }
-    
     @IBOutlet weak var scaleButton: UIButton!
     @IBOutlet weak var moveButton: UIButton!
     @IBOutlet weak var rotateButton: UIButton!
@@ -37,9 +32,6 @@ class WhiteBoardViewController: UIViewController {
         
         performSegue(withIdentifier: "goToConfig", sender: image1)
     }
-    @IBOutlet weak var iaButton: UIButton!
-    @IBAction func iaButtonAction(_ sender: Any) {
-    }
     var imagenew: UIImage?
     var imageReceive : UIImage?
 
@@ -54,8 +46,6 @@ class WhiteBoardViewController: UIViewController {
     var lastScale = CGFloat()
     var initialCenter = CGPoint()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagenew = imageReceive
@@ -63,27 +53,23 @@ class WhiteBoardViewController: UIViewController {
         
         
         self.editView.image = newImage
-        
-        returnButton.layer.cornerRadius = 20
-        returnButton.layer.borderWidth = 0.5
-        returnButton.layer.borderColor = UIColor.white.cgColor
-//        returnButton.setTitleColor(UIColor.black, for: .disabled)
-        scaleButton.layer.cornerRadius = 20
+
+        scaleButton.layer.cornerRadius = 25
         scaleButton.layer.borderWidth = 0.5
         scaleButton.layer.borderColor = UIColor.white.cgColor
-//        scaleButton.setcol
-        moveButton.layer.cornerRadius = 20
+
+        moveButton.layer.cornerRadius = 25
         moveButton.layer.borderWidth = 0.5
         moveButton.layer.borderColor = UIColor.white.cgColor
-//        moveButton.setTitleColor(UIColor.black, for: .disabled)
-        rotateButton.layer.cornerRadius = 20
+
+        rotateButton.layer.cornerRadius = 25
         rotateButton.layer.borderWidth = 0.5
         rotateButton.layer.borderColor = UIColor.white.cgColor
-//        rotateButton.setTitleColor(UIColor.black, for: .disabled)
-        eraseButton.layer.cornerRadius = 20
+
+        eraseButton.layer.cornerRadius = 25
         eraseButton.layer.borderWidth = 0.5
         eraseButton.layer.borderColor = UIColor.white.cgColor
-//        eraseButton.setTitleColor(UIColor.black, for: .disabled)
+
         
         //        //Rotation
 //                let rotation = UIRotationGestureRecognizer()

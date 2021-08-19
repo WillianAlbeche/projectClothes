@@ -11,7 +11,10 @@ class TopClothesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var tableViewheigth: NSLayoutConstraint!
+    
     var gender: String?
+    var choice: String?
     
     var maleClothes = ["Blazer / Paletó", "Colete", "Casaco", "Moletom", "Camiseta", "Camisa", "Polo", "Regata", "Blusão / Suéter"]
     var femaleClothes = ["Blazer", "Casaco / Jaqueta", "Cardigan", "Colete / Kimono"]
@@ -20,9 +23,11 @@ class TopClothesViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableViewheigth.constant = UIScreen.main.bounds.height*0.38
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor(named: "ligthPurple")
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,6 +53,7 @@ class TopClothesViewController: UIViewController, UITableViewDelegate, UITableVi
             let cellroupas = maleClothes[indexPath.row]
             
             cell.clothesLabel.text = cellroupas
+            cell.clothesLabel.layer.masksToBounds = true
             cell.clothesLabel.layer.cornerRadius = 20
         
             
@@ -60,6 +66,7 @@ class TopClothesViewController: UIViewController, UITableViewDelegate, UITableVi
             let cellroupas = femaleClothes[indexPath.row]
             
             cell.clothesLabel.text = cellroupas
+            cell.clothesLabel.layer.masksToBounds = true
             cell.clothesLabel.layer.cornerRadius = 20
             
             return cell
@@ -71,6 +78,7 @@ class TopClothesViewController: UIViewController, UITableViewDelegate, UITableVi
             let cellroupas = none[indexPath.row]
             
             cell.clothesLabel.text = cellroupas
+            cell.clothesLabel.layer.masksToBounds = true
             cell.clothesLabel.layer.cornerRadius = 20
             
             return cell
@@ -80,9 +88,44 @@ class TopClothesViewController: UIViewController, UITableViewDelegate, UITableVi
             let cellroupas = none[indexPath.row]
             
             cell.clothesLabel.text = cellroupas
+            cell.clothesLabel.layer.masksToBounds = true
             cell.clothesLabel.layer.cornerRadius = 20
             
             return cell
+        }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)  {
+        
+        if gender == "M" {
+            
+            let array = maleClothes
+            choice = array[indexPath.row]
+            performSegue(withIdentifier: "goBack", sender: self)
+            
+        }else if gender == "F" {
+            
+            let array = femaleClothes
+            choice = array[indexPath.row]
+            performSegue(withIdentifier: "goBack", sender: self)
+            
+        }else if gender == "NONE"{
+            
+            let array = none
+            choice = array[indexPath.row]
+            performSegue(withIdentifier: "goBack", sender: self)
+            
+        }else{
+            let array = none
+            choice = array[indexPath.row]
+            performSegue(withIdentifier: "goBack", sender: self)
+            
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? ClothesConfigurationViewController
+        
+        if segue.identifier == "goBack" {
+            destination?.choice = choice
         }
     }
 }

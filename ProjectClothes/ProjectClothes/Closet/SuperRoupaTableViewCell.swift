@@ -22,7 +22,7 @@ class SuperRoupaTableViewCell: UITableViewCell {
         super.awakeFromNib()
         subClassesCollecionView.delegate = self
         subClassesCollecionView.dataSource = self
-        subClassesCollecionView.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+        subClassesCollecionView.backgroundColor = UIColor(red: 247/255, green: 248/255 , blue: 251/255, alpha: 1)
         constraintCollectionViewHeight.constant = UIScreen.screenWidth*0.4//41
         
         
