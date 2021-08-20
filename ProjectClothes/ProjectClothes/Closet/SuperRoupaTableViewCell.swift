@@ -18,11 +18,15 @@ class SuperRoupaTableViewCell: UITableViewCell {
     var subTypesNames : [String]?
     //    var segueSubtypes : (()->())?
     var fatherView : wardrobeViewController?
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         subClassesCollecionView.delegate = self
         subClassesCollecionView.dataSource = self
-        subClassesCollecionView.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+        subClassesCollecionView.backgroundColor = UIColor(red: 247/255, green: 248/255 , blue: 251/255, alpha: 1)
         constraintCollectionViewHeight.constant = UIScreen.screenWidth*0.4//41
         
         
@@ -43,7 +47,8 @@ extension SuperRoupaTableViewCell : UICollectionViewDelegate, UICollectionViewDa
         
         let collectionCell = subClassesCollecionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! FrontCollectionViewCell
         
-        
+        collectionCell.subTypeName.text =  thisSuperClothesArray?[indexPath.item].subType?.capitalizingFirstLetter()
+            
         collectionCell.pictureOfSubType.image = thisSuperClothesArray?[indexPath.item].image?.toUIImage() ?? nil
         
         collectionCell.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0).cgColor
@@ -53,6 +58,7 @@ extension SuperRoupaTableViewCell : UICollectionViewDelegate, UICollectionViewDa
         collectionCell.backgroundColor = .white
         collectionCell.pictureOfSubType.backgroundColor = .white
         return collectionCell
+        
     }
     
     
@@ -63,6 +69,7 @@ extension SuperRoupaTableViewCell : UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         //        let segue = segueSubtypes!
+        
         fatherView!.performSegue(withIdentifier: "selectionOfSubtipe", sender: (superClassNameLabel.text, self.thisSuperClothesArray?[indexPath.item].subType))
         //        segue()
         

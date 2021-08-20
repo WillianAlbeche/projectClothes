@@ -10,6 +10,7 @@ import UIKit
 class FrontCollectionViewCell: UICollectionViewCell {
     
     
+    @IBOutlet weak var subTypeName: UILabel!
     @IBOutlet weak var pictureOfSubType: UIImageView!
     var typeOfCell = EnumForSegues.subtype
     

@@ -113,6 +113,7 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
             destination?.color = roupa?.color
             destination?.type = roupa?.type
             destination?.image = roupa?.image
+            destination?.roupa = roupa
         }
         
         if segue.identifier == "goToModal" {

@@ -48,6 +48,7 @@
                                 </state>
                                 <connections>
                                     <action selector="addItem:" destination="0BM-JC-uqb" eventType="touchUpInside" id="qK2-vI-JOA"/>
+                                    <action selector="toWardrobe:" destination="0BM-JC-uqb" eventType="touchUpInside" id="5OT-Df-fvE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oho-iK-3wO">
@@ -70,6 +71,9 @@
                                 <state key="normal" title="Salvar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveLook:" destination="0BM-JC-uqb" eventType="touchUpInside" id="xHp-9u-Gy5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uzg-Zl-19a"/>
@@ -92,6 +96,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzc-S2-HV8" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1207" y="113"/>
+        </scene>
+        <!--closetStoryboard-->
+        <scene sceneID="9v6-sT-otU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="closetStoryboard" id="QC6-N4-RS1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E4k-Rm-raw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2016" y="113"/>
         </scene>
     </scenes>
     <resources>

@@ -21,6 +21,7 @@ class ClothesConfigViewController: UIViewController {
     var color: String?
     var image: CKAsset?
     var roupa : Clothes?
+    
     var flags = [false, false, false, false, false, false, false, false, false]
     var filterList = ["casual", "formal","camping", "work", "beach", "vacations", "sports", "party", "date"]
     var emptyArray = [String]()
@@ -229,7 +230,7 @@ class ClothesConfigViewController: UIViewController {
         roupa?.color = color
         roupa?.type = type
         roupa?.subType = clothCategory
-        var indice = flags.enumerated().filter({ $0.element == true }).map({ $0.offset })
+        let indice = flags.enumerated().filter({ $0.element == true }).map({ $0.offset })
         for i in indice {emptyArray.append(filterList[i])}
         roupa?.filters = emptyArray
         print(roupa?.filters)
