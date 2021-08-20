@@ -15,6 +15,7 @@ class ShoesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     var gender: String?
     var choice: String?
+    var type: String?
     
     var maleClothes = ["Tênis", "Bota", "Sapatênis", "Oxford", "Monk", "Derby", "Outro"]
     var femaleClothes = ["Tênis", "Bota", "Saltos", "Sapatilhas / Rasteiras", "Oxford", "Mules", "Mocassins", "Sandálias", "Scarpin", "Outro"]
@@ -42,6 +43,12 @@ class ShoesViewController: UIViewController, UITableViewDelegate, UITableViewDat
             return numberOfClothes.count
             
         }else if gender == "none"{
+            
+            let numberOfClothes = none
+            return numberOfClothes.count
+            
+        }else{
+            
             let numberOfClothes = none
             return numberOfClothes.count
         }
@@ -125,6 +132,7 @@ class ShoesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if segue.identifier == "goBack" {
             destination?.choice = choice
+            destination?.type = type
         }
     }
 }

@@ -15,6 +15,7 @@ class FullSizeClothesViewController: UIViewController, UITableViewDelegate, UITa
     
     var gender: String?
     var choice: String?
+    var type: String?
     
     var maleClothes = ["Macacão"]
     var femaleClothes = ["Macacão", "Vestido"]
@@ -121,6 +122,7 @@ class FullSizeClothesViewController: UIViewController, UITableViewDelegate, UITa
         
         if segue.identifier == "goBack" {
             destination?.choice = choice
+            destination?.type = type
         }
     }
     

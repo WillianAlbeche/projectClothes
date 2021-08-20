@@ -15,6 +15,7 @@ class AccessoriesViewController: UIViewController, UITableViewDelegate, UITableV
     
     var gender: String?
     var choice: String?
+    var type: String?
     
     
     var maleClothes = ["Colar" , "Brinco"]
@@ -124,6 +125,7 @@ class AccessoriesViewController: UIViewController, UITableViewDelegate, UITableV
         
         if segue.identifier == "goBack" {
             destination?.choice = choice
+            destination?.type = type
         }
     }
 }

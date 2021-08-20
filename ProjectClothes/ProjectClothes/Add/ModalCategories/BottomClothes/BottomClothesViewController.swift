@@ -15,6 +15,7 @@ class BottomClothesViewController: UIViewController, UITableViewDelegate, UITabl
     
     var gender: String?
     var choice: String?
+    var type: String?
     
     var maleClothes = ["Calça", "Short / Bermuda"]
     var femaleClothes = ["Calça", "Short / Bermuda", "Saia"]
@@ -121,6 +122,7 @@ class BottomClothesViewController: UIViewController, UITableViewDelegate, UITabl
         
         if segue.identifier == "goBack" {
             destination?.choice = choice
+            destination?.type = type
         }
     }
     

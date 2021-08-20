@@ -24,6 +24,8 @@ class MyCustomNavigationController: UINavigationController {
 
 class ModalViewController: UIViewController {
     
+    
+    
     @IBOutlet weak var fullSizeClothesButton: UIButton!
     @IBAction func fullSizeAction(_ sender: Any) {
         performSegue(withIdentifier: "goToFullSize", sender: gender1)
@@ -67,14 +69,24 @@ class ModalViewController: UIViewController {
         
         if segue.identifier == "goToFullSize" {
             destination?.gender = gender1
+            category = "full size Clothes"
+            destination?.type = category
         }else if segue.identifier == "goToTop"{
             destination2?.gender = gender1
+            category = "top clothes"
+            destination2?.type = category
         }else if segue.identifier == "goToBottom"{
             destination3?.gender = gender1
+            category = "bottom clothes"
+            destination3?.type = category
         }else if segue.identifier == "goToShoes"{
             destination4?.gender = gender1
+            category = "shoes"
+            destination4?.type = category
         }else if segue.identifier == "goToAccessories"{
             destination5?.gender = gender1
+            category = "accessories"
+            destination5?.type = category
         }
     }
     

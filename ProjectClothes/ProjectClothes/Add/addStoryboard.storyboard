@@ -272,6 +272,9 @@
                                         <state key="normal" title="Salvar">
                                             <color key="titleColor" red="0.043137254901960784" green="0.13725490196078433" blue="0.38431372549019605" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="saveAction:" destination="w22-R3-u5x" eventType="touchUpInside" id="m9p-u0-4St"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBR-hn-4RT">
                                         <rect key="frame" x="188.5" y="0.0" width="175.5" height="64"/>

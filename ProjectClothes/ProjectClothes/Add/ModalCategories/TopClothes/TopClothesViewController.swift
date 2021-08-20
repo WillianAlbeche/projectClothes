@@ -15,6 +15,7 @@ class TopClothesViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var gender: String?
     var choice: String?
+    var type: String?
     
     var maleClothes = ["Blazer / Paletó", "Colete", "Casaco", "Moletom", "Camiseta", "Camisa", "Polo", "Regata", "Blusão / Suéter", "Outro"]
     var femaleClothes = ["Blazer", "Casaco / Jaqueta", "Cardigan", "Colete / Kimono", "Outro"]
@@ -43,6 +44,11 @@ class TopClothesViewController: UIViewController, UITableViewDelegate, UITableVi
             return numberOfClothes.count
             
         }else if gender == "none"{
+            
+            let numberOfClothes = none
+            return numberOfClothes.count
+            
+        }else{
             
             let numberOfClothes = none
             return numberOfClothes.count
@@ -131,6 +137,7 @@ class TopClothesViewController: UIViewController, UITableViewDelegate, UITableVi
         
         if segue.identifier == "goBack" {
             destination?.choice = choice
+            destination?.type = type
         }
     }
 }
