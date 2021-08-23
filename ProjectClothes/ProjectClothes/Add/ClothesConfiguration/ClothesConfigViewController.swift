@@ -6,18 +6,103 @@
 //
 
 import UIKit
+import CloudKit
+
+//enum CategoryOption {
+//    case casual, formal, camping, trabalho, praia, ferias, esportes, festa, encontro
+//}
 
 class ClothesConfigViewController: UIViewController {
     
-    
     @IBOutlet weak var viewHeigth: NSLayoutConstraint!
     
+    var type: String?
     var clothCategory: String?
+    var color: String?
+    var image: CKAsset?
+    var roupa : Clothes?
+    var flags = [false, false, false, false, false, false, false, false, false]
+    var filterList = ["casual", "formal","camping", "work", "beach", "vacations", "sports", "party", "date"]
+    var emptyArray = [String]()
     
-    //Slider 1
-    @IBOutlet weak var appSlider: UISlider!
-    @IBOutlet weak var showSliderValue: UILabel!
+    var flags2 = [false, false, false, false]
+    var filterList2 = ["autumn", "winter","spring", "summer"]
+    var emptyArray2 = [String]()
     
+    var flags3 = [false, false, false, false]
+    var filterList3 = ["wind", "rain","snow", "sensitiveRain"]
+    var emptyArray3 = [String]()
+    
+    //Tags Sections
+    @IBAction func filtroSections(_ sender: UIButton) {
+        switch sender.tag {
+        case 0: if !flags[sender.tag] {
+            casualOption.backgroundColor = UIColor(named: "purple1")
+            flags[sender.tag] = true
+        }else{
+            casualOption.backgroundColor = .white
+            flags[sender.tag] = false
+        }
+        case 1: if !flags[sender.tag] {
+            formalOption.backgroundColor = UIColor(named: "purple1")
+            flags[sender.tag] = true
+        }else{
+            formalOption.backgroundColor = .white
+            flags[sender.tag] = false
+        }
+        case 2: if !flags[sender.tag] {
+            campingOption.backgroundColor = UIColor(named: "purple1")
+            flags[sender.tag] = true
+        }else{
+            campingOption.backgroundColor = .white
+            flags[sender.tag] = false
+        }
+        case 3: if !flags[sender.tag] {
+            workOption.backgroundColor = UIColor(named: "purple1")
+            flags[sender.tag] = true
+        }else{
+            workOption.backgroundColor = .white
+            flags[sender.tag] = false
+        }
+        case 4: if !flags[sender.tag] {
+            beachOption.backgroundColor = UIColor(named: "purple1")
+            flags[sender.tag] = true
+        }else{
+            beachOption.backgroundColor = .white
+            flags[sender.tag] = false
+        }
+        case 5: if !flags[sender.tag] {
+            vacationsOption.backgroundColor = UIColor(named: "purple1")
+            flags[sender.tag] = true
+        }else{
+            vacationsOption.backgroundColor = .white
+            flags[sender.tag] = false
+        }
+        case 6: if !flags[sender.tag] {
+            sportsOption.backgroundColor = UIColor(named: "purple1")
+            flags[sender.tag] = true
+        }else{
+            sportsOption.backgroundColor = .white
+            flags[sender.tag] = false
+        }
+        case 7: if !flags[sender.tag] {
+            partyOption.backgroundColor = UIColor(named: "purple1")
+            flags[sender.tag] = true
+        }else{
+            partyOption.backgroundColor = .white
+            flags[sender.tag] = false
+        }
+        case 8: if !flags[sender.tag] {
+            dateOption.backgroundColor = UIColor(named: "purple1")
+            flags[sender.tag] = true
+        }else{
+            dateOption.backgroundColor = .white
+            flags[sender.tag] = false
+        }
+        default:
+            break
+        }
+    }
     //Options
     @IBOutlet weak var casualOption: UIButton!
     @IBOutlet weak var formalOption: UIButton!
@@ -31,12 +116,80 @@ class ClothesConfigViewController: UIViewController {
     @IBOutlet weak var newOption: UIButton!
     
     //Stack Estação
+    @IBAction func filtroSeason(_ sender: UIButton) {
+        switch sender.tag {
+        case 0: if !flags2[sender.tag] {
+            autumnOption.backgroundColor = UIColor(named: "purple1")
+            flags2[sender.tag] = true
+        }else{
+            autumnOption.backgroundColor = .white
+            flags2[sender.tag] = false
+        }
+        case 1: if !flags2[sender.tag] {
+            winterOption.backgroundColor = UIColor(named: "purple1")
+            flags2[sender.tag] = true
+        }else{
+            winterOption.backgroundColor = .white
+            flags2[sender.tag] = false
+        }
+        case 2: if !flags2[sender.tag] {
+            springOption.backgroundColor = UIColor(named: "purple1")
+            flags2[sender.tag] = true
+        }else{
+            springOption.backgroundColor = .white
+            flags2[sender.tag] = false
+        }
+        case 3: if !flags2[sender.tag] {
+            summerOption.backgroundColor = UIColor(named: "purple1")
+            flags2[sender.tag] = true
+        }else{
+            summerOption.backgroundColor = .white
+            flags2[sender.tag] = false
+        }
+        default:
+            break
+        }
+    }
     @IBOutlet weak var autumnOption: UIButton!
     @IBOutlet weak var winterOption: UIButton!
     @IBOutlet weak var springOption: UIButton!
     @IBOutlet weak var summerOption: UIButton!
     
     //Stack Especiais
+    @IBAction func filtroSpecial(_ sender: UIButton){
+        switch sender.tag {
+        case 0: if !flags3[sender.tag] {
+            windOption.backgroundColor = UIColor(named: "purple1")
+            flags3[sender.tag] = true
+        }else{
+            windOption.backgroundColor = .white
+            flags3[sender.tag] = false
+        }
+        case 1: if !flags3[sender.tag] {
+            rainOption.backgroundColor = UIColor(named: "purple1")
+            flags3[sender.tag] = true
+        }else{
+            rainOption.backgroundColor = .white
+            flags3[sender.tag] = false
+        }
+        case 2: if !flags3[sender.tag] {
+            snowOption.backgroundColor = UIColor(named: "purple1")
+            flags3[sender.tag] = true
+        }else{
+            snowOption.backgroundColor = .white
+            flags3[sender.tag] = false
+        }
+        case 3: if !flags3[sender.tag] {
+            sensitiveRainOption.backgroundColor = UIColor(named: "purple1")
+            flags3[sender.tag] = true
+        }else{
+            sensitiveRainOption.backgroundColor = .white
+            flags3[sender.tag] = false
+        }
+        default:
+            break
+        }
+    }
     @IBOutlet weak var windOption: UIButton!
     @IBOutlet weak var rainOption: UIButton!
     @IBOutlet weak var snowOption: UIButton!
@@ -44,8 +197,62 @@ class ClothesConfigViewController: UIViewController {
     
     @IBOutlet weak var addBrand: UIButton!
     @IBOutlet weak var addCloth: UIButton!
+    @IBAction func addBrandFabricAction(_ sender: UIButton) {
+        if sender.tag == 0{
+            let ac = UIAlertController(title: "Enter the Brand", message: nil, preferredStyle: .alert)
+            ac.addTextField()
+            
+            let submitAction = UIAlertAction(title: "Submit", style: .default) { [unowned ac] _ in
+                let answer = ac.textFields![0]
+                // do something interesting with "answer" here
+                self.roupa?.brand = answer.text?.lowercased()
+            }
+            ac.addAction(submitAction)
+            present(ac, animated: true)
+        }else{
+            let ac = UIAlertController(title: "Enter the Fabric", message: nil, preferredStyle: .alert)
+            ac.addTextField()
+            
+            let submitAction = UIAlertAction(title: "Submit", style: .default) { [unowned ac] _ in
+                let answer = ac.textFields![0]
+                // do something interesting with "answer" here
+                self.roupa?.fabric = answer.text?.lowercased()
+            }
+            ac.addAction(submitAction)
+            present(ac, animated: true)
+        }
+    }
     
     @IBOutlet weak var nextButton: UIButton!
+    @IBAction func nextButtonAction(_ sender: Any) {
+        var indice = flags.enumerated().filter({ $0.element == true }).map({ $0.offset })
+        for i in indice {emptyArray.append(filterList[i])}
+        roupa?.filters = emptyArray
+        print(roupa?.filters)
+        
+        var indice2 = flags2.enumerated().filter({ $0.element == true }).map({ $0.offset })
+        for i in indice2 {emptyArray2.append(filterList2[i])}
+        roupa?.seasons = emptyArray2
+        print(roupa?.seasons)
+        
+        var indice3 = flags3.enumerated().filter({ $0.element == true }).map({ $0.offset })
+        for i in indice3 {emptyArray3.append(filterList3[i])}
+        roupa?.specials = emptyArray3
+        print(roupa?.specials)
+        
+        guard let roupa = roupa else {return}
+        print("hihihihihihi: \(roupa.id)")
+        DatabaseManager.shared.createNewClothes(clothes:roupa) { error in
+            if error == nil{
+                print("create clothes concluir")
+            }
+        }
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    //Slider
+    @IBOutlet weak var appSlider: UISlider!
+    @IBOutlet weak var showSliderValue: UILabel!
     
     @IBAction func sliderValueChanged(_ sender: Any) {
         
@@ -80,9 +287,13 @@ class ClothesConfigViewController: UIViewController {
     {
         super.viewDidLoad()
         
+        
+        print("color: \(roupa?.color)")
+        print("roupa: \(roupa?.type)")
+        print("subtype: \(roupa?.subType)")
         viewHeigth.constant = UIScreen.main.bounds.height*0.2
         
-        self.title = clothCategory
+        self.title = roupa?.subType
         
         appSlider.minimumTrackTintColor = UIColor(named: "color1")
         appSlider.maximumTrackTintColor = .white

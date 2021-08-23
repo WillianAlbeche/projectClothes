@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CloudKit
 
 class ClothesConfigurationViewController: UIViewController, UIColorPickerViewControllerDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
@@ -15,6 +16,24 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
     @IBOutlet weak var newImage: UIImageView!
     @IBOutlet weak var colorButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
+    @IBAction func saveAction(_ sender: Any) {
+        
+        
+        let mock = MockClothesData.init()
+        
+        guard let roupa = roupa else {return}
+        print("iddidididi: \(roupa.id)")
+        DatabaseManager.shared.createNewClothes(clothes: mock.roupa1) { error in
+            if error == nil{
+                print("create clothes save")
+            }
+        }
+        print(roupa.color)
+        print(roupa.type)
+        print(roupa.subType)
+        
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBOutlet weak var categoryButton: UIButton!
     @IBAction func continuarButton(_ sender: UIButton) {
         performSegue(withIdentifier: "goToConfig", sender: gender)
@@ -26,14 +45,32 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
     }
     @IBOutlet weak var nextButton: UIButton!
     
-    var gender = "M"
-    var choice: String?
-    
     var imageReceive: UIImage?
+    var gender: String = "none" // nao binario
+    var roupa : Clothes?
+    var type: String?{
+        didSet{
+            guard let type = type else {return}
+            roupa?.type = type.lowercased()
+        }
+    }
+    var choice: String?{
+        didSet{
+            guard let choice = choice else {return}
+            categoryButton.setTitle(choice, for: .normal)
+            roupa?.subType = choice.lowercased()
+            
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        roupa = Clothes.createEmptyClothes()
+//        gender = DatabaseManager.shared.loadGender().lowercased()
+        guard let imageURL = imageReceive?.toURL() else {return}
+        let auxImage = CKAsset.init(fileURL: imageURL)
+        roupa?.image = auxImage
         newImage.image = imageReceive
         newImage.backgroundColor = .white
         newImage.layer.cornerRadius = 20
@@ -74,9 +111,10 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToConfig"{
             let destination = segue.destination as? ClothesConfigViewController
-            destination?.clothCategory = choice
+            destination?.roupa = roupa
+            
         }
-    
+        
         if segue.identifier == "goToModal" {
             let destination = segue.destination as? MyCustomNavigationController
             let dest = destination?.topViewController as? ModalViewController
@@ -99,6 +137,7 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
         colorButton.tintColor = color
         colorButton.titleLabel?.textColor = color
         colorButton.setTitle(" \(color.accessibilityName.capitalizingFirstLetter())", for: .normal)
+        roupa?.color = String("\(color.accessibilityName)").lowercased()
     }
 }
 extension String {

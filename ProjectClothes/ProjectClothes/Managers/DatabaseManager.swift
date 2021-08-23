@@ -174,17 +174,17 @@ class DatabaseManager {
         let newClothesRecord = CKRecord(recordType: "Clothes", recordID: auxid)
         
         newClothesRecord["image"] = clothes.image
-        newClothesRecord["color"] = clothes.color
-        newClothesRecord["filters"] = clothes.filters
-        newClothesRecord["seasons"] = clothes.seasons
-        newClothesRecord["specials"] = clothes.specials
-        newClothesRecord["warm"] = clothes.warm?.rawValue ?? 0
-        newClothesRecord["confort"] = clothes.confort?.rawValue ?? 0
-        newClothesRecord["type"] = clothes.type
-        newClothesRecord["subType"] = clothes.subType
-        newClothesRecord["fabric"] = clothes.fabric
-        newClothesRecord["brand"] = clothes.brand
-        newClothesRecord["gender"] = clothes.gender
+        newClothesRecord["color"] = clothes.color ?? ""
+        newClothesRecord["filters"] = clothes.filters ?? []
+        newClothesRecord["seasons"] = clothes.seasons ?? []
+        newClothesRecord["specials"] = clothes.specials ?? []
+        newClothesRecord["warm"] = clothes.warm?.rawValue ?? 1
+        newClothesRecord["confort"] = clothes.confort?.rawValue ?? 1
+        newClothesRecord["type"] = clothes.type ?? ""
+        newClothesRecord["subType"] = clothes.subType ?? ""
+        newClothesRecord["fabric"] = clothes.fabric ?? ""
+        newClothesRecord["brand"] = clothes.brand ?? ""
+        newClothesRecord["gender"] = clothes.gender ?? ""
         
         
         self.privateDB.save(newClothesRecord) { (savedRecord, error) in

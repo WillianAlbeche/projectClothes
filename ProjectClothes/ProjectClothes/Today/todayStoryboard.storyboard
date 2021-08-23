@@ -16,6 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6rP-Nd-93j">
+                                <rect key="frame" x="0.0" y="88" width="414" height="555"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="1KV-wo-Ih9">
                                 <rect key="frame" x="30" y="128" width="150" height="236"/>
                                 <subviews>
@@ -62,9 +65,6 @@
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                                 <color key="color" red="0.056052442020000003" green="0.0042765853" blue="0.21933195759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </activityIndicatorView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6rP-Nd-93j">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                            </imageView>
                             <view contentMode="scaleToFill" id="NRd-o9-iun">
                                 <rect key="frame" x="0.0" y="2" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -135,7 +135,7 @@
                             <constraint firstItem="WMT-QY-MLJ" firstAttribute="leading" secondItem="W2h-ce-TQg" secondAttribute="leading" id="Bbp-sD-XqA"/>
                             <constraint firstItem="Yt9-xi-dQh" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="EMQ-tr-uXb"/>
                             <constraint firstItem="WMT-QY-MLJ" firstAttribute="leading" secondItem="1KV-wo-Ih9" secondAttribute="leading" id="J4Y-tO-Fg5"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="6rP-Nd-93j" secondAttribute="bottom" id="N1i-1Q-fA5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="6rP-Nd-93j" secondAttribute="bottom" constant="170" id="N1i-1Q-fA5"/>
                             <constraint firstItem="6rP-Nd-93j" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="dQd-H4-5DS"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="W2h-ce-TQg" secondAttribute="bottom" constant="60" id="ra3-eQ-UJa"/>
                             <constraint firstItem="W2h-ce-TQg" firstAttribute="top" secondItem="WMT-QY-MLJ" secondAttribute="bottom" constant="8" id="sQc-gF-jN6"/>

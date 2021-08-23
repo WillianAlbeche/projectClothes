@@ -33,6 +33,7 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
         onBoardingView.isHidden = DatabaseManager.shared.loadOnboardingDone()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

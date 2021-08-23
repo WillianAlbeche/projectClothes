@@ -15,10 +15,11 @@ class ShoesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     var gender: String?
     var choice: String?
+    var type: String?
     
-    var maleClothes = ["Tênis", "Bota", "Sapatênis", "Oxford / Monk / Derby", "Outro", "Tênis", "Bota", "Sapatênis"]
+    var maleClothes = ["Tênis", "Bota", "Sapatênis", "Oxford", "Monk", "Derby", "Outro"]
     var femaleClothes = ["Tênis", "Bota", "Saltos", "Sapatilhas / Rasteiras", "Oxford", "Mules", "Mocassins", "Sandálias", "Scarpin", "Outro"]
-    var none = ["Tênis", "Bota", "Sapatênis", "Oxford / Monk / Derby", "Saltos", "Sapatilhas / Rasteiras", "Mules", "Mocassins", "Sandálias", "Scarpin", "Outro"]
+    var none = ["Tênis", "Bota", "Sapatênis", "Oxford", "Monk", "Derby", "Saltos", "Sapatilhas / Rasteiras", "Mules", "Mocassins", "Sandálias", "Scarpin", "Outro"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,14 +32,24 @@ class ShoesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if gender == "M" {
+        if gender == "male" {
             
             let numberOfClothes = maleClothes
             return numberOfClothes.count
             
-        }else{
+        }else if gender == "female"{
             
             let numberOfClothes = femaleClothes
+            return numberOfClothes.count
+            
+        }else if gender == "none"{
+            
+            let numberOfClothes = none
+            return numberOfClothes.count
+            
+        }else{
+            
+            let numberOfClothes = none
             return numberOfClothes.count
         }
     }
@@ -46,7 +57,7 @@ class ShoesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         
-        if gender == "M"{
+        if gender == "male"{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! CustomCellShoesClothesTableViewCell
             
             let cellroupas = maleClothes[indexPath.row]
@@ -57,7 +68,7 @@ class ShoesViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             return cell
             
-        }else if gender == "F" {
+        }else if gender == "female" {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! CustomCellShoesClothesTableViewCell
             
             let cellroupas = femaleClothes[indexPath.row]
@@ -67,7 +78,7 @@ class ShoesViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cell.clothesLabel.layer.cornerRadius = 20
             
             return cell
-        }else if gender == "NONE"{
+        }else if gender == "none"{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! CustomCellShoesClothesTableViewCell
             
             let cellroupas = none[indexPath.row]
@@ -91,19 +102,19 @@ class ShoesViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)  {
         
-        if gender == "M" {
+        if gender == "male" {
             
             let array = maleClothes
             choice = array[indexPath.row]
             performSegue(withIdentifier: "goBack", sender: self)
             
-        }else if gender == "F" {
+        }else if gender == "female" {
             
             let array = femaleClothes
             choice = array[indexPath.row]
             performSegue(withIdentifier: "goBack", sender: self)
             
-        }else if gender == "NONE"{
+        }else if gender == "none"{
             
             let array = none
             choice = array[indexPath.row]
@@ -121,6 +132,7 @@ class ShoesViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if segue.identifier == "goBack" {
             destination?.choice = choice
+            destination?.type = type
         }
     }
 }

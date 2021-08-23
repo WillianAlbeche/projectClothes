@@ -47,6 +47,7 @@ struct Constants {
         else {
             return clothesRecommendation[5]
         }
+        
     }
     
     func recommendationIcone(temperatures: Int) -> String {

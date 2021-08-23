@@ -26,7 +26,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="BrW-bl-e4s">
                                 <rect key="frame" x="16" y="174" width="358" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxS-Oe-c2P">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxS-Oe-c2P">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <rect key="contentStretch" x="0.29999999999999999" y="0.0" width="1" height="1"/>

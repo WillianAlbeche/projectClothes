@@ -212,7 +212,6 @@ class Clothes {
            
             self.warm = warm1
             self.confort = confort1
-            
         }
         
         
