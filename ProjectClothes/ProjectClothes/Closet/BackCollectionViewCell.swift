@@ -14,9 +14,33 @@ class BackCollectionViewCell: UICollectionViewCell {
     var typeOfCell : EnumForSegues?
     
     @IBOutlet weak var clotheImage: UIImageView!
+    @IBOutlet weak var stack: UIStackView!
+    @IBOutlet var label: UILabel!
     
-    @IBOutlet weak var label: UILabel!
     
+    override func awakeFromNib(){
+        super.awakeFromNib()
+        configureWithOutLabel()
+        
+        
+        
+        
+        
+    }
     
+    func configureWithOutLabel(){
+        
+        stack.removeArrangedSubview(label)
+        label.isHidden = true
+        
+        
+    }
     
+    func configureWithlabel(){
+        stack.addArrangedSubview(label)
+        label.isHidden = false
+        
+        
+        
+    }
 }

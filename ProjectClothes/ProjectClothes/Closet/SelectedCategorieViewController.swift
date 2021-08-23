@@ -9,7 +9,7 @@ import UIKit
 
 class SelectedCategorieViewController: UIViewController {
 
-    
+    var isCreating : Bool = false
     
     @IBOutlet weak var filteredClothesCollectionView: UICollectionView!
     var segmentedClothes : [Clothes]?
@@ -24,6 +24,21 @@ class SelectedCategorieViewController: UIViewController {
         
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        let destination = segue.destination as? ClothesDetailsViewController
+        guard let roupa = sender as? Clothes else{return}
+        destination?.clothe = roupa
+        destination?.isCreating = self.isCreating
+        
+        
+        
+    }
+    
+  
+    
+    
 }
 extension SelectedCategorieViewController : UICollectionViewDelegate, UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -45,6 +60,13 @@ extension SelectedCategorieViewController : UICollectionViewDelegate, UICollecti
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        
+        performSegue(withIdentifier: "toClothesDetails", sender: segmentedClothes?[indexPath.item])
+        
+        
+    }
 
 }
 extension SelectedCategorieViewController : UICollectionViewDelegateFlowLayout{

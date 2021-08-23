@@ -15,6 +15,7 @@ class AccessoriesViewController: UIViewController, UITableViewDelegate, UITableV
     
     var gender: String?
     var choice: String?
+    var type: String?
     
     
     var maleClothes = ["Colar" , "Brinco"]
@@ -32,7 +33,7 @@ class AccessoriesViewController: UIViewController, UITableViewDelegate, UITableV
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if gender == "M" {
+        if gender == "male" {
             
             let numberOfClothes = maleClothes
             return numberOfClothes.count
@@ -48,7 +49,7 @@ class AccessoriesViewController: UIViewController, UITableViewDelegate, UITableV
         
         
         
-        if gender == "M"{
+        if gender == "male"{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! CustomCellAccessoriesClothesTableViewCell
             
             let cellroupas = maleClothes[indexPath.row]
@@ -59,7 +60,7 @@ class AccessoriesViewController: UIViewController, UITableViewDelegate, UITableV
             
             return cell
             
-        }else if gender == "F" {
+        }else if gender == "female" {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! CustomCellAccessoriesClothesTableViewCell
             
             let cellroupas = femaleClothes[indexPath.row]
@@ -69,7 +70,7 @@ class AccessoriesViewController: UIViewController, UITableViewDelegate, UITableV
             cell.clothesLabel.layer.cornerRadius = 20
             
             return cell
-        }else if gender == "NONE"{
+        }else if gender == "none"{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! CustomCellAccessoriesClothesTableViewCell
             
             let cellroupas = none[indexPath.row]
@@ -94,19 +95,19 @@ class AccessoriesViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)  {
         
-        if gender == "M" {
+        if gender == "male" {
             
             let array = maleClothes
             choice = array[indexPath.row]
             performSegue(withIdentifier: "goBack", sender: self)
             
-        }else if gender == "F" {
+        }else if gender == "female" {
             
             let array = femaleClothes
             choice = array[indexPath.row]
             performSegue(withIdentifier: "goBack", sender: self)
             
-        }else if gender == "NONE"{
+        }else if gender == "none"{
             
             let array = none
             choice = array[indexPath.row]
@@ -124,6 +125,7 @@ class AccessoriesViewController: UIViewController, UITableViewDelegate, UITableV
         
         if segue.identifier == "goBack" {
             destination?.choice = choice
+            destination?.type = type
         }
     }
 }
