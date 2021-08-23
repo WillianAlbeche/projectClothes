@@ -60,6 +60,16 @@ class CustomModalViewController:  UIViewController, UINavigationControllerDelega
         return buttom
         
     }()
+    lazy var but1Label: UILabel = {
+        let label = UILabel()
+        label.text = "Galeria"
+        label.font = .systemFont(ofSize: 16)
+        label.textColor = .darkGray
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        return label
+    }()
+    
     @IBAction func gallery(_ sender: Any?) {
         let imagePicketController = UIImagePickerController()
         imagePicketController.delegate = self
@@ -91,6 +101,16 @@ class CustomModalViewController:  UIViewController, UINavigationControllerDelega
         buttom.addTarget(self, action: #selector(camera(_:)), for: .touchUpInside)
         return buttom
     }()
+    lazy var but2Label: UILabel = {
+        let label = UILabel()
+        label.text = "Camera"
+        label.font = .systemFont(ofSize: 16)
+        label.textColor = .darkGray
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        return label
+    }()
+
     @IBAction func camera(_ sender: Any?) {
         
         let imagePicketController = UIImagePickerController()
@@ -125,16 +145,26 @@ class CustomModalViewController:  UIViewController, UINavigationControllerDelega
         return buttom
         
     }()
-    
-    
-    lazy var notesLabel: UILabel = {
+    lazy var but3Label: UILabel = {
         let label = UILabel()
-        label.text = "      Galeria                    Câmera                 Sugestões"
+        label.text = "Sugestões"
         label.font = .systemFont(ofSize: 16)
         label.textColor = .darkGray
         label.numberOfLines = 0
+        label.textAlignment = .center
         return label
     }()
+    
+    
+    
+//    lazy var notesLabel: UILabel = {
+//        let label = UILabel()
+//        label.text = "      Galeria                    Câmera                 Sugestões"
+//        label.font = .systemFont(ofSize: 16)
+//        label.textColor = .darkGray
+//        label.numberOfLines = 0
+//        return label
+//    }()
     
     
     lazy var contentStackHorizontal: UIStackView = {
@@ -146,9 +176,17 @@ class CustomModalViewController:  UIViewController, UINavigationControllerDelega
         
         
         // tirei o spacer
-        let stackView = UIStackView(arrangedSubviews: [but1 , but2, but3])
+        let stackView = UIStackView(arrangedSubviews: [but1, but2, but3])
         stackView.axis = .horizontal
         stackView.alignment = .fill
+        stackView.distribution = .fillEqually
+        stackView.spacing = 37
+        return stackView
+    }()
+    lazy var labelStackHorizontal:UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [but1Label,but2Label, but3Label])
+        stackView.axis = .horizontal
+        stackView.alignment = .center
         stackView.distribution = .fillEqually
         stackView.spacing = 37
         return stackView
@@ -159,7 +197,7 @@ class CustomModalViewController:  UIViewController, UINavigationControllerDelega
     lazy var contentStackView: UIStackView = {
         let spacer = UIView()
         let spacer2 = UIView()
-        let stackView = UIStackView(arrangedSubviews: [titleLabel,spacer,contentStackHorizontal,notesLabel, spacer2])
+        let stackView = UIStackView(arrangedSubviews: [titleLabel,spacer,contentStackHorizontal,labelStackHorizontal, spacer2])
         stackView.axis = .vertical
         stackView.spacing = 12.0
         return stackView
@@ -294,6 +332,7 @@ class CustomModalViewController:  UIViewController, UINavigationControllerDelega
         let isDraggingDown = translation.y > 0
         print("Dragging direction: \(isDraggingDown ? "going down" : "going up")")
         
+        guard isDraggingDown else {return}
         // New height is based on value of dragging plus current container height
         let newHeight = currentContainerHeight - translation.y
         
