@@ -44,7 +44,7 @@ class WhiteBoardViewController: UIViewController {
             switch selectedWhiteBoardOption {
             case .erase:
                 eraseButton.backgroundColor = .white
-                eraseButton.setImage(UIImage(named: "erase"), for: .normal)
+                eraseButton.setImage(UIImage(named: "whiteerase"), for: .normal)
             case .move:
                 moveButton.backgroundColor = .white
                 moveButton.tintColor = .black
