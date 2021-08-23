@@ -12,8 +12,8 @@
         <!--Closet-->
         <scene sceneID="nHn-U5-DJc">
             <objects>
-                <navigationController storyboardIdentifier="WardrobeNavigation" automaticallyAdjustsScrollViewInsets="NO" id="f0l-Ze-ZeP" customClass="WardrobeNavigationController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Closet" image="person.fill" catalog="system" id="yaw-Tz-1ee"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f0l-Ze-ZeP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Closet" image="cabide" id="yaw-Tz-1ee"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="w2X-oL-lNt">
@@ -431,7 +431,7 @@
     </scenes>
     <resources>
         <image name="autumn" width="34" height="34"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="cabide" width="23" height="17.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

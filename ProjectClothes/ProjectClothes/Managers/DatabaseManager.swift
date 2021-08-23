@@ -423,6 +423,14 @@ class DatabaseManager {
         return ""
     }
     
+    func onboardingDone(genderSave: Bool) {
+        UserDefaults.standard.setValue(genderSave, forKey: "onboarding")
+    }
+    
+    func loadOnboardingDone() -> Bool {
+        return UserDefaults.standard.bool(forKey: "onboarding")
+    }
+    
     //------------------------------------------------
     // MARK: - Helper
     /// To check iCloud account status
