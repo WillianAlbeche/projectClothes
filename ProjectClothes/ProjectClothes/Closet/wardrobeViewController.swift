@@ -20,12 +20,14 @@ class wardrobeViewController: UIViewController {
     var classeMock = MockClothesData()
     var viewsSearchController : UISearchController?
     var allClothes: [Clothes]? = [] // array the clothes recebido ou do servidor, ou do core data, ou do mock de dados
+    var allClothesNew: [Clothes]? = []
     var clotheTipesDict: [String: [Clothes]] = [:]// array filtrado pelo tipo : parte de cima, parte de baixo, calçado
     var clotheSuperTypesAndSubTypesDict : [String:[String:[Clothes]]] = [:] // isso aqui tem somente uma roupa de cada subtipo
     var presentClothesSuperTypes : [String] = [] //tipos(supertipos) presentes no array allclothes
     var filteredClothes : [Clothes]?
     var allLooks : [Look]? = []
     var calculatedNumberOfCategories :Int?
+    
     var isloggedin: Bool = false
     
     var isCreating : Bool = false
@@ -91,24 +93,32 @@ class wardrobeViewController: UIViewController {
                         print("yes log")
                         DatabaseManager.shared.fetchAllClothes { result in
                             switch result {
-                            case .failure(let error):
+                            case .failure(_):
                                 print("wrong clothes")
                             case .success(let clothes):
-                                self.allClothes = clothes
+                                self.allClothesNew = clothes
                                 DispatchQueue.main.async {
+                                    
+                                    if self.allClothesNew != self.allClothes {
+                                        print("DIFERENTE")
+                                        self.allClothes = self.allClothesNew
+                                    
                                     self.clotheTipesDict = [:]
                                     self.clotheSuperTypesAndSubTypesDict = [:]
                                     self.presentClothesSuperTypes = []
                                     self.filteredClothes = []
-    
-                                    self.clotheSuperTypesAndSubTypesDict = [:]
+                                    
+                                    
     
                                     self.calculatedNumberOfCategories = self.getNumberSuperClothesCategories()
     
                                     self.categoriesTableView.reloadData()
+//                                        print(self.allClothes)
+//                                        print(self.allClothesNew)
+                                    }
                                 }
                             }
-                            print(self.allClothes)
+                            
                         }
                     } else {
                         print("nolog")
@@ -118,7 +128,7 @@ class wardrobeViewController: UIViewController {
                     }
                 }
             }
-            self.categoriesTableView.reloadData()
+            
         }
     
     override func viewWillAppear(_ animated: Bool) {
