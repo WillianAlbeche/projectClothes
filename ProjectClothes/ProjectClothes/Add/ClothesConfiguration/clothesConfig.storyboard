@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="54f-cc-Slp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Suéter-->
+        <scene sceneID="0pb-QD-Idp">
+            <objects>
+                <viewController id="54f-cc-Slp" customClass="ClothesConfigViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j3d-a5-9yt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="od9-jX-Zdq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZe-Y5-Mw1" userLabel="View2">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fBY-Oe-QXA">
+                                                <rect key="frame" x="20" y="50" width="374" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BV7-wX-mmY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="flK-NL-QUP"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="tintColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Casual">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="filtroSections:" destination="54f-cc-Slp" eventType="touchUpInside" id="Uav-K6-0OD"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1s-dj-SqH">
+                                                        <rect key="frame" x="128" y="0.0" width="118" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="IY5-Mh-VEB"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="tintColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Formal">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="filtroSections:" destination="54f-cc-Slp" eventType="touchUpInside" id="NYp-op-l2p"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2x-Gr-HjD">
+                                                        <rect key="frame" x="256" y="0.0" width="118" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="NEy-D1-pPP"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="tintColor" red="0.80000000000000004" green="0.82745098039999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Camping">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="filtroSections:" destination="54f-cc-Slp" eventType="touchUpInside" id="m2n-uz-Lau"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6Ud-i7-QKd">
+                                                <rect key="frame" x="20" y="100" width="374" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69k-ZE-Bq5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="6oC-I6-URi"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="tintColor" red="0.80000000000000004" green="0.82745098039999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Trabalho">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="filtroSections:" destination="54f-cc-Slp" eventType="touchUpInside" id="i3h-yF-UKF"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VsX-UL-0RX">
+                                                        <rect key="frame" x="128" y="0.0" width="118" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="zvr-hr-g2B"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="tintColor" red="0.80000000000000004" green="0.82745098039999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Praia">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="filtroSections:" destination="54f-cc-Slp" eventType="touchUpInside" id="IkG-XY-LeW"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ga-w5-k7f">
+                                                        <rect key="frame" x="256" y="0.0" width="118" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="aDP-ng-XNJ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="tintColor" red="0.80000000000000004" green="0.82745098039999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Férias">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="filtroSections:" destination="54f-cc-Slp" eventType="touchUpInside" id="1v5-6g-6Lu"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jYW-in-ZjX">
+                                                <rect key="frame" x="20" y="150" width="374" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVw-0k-VgD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="TSs-m3-rUH"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="tintColor" red="0.80000000000000004" green="0.82745098039999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Esportes">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="filtroSections:" destination="54f-cc-Slp" eventType="touchUpInside" id="0ta-MD-uZr"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NN6-bt-QkY">
+                                                        <rect key="frame" x="128" y="0.0" width="118" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="aPt-x9-ksT"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="tintColor" red="0.80000000000000004" green="0.82745098039999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Festa">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="filtroSections:" destination="54f-cc-Slp" eventType="touchUpInside" id="awo-pR-2Fx"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lZ-H7-Lk1">
+                                                        <rect key="frame" x="256" y="0.0" width="118" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="Jt3-SD-zLD"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <color key="tintColor" red="0.80000000000000004" green="0.82745098039999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <state key="normal" title="Encontro">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="filtroSections:" destination="54f-cc-Slp" eventType="touchUpInside" id="jD2-Iu-kOo"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfv-gv-JpH">
+                                                <rect key="frame" x="20" y="200" width="136" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="OyB-fx-biK"/>
+                                                    <constraint firstAttribute="width" constant="136" id="Yi4-37-KWf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="Adicionar +">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quão quente é essa peça?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4L-Jo-h6W">
+                                                <rect key="frame" x="20" y="260" width="374" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xfs-zB-fOJ" customClass="CustomSlider" customModule="ProjectClothes" customModuleProvider="target">
+                                                <rect key="frame" x="18" y="279.5" width="378" height="31"/>
+                                                <connections>
+                                                    <action selector="sliderValueChanged:" destination="54f-cc-Slp" eventType="valueChanged" id="2yZ-bx-yVt"/>
+                                                </connections>
+                                            </slider>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="QxV-2A-gYS">
+                                                <rect key="frame" x="10" y="349.5" width="394" height="167.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8wT-QB-z6Z">
+                                                        <rect key="frame" x="0.0" y="0.0" width="182" height="167.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estação" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDg-DU-jSH">
+                                                                <rect key="frame" x="68.5" y="0.0" width="45" height="14.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <color key="textColor" red="0.30588235289999999" green="0.30588235289999999" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="haZ-M4-obN">
+                                                                <rect key="frame" x="18.5" y="22.5" width="145" height="145"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6mq-sE-gti">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="145" height="70"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6l-7Y-ZDX">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="70" id="4Rm-uR-Ihu"/>
+                                                                                    <constraint firstAttribute="width" constant="70" id="4X4-yM-Iit"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <color key="tintColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <inset key="contentEdgeInsets" minX="-41" minY="0.0" maxX="0.0" maxY="-41"/>
+                                                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="-7" maxY="0.0"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="-60" maxX="-82" maxY="0.0"/>
+                                                                                <state key="normal" title="Outono" image="autumn">
+                                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="thin"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="filtroSeason:" destination="54f-cc-Slp" eventType="touchUpInside" id="oZw-uy-rGL"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Htt-Yj-zOL">
+                                                                                <rect key="frame" x="75" y="0.0" width="70" height="70"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="70" id="0kI-Oe-eyS"/>
+                                                                                    <constraint firstAttribute="width" constant="70" id="ZIe-x2-hTh"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <color key="tintColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <inset key="contentEdgeInsets" minX="-41" minY="0.0" maxX="0.0" maxY="-41"/>
+                                                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="-7" maxY="0.0"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="-60" maxX="-84" maxY="0.0"/>
+                                                                                <state key="normal" title="Inverno" image="snow" catalog="system">
+                                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="light"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="filtroSeason:" destination="54f-cc-Slp" eventType="touchUpInside" id="6S4-2k-JQa"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CrY-V3-0z9">
+                                                                        <rect key="frame" x="0.0" y="75" width="145" height="70"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IU3-Mi-swH">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="70" id="W30-Zb-4PI"/>
+                                                                                    <constraint firstAttribute="width" constant="70" id="txV-iH-n8N"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <color key="tintColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <inset key="contentEdgeInsets" minX="-41" minY="0.0" maxX="0.0" maxY="-41"/>
+                                                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="-1" maxY="0.0"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="-60" maxX="-98" maxY="0.0"/>
+                                                                                <state key="normal" title="Primavera" image="leaf" catalog="system">
+                                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="light"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="filtroSeason:" destination="54f-cc-Slp" eventType="touchUpInside" id="6bI-ck-oAT"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhG-ZI-GBC">
+                                                                                <rect key="frame" x="75" y="0.0" width="70" height="70"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="70" id="AZM-e9-uTK"/>
+                                                                                    <constraint firstAttribute="height" constant="70" id="tnj-Zx-aKa"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <color key="tintColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <inset key="contentEdgeInsets" minX="-41" minY="0.0" maxX="0.0" maxY="-41"/>
+                                                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="1" maxY="0.0"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="-60" maxX="-73" maxY="0.0"/>
+                                                                                <state key="normal" title="Verão" image="sun.max" catalog="system">
+                                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="light"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="filtroSeason:" destination="54f-cc-Slp" eventType="touchUpInside" id="W5A-4K-9rN"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oQ4-85-h7X">
+                                                        <rect key="frame" x="212" y="0.0" width="182" height="167.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Especiais" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDv-zy-URg">
+                                                                <rect key="frame" x="64.5" y="0.0" width="53.5" height="14.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <color key="textColor" red="0.30588235289999999" green="0.30588235289999999" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="c6j-HU-dfc">
+                                                                <rect key="frame" x="18.5" y="22.5" width="145" height="145"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dEV-r0-5Wx">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="145" height="70"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tj2-Rf-2eN">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="70" id="FcK-90-IUe"/>
+                                                                                    <constraint firstAttribute="width" constant="70" id="heS-B2-Mey"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <color key="tintColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <inset key="contentEdgeInsets" minX="-41" minY="0.0" maxX="0.0" maxY="-41"/>
+                                                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="3" maxY="0.0"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="-60" maxX="-75" maxY="0.0"/>
+                                                                                <state key="normal" title="Vento" image="wind" catalog="system">
+                                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="light"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="filtroSpecial:" destination="54f-cc-Slp" eventType="touchUpInside" id="60Y-zB-1Yx"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Asr-Rb-emE">
+                                                                                <rect key="frame" x="75" y="0.0" width="70" height="70"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="70" id="W9t-g4-7KX"/>
+                                                                                    <constraint firstAttribute="width" constant="70" id="xfj-3j-G9h"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <color key="tintColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <inset key="contentEdgeInsets" minX="-41" minY="0.0" maxX="0.0" maxY="-41"/>
+                                                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="2" maxY="0.0"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="-60" maxX="-78" maxY="0.0"/>
+                                                                                <state key="normal" title="Chuva" image="cloud.rain" catalog="system">
+                                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="light"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="filtroSpecial:" destination="54f-cc-Slp" eventType="touchUpInside" id="39E-g7-fiE"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Rur-ge-VKM">
+                                                                        <rect key="frame" x="0.0" y="75" width="145" height="70"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAV-mG-R33">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="70" id="Eug-pc-9ql"/>
+                                                                                    <constraint firstAttribute="height" constant="70" id="Yfx-L7-GHK"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <color key="tintColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <inset key="contentEdgeInsets" minX="-41" minY="0.0" maxX="0.0" maxY="-41"/>
+                                                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="-6" maxY="0.0"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="-60" maxX="-70" maxY="0.0"/>
+                                                                                <state key="normal" title="Neve" image="neve">
+                                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="thin"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="filtroSpecial:" destination="54f-cc-Slp" eventType="touchUpInside" id="oNT-4q-8GY"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="3Sn-BQ-a02">
+                                                                                <rect key="frame" x="75" y="0.0" width="70" height="70"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="70" id="3x3-z1-xws"/>
+                                                                                    <constraint firstAttribute="width" constant="70" id="GVs-YK-an0"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <color key="tintColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <inset key="contentEdgeInsets" minX="-41" minY="0.0" maxX="0.0" maxY="-41"/>
+                                                                                <inset key="titleEdgeInsets" minX="0.0" minY="-4" maxX="-13" maxY="0.0"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="-70" maxX="-91" maxY="0.0"/>
+                                                                                <state key="normal" title="Sensível a chuva" image="umbrella" catalog="system">
+                                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="light"/>
+                                                                                </state>
+                                                                                <connections>
+                                                                                    <action selector="filtroSpecial:" destination="54f-cc-Slp" eventType="touchUpInside" id="90z-Kj-Bdd"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3o-qn-Pap">
+                                                <rect key="frame" x="20" y="329.5" width="374" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Em quais ocasiões você usaria essa peça?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twb-bp-GqF">
+                                                <rect key="frame" x="20" y="15.5" width="374" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="jDA-3C-a8M">
+                                                <rect key="frame" x="20" y="547" width="374" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5s-7p-B0w">
+                                                        <rect key="frame" x="0.0" y="0.0" width="184" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="cij-dI-keL"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Adicionar Marca">
+                                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="addBrandFabricAction:" destination="54f-cc-Slp" eventType="touchUpInside" id="tkX-ob-30I"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjo-8M-pmM">
+                                                        <rect key="frame" x="190" y="0.0" width="184" height="40"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="By9-dl-agN"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Adicionar Tecido">
+                                                            <color key="titleColor" red="0.043137254899999998" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="addBrandFabricAction:" destination="54f-cc-Slp" eventType="touchUpInside" id="gjd-Fy-hpy"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLE-cq-9Ua">
+                                                <rect key="frame" x="20" y="617" width="374" height="40"/>
+                                                <color key="backgroundColor" red="0.53725490200000003" green="0.5568627451" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="esD-CQ-wpu"/>
+                                                </constraints>
+                                                <state key="normal" title="Concluir">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="nextButtonAction:" destination="54f-cc-Slp" eventType="touchUpInside" id="hUU-E8-GtN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="QxV-2A-gYS" secondAttribute="trailing" constant="10" id="0FS-Jr-0xU"/>
+                                            <constraint firstItem="jYW-in-ZjX" firstAttribute="leading" secondItem="CZe-Y5-Mw1" secondAttribute="leading" constant="20" id="3pU-qe-kbf"/>
+                                            <constraint firstItem="TLE-cq-9Ua" firstAttribute="leading" secondItem="CZe-Y5-Mw1" secondAttribute="leading" constant="20" id="5Fl-4R-F3L"/>
+                                            <constraint firstAttribute="trailing" secondItem="X4L-Jo-h6W" secondAttribute="trailing" constant="20" id="5yf-Js-pMB"/>
+                                            <constraint firstAttribute="trailing" secondItem="jYW-in-ZjX" secondAttribute="trailing" constant="20" id="6OP-fp-zyK"/>
+                                            <constraint firstItem="6Ud-i7-QKd" firstAttribute="top" secondItem="fBY-Oe-QXA" secondAttribute="bottom" constant="10" id="Bxj-iy-9nm"/>
+                                            <constraint firstItem="gfv-gv-JpH" firstAttribute="leading" secondItem="CZe-Y5-Mw1" secondAttribute="leading" constant="20" id="D6u-Th-Ndd"/>
+                                            <constraint firstItem="X4L-Jo-h6W" firstAttribute="top" secondItem="gfv-gv-JpH" secondAttribute="bottom" constant="20" id="F0h-fT-gsP"/>
+                                            <constraint firstItem="jDA-3C-a8M" firstAttribute="leading" secondItem="CZe-Y5-Mw1" secondAttribute="leading" constant="20" id="H5A-bZ-oXC"/>
+                                            <constraint firstAttribute="trailing" secondItem="j3o-qn-Pap" secondAttribute="trailing" constant="20" id="IM2-rB-aF0"/>
+                                            <constraint firstAttribute="trailing" secondItem="xfs-zB-fOJ" secondAttribute="trailing" constant="20" id="Lbs-Vg-f0X"/>
+                                            <constraint firstItem="X4L-Jo-h6W" firstAttribute="leading" secondItem="CZe-Y5-Mw1" secondAttribute="leading" constant="20" id="M59-dg-VaT"/>
+                                            <constraint firstAttribute="trailing" secondItem="twb-bp-GqF" secondAttribute="trailing" constant="20" id="MVX-f2-qkR"/>
+                                            <constraint firstAttribute="trailing" secondItem="6Ud-i7-QKd" secondAttribute="trailing" constant="20" id="NMI-tw-Lsi"/>
+                                            <constraint firstAttribute="bottom" secondItem="TLE-cq-9Ua" secondAttribute="bottom" constant="10" id="PJK-Ta-sJq"/>
+                                            <constraint firstItem="jDA-3C-a8M" firstAttribute="top" secondItem="QxV-2A-gYS" secondAttribute="bottom" constant="30" id="PLf-qv-56H"/>
+                                            <constraint firstItem="fBY-Oe-QXA" firstAttribute="leading" secondItem="CZe-Y5-Mw1" secondAttribute="leading" constant="20" id="QGn-tG-Q1x"/>
+                                            <constraint firstItem="xfs-zB-fOJ" firstAttribute="leading" secondItem="CZe-Y5-Mw1" secondAttribute="leading" constant="20" id="Qye-WI-DLR"/>
+                                            <constraint firstAttribute="trailing" secondItem="TLE-cq-9Ua" secondAttribute="trailing" constant="20" id="RBV-Fk-6E9"/>
+                                            <constraint firstItem="twb-bp-GqF" firstAttribute="leading" secondItem="CZe-Y5-Mw1" secondAttribute="leading" constant="20" id="RUS-eC-Vz2"/>
+                                            <constraint firstItem="TLE-cq-9Ua" firstAttribute="top" secondItem="jDA-3C-a8M" secondAttribute="bottom" constant="30" id="UqO-LP-xIf"/>
+                                            <constraint firstItem="j3o-qn-Pap" firstAttribute="top" secondItem="xfs-zB-fOJ" secondAttribute="bottom" constant="20" id="WKx-La-UA2"/>
+                                            <constraint firstItem="j3o-qn-Pap" firstAttribute="leading" secondItem="CZe-Y5-Mw1" secondAttribute="leading" constant="20" id="ald-sP-4q4"/>
+                                            <constraint firstItem="xfs-zB-fOJ" firstAttribute="top" secondItem="X4L-Jo-h6W" secondAttribute="bottom" constant="5" id="dSq-d1-zXG"/>
+                                            <constraint firstItem="QxV-2A-gYS" firstAttribute="leading" secondItem="CZe-Y5-Mw1" secondAttribute="leading" constant="10" id="dhG-9v-QTH"/>
+                                            <constraint firstItem="QxV-2A-gYS" firstAttribute="top" secondItem="j3o-qn-Pap" secondAttribute="bottom" constant="20" id="ew0-lB-y5F"/>
+                                            <constraint firstAttribute="trailing" secondItem="fBY-Oe-QXA" secondAttribute="trailing" constant="20" id="joc-Ht-YQq"/>
+                                            <constraint firstItem="6Ud-i7-QKd" firstAttribute="leading" secondItem="CZe-Y5-Mw1" secondAttribute="leading" constant="20" id="m3S-6M-BL1"/>
+                                            <constraint firstItem="fBY-Oe-QXA" firstAttribute="top" secondItem="twb-bp-GqF" secondAttribute="bottom" constant="20" id="q8C-kO-pfH"/>
+                                            <constraint firstItem="gfv-gv-JpH" firstAttribute="top" secondItem="jYW-in-ZjX" secondAttribute="bottom" constant="10" id="r5C-wI-hAc"/>
+                                            <constraint firstItem="jYW-in-ZjX" firstAttribute="top" secondItem="6Ud-i7-QKd" secondAttribute="bottom" constant="10" id="raA-J0-McP"/>
+                                            <constraint firstAttribute="trailing" secondItem="jDA-3C-a8M" secondAttribute="trailing" constant="20" id="rqG-d1-ECc"/>
+                                            <constraint firstItem="fBY-Oe-QXA" firstAttribute="top" secondItem="CZe-Y5-Mw1" secondAttribute="top" constant="50" id="vQp-0u-FQb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CZe-Y5-Mw1" firstAttribute="width" secondItem="od9-jX-Zdq" secondAttribute="width" id="644-kc-zbe"/>
+                                    <constraint firstItem="CZe-Y5-Mw1" firstAttribute="leading" secondItem="od9-jX-Zdq" secondAttribute="leading" id="Ddb-qL-YnH"/>
+                                    <constraint firstAttribute="trailing" secondItem="CZe-Y5-Mw1" secondAttribute="trailing" id="SYX-mH-PWk"/>
+                                    <constraint firstAttribute="bottom" secondItem="CZe-Y5-Mw1" secondAttribute="bottom" id="w7v-LK-sBP"/>
+                                    <constraint firstItem="CZe-Y5-Mw1" firstAttribute="top" secondItem="od9-jX-Zdq" secondAttribute="top" id="wiu-vG-5b3"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="DHx-Wd-Fiw"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="0Na-OU-I1J"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1cz-P7-xFP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1cz-P7-xFP" firstAttribute="top" secondItem="od9-jX-Zdq" secondAttribute="top" constant="44" id="4Ln-4w-gM1"/>
+                            <constraint firstItem="1cz-P7-xFP" firstAttribute="trailing" secondItem="od9-jX-Zdq" secondAttribute="trailing" id="60V-4I-qbh"/>
+                            <constraint firstItem="od9-jX-Zdq" firstAttribute="bottom" secondItem="1cz-P7-xFP" secondAttribute="bottom" constant="34" id="7GF-j2-JX9"/>
+                            <constraint firstItem="od9-jX-Zdq" firstAttribute="leading" secondItem="1cz-P7-xFP" secondAttribute="leading" id="IMs-eG-ln0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Suéter" id="As6-bO-mCS"/>
+                    <connections>
+                        <outlet property="addBrand" destination="J5s-7p-B0w" id="tOz-sz-CCU"/>
+                        <outlet property="addCloth" destination="qjo-8M-pmM" id="2qk-qr-rfw"/>
+                        <outlet property="appSlider" destination="xfs-zB-fOJ" id="L7q-fZ-E8X"/>
+                        <outlet property="autumnOption" destination="K6l-7Y-ZDX" id="JTg-Ui-AXf"/>
+                        <outlet property="beachOption" destination="VsX-UL-0RX" id="Eer-aT-to7"/>
+                        <outlet property="campingOption" destination="l2x-Gr-HjD" id="DBu-lS-tz6"/>
+                        <outlet property="casualOption" destination="BV7-wX-mmY" id="IMO-ZU-ZQZ"/>
+                        <outlet property="dateOption" destination="4lZ-H7-Lk1" id="lG1-N4-rdy"/>
+                        <outlet property="formalOption" destination="i1s-dj-SqH" id="frF-mZ-XRi"/>
+                        <outlet property="newOption" destination="gfv-gv-JpH" id="5ol-UW-cdB"/>
+                        <outlet property="nextButton" destination="TLE-cq-9Ua" id="1vG-7c-sFT"/>
+                        <outlet property="partyOption" destination="NN6-bt-QkY" id="0TV-bN-czq"/>
+                        <outlet property="rainOption" destination="Asr-Rb-emE" id="mCm-OX-A5P"/>
+                        <outlet property="sensitiveRainOption" destination="3Sn-BQ-a02" id="AAU-W5-DQC"/>
+                        <outlet property="showSliderValue" destination="j3o-qn-Pap" id="zR4-Xa-QfT"/>
+                        <outlet property="snowOption" destination="PAV-mG-R33" id="uyq-PH-3qx"/>
+                        <outlet property="sportsOption" destination="sVw-0k-VgD" id="UkG-sn-XdJ"/>
+                        <outlet property="springOption" destination="IU3-Mi-swH" id="kNk-ca-a3N"/>
+                        <outlet property="summerOption" destination="FhG-ZI-GBC" id="UpZ-eu-Xsl"/>
+                        <outlet property="vacationsOption" destination="5Ga-w5-k7f" id="gQw-hO-fRG"/>
+                        <outlet property="viewHeigth" destination="w7v-LK-sBP" id="SzC-nc-qvq"/>
+                        <outlet property="windOption" destination="Tj2-Rf-2eN" id="UfI-rW-J7u"/>
+                        <outlet property="winterOption" destination="Htt-Yj-zOL" id="OdP-ux-UfI"/>
+                        <outlet property="workOption" destination="69k-ZE-Bq5" id="EgU-mI-R65"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OYe-b5-5IF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4526.0869565217399" y="114.50892857142857"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aaa-dL-ktU">
+            <objects>
+                <viewController id="21n-6Q-Xyi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VUh-dw-YYk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="oss-GN-Be4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S37-cW-pEi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5390" y="115"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="autumn" width="34" height="34"/>
+        <image name="cloud.rain" catalog="system" width="128" height="125"/>
+        <image name="leaf" catalog="system" width="128" height="109"/>
+        <image name="neve" width="33" height="32"/>
+        <image name="snow" catalog="system" width="121" height="128"/>
+        <image name="sun.max" catalog="system" width="128" height="124"/>
+        <image name="umbrella" catalog="system" width="124" height="128"/>
+        <image name="wind" catalog="system" width="128" height="101"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

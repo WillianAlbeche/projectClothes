@@ -1,0 +1,23 @@
+//
+//  CustomCellFullClothesTableViewCell.swift
+//  ProjectClothes
+//
+//  Created by João Gabriel Biazus de Quevedo on 11/08/21.
+//
+
+import UIKit
+
+class CustomCellFullClothesTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var clothesLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+
+}
