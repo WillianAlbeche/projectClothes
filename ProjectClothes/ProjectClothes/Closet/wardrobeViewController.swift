@@ -237,6 +237,9 @@ class wardrobeViewController: UIViewController {
 
 
 extension wardrobeViewController :  UITableViewDelegate, UITableViewDataSource{
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return calculatedNumberOfCategories ?? 0
     }
@@ -253,6 +256,7 @@ extension wardrobeViewController :  UITableViewDelegate, UITableViewDataSource{
         
         cell.fatherView = self
         
+        cell.subClassesCollecionView.reloadData()
         return  cell
     }
     
@@ -269,10 +273,10 @@ extension wardrobeViewController : UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let _ = viewsSearchController?.searchBar.text, let unwrappedFilteredClothes = filteredClothes,  viewsSearchController?.searchBar.text != "", clotheOrLookPicker.selectedSegmentIndex == 0 {// if a query is being made on clothes
             
-            print("UUHEUHEUH")
+            
             return unwrappedFilteredClothes.count
         }else{
-            print("AAAAAAAAAAAAAAAAAAAAAAAAAAA")
+            
             if clotheOrLookPicker.selectedSegmentIndex == 1 {
                 return allLooks?.count ?? 0
             }

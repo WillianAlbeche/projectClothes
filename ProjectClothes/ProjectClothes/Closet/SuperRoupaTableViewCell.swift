@@ -57,6 +57,7 @@ extension SuperRoupaTableViewCell : UICollectionViewDelegate, UICollectionViewDa
         
         collectionCell.backgroundColor = .white
         collectionCell.pictureOfSubType.backgroundColor = .white
+        
         return collectionCell
         
     }
