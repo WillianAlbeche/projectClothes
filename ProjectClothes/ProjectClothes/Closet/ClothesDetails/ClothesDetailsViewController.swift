@@ -130,7 +130,7 @@ class ClothesDetailsViewController: UIViewController {
             image = UIImage(systemName: "wind")
             
         } else { //if seasonOrSpecial.lowercased() == "snow"
-            image = UIImage(named: "snowFla")
+            image = UIImage(named: "snow.")
             
         }
         

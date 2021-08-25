@@ -16,8 +16,7 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
     @IBOutlet weak var addItem: UIButton!
     
     var currentClothesInDisplay : [UIImageView] = []
-    let mock = MockData()
-    var mockClo: [Clothes] = []
+    var lookfilters = [String]()
     var roupa : Clothes = Clothes.createEmptyClothes()
     var isflag: Bool = false
     var imageOfLook : UIImage?
@@ -53,11 +52,17 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
             fatalError("problema nem fetch imagem nas roupas mock")
         }
         look.image = CKAsset.init(fileURL: image.toURL() ?? imageURL)
-
+        look.filters = lookfilters
         for clotheImage in currentClothesInDisplay{
             clotheImage.removeFromSuperview()
         }
-//        MockClothesData.looksMock.append(look)
+        
+        DatabaseManager.shared.createNewLook(look: look) { error in
+            if error != nil {
+                print("filters: \(look.filters)")
+                print("allfilters: \(self.lookfilters)")
+            }
+        }
         
     }
     func cropToBounds(image: UIImage, width: Double, height: Double) -> UIImage {
@@ -163,6 +168,11 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
     }
     
     func createClothes(selectClothes: Clothes){
+
+        
+        (selectClothes.filters ?? []).map({ if !lookfilters.contains( $0 ) {
+            lookfilters.append($0)
+        }})
         
         let image = selectClothes.image?.toUIImage()
         let imageView = UIImageView(image: image)

@@ -244,7 +244,7 @@ class DatabaseManager {
                 completion?(error == nil)
                 return
             }
-            
+            print("newclook")
             completion?(error == nil)
             if let error = error{
                 print(error.localizedDescription)

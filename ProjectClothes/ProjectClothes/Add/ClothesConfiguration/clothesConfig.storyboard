@@ -364,7 +364,7 @@
                                                                                 <inset key="contentEdgeInsets" minX="-41" minY="0.0" maxX="0.0" maxY="-41"/>
                                                                                 <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="-6" maxY="0.0"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="-60" maxX="-70" maxY="0.0"/>
-                                                                                <state key="normal" title="Neve" image="neve">
+                                                                                <state key="normal" title="Neve" image="snow.">
                                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="34" weight="thin"/>
                                                                                 </state>
                                                                                 <connections>
@@ -564,8 +564,8 @@
         <image name="autumn" width="34" height="34"/>
         <image name="cloud.rain" catalog="system" width="128" height="125"/>
         <image name="leaf" catalog="system" width="128" height="109"/>
-        <image name="neve" width="33" height="32"/>
         <image name="snow" catalog="system" width="121" height="128"/>
+        <image name="snow." width="33" height="32"/>
         <image name="sun.max" catalog="system" width="128" height="124"/>
         <image name="umbrella" catalog="system" width="124" height="128"/>
         <image name="wind" catalog="system" width="128" height="101"/>

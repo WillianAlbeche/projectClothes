@@ -122,8 +122,6 @@
 		FD430BE626B3236E00F31DD2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FDA72CA226C43DAD00F966F5 /* settingsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = settingsStoryboard.storyboard; sourceTree = "<group>"; };
 		FDA72CA326C43DAD00F966F5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		FDA72CA626C4406100F966F5 /* wardrobeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wardrobeViewController.swift; sourceTree = "<group>"; };
-		FDA72CD626C5A80C00F966F5 /* FrontCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontCollectionViewCell.swift; sourceTree = "<group>"; };
 		FDA72CEF26CB503B00F966F5 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		FDA72CF026CB503B00F966F5 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		FDA72CF126CB503B00F966F5 /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
@@ -226,7 +224,6 @@
 				CDF28F8D26B07C8C00241F13 /* ProjectClothes */,
 				CDF28F8C26B07C8C00241F13 /* Products */,
 				B278CE1726C9ADFB00A7FEA4 /* Frameworks */,
-				F834205D26D41DCD0033432E /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -298,15 +295,6 @@
 				F8103C6326CF54BD0082F5D5 /* TagClothesDetailsCollectionViewCell.swift */,
 			);
 			path = ClothesDetails;
-			sourceTree = "<group>";
-		};
-		F834205D26D41DCD0033432E /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				FDA72CD626C5A80C00F966F5 /* FrontCollectionViewCell.swift */,
-				FDA72CA626C4406100F966F5 /* wardrobeViewController.swift */,
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		FD23EEBE26B1D1C6009FF48C /* Today */ = {
