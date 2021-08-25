@@ -12,7 +12,7 @@
         <!--Closet-->
         <scene sceneID="nHn-U5-DJc">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f0l-Ze-ZeP" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="WardrobeNavigation" automaticallyAdjustsScrollViewInsets="NO" id="f0l-Ze-ZeP" customClass="WardrobeNavigationController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Closet" image="cabide" id="yaw-Tz-1ee"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
