@@ -22,6 +22,11 @@ class SelectedCategorieViewController: UIViewController {
         let layout = filteredClothesCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
         layout?.sectionInset =  UIEdgeInsets(top: 0.0 , left: UIScreen.screenWidth*0.072, bottom: 5, right: UIScreen.screenWidth*0.072)
         
+        
+        self.view.backgroundColor = UIColor(red: 247/255, green: 248/255 , blue: 251/255, alpha: 1)
+        
+        
+        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -56,6 +61,12 @@ extension SelectedCategorieViewController : UICollectionViewDelegate, UICollecti
         }
         cell.segmentedImage.image = unwrapedSegmentedClothes[indexPath.row].image?.toUIImage()
         cell.segmentedImage.backgroundColor = .white
+        cell.layer.cornerRadius = 21
+        
+        cell.backgroundColor = .white
+       
+        
+        
         
         return cell
     }

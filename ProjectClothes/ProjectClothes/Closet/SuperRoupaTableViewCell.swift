@@ -52,6 +52,7 @@ extension SuperRoupaTableViewCell : UICollectionViewDelegate, UICollectionViewDa
         collectionCell.pictureOfSubType.image = thisSuperClothesArray?[indexPath.item].image?.toUIImage() ?? nil
         
         collectionCell.layer.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0).cgColor
+        
         collectionCell.layer.cornerRadius = 21
         
         
