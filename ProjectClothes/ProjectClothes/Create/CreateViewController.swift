@@ -15,6 +15,7 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
     
     @IBOutlet weak var addItem: UIButton!
     
+    var currentClothesInDisplay : [UIImageView] = []
     let mock = MockData()
     var mockClo: [Clothes] = []
     var roupa : Clothes = Clothes.createEmptyClothes()
@@ -53,7 +54,9 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
         }
         look.image = CKAsset.init(fileURL: image.toURL() ?? imageURL)
 
-        
+        for clotheImage in currentClothesInDisplay{
+            clotheImage.removeFromSuperview()
+        }
 //        MockClothesData.looksMock.append(look)
         
     }
@@ -175,6 +178,9 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
         imageView.addGestureRecognizer(rotateGesture)
         
         imageView.isUserInteractionEnabled = true
+        currentClothesInDisplay.append(imageView)
+        
+        
     }
     
     @IBAction func unwind( _ seg: UIStoryboardSegue) {
