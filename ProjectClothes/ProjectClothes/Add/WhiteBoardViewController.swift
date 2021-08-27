@@ -37,6 +37,18 @@ class WhiteBoardViewController: UIViewController {
     @IBAction func eraseAction(_ sender: Any) {
         selectedWhiteBoardOption = .erase
     }
+    @IBAction func IAOnAndOff(_ sender: Any) {
+        if IAon {
+            self.editView.image = imageReceive
+            IAon.toggle()
+        } else {
+            
+            self.editView.image = newImage
+            IAon.toggle()
+        }
+        self.editView.setNeedsDisplay()
+        
+    }
     
     var selectedWhiteBoardOption: WhiteBoardOption = .scale {
         didSet {
@@ -93,14 +105,15 @@ class WhiteBoardViewController: UIViewController {
     
     var lastScale = CGFloat()
     var initialCenter = CGPoint()
-    
+    var IAon : Bool = false
+    var newImage : UIImage?
     override func viewDidLoad() {
         super.viewDidLoad()
         imagenew = imageReceive
-        guard let newImage = imagenew?.removeBackground(returnResult: .finalImage) else { return }
+        guard let newImageAux = imagenew?.removeBackground(returnResult: .finalImage) else { return }
+        newImage = newImageAux
         
-        
-        self.editView.image = newImage
+        self.editView.image = imageReceive
 
         scaleButton.layer.cornerRadius = 25
         scaleButton.layer.borderWidth = 0.5

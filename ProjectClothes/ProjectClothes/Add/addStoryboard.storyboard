@@ -76,10 +76,19 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7kF-cR-VVJ">
-                                <rect key="frame" x="30" y="718" width="354" height="74.5"/>
+                                <rect key="frame" x="30" y="718" width="354" height="96.5"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Er-tK-9ai">
+                                        <rect key="frame" x="158.5" y="0.0" width="37" height="22"/>
+                                        <state key="normal" title="IA" image="wand.and.rays" catalog="system">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="IAOnAndOff:" destination="UWU-pd-xIf" eventType="touchUpInside" id="ydr-FU-icc"/>
+                                        </connections>
+                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="sJw-vU-SWr">
-                                        <rect key="frame" x="54.5" y="0.0" width="245" height="74.5"/>
+                                        <rect key="frame" x="54.5" y="22" width="245" height="74.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="H9c-9r-znm">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="74.5"/>
@@ -842,6 +851,7 @@
         <image name="erase" width="23" height="26"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="wand.and.rays" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -851,6 +861,9 @@
         <namedColor name="ligthPurple">
             <color red="0.7929999828338623" green="0.82899999618530273" blue="0.96799999475479126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
