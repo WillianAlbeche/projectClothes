@@ -37,3 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 }
 
+//Permission for request alert, soud and badge
+
+

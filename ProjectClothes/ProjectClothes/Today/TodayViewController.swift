@@ -8,6 +8,7 @@
 import UIKit
 import CoreLocation
 
+
 class TodayViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet var tempLabel: UILabel!
@@ -33,22 +34,27 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
         onBoardingView.isHidden = DatabaseManager.shared.loadOnboardingDone()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+        atualizaTelaToday()
+
+        //Timer to refresh
+        let timeToRefresh: Timer?
+        
+        timeToRefresh = Timer.scheduledTimer(timeInterval: 3600, target: self, selector: #selector(atualizaTelaToday), userInfo: nil, repeats: true)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    @objc func atualizaTelaToday(){
         if DatabaseManager.shared.loadOnboardingDone() {
             loadingWeather.startAnimating()
             manager.delegate = self
             manager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
             
             DatabaseManager.shared.checkLocationAuth(locationManager: manager, vc: self)
-
+            
             manager.requestWhenInUseAuthorization()
+            
             manager.startUpdatingLocation()
         }
     }
-    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let first = locations.first else {
             return
@@ -63,12 +69,17 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
             
             print("temp : \(self.auxTemp)")
             print("icone : \(self.auxIconeLabel)")
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [self] in
                 self.tempLabel.text = "\(Int(self.auxTemp))° "
                 self.iconeLabel.text = self.auxIconeLabel
                 self.iconeImage.image = icone
                 self.preferenceLabel.text = ("Dê preferência: \(self.constants.recommendationPhrase(temperatures: Int(self.auxTemp)))")
                 self.tempIconView.image = auxIcone
+//                self.tempLabel.reloadInputViews()
+//                self.iconeLabel.reloadInputViews()
+//                self.iconeImage.reloadInputViews()
+//                self.preferenceLabel.reloadInputViews()
+//                self.tempIconView.reloadInputViews()
                 self.loadingWeather.stopAnimating()
             }
         }
@@ -93,7 +104,7 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
             let weatherList2 = weatherList[0]
             guard let weatherIconeLabel = weatherList2["main"] as? String,
                   let weatherIcone = weatherList2["icon"] as? String
-                  else { return }
+            else { return }
             
             self.getIconeImage(name: weatherIcone) { image in
                 completionHandler(celsius, weatherIconeLabel, image)
@@ -110,7 +121,7 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             
             guard let data = data
-                  
+            
             else { return }
             
             guard let passing = UIImage(data: data) else { return }
@@ -140,3 +151,4 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
         
     }
 }
+

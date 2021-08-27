@@ -22,10 +22,7 @@ class CustomModalViewController:  UIViewController, UINavigationControllerDelega
         whiteVC.imageReceive = image
         
         navigationController?.pushViewController(whiteVC, animated: true)
-       
     }
-    
-    
     
     
     lazy var titleLabel: UILabel = {
@@ -138,10 +135,6 @@ class CustomModalViewController:  UIViewController, UINavigationControllerDelega
         buttom.layer.shadowOpacity = 0.3
         buttom.layer.shadowOffset = .zero
         buttom.layer.shadowRadius = 30
-        
-        
-        
-        
         return buttom
         
     }()
