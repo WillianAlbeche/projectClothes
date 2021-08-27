@@ -7,7 +7,6 @@
 
 import UIKit
 import CoreLocation
-import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
