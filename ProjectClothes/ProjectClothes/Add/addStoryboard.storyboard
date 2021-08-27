@@ -12,7 +12,6 @@
         <!--View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -23,14 +22,14 @@
                     <navigationItem key="navigationItem" id="ijJ-lk-fyM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
         </scene>
         <!--Add-->
         <scene sceneID="p97-dz-KMq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N1j-Gs-ycV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7yY-ne-LBw" customClass="AddNavigationController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7yY-ne-LBw" customClass="AddNavigationController" customModule="Ozel" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Add" image="plus" catalog="system" id="96M-GS-BCU"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -43,18 +42,19 @@
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="KF4-7L-cjC"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N1j-Gs-ycV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
         </scene>
         <!--Recortar Imagem-->
         <scene sceneID="nmK-4s-ScX">
             <objects>
-                <viewController storyboardIdentifier="WhiteBoardViewController" id="UWU-pd-xIf" customClass="WhiteBoardViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WhiteBoardViewController" id="UWU-pd-xIf" customClass="WhiteBoardViewController" customModule="Ozel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BQz-aT-svu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8U0-DQ-1h3" customClass="DrawingView" customModule="ProjectClothes" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8U0-DQ-1h3" customClass="DrawingView" customModule="Ozel" customModuleProvider="target">
                                 <rect key="frame" x="20" y="88" width="374" height="600"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -237,7 +237,7 @@
         <!--Clothes Configuration View Controller-->
         <scene sceneID="Wdd-om-QOL">
             <objects>
-                <viewController id="w22-R3-u5x" customClass="ClothesConfigurationViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="w22-R3-u5x" customClass="ClothesConfigurationViewController" customModule="Ozel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yed-tq-vJa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -348,7 +348,7 @@
         <!--Modal View Controller-->
         <scene sceneID="bF3-kg-VJi">
             <objects>
-                <viewController id="tsd-xi-Oye" customClass="ModalViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tsd-xi-Oye" customClass="ModalViewController" customModule="Ozel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jQT-OM-J76">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -459,7 +459,7 @@
         <!--Top Clothes View Controller-->
         <scene sceneID="kDU-Yv-YKC">
             <objects>
-                <viewController id="7gc-V1-J3Y" customClass="TopClothesViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7gc-V1-J3Y" customClass="TopClothesViewController" customModule="Ozel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t2F-CI-yGC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -473,7 +473,7 @@
                                 <color key="separatorColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexBackgroundColor" red="0.79232507939999997" green="0.82592171430000005" blue="0.97256344559999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell1" rowHeight="72" id="Roc-Pf-dAp" customClass="CustomCellTopClothesTableViewCell" customModule="ProjectClothes" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell1" rowHeight="72" id="Roc-Pf-dAp" customClass="CustomCellTopClothesTableViewCell" customModule="Ozel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Roc-Pf-dAp" id="qyM-m5-wNv">
@@ -531,7 +531,7 @@
         <!--Bottom Clothes View Controller-->
         <scene sceneID="wO3-yc-auM">
             <objects>
-                <viewController id="3YF-vI-niR" customClass="BottomClothesViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3YF-vI-niR" customClass="BottomClothesViewController" customModule="Ozel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4UJ-73-2tO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -543,7 +543,7 @@
                                     <constraint firstAttribute="height" constant="426" id="eRA-7S-v6f"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell1" rowHeight="86" id="9cR-h1-6gi" customClass="CustomCellBottomClothesTableViewCell" customModule="ProjectClothes" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell1" rowHeight="86" id="9cR-h1-6gi" customClass="CustomCellBottomClothesTableViewCell" customModule="Ozel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="86"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9cR-h1-6gi" id="bKK-y4-Gar">
@@ -600,7 +600,7 @@
         <!--Accessories View Controller-->
         <scene sceneID="9z7-ZA-E2j">
             <objects>
-                <viewController id="VjH-ni-b7p" customClass="AccessoriesViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VjH-ni-b7p" customClass="AccessoriesViewController" customModule="Ozel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bvz-f2-nCp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -612,7 +612,7 @@
                                     <constraint firstAttribute="height" constant="426" id="lyh-tg-6PB"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell1" rowHeight="105" id="MIQ-rN-9ef" customClass="CustomCellAccessoriesClothesTableViewCell" customModule="ProjectClothes" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell1" rowHeight="105" id="MIQ-rN-9ef" customClass="CustomCellAccessoriesClothesTableViewCell" customModule="Ozel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MIQ-rN-9ef" id="hAx-Jc-kmP">
@@ -669,7 +669,7 @@
         <!--Shoes View Controller-->
         <scene sceneID="JQe-21-hSO">
             <objects>
-                <viewController id="PFl-ee-ubY" customClass="ShoesViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PFl-ee-ubY" customClass="ShoesViewController" customModule="Ozel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="31j-mq-PqA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -681,7 +681,7 @@
                                     <constraint firstAttribute="height" constant="426" id="xYD-yM-z6x"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell1" rowHeight="134" id="umU-MN-BhL" customClass="CustomCellShoesClothesTableViewCell" customModule="ProjectClothes" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell1" rowHeight="134" id="umU-MN-BhL" customClass="CustomCellShoesClothesTableViewCell" customModule="Ozel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="134"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="umU-MN-BhL" id="Hc2-tH-rNH">
@@ -737,7 +737,7 @@
         <!--Full Size Clothes View Controller-->
         <scene sceneID="wSM-FE-aqQ">
             <objects>
-                <viewController id="GeA-2B-aK3" customClass="FullSizeClothesViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GeA-2B-aK3" customClass="FullSizeClothesViewController" customModule="Ozel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bgg-sZ-yCy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -749,7 +749,7 @@
                                     <constraint firstAttribute="height" constant="426" id="tmZ-Df-oL6"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell1" rowHeight="88" id="MUF-8J-YU6" customClass="CustomCellFullClothesTableViewCell" customModule="ProjectClothes" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell1" rowHeight="88" id="MUF-8J-YU6" customClass="CustomCellFullClothesTableViewCell" customModule="Ozel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MUF-8J-YU6" id="Hrn-58-ia8">
@@ -825,7 +825,7 @@
         <!--My Custom Navigation Controller-->
         <scene sceneID="5zF-r2-sF2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E17-eI-zX3" customClass="MyCustomNavigationController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E17-eI-zX3" customClass="MyCustomNavigationController" customModule="Ozel" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2iK-l1-Waf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>

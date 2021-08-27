@@ -30,8 +30,10 @@
 		CD852D0126C44E3800926B13 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD852CFE26C44E3800926B13 /* Extensions.swift */; };
 		CDA4C6FC26CC2B710061C082 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4C6FB26CC2B710061C082 /* ContactViewController.swift */; };
 		CDA4C70326CDB0110061C082 /* CustomCellBottomClothesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72D1C26CB503B00F966F5 /* CustomCellBottomClothesTableViewCell.swift */; };
-		CDA8CFC826D968D00064DE9E /* SuggestionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA8CFC726D968D00064DE9E /* SuggestionStoryboard.storyboard */; };
-		CDA8CFCA26D96B910064DE9E /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA8CFC926D96B910064DE9E /* SuggestionViewController.swift */; };
+		CDA8CFC826D968D00064DE9E /* (null) in Resources */ = {isa = PBXBuildFile; };
+		CDA8CFCA26D96B910064DE9E /* (null) in Sources */ = {isa = PBXBuildFile; };
+		CDA8CFCC26D982C30064DE9E /* suggestionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA8CFCB26D982C30064DE9E /* suggestionStoryboard.storyboard */; };
+		CDA8CFD026D983F30064DE9E /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA8CFCF26D983F30064DE9E /* SuggestionViewController.swift */; };
 		CDF28F8F26B07C8C00241F13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF28F8E26B07C8C00241F13 /* AppDelegate.swift */; };
 		CDF28F9126B07C8C00241F13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF28F9026B07C8C00241F13 /* SceneDelegate.swift */; };
 		CDF28F9326B07C8C00241F13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF28F9226B07C8C00241F13 /* ViewController.swift */; };
@@ -97,6 +99,8 @@
 		CD852CFC26C44E3800926B13 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		CD852CFE26C44E3800926B13 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CDA4C6FB26CC2B710061C082 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		CDA8CFCB26D982C30064DE9E /* suggestionStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = suggestionStoryboard.storyboard; sourceTree = "<group>"; };
+		CDA8CFCF26D983F30064DE9E /* SuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
 		CDF28F8B26B07C8C00241F13 /* Ozel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ozel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF28F8E26B07C8C00241F13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDF28F9026B07C8C00241F13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -324,14 +328,14 @@
 				FDA72CEE26CB503B00F966F5 /* CoreMLHelpers */,
 				FDA72D0026CB503B00F966F5 /* addStoryboard.storyboard */,
 				FDA72D0126CB503B00F966F5 /* AddNavigationController.swift */,
-				CDA8CFC726D968D00064DE9E /* SuggestionStoryboard.storyboard */,
 				FDA72D0326CB503B00F966F5 /* CustomModalViewController.swift */,
 				FDA72D0626CB503B00F966F5 /* ClothesConfigurationViewController.swift */,
-				CDA8CFC926D96B910064DE9E /* SuggestionViewController.swift */,
 				FDA72D0726CB503B00F966F5 /* ModalCategories */,
 				FDA72D1526CB503B00F966F5 /* Ml */,
 				FDA72D1726CB503B00F966F5 /* WhiteBoardViewController.swift */,
 				FDA72D1A26CB503B00F966F5 /* ClothesConfiguration */,
+				CDA8CFCB26D982C30064DE9E /* suggestionStoryboard.storyboard */,
+				CDA8CFCF26D983F30064DE9E /* SuggestionViewController.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -494,12 +498,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B28E0D5C26CEC183008476D4 /* Gender.storyboard in Resources */,
-				CDA8CFC826D968D00064DE9E /* SuggestionStoryboard.storyboard in Resources */,
+				CDA8CFC826D968D00064DE9E /* (null) in Resources */,
 				FDA72D2E26CB503C00F966F5 /* addStoryboard.storyboard in Resources */,
 				FDA72D4126CB503C00F966F5 /* clothesConfig.storyboard in Resources */,
 				FD08F82F26B86B0B003E0C9C /* todayStoryboard.storyboard in Resources */,
 				F8103C5926CF546E0082F5D5 /* createStoryboard.storyboard in Resources */,
 				CDF28F9B26B07C9000241F13 /* LaunchScreen.storyboard in Resources */,
+				CDA8CFCC26D982C30064DE9E /* suggestionStoryboard.storyboard in Resources */,
 				CDF28F9826B07C9000241F13 /* Assets.xcassets in Resources */,
 				CDF28F9626B07C8C00241F13 /* Main.storyboard in Resources */,
 				F8103C6C26CF54BD0082F5D5 /* closetStoryboard.storyboard in Resources */,
@@ -549,6 +554,7 @@
 				FDA72D1D26CB503C00F966F5 /* Array+Extensions.swift in Sources */,
 				B28E0D5E26CEC197008476D4 /* GenderViewController.swift in Sources */,
 				FDA72D2226CB503C00F966F5 /* CGImagePropertyOrientation.swift in Sources */,
+				CDA8CFD026D983F30064DE9E /* SuggestionViewController.swift in Sources */,
 				FDA72D1E26CB503C00F966F5 /* Math.swift in Sources */,
 				FDA72D2A26CB503C00F966F5 /* CGImage+RawBytes.swift in Sources */,
 				FDA72D4026CB503C00F966F5 /* CustomCellAccessoriesClothesTableViewCell.swift in Sources */,
@@ -558,7 +564,7 @@
 				F8103C5826CF546E0082F5D5 /* CreateViewController.swift in Sources */,
 				F8103C4B26CDAF000082F5D5 /* CustomCellBottomClothesTableViewCell.swift in Sources */,
 				F834206326D41F5C0033432E /* wardrobeViewController.swift in Sources */,
-				CDA8CFCA26D96B910064DE9E /* SuggestionViewController.swift in Sources */,
+				CDA8CFCA26D96B910064DE9E /* (null) in Sources */,
 				F8103C6926CF54BD0082F5D5 /* WardrobeNavigationController.swift in Sources */,
 				FDA72D3B26CB503C00F966F5 /* TopClothesViewController.swift in Sources */,
 				FDA72D3926CB503C00F966F5 /* ModalViewController.swift in Sources */,

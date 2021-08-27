@@ -24,6 +24,14 @@ class CustomModalViewController:  UIViewController, UINavigationControllerDelega
         navigationController?.pushViewController(whiteVC, animated: true)
     }
     
+    @objc
+        func suggestionAction(){
+            print("hellou")
+            let storyboard = UIStoryboard(name: "suggestionStoryboard", bundle: nil)
+            guard let suggestionVC = storyboard.instantiateViewController(identifier: "suggestion") as? SuggestionViewController else { return }
+            
+            navigationController?.pushViewController(suggestionVC, animated: true)
+        }
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -135,6 +143,7 @@ class CustomModalViewController:  UIViewController, UINavigationControllerDelega
         buttom.layer.shadowOpacity = 0.3
         buttom.layer.shadowOffset = .zero
         buttom.layer.shadowRadius = 30
+        buttom.addTarget(self, action: #selector(suggestionAction), for: .touchUpInside)
         return buttom
         
     }()
