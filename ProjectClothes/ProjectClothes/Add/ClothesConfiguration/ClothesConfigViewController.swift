@@ -19,8 +19,8 @@ class ClothesConfigViewController: UIViewController {
     var type: String?
     var clothCategory: String?
     var color: String?
-    var image: CKAsset?
-    var roupa : Clothes?
+    var image: Data?
+    var roupa : Clothes? 
     
     var flags = [false, false, false, false, false, false, false, false, false]
     var filterList = ["casual", "formal","camping", "work", "beach", "vacations", "sports", "party", "date"]
@@ -245,12 +245,15 @@ class ClothesConfigViewController: UIViewController {
         roupa?.specials = emptyArray3
         print(roupa?.specials)
         
-        guard let roupa = roupa else {return}
-        DatabaseManager.shared.createNewClothes(clothes:roupa) { error in
-            if error == nil{
-                print("hihihi")
-            }
-        }
+        guard let _ = roupa else {return}
+        //----
+//        DatabaseManager.shared.createNewClothes(clothes:roupa) { error in
+//            if error == nil{
+//                print("hihihi")
+//            }
+//        }
+        //----
+//        DatabaseManager.shared.saveData()
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -291,7 +294,7 @@ class ClothesConfigViewController: UIViewController {
     {
         super.viewDidLoad()
         
-        roupa = Clothes.createEmptyClothes()
+//        roupa = Clothes(context: DatabaseManager.shared.context)
         
         viewHeigth.constant = UIScreen.main.bounds.height*0.2
         

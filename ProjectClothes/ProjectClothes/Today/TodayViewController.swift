@@ -28,25 +28,32 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
     var isAuthorized: Bool = false
     var isSelectedGender: Bool = false
     
+//    print("here")
+//    print(Clothes.all().count)
     override func viewDidLoad() {
         super.viewDidLoad()
-        onBoardingView.isHidden = DatabaseManager.shared.loadOnboardingDone()
+//        print("here")
+//        print(Clothes.all().count)
+//        onBoardingView.isHidden = DatabaseManager.shared.loadOnboardingDone()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+//        print("here22")
+//        print(Clothes.all().count)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if DatabaseManager.shared.loadOnboardingDone() {
-            loadingWeather.startAnimating()
-            manager.delegate = self
-            manager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
-            
-            DatabaseManager.shared.checkLocationAuth(locationManager: manager, vc: self)
-
-            manager.requestWhenInUseAuthorization()
-            manager.startUpdatingLocation()
-        }
+        
+//        if DatabaseManager.shared.loadOnboardingDone() {
+//            loadingWeather.startAnimating()
+//            manager.delegate = self
+//            manager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
+//            
+//            DatabaseManager.shared.checkLocationAuth(locationManager: manager, vc: self)
+//
+//            manager.requestWhenInUseAuthorization()
+//            manager.startUpdatingLocation()
+//        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -121,18 +128,18 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func generoButton(_ sender: UIButton) {
-        switch sender.tag {
-        case 0: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Feminino")
-            print(sender.tag)
-        case 1: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Masculino")
-            print(sender.tag)
-        case 2: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Não binário")
-            print(sender.tag)
-        default: isSelectedGender = false
-        }
-        
-        DatabaseManager.shared.onboardingDone(genderSave: isSelectedGender)
-        
+//        switch sender.tag {
+//        case 0: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Feminino")
+//            print(sender.tag)
+//        case 1: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Masculino")
+//            print(sender.tag)
+//        case 2: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Não binário")
+//            print(sender.tag)
+//        default: isSelectedGender = false
+//        }
+//
+//        DatabaseManager.shared.onboardingDone(genderSave: isSelectedGender)
+//
         onBoardingView.isHidden = isSelectedGender
         
         

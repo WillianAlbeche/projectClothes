@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v60-uc-leN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NwM-cf-m5n">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,6 +13,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="v60-uc-leN" customClass="TabBarController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="uR3-bN-npz"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="gmk-MV-Qar">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -80,5 +83,82 @@
             </objects>
             <point key="canvasLocation" x="768" y="133"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="DmQ-cY-eU7">
+            <objects>
+                <viewController id="jh1-x4-JbU" customClass="ViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fid-Pj-Rvl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7t-LX-tCu">
+                                <rect key="frame" x="140" y="443" width="135" height="56"/>
+                                <color key="backgroundColor" red="0.39614009859999999" green="0.7689325213" blue="0.39993044729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="9MQ-7P-mbl"/>
+                                    <constraint firstAttribute="width" constant="135" id="bNV-xy-9yO"/>
+                                </constraints>
+                                <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="save:" destination="jh1-x4-JbU" eventType="touchUpInside" id="eym-31-xxp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLp-q7-BVc">
+                                <rect key="frame" x="140" y="532" width="131" height="21"/>
+                                <color key="backgroundColor" red="0.39614009859999999" green="0.7689325213" blue="0.39993044729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="ICq-Ec-BEi"/>
+                                    <constraint firstAttribute="height" constant="65" id="nXu-v2-1aO"/>
+                                </constraints>
+                                <state key="normal" title="print"/>
+                                <connections>
+                                    <action selector="printing:" destination="jh1-x4-JbU" eventType="touchUpInside" id="baa-DD-F92"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Ed-oB-ecF"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="U7t-LX-tCu" firstAttribute="top" secondItem="2Ed-oB-ecF" secondAttribute="top" constant="355" id="DCB-Gd-WT5"/>
+                            <constraint firstItem="2Ed-oB-ecF" firstAttribute="trailing" secondItem="U7t-LX-tCu" secondAttribute="trailing" constant="139" id="FVj-h1-cfm"/>
+                            <constraint firstItem="2Ed-oB-ecF" firstAttribute="trailing" secondItem="MLp-q7-BVc" secondAttribute="trailing" constant="143" id="GRU-zk-D61"/>
+                            <constraint firstItem="2Ed-oB-ecF" firstAttribute="bottom" secondItem="MLp-q7-BVc" secondAttribute="bottom" constant="309" id="RzX-ly-ByI"/>
+                            <constraint firstItem="U7t-LX-tCu" firstAttribute="leading" secondItem="2Ed-oB-ecF" secondAttribute="leading" constant="140" id="fLu-0V-jrP"/>
+                            <constraint firstItem="MLp-q7-BVc" firstAttribute="leading" secondItem="2Ed-oB-ecF" secondAttribute="leading" constant="140" id="gmj-KO-Tbn"/>
+                            <constraint firstItem="MLp-q7-BVc" firstAttribute="top" secondItem="U7t-LX-tCu" secondAttribute="bottom" constant="33" id="zIe-h3-AY3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZdW-Eh-jnc"/>
+                    <connections>
+                        <segue destination="v60-uc-leN" kind="show" identifier="test" id="PWN-zS-blM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G1e-lt-Knr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1074" y="-48"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xuo-jO-BbZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NwM-cf-m5n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pCQ-9k-ZLJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jh1-x4-JbU" kind="relationship" relationship="rootViewController" id="E9K-zj-YWX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iCJ-Ui-Kc8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1896" y="-48"/>
+        </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

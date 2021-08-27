@@ -17,7 +17,7 @@ class wardrobeViewController: UIViewController {
     @IBOutlet weak var clotheOrLookPicker: UISegmentedControl!
     @IBOutlet weak var categoriesTableView: UITableView!
    
-    var classeMock = MockClothesData()
+
     var viewsSearchController : UISearchController?
     var allClothes: [Clothes]? = [] // array the clothes recebido ou do servidor, ou do core data, ou do mock de dados
     var allClothesNew: [Clothes]? = []
@@ -87,47 +87,68 @@ class wardrobeViewController: UIViewController {
         override func viewDidAppear(_ animated: Bool) {
             super.viewDidAppear(animated)
     //        loadingPage.startAnimating()
-            DatabaseManager.shared.checkiCloudAccount() { error, logged in
-                if error == true {
-                    if logged {
-                        print("yes log")
-                        DatabaseManager.shared.fetchAllClothes { result in
-                            switch result {
-                            case .failure(_):
-                                print("wrong clothes")
-                            case .success(let clothes):
-                                self.allClothesNew = clothes
-                                DispatchQueue.main.async {
-                                    
-                                    if self.allClothesNew != self.allClothes {
-                                        print("DIFERENTE")
-                                        self.allClothes = self.allClothesNew
-                                    
-                                    self.clotheTipesDict = [:]
-                                    self.clotheSuperTypesAndSubTypesDict = [:]
-                                    self.presentClothesSuperTypes = []
-                                    self.filteredClothes = []
-                                    
-                                    
-    
-                                    self.calculatedNumberOfCategories = self.getNumberSuperClothesCategories()
-    
-                                    self.categoriesTableView.reloadData()
-//                                        print(self.allClothes)
-//                                        print(self.allClothesNew)
-                                    }
-                                }
-                            }
-                            
-                        }
-                    } else {
-                        print("nolog")
-                        DispatchQueue.main.async {
-                            DatabaseManager.shared.loggingiCloud(vc: self)
-                        }
-                    }
-                }
-            }
+////            DatabaseManager.shared.checkiCloudAccount() { error, logged in
+//                if error == true {
+//                    if logged {
+//                        print("yes log")
+//                        self.allClothesNew = DatabaseManager.shared.fetchAllClothes()
+//                        DispatchQueue.main.async {
+//                            
+//                            if self.allClothesNew != self.allClothes {
+//                                print("DIFERENTE")
+//                                self.allClothes = self.allClothesNew
+//                            
+//                            self.clotheTipesDict = [:]
+//                            self.clotheSuperTypesAndSubTypesDict = [:]
+//                            self.presentClothesSuperTypes = []
+//                            self.filteredClothes = []
+//                            
+//                            
+//
+//                            self.calculatedNumberOfCategories = self.getNumberSuperClothesCategories()
+//
+//                            self.categoriesTableView.reloadData()
+////                                        print(self.allClothes)
+////                                        print(self.allClothesNew)
+//                            }
+//                        }
+//                        DatabaseManager.shared.fetchAllClothes { result in
+//                            switch result {
+//                            case .failure(_):
+//                                print("wrong clothes")
+//                            case .success(let clothes):
+//                                self.allClothesNew = clothes
+//                                DispatchQueue.main.async {
+//
+//                                    if self.allClothesNew != self.allClothes {
+//                                        print("DIFERENTE")
+//                                        self.allClothes = self.allClothesNew
+//
+//                                    self.clotheTipesDict = [:]
+//                                    self.clotheSuperTypesAndSubTypesDict = [:]
+//                                    self.presentClothesSuperTypes = []
+//                                    self.filteredClothes = []
+//
+//
+//
+//                                    self.calculatedNumberOfCategories = self.getNumberSuperClothesCategories()
+//
+//                                    self.categoriesTableView.reloadData()
+////                                        print(self.allClothes)
+////                                        print(self.allClothesNew)
+//                                    }
+//                                }
+//                            }
+//
+////                        }
+//                    } else {
+//                        print("nolog")
+//                        DispatchQueue.main.async {
+//                            DatabaseManager.shared.loggingiCloud(vc: self)
+//                        }
+//                    }
+//                }
+//            }
             
         }
     

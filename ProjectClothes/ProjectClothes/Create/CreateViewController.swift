@@ -17,7 +17,7 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
     
     var currentClothesInDisplay : [UIImageView] = []
     var lookfilters = [String]()
-    var roupa : Clothes = Clothes.createEmptyClothes()
+    var roupa : Clothes = Clothes(context: DatabaseManager.shared.context)
     var isflag: Bool = false
     var imageOfLook : UIImage?
     @IBAction func toWardrobe(_ sender: Any) {
@@ -44,25 +44,28 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
         deleteButton.isHidden = false
         self.view.backgroundColor = UIColor(red: 247/255, green: 248/255 , blue: 251/255, alpha: 1)
         
-        var look : Look = Look.createEmptyClothes()
+        var look : Look = Look(context: DatabaseManager.shared.context)
         
         let image = cropToBounds(image: imageOfLook! , width: Double(UIScreen.screenWidth), height: Double(UIScreen.screenHeight))
         
         guard let imageURL = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("Image2.png") else {
             fatalError("problema nem fetch imagem nas roupas mock")
         }
-        look.image = CKAsset.init(fileURL: image.toURL() ?? imageURL)
+//        look.image = CKAsset.init(fileURL: image.toURL() ?? imageURL)
+        //----
+        look.image = image.pngData()
         look.filters = lookfilters
         for clotheImage in currentClothesInDisplay{
             clotheImage.removeFromSuperview()
         }
         
-        DatabaseManager.shared.createNewLook(look: look) { error in
-            if error != nil {
-                print("filters: \(look.filters)")
-                print("allfilters: \(self.lookfilters)")
-            }
-        }
+//        DatabaseManager.shared.createNewLook(look: look) { error in
+//            if error != nil {
+//                print("filters: \(look.filters)")
+//                print("allfilters: \(self.lookfilters)")
+//            }
+//        }
+        DatabaseManager.shared.saveData()
         
     }
     func cropToBounds(image: UIImage, width: Double, height: Double) -> UIImage {

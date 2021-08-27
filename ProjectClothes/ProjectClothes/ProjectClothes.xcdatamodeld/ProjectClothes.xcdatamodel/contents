@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G80" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Clothes" representedClassName="Clothes" syncable="YES">
+        <attribute name="brand" optional="YES" attributeType="String"/>
+        <attribute name="color" optional="YES" attributeType="String"/>
+        <attribute name="fabric" optional="YES" attributeType="String"/>
+        <attribute name="filters" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="gender" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="seasons" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="specials" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="subType" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="warm" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Look" representedClassName="Look" syncable="YES">
+        <attribute name="filters" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+    </entity>
+    <elements>
+        <element name="Clothes" positionX="-27" positionY="18" width="128" height="194"/>
+        <element name="Look" positionX="18" positionY="144" width="128" height="59"/>
+    </elements>
+</model>

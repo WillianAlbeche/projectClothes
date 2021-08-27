@@ -19,13 +19,17 @@
 		B215AD0D26CC551D0033CDAA /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CF126CB503B00F966F5 /* UIImage+CVPixelBuffer.swift */; };
 		B215AD0E26CC55330033CDAA /* CGImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CFA26CB503B00F966F5 /* CGImage+CVPixelBuffer.swift */; };
 		B215AD0F26CC55570033CDAA /* MLMultiArray+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA72CFD26CB503B00F966F5 /* MLMultiArray+Image.swift */; };
-		B237047426C58202000097FA /* Look.swift in Sources */ = {isa = PBXBuildFile; fileRef = B237047326C58202000097FA /* Look.swift */; };
 		B278CE1426C97ED200A7FEA4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278CE1326C97ED200A7FEA4 /* Constants.swift */; };
 		B278CE1626C9A9C600A7FEA4 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278CE1526C9A9C600A7FEA4 /* MockData.swift */; };
 		B278CE1926C9ADFB00A7FEA4 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B278CE1826C9ADFB00A7FEA4 /* CloudKit.framework */; };
 		B28E0D5C26CEC183008476D4 /* Gender.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28E0D5B26CEC183008476D4 /* Gender.storyboard */; };
 		B28E0D5E26CEC197008476D4 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E0D5D26CEC197008476D4 /* GenderViewController.swift */; };
-		CD852CFF26C44E3800926B13 /* Clothes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD852CF926C44E3800926B13 /* Clothes.swift */; };
+		B2FECC6426D7FD78008CA9C8 /* ProjectClothes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2FECC6226D7FD78008CA9C8 /* ProjectClothes.xcdatamodeld */; };
+		B2FECC7B26D8164A008CA9C8 /* Clothes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FECC7726D8164A008CA9C8 /* Clothes+CoreDataClass.swift */; };
+		B2FECC7C26D8164A008CA9C8 /* Clothes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FECC7826D8164A008CA9C8 /* Clothes+CoreDataProperties.swift */; };
+		B2FECC7F26D8188C008CA9C8 /* Look+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FECC7D26D8188C008CA9C8 /* Look+CoreDataClass.swift */; };
+		B2FECC8026D8188C008CA9C8 /* Look+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FECC7E26D8188C008CA9C8 /* Look+CoreDataProperties.swift */; };
+		B2FECC8226D8300A008CA9C8 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FECC8126D8300A008CA9C8 /* Protocols.swift */; };
 		CD852D0026C44E3800926B13 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD852CFC26C44E3800926B13 /* DatabaseManager.swift */; };
 		CD852D0126C44E3800926B13 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD852CFE26C44E3800926B13 /* Extensions.swift */; };
 		CDA4C6FC26CC2B710061C082 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4C6FB26CC2B710061C082 /* ContactViewController.swift */; };
@@ -84,13 +88,17 @@
 /* Begin PBXFileReference section */
 		B215ACFF26CC25CE0033CDAA /* MockClothesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockClothesData.swift; sourceTree = "<group>"; };
 		B215AD0426CC52F20033CDAA /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		B237047326C58202000097FA /* Look.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Look.swift; sourceTree = "<group>"; };
 		B278CE1326C97ED200A7FEA4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B278CE1526C9A9C600A7FEA4 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		B278CE1826C9ADFB00A7FEA4 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B28E0D5B26CEC183008476D4 /* Gender.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Gender.storyboard; sourceTree = "<group>"; };
 		B28E0D5D26CEC197008476D4 /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
-		CD852CF926C44E3800926B13 /* Clothes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clothes.swift; sourceTree = "<group>"; };
+		B2FECC6326D7FD78008CA9C8 /* ProjectClothes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjectClothes.xcdatamodel; sourceTree = "<group>"; };
+		B2FECC7726D8164A008CA9C8 /* Clothes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Clothes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2FECC7826D8164A008CA9C8 /* Clothes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Clothes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2FECC7D26D8188C008CA9C8 /* Look+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Look+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2FECC7E26D8188C008CA9C8 /* Look+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Look+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2FECC8126D8300A008CA9C8 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		CD852CFA26C44E3800926B13 /* ProjectClothes.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = ProjectClothes.entitlements; sourceTree = "<group>"; };
 		CD852CFC26C44E3800926B13 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		CD852CFE26C44E3800926B13 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -193,8 +201,10 @@
 		CD852CF826C44E3800926B13 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CD852CF926C44E3800926B13 /* Clothes.swift */,
-				B237047326C58202000097FA /* Look.swift */,
+				B2FECC7D26D8188C008CA9C8 /* Look+CoreDataClass.swift */,
+				B2FECC7E26D8188C008CA9C8 /* Look+CoreDataProperties.swift */,
+				B2FECC7726D8164A008CA9C8 /* Clothes+CoreDataClass.swift */,
+				B2FECC7826D8164A008CA9C8 /* Clothes+CoreDataProperties.swift */,
 				B278CE1526C9A9C600A7FEA4 /* MockData.swift */,
 				B215ACFF26CC25CE0033CDAA /* MockClothesData.swift */,
 			);
@@ -214,6 +224,7 @@
 			children = (
 				CD852CFE26C44E3800926B13 /* Extensions.swift */,
 				B278CE1326C97ED200A7FEA4 /* Constants.swift */,
+				B2FECC8126D8300A008CA9C8 /* Protocols.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -256,6 +267,7 @@
 				CDF28F9926B07C9000241F13 /* LaunchScreen.storyboard */,
 				CDF28F9C26B07C9000241F13 /* Info.plist */,
 				FD430BE626B3236E00F31DD2 /* TabBarController.swift */,
+				B2FECC6226D7FD78008CA9C8 /* ProjectClothes.xcdatamodeld */,
 			);
 			path = ProjectClothes;
 			sourceTree = "<group>";
@@ -509,6 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2FECC7F26D8188C008CA9C8 /* Look+CoreDataClass.swift in Sources */,
 				F834206126D41F1E0033432E /* FrontCollectionViewCell.swift in Sources */,
 				B215AD0F26CC55570033CDAA /* MLMultiArray+Image.swift in Sources */,
 				F8103C7026CF54BD0082F5D5 /* TagClothesDetailsCollectionViewCell.swift in Sources */,
@@ -525,9 +538,11 @@
 				FDA72D3626CB503C00F966F5 /* CustomCellFullClothesTableViewCell.swift in Sources */,
 				FDA72D2526CB503C00F966F5 /* MLModel+Images.swift in Sources */,
 				B215AD0526CC52F20033CDAA /* TodayViewController.swift in Sources */,
+				B2FECC7C26D8164A008CA9C8 /* Clothes+CoreDataProperties.swift in Sources */,
 				FDA72D2026CB503C00F966F5 /* Predictions.swift in Sources */,
 				CDA4C70326CDB0110061C082 /* CustomCellBottomClothesTableViewCell.swift in Sources */,
 				FDA72D2D26CB503C00F966F5 /* CVPixelBuffer+Rotate.swift in Sources */,
+				B2FECC7B26D8164A008CA9C8 /* Clothes+CoreDataClass.swift in Sources */,
 				F8103C7226CF54BD0082F5D5 /* SuperRoupaTableViewCell.swift in Sources */,
 				CDF28F9326B07C8C00241F13 /* ViewController.swift in Sources */,
 				CD852D0026C44E3800926B13 /* DatabaseManager.swift in Sources */,
@@ -535,18 +550,19 @@
 				B278CE1426C97ED200A7FEA4 /* Constants.swift in Sources */,
 				B278CE1626C9A9C600A7FEA4 /* MockData.swift in Sources */,
 				B215AD0026CC25CE0033CDAA /* MockClothesData.swift in Sources */,
-				B237047426C58202000097FA /* Look.swift in Sources */,
-				CD852CFF26C44E3800926B13 /* Clothes.swift in Sources */,
 				F8103C6D26CF54BD0082F5D5 /* ClothesDetailsViewController.swift in Sources */,
 				F8103C4A26CDAEA20082F5D5 /* AccessoriesViewController.swift in Sources */,
 				F8103C4926CDAE900082F5D5 /* BottomClothesViewController.swift in Sources */,
 				F8103C6F26CF54BD0082F5D5 /* AlignedCollectionViewFlowLayout.swift in Sources */,
 				FDA72D1D26CB503C00F966F5 /* Array+Extensions.swift in Sources */,
 				B28E0D5E26CEC197008476D4 /* GenderViewController.swift in Sources */,
+				B2FECC8226D8300A008CA9C8 /* Protocols.swift in Sources */,
 				FDA72D2226CB503C00F966F5 /* CGImagePropertyOrientation.swift in Sources */,
 				FDA72D1E26CB503C00F966F5 /* Math.swift in Sources */,
 				FDA72D2A26CB503C00F966F5 /* CGImage+RawBytes.swift in Sources */,
 				FDA72D4026CB503C00F966F5 /* CustomCellAccessoriesClothesTableViewCell.swift in Sources */,
+				B2FECC6426D7FD78008CA9C8 /* ProjectClothes.xcdatamodeld in Sources */,
+				B2FECC8026D8188C008CA9C8 /* Look+CoreDataProperties.swift in Sources */,
 				FD430BE726B3236F00F31DD2 /* TabBarController.swift in Sources */,
 				FDA72D2326CB503C00F966F5 /* UIImage+RawBytes.swift in Sources */,
 				FDA72D2726CB503C00F966F5 /* CVPixelBuffer+Create.swift in Sources */,
@@ -718,13 +734,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ProjectClothes/ProjectClothes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KY3S643HND;
+				DEVELOPMENT_TEAM = 26UK52Y76J;
 				INFOPLIST_FILE = ProjectClothes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.DeveloperAcademy.ProjectClothes;
+				PRODUCT_BUNDLE_IDENTIFIER = ClothesCloud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -738,13 +754,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ProjectClothes/ProjectClothes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KY3S643HND;
+				DEVELOPMENT_TEAM = 26UK52Y76J;
 				INFOPLIST_FILE = ProjectClothes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.DeveloperAcademy.ProjectClothes;
+				PRODUCT_BUNDLE_IDENTIFIER = ClothesCloud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -773,6 +789,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B2FECC6226D7FD78008CA9C8 /* ProjectClothes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B2FECC6326D7FD78008CA9C8 /* ProjectClothes.xcdatamodel */,
+			);
+			currentVersion = B2FECC6326D7FD78008CA9C8 /* ProjectClothes.xcdatamodel */;
+			path = ProjectClothes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CDF28F8326B07C8C00241F13 /* Project object */;
 }

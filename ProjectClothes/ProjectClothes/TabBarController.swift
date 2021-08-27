@@ -13,6 +13,8 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate, UIViewCo
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
+        print("here")
+        print(Clothes.all().count)
         //        self.tabBarController?.delegate = self
         // Do any additional setup after loading the view.
     }

@@ -17,20 +17,22 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
     @IBOutlet weak var colorButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBAction func saveAction(_ sender: Any) {
+//----
+//        guard let imageURL = imageReceive?.toURL() else {return}
+//        let auxImage = CKAsset.init(fileURL: imageURL)
+//----
+        roupa?.image = imageReceive?.pngData()
         
-        guard let imageURL = imageReceive?.toURL() else {return}
-        let auxImage = CKAsset.init(fileURL: imageURL)
-        roupa?.image = auxImage
+        guard let _ = roupa else {return}
+        //----
+//        DatabaseManager.shared.createNewClothes(clothes:roupa) { error in
+//            if error == nil{
+//                print("hihihi")
+//            }
+//        }
+        //----
+//        DatabaseManager.shared.saveData()
         
-        guard let roupa = roupa else {return}
-        DatabaseManager.shared.createNewClothes(clothes:roupa) { error in
-            if error == nil{
-                print("hihihi")
-            }
-        }
-        print(roupa.color)
-        print(roupa.type)
-        print(roupa.subType)
         
         self.dismiss(animated: true, completion: nil)
     }
@@ -66,7 +68,7 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        roupa = Clothes.createEmptyClothes()
+//        roupa = Clothes(context: DatabaseManager.shared.context)
 //        gender = DatabaseManager.shared.loadGender().lowercased()
         
         newImage.image = imageReceive
@@ -109,10 +111,7 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToConfig"{
             let destination = segue.destination as? ClothesConfigViewController
-            destination?.clothCategory = roupa?.subType
-            destination?.color = roupa?.color
-            destination?.type = roupa?.type
-            destination?.image = roupa?.image
+            
             destination?.roupa = roupa
         }
         

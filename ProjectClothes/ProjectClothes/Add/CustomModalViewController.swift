@@ -9,6 +9,7 @@ import UIKit
 
 class CustomModalViewController:  UIViewController, UINavigationControllerDelegate, UIColorPickerViewControllerDelegate, UIImagePickerControllerDelegate {
     
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
@@ -247,6 +248,7 @@ class CustomModalViewController:  UIViewController, UINavigationControllerDelega
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         navigationController?.setNavigationBarHidden(true, animated: true)
         
     }
