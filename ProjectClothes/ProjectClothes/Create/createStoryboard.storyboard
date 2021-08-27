@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ee2-uZ-kUr">
-                                <rect key="frame" x="224" y="98" width="160" height="50"/>
+                                <rect key="frame" x="234" y="98" width="160" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="V7u-ze-ZdC"/>
@@ -52,7 +52,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oho-iK-3wO">
-                                <rect key="frame" x="30" y="98" width="50" height="50"/>
+                                <rect key="frame" x="20" y="98" width="50" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9Vo-2u-YC8"/>
@@ -63,10 +63,12 @@
                                     <color key="titleColor" red="0.77108126880000005" green="0.12614390249999999" blue="0.17236095670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTS-Va-VpS">
-                                <rect key="frame" x="30" y="802" width="354" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTS-Va-VpS">
+                                <rect key="frame" x="20" y="826" width="374" height="40"/>
                                 <color key="backgroundColor" red="0.46955138439999999" green="0.4547356367" blue="0.94050794839999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="AUv-FN-C3e"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="Salvar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -80,10 +82,13 @@
                         <color key="backgroundColor" red="0.96937447789999998" green="0.9729323983" blue="0.98358923200000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Oho-iK-3wO" firstAttribute="leading" secondItem="Uzg-Zl-19a" secondAttribute="leading" constant="30" id="A7k-hK-U2b"/>
+                            <constraint firstItem="Oho-iK-3wO" firstAttribute="leading" secondItem="Uzg-Zl-19a" secondAttribute="leading" constant="20" id="A7k-hK-U2b"/>
                             <constraint firstItem="Oho-iK-3wO" firstAttribute="top" secondItem="Uzg-Zl-19a" secondAttribute="top" constant="10" id="M3D-vT-Dfx"/>
-                            <constraint firstItem="Uzg-Zl-19a" firstAttribute="trailing" secondItem="ee2-uZ-kUr" secondAttribute="trailing" constant="30" id="MBH-zF-8Rv"/>
+                            <constraint firstItem="Uzg-Zl-19a" firstAttribute="trailing" secondItem="ee2-uZ-kUr" secondAttribute="trailing" constant="20" id="MBH-zF-8Rv"/>
+                            <constraint firstItem="Uzg-Zl-19a" firstAttribute="trailing" secondItem="wTS-Va-VpS" secondAttribute="trailing" constant="20" id="aqn-lY-NnT"/>
                             <constraint firstItem="ee2-uZ-kUr" firstAttribute="top" secondItem="Uzg-Zl-19a" secondAttribute="top" constant="10" id="mVL-4b-5eu"/>
+                            <constraint firstItem="wTS-Va-VpS" firstAttribute="leading" secondItem="Uzg-Zl-19a" secondAttribute="leading" constant="20" id="sap-O4-Ogk"/>
+                            <constraint firstAttribute="bottom" secondItem="wTS-Va-VpS" secondAttribute="bottom" constant="30" id="yUQ-aH-2Ui"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Whiteboard" id="oMT-Bm-Apc"/>
