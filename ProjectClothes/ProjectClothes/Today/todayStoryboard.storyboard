@@ -15,66 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="NRd-o9-iun">
-                                <rect key="frame" x="0.0" y="2" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá! Em qual gênero suas roupas mais se encaixam?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpS-0h-EXJ">
-                                        <rect key="frame" x="20" y="281.5" width="374" height="47"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="WmK-bD-qAN">
-                                        <rect key="frame" x="20" y="357.5" width="374" height="181"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qca-e4-VKR">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
-                                                <color key="backgroundColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="tintColor" red="0.4676201344" green="0.45808762310000001" blue="0.90984714030000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="Feminino">
-                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="generoButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="It4-OH-2am"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2G5-3e-pd1">
-                                                <rect key="frame" x="0.0" y="70" width="374" height="41"/>
-                                                <color key="backgroundColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="tintColor" red="0.4676201344" green="0.45808762310000001" blue="0.90984714030000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="Masculino"/>
-                                                <connections>
-                                                    <action selector="generoButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="QSZ-fX-Yrr"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3PR-Tf-kPM">
-                                                <rect key="frame" x="0.0" y="140" width="374" height="41"/>
-                                                <color key="backgroundColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <color key="tintColor" red="0.4676201344" green="0.45808762310000001" blue="0.90984714030000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="Não binário"/>
-                                                <connections>
-                                                    <action selector="generoButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="f2U-8S-Ezo"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <viewLayoutGuide key="safeArea" id="Y6E-Mk-5wM"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="WmK-bD-qAN" firstAttribute="top" secondItem="xpS-0h-EXJ" secondAttribute="bottom" constant="29" id="C18-th-ugg"/>
-                                    <constraint firstItem="WmK-bD-qAN" firstAttribute="leading" secondItem="Y6E-Mk-5wM" secondAttribute="leading" constant="20" id="Cvv-3x-Ba4"/>
-                                    <constraint firstItem="WmK-bD-qAN" firstAttribute="centerX" secondItem="NRd-o9-iun" secondAttribute="centerX" id="Dbh-vc-sSw"/>
-                                    <constraint firstItem="Y6E-Mk-5wM" firstAttribute="trailing" secondItem="xpS-0h-EXJ" secondAttribute="trailing" constant="20" id="GFO-ds-3Nj"/>
-                                    <constraint firstItem="Y6E-Mk-5wM" firstAttribute="trailing" secondItem="WmK-bD-qAN" secondAttribute="trailing" constant="20" id="Gnk-5E-Fxz"/>
-                                    <constraint firstItem="WmK-bD-qAN" firstAttribute="centerY" secondItem="NRd-o9-iun" secondAttribute="centerY" id="TIo-nI-YbA"/>
-                                    <constraint firstItem="xpS-0h-EXJ" firstAttribute="leading" secondItem="Y6E-Mk-5wM" secondAttribute="leading" constant="20" id="dDX-zN-GxM"/>
-                                </constraints>
-                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6rP-Nd-93j">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </imageView>
@@ -150,7 +90,6 @@
                         <outlet property="iconeImage" destination="Hha-C9-OtI" id="lmE-gx-y7v"/>
                         <outlet property="iconeLabel" destination="GgI-1A-ice" id="DYS-ux-uOd"/>
                         <outlet property="loadingWeather" destination="Yt9-xi-dQh" id="aMF-EH-oZI"/>
-                        <outlet property="onBoardingView" destination="NRd-o9-iun" id="4m0-uY-Y8c"/>
                         <outlet property="preferenceLabel" destination="W2h-ce-TQg" id="XCN-8n-QbN"/>
                         <outlet property="tempIconView" destination="6rP-Nd-93j" id="2fn-37-NaW"/>
                         <outlet property="tempLabel" destination="VmP-dv-rRt" id="O6E-Q4-OWY"/>

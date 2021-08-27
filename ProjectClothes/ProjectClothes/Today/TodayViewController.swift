@@ -31,7 +31,7 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        onBoardingView.isHidden = DatabaseManager.shared.loadOnboardingDone()
+        //onBoardingView.isHidden = DatabaseManager.shared.loadOnboardingDone()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         atualizaTelaToday()
