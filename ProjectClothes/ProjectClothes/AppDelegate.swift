@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -36,4 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
 }
+
+//Permission for request alert, soud and badge
+
 

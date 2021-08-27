@@ -125,7 +125,7 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
         saveButton.layer.shadowOpacity = 0.3
         saveButton.layer.shadowOffset = .zero
         saveButton.layer.shadowRadius = 20
-        saveButton.layer.cornerRadius = 25
+        saveButton.layer.cornerRadius = 20
         
         //        // MARK: - Check iCloud account status
         //        CKContainer.default().accountStatus { (accountStatus, error) in
