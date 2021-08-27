@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v60-uc-leN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Ri-PU-YrM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="ev4-ut-1Fo">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="v60-uc-leN" customClass="TabBarController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="v60-uc-leN" customClass="TabBarController" customModule="Ozel" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="HQF-25-113"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="gmk-MV-Qar">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -27,7 +29,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6X-Pi-m8v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25" y="-59"/>
+            <point key="canvasLocation" x="934.78260869565224" y="-59.598214285714285"/>
         </scene>
         <!--todayStoryboard-->
         <scene sceneID="xmI-LK-9qK">
@@ -38,7 +40,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="32M-5H-be1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="-165"/>
+            <point key="canvasLocation" x="1673.1884057971015" y="-165.40178571428569"/>
         </scene>
         <!--createStoryboard-->
         <scene sceneID="Ldz-kW-Rm7">
@@ -48,7 +50,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VSK-g8-B04" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="-125"/>
+            <point key="canvasLocation" x="1676.0869565217392" y="-125.22321428571428"/>
         </scene>
         <!--addStoryboard-->
         <scene sceneID="Ufi-ef-uF0">
@@ -58,7 +60,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5w-9q-4KB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="778" y="-33"/>
+            <point key="canvasLocation" x="1687.68115942029" y="-33.482142857142854"/>
         </scene>
         <!--closetStoryboard-->
         <scene sceneID="Otu-tB-H7R">
@@ -68,7 +70,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YzE-W8-UHt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="759" y="88"/>
+            <point key="canvasLocation" x="1668.1159420289857" y="87.723214285714278"/>
         </scene>
         <!--settingsStoryboard-->
         <scene sceneID="v0b-Vr-rav">
@@ -78,7 +80,98 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ch-Ap-XsW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="768" y="133"/>
+            <point key="canvasLocation" x="1676.8115942028987" y="132.58928571428572"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="W28-Jp-MCw">
+            <objects>
+                <viewController id="tqa-7d-Pgd" customClass="ViewController" customModule="Ozel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MpV-Ud-4oV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá! Em qual gênero suas roupas mais se encaixam?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hac-IT-i0l">
+                                <rect key="frame" x="20" y="281.5" width="374" height="47"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="zYH-W9-6gt">
+                                <rect key="frame" x="20" y="357.5" width="374" height="181"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qS3-kj-e9U">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
+                                        <color key="backgroundColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="tintColor" red="0.4676201344" green="0.45808762310000001" blue="0.90984714030000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Feminino">
+                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="genderSelect:" destination="tqa-7d-Pgd" eventType="touchUpInside" id="KfW-7M-jok"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0s0-vd-NhQ">
+                                        <rect key="frame" x="0.0" y="70" width="374" height="41"/>
+                                        <color key="backgroundColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="tintColor" red="0.4676201344" green="0.45808762310000001" blue="0.90984714030000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Masculino"/>
+                                        <connections>
+                                            <action selector="genderSelect:" destination="tqa-7d-Pgd" eventType="touchUpInside" id="Owv-TV-FvO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQN-84-Odc">
+                                        <rect key="frame" x="0.0" y="140" width="374" height="41"/>
+                                        <color key="backgroundColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="tintColor" red="0.4676201344" green="0.45808762310000001" blue="0.90984714030000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Não binário"/>
+                                        <connections>
+                                            <action selector="genderSelect:" destination="tqa-7d-Pgd" eventType="touchUpInside" id="pr0-nN-I7A"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JOv-S5-y1h"/>
+                        <color key="backgroundColor" red="0.97653514149999998" green="0.96833842989999996" blue="0.98431700470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="zYH-W9-6gt" firstAttribute="top" secondItem="hac-IT-i0l" secondAttribute="bottom" constant="29" id="71U-4i-Kc1"/>
+                            <constraint firstItem="zYH-W9-6gt" firstAttribute="centerX" secondItem="MpV-Ud-4oV" secondAttribute="centerX" id="7Br-IX-gls"/>
+                            <constraint firstItem="zYH-W9-6gt" firstAttribute="leading" secondItem="JOv-S5-y1h" secondAttribute="leading" constant="20" id="DSo-rd-UuA"/>
+                            <constraint firstItem="zYH-W9-6gt" firstAttribute="centerY" secondItem="MpV-Ud-4oV" secondAttribute="centerY" id="Dak-Tv-y9p"/>
+                            <constraint firstItem="JOv-S5-y1h" firstAttribute="trailing" secondItem="zYH-W9-6gt" secondAttribute="trailing" constant="20" id="fhp-Gl-Ez5"/>
+                            <constraint firstItem="hac-IT-i0l" firstAttribute="leading" secondItem="JOv-S5-y1h" secondAttribute="leading" constant="20" id="hnS-R8-ZFP"/>
+                            <constraint firstItem="JOv-S5-y1h" firstAttribute="trailing" secondItem="hac-IT-i0l" secondAttribute="trailing" constant="20" id="ofz-Ix-w4B"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sTk-XI-NH9"/>
+                    <connections>
+                        <segue destination="v60-uc-leN" kind="push" identifier="onboarding" id="eTu-eC-B7s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w3w-o7-EuD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88" y="-54"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bL0-la-vAl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Ri-PU-YrM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cQ8-IS-dtN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tqa-7d-Pgd" kind="relationship" relationship="rootViewController" id="XFb-3P-iK5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5un-Zl-qBu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-717.39130434782612" y="-54.241071428571423"/>
         </scene>
     </scenes>
 </document>

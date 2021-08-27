@@ -12,7 +12,7 @@
         <!--Settings-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="SettingsViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="SettingsViewController" customModule="Ozel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UvH-5p-GUG">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,7 +168,7 @@
         <!--Contate-nos-->
         <scene sceneID="K9C-dH-bZe">
             <objects>
-                <viewController id="0ay-A1-2Qm" customClass="ContactViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0ay-A1-2Qm" customClass="ContactViewController" customModule="Ozel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z0R-dR-xhU">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
