@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Suggestion-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="suggestion" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="SuggestionViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esta feature estará disponível em breve" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Th6-xY-ECg">
+                                <rect key="frame" x="0.0" y="254" width="414" height="190"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work in progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6o-6g-HgJ">
+                                <rect key="frame" x="0.0" y="436" width="414" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.9609054923" green="0.96446448559999998" blue="0.97647291420000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="A6o-6g-HgJ" secondAttribute="trailing" id="64j-ZG-3kb"/>
+                            <constraint firstItem="Th6-xY-ECg" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="6vi-Gr-kRH"/>
+                            <constraint firstItem="Th6-xY-ECg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="E9D-cY-Zw6"/>
+                            <constraint firstItem="Th6-xY-ECg" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Nz7-Al-tWm"/>
+                            <constraint firstItem="A6o-6g-HgJ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="V7x-C0-JcJ"/>
+                            <constraint firstItem="A6o-6g-HgJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="348" id="i1X-Q9-E1I"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Th6-xY-ECg" secondAttribute="bottom" constant="418" id="ot9-ph-pQd"/>
+                            <constraint firstItem="Th6-xY-ECg" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="166" id="pyo-QD-8wM"/>
+                            <constraint firstItem="A6o-6g-HgJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vfJ-3G-Ba6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Suggestion" id="O0k-Dr-wyf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="89.732142857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="I9n-eG-x38">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pcn-mJ-knt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nEs-Fk-fhZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="4Jg-iw-NfS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JMw-kt-Nb2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
+        </scene>
+    </scenes>
+</document>
