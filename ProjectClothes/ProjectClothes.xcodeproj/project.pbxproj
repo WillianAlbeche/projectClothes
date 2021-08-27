@@ -95,7 +95,7 @@
 		CD852CFC26C44E3800926B13 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		CD852CFE26C44E3800926B13 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CDA4C6FB26CC2B710061C082 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
-		CDF28F8B26B07C8C00241F13 /* ProjectClothes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectClothes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF28F8B26B07C8C00241F13 /* Ozel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ozel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF28F8E26B07C8C00241F13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDF28F9026B07C8C00241F13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CDF28F9226B07C8C00241F13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -230,7 +230,7 @@
 		CDF28F8C26B07C8C00241F13 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CDF28F8B26B07C8C00241F13 /* ProjectClothes.app */,
+				CDF28F8B26B07C8C00241F13 /* Ozel.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -435,9 +435,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CDF28F8A26B07C8C00241F13 /* ProjectClothes */ = {
+		CDF28F8A26B07C8C00241F13 /* Ozel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CDF28F9F26B07C9000241F13 /* Build configuration list for PBXNativeTarget "ProjectClothes" */;
+			buildConfigurationList = CDF28F9F26B07C9000241F13 /* Build configuration list for PBXNativeTarget "Ozel" */;
 			buildPhases = (
 				CDF28F8726B07C8C00241F13 /* Sources */,
 				CDF28F8826B07C8C00241F13 /* Frameworks */,
@@ -447,9 +447,9 @@
 			);
 			dependencies = (
 			);
-			name = ProjectClothes;
+			name = Ozel;
 			productName = ProjectClothes;
-			productReference = CDF28F8B26B07C8C00241F13 /* ProjectClothes.app */;
+			productReference = CDF28F8B26B07C8C00241F13 /* Ozel.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -479,7 +479,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CDF28F8A26B07C8C00241F13 /* ProjectClothes */,
+				CDF28F8A26B07C8C00241F13 /* Ozel */,
 			);
 		};
 /* End PBXProject section */
@@ -763,7 +763,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CDF28F9F26B07C9000241F13 /* Build configuration list for PBXNativeTarget "ProjectClothes" */ = {
+		CDF28F9F26B07C9000241F13 /* Build configuration list for PBXNativeTarget "Ozel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CDF28FA026B07C9000241F13 /* Debug */,
