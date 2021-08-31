@@ -247,6 +247,7 @@ class CustomModalViewController:  UIViewController, UINavigationControllerDelega
         setupPanGesture()
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
@@ -266,6 +267,18 @@ class CustomModalViewController:  UIViewController, UINavigationControllerDelega
         super.viewDidAppear(animated)
         animateShowDimmedView()
         animatePresentContainer()
+        DatabaseManager.shared.checkiCloudAccount() { error, logged in
+            if error == true {
+                if logged {
+                    print("yes log")
+                }else {
+                    print("nolog")
+                    DispatchQueue.main.async {
+                        DatabaseManager.shared.loggingiCloud(vc: self)
+                    }
+                }
+            }
+        }
     }
     
     func setupView() {

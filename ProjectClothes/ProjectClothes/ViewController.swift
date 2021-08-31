@@ -16,18 +16,18 @@ class ViewController: UIViewController {
     }
 
     @IBAction func genderSelect(_ sender: UIButton){
-        switch sender.tag {
-        case 0: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Feminino")
-            print(sender.tag)
-        case 1: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Masculino")
-            print(sender.tag)
-        case 2: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Não binário")
-            print(sender.tag)
-        default: isSelectedGender = false
-        }
-        
-        DatabaseManager.shared.onboardingDone(genderSave: isSelectedGender)
-            
+//        switch sender.tag {
+//        case 0: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Feminino")
+//            print(sender.tag)
+//        case 1: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Masculino")
+//            print(sender.tag)
+//        case 2: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Não binário")
+//            print(sender.tag)
+//        default: isSelectedGender = false
+//        }
+//        
+//        DatabaseManager.shared.onboardingDone(genderSave: isSelectedGender)
+//            
         
         performSegue(withIdentifier: "onboarding", sender: nil)
     }

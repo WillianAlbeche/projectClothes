@@ -61,9 +61,10 @@ class CreateViewController: UIViewController,  UIGestureRecognizerDelegate {
             if error != nil {
                 print("filters: \(look.filters)")
                 print("allfilters: \(self.lookfilters)")
+//                let ac = UIAlertController(title: "Look", message: "Look Saved", preferredStyle: .alert)
+//                ac.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
             }
         }
-        
     }
     func cropToBounds(image: UIImage, width: Double, height: Double) -> UIImage {
 

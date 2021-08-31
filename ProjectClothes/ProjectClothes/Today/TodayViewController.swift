@@ -41,19 +41,22 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
         
         timeToRefresh = Timer.scheduledTimer(timeInterval: 3600, target: self, selector: #selector(atualizaTelaToday), userInfo: nil, repeats: true)
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let genderprint = DatabaseManager.shared.loadGender()
+        print("gedner : \(genderprint)")
+    }
     
     @objc func atualizaTelaToday(){
-        if DatabaseManager.shared.loadOnboardingDone() {
-            loadingWeather.startAnimating()
-            manager.delegate = self
-            manager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
-            
-            DatabaseManager.shared.checkLocationAuth(locationManager: manager, vc: self)
-            
-            manager.requestWhenInUseAuthorization()
-            
-            manager.startUpdatingLocation()
-        }
+        loadingWeather.startAnimating()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
+        
+        DatabaseManager.shared.checkLocationAuth(locationManager: manager, vc: self)
+        
+        manager.requestWhenInUseAuthorization()
+        
+        manager.startUpdatingLocation()
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let first = locations.first else {
@@ -75,11 +78,6 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
                 self.iconeImage.image = icone
                 self.preferenceLabel.text = ("Dê preferência: \(self.constants.recommendationPhrase(temperatures: Int(self.auxTemp)))")
                 self.tempIconView.image = auxIcone
-//                self.tempLabel.reloadInputViews()
-//                self.iconeLabel.reloadInputViews()
-//                self.iconeImage.reloadInputViews()
-//                self.preferenceLabel.reloadInputViews()
-//                self.tempIconView.reloadInputViews()
                 self.loadingWeather.stopAnimating()
             }
         }
@@ -132,22 +130,22 @@ class TodayViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func generoButton(_ sender: UIButton) {
-        switch sender.tag {
-        case 0: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Feminino")
-            print(sender.tag)
-        case 1: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Masculino")
-            print(sender.tag)
-        case 2: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Não binário")
-            print(sender.tag)
-        default: isSelectedGender = false
-        }
-        
-        DatabaseManager.shared.onboardingDone(genderSave: isSelectedGender)
-        
-        onBoardingView.isHidden = isSelectedGender
-        
-        
-        
+//        switch sender.tag {
+//        case 0: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Feminino")
+//            print(sender.tag)
+//        case 1: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Masculino")
+//            print(sender.tag)
+//        case 2: isSelectedGender = DatabaseManager.shared.storeGender(userGender: "Não binário")
+//            print(sender.tag)
+//        default: isSelectedGender = false
+//        }
+//
+//        DatabaseManager.shared.onboardingDone(genderSave: isSelectedGender)
+//
+//        onBoardingView.isHidden = isSelectedGender
+//
+//
+//
         
     }
 }

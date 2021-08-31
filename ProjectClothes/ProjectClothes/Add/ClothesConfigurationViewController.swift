@@ -18,16 +18,17 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
     @IBOutlet weak var saveButton: UIButton!
     @IBAction func saveAction(_ sender: Any) {
         
-        guard let imageURL = imageReceive?.toURL() else {return}
-        let auxImage = CKAsset.init(fileURL: imageURL)
-        roupa?.image = auxImage
+
         
         guard let roupa = roupa else {return}
         DatabaseManager.shared.createNewClothes(clothes:roupa) { error in
             if error == nil{
-                print("hihihi")
+                print("save")
+//                let ac = UIAlertController(title: "Clothes", message: "Clothes Saved", preferredStyle: .alert)
+//                ac.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
             }
         }
+        
         print(roupa.color)
         print(roupa.type)
         print(roupa.subType)
@@ -46,7 +47,7 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
     @IBOutlet weak var nextButton: UIButton!
     
     var imageReceive: UIImage?
-    var gender: String = "male"
+    var gender: String = "none"
     var roupa : Clothes?
     var type: String?{
         didSet{
@@ -65,11 +66,16 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.gender = DatabaseManager.shared.loadGender()
         
         roupa = Clothes.createEmptyClothes()
 //        gender = DatabaseManager.shared.loadGender().lowercased()
         
         newImage.image = imageReceive
+        guard let imageURL = imageReceive?.toURL() else {return}
+        let auxImage = CKAsset.init(fileURL: imageURL)
+        
+        roupa?.image = auxImage
         newImage.backgroundColor = .white
         newImage.layer.cornerRadius = 20
         newImage.layer.shadowColor = UIColor.gray.cgColor
@@ -109,10 +115,7 @@ class ClothesConfigurationViewController: UIViewController, UIColorPickerViewCon
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToConfig"{
             let destination = segue.destination as? ClothesConfigViewController
-            destination?.clothCategory = roupa?.subType
-            destination?.color = roupa?.color
-            destination?.type = roupa?.type
-            destination?.image = roupa?.image
+            
             destination?.roupa = roupa
         }
         

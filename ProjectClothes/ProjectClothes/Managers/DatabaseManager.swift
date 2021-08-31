@@ -23,8 +23,8 @@ class DatabaseManager {
     var isiCloudAuth: Bool = false
     var isLocationAuth: Bool = false
     
-    /// For settings screen url path
-    private let preferencePath = "App-prefs:"
+//    /// For settings screen url path
+//    private let preferencePath = "App-prefs:"
     
     //------------------------------------------------
     // MARK: - API (Clothes)
@@ -195,6 +195,12 @@ class DatabaseManager {
                 return
             }
             
+            DispatchQueue.main.async {
+                let ac = UIAlertController(title: "Clothes", message: "Clothes Saved", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+            }
+            
+            
             completion?(error == nil)
             if let error = error{
                 print(error.localizedDescription)
@@ -245,6 +251,12 @@ class DatabaseManager {
                 return
             }
             print("newclook")
+            DispatchQueue.main.async {
+                let ac = UIAlertController(title: "Look", message: "Look Saved", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+            }
+            
+            
             completion?(error == nil)
             if let error = error{
                 print(error.localizedDescription)
@@ -401,15 +413,13 @@ class DatabaseManager {
     /// To store user's gender.
     /// - Parameters:
     ///   - userGender: user's gender to be able to show all types of clothes which conform to that gender.
-    func storeGender(userGender: String) -> Bool {
+    func storeGender(userGender: String){
         
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(userGender) {
             let defaults = UserDefaults.standard
             defaults.set(encoded, forKey: "gender")
-            return true
         }
-        return false
     }
     
     /// To load user's gender.
@@ -457,14 +467,17 @@ class DatabaseManager {
     
     /// For user to log in iCloud account
     func loggingiCloud(vc: UIViewController){
-        let appPath = "\(self.preferencePath)=ACCOUNT_SETTINGS"
+//        let appPath = "\(self.preferencePath)=ACCOUNT_SETTINGS"
         if !self.isiCloudAuth {
             let ac = UIAlertController(title: "No iCloud account", message: "You need to be logged in iCloud account.", preferredStyle: .alert)
             ac.addAction((UIAlertAction(title: "Go to settings", style: .default, handler: { (action) -> Void in
-                guard let settingsUrl = NSURL(string: appPath) as URL? else {return}
+//                guard let settingsUrl = NSURL(string: appPath) as URL? else {return}
+                guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                            return
+                        }
                 UIApplication.shared.open(settingsUrl)
             })))
-            ac.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+//            ac.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
             vc.present(ac, animated: true)
         }
     }
