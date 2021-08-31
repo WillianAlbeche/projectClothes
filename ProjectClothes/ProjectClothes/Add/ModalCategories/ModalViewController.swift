@@ -26,6 +26,9 @@ class ModalViewController: UIViewController {
     
     
     
+    @IBAction func cancelButtonAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBOutlet weak var fullSizeClothesButton: UIButton!
     @IBAction func fullSizeAction(_ sender: Any) {
         performSegue(withIdentifier: "goToFullSize", sender: gender1)

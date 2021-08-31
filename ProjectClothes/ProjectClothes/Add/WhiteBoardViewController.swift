@@ -18,6 +18,7 @@ enum WhiteBoardOption {
 class WhiteBoardViewController: UIViewController {
 
     
+    @IBOutlet weak var iaButton: UIButton!
     @IBOutlet var editView: DrawingView!
     @IBOutlet weak var nextButton: UIButton!
     
@@ -130,6 +131,10 @@ class WhiteBoardViewController: UIViewController {
         eraseButton.layer.cornerRadius = 25
         eraseButton.layer.borderWidth = 0.5
         eraseButton.layer.borderColor = UIColor.white.cgColor
+        
+//        iaButton.layer.cornerRadius = 15
+//        iaButton.layer.borderWidth = 0.5
+//        iaButton.layer.borderColor = UIColor.white.cgColor
 
         
         //        //Rotation
