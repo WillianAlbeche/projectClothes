@@ -7,11 +7,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Create-->
+        <!--Criar-->
         <scene sceneID="A3y-qZ-rrk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ABo-dm-SEh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Create" image="wand.and.stars" catalog="system" id="8Iz-wb-Qpp"/>
+                    <tabBarItem key="tabBarItem" title="Criar" image="wand.and.stars" catalog="system" id="8Iz-wb-Qpp"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hAR-n5-PYV">
@@ -30,7 +30,7 @@
         <!--Whiteboard-->
         <scene sceneID="3Zz-Ma-gfC">
             <objects>
-                <viewController id="0BM-JC-uqb" customClass="CreateViewController" customModule="ProjectClothes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0BM-JC-uqb" customClass="CreateViewController" customModule="Ozel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MG5-BL-i1V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

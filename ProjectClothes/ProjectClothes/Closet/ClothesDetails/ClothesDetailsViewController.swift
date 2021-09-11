@@ -108,25 +108,25 @@ class ClothesDetailsViewController: UIViewController {
     func getUIImage(seasonOrSpecial : String)-> UIImage?{
         var image : UIImage? = nil
         
-        if seasonOrSpecial.lowercased() == "summer"{
+        if seasonOrSpecial.lowercased() == "verão"{
             image = UIImage(systemName: "sun.max")
             
-        }else if seasonOrSpecial.lowercased() == "winter"{
+        }else if seasonOrSpecial.lowercased() == "inverno"{
             image = UIImage(systemName: "snow")
             
-        } else if seasonOrSpecial.lowercased() == "spring"{
+        } else if seasonOrSpecial.lowercased() == "primaver"{
             image = UIImage(systemName: "leaf")
             
-        } else if seasonOrSpecial.lowercased() == "autumn"{
+        } else if seasonOrSpecial.lowercased() == "outono"{
             image = UIImage(named: "autumn")
             
-        } else if seasonOrSpecial.lowercased() == "wind"{
+        } else if seasonOrSpecial.lowercased() == "vento"{
             image = UIImage(systemName: "wind")
             
-        } else if seasonOrSpecial.lowercased() == "rain"{
+        } else if seasonOrSpecial.lowercased() == "chuva"{
             image = UIImage(systemName: "cloud.rain")
             
-        } else if seasonOrSpecial.lowercased() == "sensitiveRain"{
+        } else if seasonOrSpecial.lowercased() == "sensivelChuva"{
             image = UIImage(systemName: "wind")
             
         } else { //if seasonOrSpecial.lowercased() == "snow"

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Settings-->
+        <!--Configurações-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="SettingsViewController" customModule="Ozel" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Em que gênero minhas roupas mais se enquadram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItD-FN-JsV">
-                                <rect key="frame" x="16" y="150" width="325" height="17"/>
+                                <rect key="frame" x="16" y="157.66666666666666" width="325" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="BrW-bl-e4s">
-                                <rect key="frame" x="16" y="174" width="358" height="40"/>
+                                <rect key="frame" x="16" y="181.66666666666666" width="358" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxS-Oe-c2P">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="40"/>
@@ -67,7 +67,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="fzu-6y-H28">
-                                <rect key="frame" x="0.0" y="264" width="390" height="80"/>
+                                <rect key="frame" x="0.0" y="271.66666666666669" width="390" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m52-YX-Obg">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="33"/>
@@ -106,7 +106,7 @@
                             <constraint firstItem="fzu-6y-H28" firstAttribute="top" secondItem="BrW-bl-e4s" secondAttribute="bottom" constant="50" id="uKI-Rq-dLS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="Cig-R1-gp2"/>
+                    <navigationItem key="navigationItem" title="Configurações" id="Cig-R1-gp2"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outletCollection property="gender" destination="YxS-Oe-c2P" collectionClass="NSMutableArray" id="b89-pB-OBm"/>
@@ -170,11 +170,11 @@
             </objects>
             <point key="canvasLocation" x="3053.8461538461538" y="113.74407582938387"/>
         </scene>
-        <!--Settings-->
+        <!--Configurações-->
         <scene sceneID="TfE-PN-Rm0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oI5-5J-z7r" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape.2.fill" catalog="system" id="xcJ-58-2At"/>
+                    <tabBarItem key="tabBarItem" title="Configurações" image="gearshape.2.fill" catalog="system" id="xcJ-58-2At"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="9f8-AF-kMk">
