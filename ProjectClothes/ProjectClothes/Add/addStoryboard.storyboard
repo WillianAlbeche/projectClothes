@@ -85,7 +85,7 @@
                                             <constraint firstAttribute="height" constant="30" id="Ix8-gQ-Zdz"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Desativar recorte automático">
+                                        <state key="normal" title="Recorte automático">
                                             <color key="titleColor" red="0.53725490200000003" green="0.5568627451" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
@@ -444,7 +444,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xpa-93-Qsy">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="cancel" id="qD9-oD-YYD">
+                        <barButtonItem key="rightBarButtonItem" image="x.circle.fill" catalog="system" style="plain" id="qD9-oD-YYD">
+                            <color key="tintColor" red="0.97653514149999998" green="0.96833842989999996" blue="0.98431700470000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="cancelButtonAction:" destination="tsd-xi-Oye" id="IuU-Gp-qSx"/>
                             </connections>
@@ -863,6 +864,7 @@
         <image name="erase" width="23" height="26"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="x.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
